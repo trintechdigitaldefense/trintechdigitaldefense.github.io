@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel by TrinTech — 24/7 Cyber Defense for Your Business</title>
+  <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="/favicon-512.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-light: #111d33;
+      --blue: #1686ff;
+      --blue-glow: #4fa8ff;
+      --red: #ff3b5c;
+      --green: #00e676;
+      --amber: #ffc107;
+      --cyan: #00bcd4;
+      --white: #ffffff;
+      --gray: #8892a4;
+      --light: #f5f8ff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(10, 22, 40, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(22, 134, 255, 0.1);
+      padding: 0 2rem;
+    }
+    .navbar-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 70px;
+    }
+    .navbar-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 1.1rem; text-decoration: none;
+      color: var(--white);
+    }
+    .navbar-brand .shield { color: var(--blue); font-size: 1.3rem; }
+    .navbar-brand span { color: var(--blue); }
+    .navbar-links { display: flex; gap: 2rem; align-items: center; }
+    .navbar-links a {
+      color: var(--gray); text-decoration: none; font-size: 0.9rem;
+      font-weight: 500; transition: color 0.3s;
+    }
+    .navbar-links a:hover { color: var(--white); }
+    .navbar-links .btn-nav {
+      background: var(--blue); color: var(--white);
+      padding: 0.5rem 1.2rem; border-radius: 8px;
+      font-weight: 600;
+    }
+    .navbar-links .btn-nav:hover { background: var(--blue-glow); }
+    .hamburger { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero */
+    .hero {
+      padding: 140px 2rem 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(22, 134, 255, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(22, 134, 255, 0.1);
+      border: 1px solid rgba(22, 134, 255, 0.3);
+      padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.85rem; color: var(--blue-glow);
+      margin-bottom: 2rem;
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px; background: var(--green);
+      border-radius: 50%; animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      max-width: 900px; margin-left: auto; margin-right: auto;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px; margin: 0 auto 2.5rem;
+    }
+    .hero-buttons {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--blue); color: var(--white);
+      padding: 1rem 2rem; border-radius: 12px; text-decoration: none;
+      font-weight: 700; font-size: 1rem;
+      transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: var(--blue-glow); transform: translateY(-2px); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.05); color: var(--white);
+      padding: 1rem 2rem; border-radius: 12px; text-decoration: none;
+      font-weight: 600; font-size: 1rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--blue); }
+
+    /* Video Section */
+    .video-section {
+      padding: 0 2rem 60px;
+      max-width: 900px; margin: 0 auto;
+    }
+    .video-container {
+      position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 */
+      background: var(--navy-light);
+      border-radius: 16px; overflow: hidden;
+      border: 1px solid rgba(22, 134, 255, 0.2);
+      box-shadow: 0 0 60px rgba(22, 134, 255, 0.1);
+    }
+    .video-container video {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .video-placeholder {
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      cursor: pointer; transition: all 0.3s;
+    }
+    .video-placeholder:hover .play-btn { transform: scale(1.1); }
+    .play-btn {
+      width: 80px; height: 80px; border-radius: 50%;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 0 40px rgba(22, 134, 255, 0.4);
+    }
+    .play-btn i { font-size: 2rem; color: var(--white); margin-left: 4px; }
+    .video-placeholder p { color: var(--gray); font-size: 0.9rem; }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem; max-width: 1000px; margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .stat-card {
+      text-align: center; padding: 2rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+    }
+    .stat-card .number {
+      font-size: 2.5rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-card .label { color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem; }
+
+    /* Problem Section */
+    .section {
+      padding: 80px 2rem;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.85rem; font-weight: 600;
+      color: var(--blue); text-transform: uppercase;
+      letter-spacing: 2px; margin-bottom: 1rem;
+    }
+    .section h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800; margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .section p {
+      font-size: 1.1rem; color: var(--gray);
+      max-width: 700px; margin-bottom: 1rem;
+    }
+
+    /* Problem Cards */
+    .problem-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .problem-card {
+      background: rgba(255, 59, 92, 0.03);
+      border: 1px solid rgba(255, 59, 92, 0.15);
+      border-radius: 16px; padding: 2rem;
+      transition: all 0.3s;
+    }
+    .problem-card:hover { border-color: rgba(255, 59, 92, 0.4); transform: translateY(-4px); }
+    .problem-card .icon { font-size: 2rem; margin-bottom: 1rem; }
+    .problem-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .problem-card p { color: var(--gray); font-size: 0.95rem; }
+
+    /* What Is Sentinel */
+    .what-sentinel {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+      margin-top: 3rem;
+    }
+    .sentinel-visual {
+      background: var(--navy-light);
+      border: 1px solid rgba(22, 134, 255, 0.15);
+      border-radius: 16px; padding: 2rem;
+      position: relative; overflow: hidden;
+    }
+    .sentinel-visual::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--blue), var(--cyan), var(--green));
+    }
+    .sentinel-mock {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem; line-height: 2;
+    }
+    .sentinel-mock .prompt { color: var(--green); }
+    .sentinel-mock .cmd { color: var(--white); }
+    .sentinel-mock .warn { color: var(--amber); }
+    .sentinel-mock .error { color: var(--red); }
+    .sentinel-mock .info { color: var(--blue-glow); }
+    .sentinel-mock .success { color: var(--green); }
+
+    /* How It Works */
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem; margin-top: 3rem;
+    }
+    .step-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px; padding: 2rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .step-card:hover { border-color: rgba(22, 134, 255, 0.3); }
+    .step-card .step-num {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .step-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .step-card p { color: var(--gray); font-size: 0.95rem; }
+
+    /* What It Detects */
+    .detection-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .detection-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px; padding: 1.5rem;
+      display: flex; gap: 1rem; align-items: flex-start;
+      transition: all 0.3s;
+    }
+    .detection-card:hover { border-color: rgba(22, 134, 255, 0.3); }
+    .detection-card .det-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem; flex-shrink: 0;
+    }
+    .detection-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .detection-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+
+    /* Alert Types */
+    .alert-cards {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .alert-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px; padding: 2rem;
+    }
+    .alert-card.critical { border-color: rgba(255, 59, 92, 0.3); }
+    .alert-card.warning { border-color: rgba(255, 193, 7, 0.3); }
+    .alert-card.info { border-color: rgba(22, 134, 255, 0.3); }
+    .alert-card .alert-header {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 1rem;
+    }
+    .alert-card .alert-badge {
+      padding: 0.2rem 0.8rem; border-radius: 6px;
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .alert-card.critical .alert-badge { background: rgba(255, 59, 92, 0.2); color: var(--red); }
+    .alert-card.warning .alert-badge { background: rgba(255, 193, 7, 0.2); color: var(--amber); }
+    .alert-card.info .alert-badge { background: rgba(22, 134, 255, 0.2); color: var(--blue-glow); }
+    .alert-card h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .alert-card p { color: var(--gray); font-size: 0.9rem; }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem; margin-top: 3rem;
+    }
+    .pricing-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 2.5rem;
+      position: relative;
+      transition: all 0.3s;
+    }
+    .pricing-card.featured {
+      border-color: var(--blue);
+      box-shadow: 0 0 60px rgba(22, 134, 255, 0.15);
+    }
+    .pricing-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+      background: var(--blue); color: var(--white);
+      padding: 0.3rem 1rem; border-radius: 50px;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 1px;
+    }
+    .pricing-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .pricing-card .price {
+      font-size: 2.5rem; font-weight: 900;
+      margin: 1rem 0;
+    }
+    .pricing-card .price span { font-size: 1rem; font-weight: 500; color: var(--gray); }
+    .pricing-card .price-desc { color: var(--gray); font-size: 0.9rem; margin-bottom: 1.5rem; }
+    .pricing-card ul { list-style: none; margin-bottom: 2rem; }
+    .pricing-card ul li {
+      padding: 0.5rem 0; color: var(--gray);
+      font-size: 0.9rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .pricing-card ul li::before {
+      content: '✓'; color: var(--green); font-weight: 700;
+    }
+    .pricing-card .btn-price {
+      display: block; text-align: center;
+      padding: 0.9rem; border-radius: 10px;
+      text-decoration: none; font-weight: 700;
+      transition: all 0.3s;
+    }
+    .pricing-card .btn-price.primary {
+      background: var(--blue); color: var(--white);
+    }
+    .pricing-card .btn-price.primary:hover { background: var(--blue-glow); }
+    .pricing-card .btn-price.outline {
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .pricing-card .btn-price.outline:hover { border-color: var(--blue); }
+
+    /* FAQ */
+    .faq-list { max-width: 750px; margin: 3rem auto 0; }
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 1.5rem 0;
+    }
+    .faq-item h3 {
+      font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+    }
+    .faq-item h3 .faq-toggle { color: var(--blue); transition: transform 0.3s; }
+    .faq-item h3:hover .faq-toggle { transform: rotate(90deg); }
+    .faq-item p { color: var(--gray); font-size: 0.95rem; }
+
+    /* CTA */
+    .cta-section {
+      text-align: center; padding: 80px 2rem;
+      background: linear-gradient(180deg, transparent, rgba(22, 134, 255, 0.05));
+    }
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; margin-bottom: 1rem;
+    }
+    .cta-section p {
+      color: var(--gray); font-size: 1.1rem;
+      max-width: 600px; margin: 0 auto 2rem;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 3rem 2rem;
+      text-align: center;
+      color: var(--gray); font-size: 0.9rem;
+    }
+    .footer a { color: var(--blue); text-decoration: none; }
+    .footer .footer-links {
+      display: flex; justify-content: center; gap: 2rem;
+      margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar-links { display: none; }
+      .hamburger { display: block; }
+      .navbar-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 70px; left: 0; right: 0;
+        background: rgba(10, 22, 40, 0.98);
+        padding: 2rem; gap: 1.5rem;
+        border-bottom: 1px solid rgba(22, 134, 255, 0.1);
+      }
+      .what-sentinel { grid-template-columns: 1fr; gap: 2rem; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-in { animation: fadeInUp 0.6s ease forwards; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-brand">
+        <span class="shield">🛡️</span>
+        Sentinel <span>by TrinTech</span>
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#protection">Protection</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-nav">Get Protected</a>
+      </div>
+      <button class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      24/7 Active Network Defense
+    </div>
+    <h1>Your Network Has Intruders.<br><span class="highlight">Sentinel Finds Them.</span></h1>
+    <p>Most businesses have unknown devices on their Wi-Fi, employees clicking phishing links, and hackers trying every password combination — <strong>all day, every day</strong>. Sentinel sees it all. In real time.</p>
+    <div class="hero-buttons">
+      <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-primary">
+        <i class="fas fa-calendar"></i> Book Free Scoping Call
+      </a>
+      <a href="#how-it-works" class="btn-secondary">
+        <i class="fas fa-play"></i> See How It Works
+      </a>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="video-section">
+    <div class="video-container">
+      <video id="sentinelVideo" poster="video-poster.png" preload="metadata">
+        <source src="sentinel-demo.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <div class="video-placeholder" id="videoPlaceholder" onclick="playVideo()">
+        <div class="play-btn">
+          <i class="fas fa-play"></i>
+        </div>
+        <p>Watch: How Sentinel Protects Your Business (2 min)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="number">6,300+</div>
+      <div class="label">Cyberattacks happen every day<br>in the Caribbean alone</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">73%</div>
+      <div class="label">of businesses with cyber attacks<br>have NO monitoring</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">4.4s</div>
+      <div class="label">Average time for a hacker to<br>gain access once on a network</div>
+    </div>
+    <div class="stat-card">
+      <div class="number">$4.45M</div>
+      <div class="label">Average cost of a data breach<br>for a business</div>
+    </div>
+  </div>
+
+  <!-- The Problem -->
+  <section class="section" id="protection">
+    <div class="section-label">🚨 The Problem</div>
+    <h2>You Can't See the Attack<br>Until It's Too Late</h2>
+    <p>Most business owners think their network is safe because they have antivirus. But antivirus only catches <em>known</em> threats. Modern hackers are smarter than that.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="icon">👻</div>
+        <h3>Ghost Devices on Your Network</h3>
+        <p>Your Wi-Fi has 12 devices you know about. But there are probably 3-5 more you don't — former employees, guest phones, rogue routers. They're on your network right now.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🔓</div>
+        <h3>Password Brute Force Attacks</h3>
+        <p>Every single day, hackers are trying thousands of password combinations on your systems. They don't give up. Your IT person might not notice for weeks.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📁</div>
+        <h3>Files Changed Without You Knowing</h3>
+        <p>Important business documents, financial records, client databases — all can be silently modified or stolen while you sleep. Who changed those files? When?</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">💸</div>
+        <h3>Hidden Crypto Mining</h3>
+        <p>Hackers can install software on your computers that mines cryptocurrency using your power. Your computers slow down, your electricity bill goes up, and your data is at risk.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">📧</div>
+        <h3>Phishing & Social Engineering</h3>
+        <p>One employee clicks a link, and suddenly hackers have access to your entire network. No sophisticated attack needed — just one mistake.</p>
+      </div>
+      <div class="problem-card">
+        <div class="icon">🤷</div>
+        <h3>You Have No Idea What's Happening</h3>
+        <p>If someone asks "has anything unusual happened on the network?" — can you answer? Without Sentinel, you can't. And that's the real risk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Sentinel -->
+  <section class="section">
+    <div class="section-label">🛡️ What is Sentinel?</div>
+    <h2>Your Business's 24/7<br>Cyber Security Guard</h2>
+    <p>Sentinel is like having a security guard watching your network <strong>24 hours a day, 7 days a week</strong>. It doesn't just sit there — it actively sets traps, checks on things, and alerts you when something's wrong.</p>
+
+    <div class="what-sentinel">
+      <div>
+        <p style="font-size: 1.1rem; color: var(--white); margin-bottom: 1.5rem;">
+          Think of it like a car alarm system — but for your entire business network.
+        </p>
+        <p>Sentinel runs on your server or main computer and does three things:</p>
+        <div style="margin-top: 1.5rem;">
+          <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(0, 230, 118, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green);">1</div>
+            <div><strong style="color: var(--white);">Sees everything</strong><br><span style="color: var(--gray);">Scans your network every 30 seconds. Knows every device connected.</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(255, 59, 92, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--red);">2</div>
+            <div><strong style="color: var(--white);">Sets traps</strong><br><span style="color: var(--gray);">Places fake files and services that look tempting to hackers. When they touch them — BOOM, alert.</span></div>
+          </div>
+          <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1.2rem;">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(22, 134, 255, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--blue);">3</div>
+            <div><strong style="color: var(--white);">Alerts immediately</strong><br><span style="color: var(--gray);">Sends you alerts the moment anything suspicious happens — via email or console.</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sentinel-visual">
+        <div class="sentinel-mock">
+          <span class="prompt">sentinel@your-server:~$</span> <span class="cmd">sentinel hunt</span><br>
+          <span class="info">[INFO] Starting persistence hunt...</span><br>
+          <span class="info">[INFO] Monitoring: 192.168.1.0/24</span><br>
+          <br>
+          <span class="success">[2:30 PM] All systems normal — 14 devices</span><br>
+          <span class="success">[3:00 PM] All systems normal — 14 devices</span><br>
+          <span class="warn">[3:15 PM] ⚠️ NEW DEVICE — Unknown (192.168.1.87)</span><br>
+          <span class="error">[3:15 PM] 🔴 DECOY FILE TOUCHED — "passwords.xlsx"</span><br>
+          <span class="warn">[3:16 PM] ⚠️ SSH brute force from 45.33.xx.xx</span><br>
+          <span class="success">[3:16 PM] ✅ IP auto-blocked via firewall</span><br>
+          <span class="info">[3:17 PM] 📧 Email alert sent to admin</span><br>
+          <br>
+          <span class="prompt">sentinel@your-server:~$</span> <span class="cmd">sentinel alerts</span><br>
+          <span class="success">[3:15 PM] NEW_DEVICE — Unknown (192.168.1.87)</span><br>
+          <span class="error">[3:15 PM] DECOY_MODIFIED — passwords.xlsx</span><br>
+          <span class="warn">[3:16 PM] AUTH_FAILURE — IP: 45.33.xx.xx (5 fails)</span><br>
+          <span class="success">[3:16 PM] IP_BLOCKED — 45.33.xx.xx (30 min)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section" id="how-it-works">
+    <div class="section-label">⚙️ How It Works</div>
+    <h2>Up and Running in 5 Minutes</h2>
+    <p>No complicated setup. No hiring a security team. Just install, configure, and forget.</p>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Install on Your Server</h3>
+        <p>One command. Sentinel installs in under 2 minutes on any Linux server, Raspberry Pi, or even your office computer.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We Configure It for You</h3>
+        <p>Our team sets up the network scan, deception traps, and alert settings tailored to your business. You don't touch a thing.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>It Runs 24/7 Automatically</h3>
+        <p>Sentinel monitors your network non-stop. It detects new devices, tracks password attempts, watches file changes — all automatically.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>You Get Real-Time Alerts</h3>
+        <p>When something suspicious happens, you get an instant alert. No waiting. No digging. Just "something happened — here's what."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detection Modules -->
+  <section class="section">
+    <div class="section-label">🔍 What It Detects</div>
+    <h2>8 Layers of Defense.<br>Nothing Slips Through.</h2>
+    <div class="detection-grid">
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(0, 230, 118, 0.1); color: var(--green);">📡</div>
+        <div>
+          <h4>Network Scanning</h4>
+          <p>Knows every device on your Wi-Fi. Flags unknown devices instantly.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(255, 59, 92, 0.1); color: var(--red);">🪤</div>
+        <div>
+          <h4>Deception Traps</h4>
+          <p>Fake files and services that tempt hackers. One touch = alert.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(255, 193, 7, 0.1); color: var(--amber);">📝</div>
+        <div>
+          <h4>File Integrity</h4>
+          <p>Monitors every file. If a document is changed, deleted, or added — you know.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(255, 59, 92, 0.1); color: var(--red);">⚡</div>
+        <div>
+          <h4>Process Monitoring</h4>
+          <p>Catches cryptominers, malware, and suspicious programs running on your systems.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(0, 188, 212, 0.1); color: var(--cyan);">🔑</div>
+        <div>
+          <h4>SSH Brute Force Blocking</h4>
+          <p>Automatically blocks IP addresses that try too many passwords. No human needed.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(255, 193, 7, 0.1); color: var(--amber);">🌐</div>
+        <div>
+          <h4>Outbound Monitoring</h4>
+          <p>Detects when your computer connects to suspicious foreign servers (reverse shells).</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(22, 134, 255, 0.1); color: var(--blue-glow);">👤</div>
+        <div>
+          <h4>User Activity Tracking</h4>
+          <p>Knows who's running admin commands and catches unauthorized access.</p>
+        </div>
+      </div>
+      <div class="detection-card">
+        <div class="det-icon" style="background: rgba(0, 230, 118, 0.1); color: var(--green);">🔧</div>
+        <div>
+          <h4>System Hardening</h4>
+          <p>Auto-checks your server security. Scores it 0-100. Alerts if it gets worse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alert Tiers -->
+  <section class="section">
+    <div class="section-label">🚨 Alerts That Matter</div>
+    <h2>Not All Alerts Are the Same.<br>We Categorize Them.</h2>
+    <div class="alert-cards">
+      <div class="alert-card critical">
+        <div class="alert-header">
+          <span class="alert-badge">Critical</span>
+        </div>
+        <h4>Hacker on Your Network</h4>
+        <p>Unknown device + touched deception trap = confirmed intruder. Auto-block their IP. Email you immediately. This is someone who shouldn't be on your network.</p>
+      </div>
+      <div class="alert-card warning">
+        <div class="alert-header">
+          <span class="alert-badge">Warning</span>
+        </div>
+        <h4>Password Attacks</h4>
+        <p>Someone is trying passwords on your SSH server. Sentinel blocks the attacker automatically. You get a warning — "We stopped someone trying to get in."</p>
+      </div>
+      <div class="alert-card info">
+        <div class="alert-header">
+          <span class="alert-badge">Info</span>
+        </div>
+        <h4>New Device Detected</h4>
+        <p>A new phone or laptop connected to your Wi-Fi. Could be a new employee, a guest, or something else. You decide if it's OK.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="section-label">💰 Pricing</div>
+    <h2>Simple. Transparent.<br>Every Business Can Afford It.</h2>
+    <p>No hidden fees. No long contracts. Cancel anytime.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Standalone</h3>
+        <div class="price">$150 <span>/hr</span></div>
+        <div class="price-desc">Best for: Small setups, one-time deployments</div>
+        <ul>
+          <li>Installation & configuration on your server</li>
+          <li>Network scan & deception setup</li>
+          <li>Email alert configuration</li>
+          <li>Initial hardening audit</li>
+          <li>Full report & walkthrough</li>
+          <li>Ongoing support: billed hourly</li>
+        </ul>
+        <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-price outline">Get Started</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Managed Sentinel</h3>
+        <div class="price">$450 <span>/month</span></div>
+        <div class="price-desc">Best for: Businesses that want full peace of mind</div>
+        <ul>
+          <li>Everything in Standalone</li>
+          <li>24/7 monitoring & management</li>
+          <li>Weekly security reports</li>
+          <li>Monthly threat assessment</li>
+          <li>Deception trap updates</li>
+          <li>Priority support (response &lt; 4hrs)</li>
+          <li>Unlimited alert reviews</li>
+        </ul>
+        <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-price primary">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <div class="price-desc">Best for: Multi-site organizations</div>
+        <ul>
+          <li>Everything in Managed</li>
+          <li>Multiple location support</li>
+          <li>Dedicated security analyst</li>
+          <li>Custom deception campaigns</li>
+          <li>Compliance reporting (SOC2, PCI)</li>
+          <li>Quarterly security reviews</li>
+          <li>Incident response support</li>
+        </ul>
+        <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-price outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-label">❓ FAQ</div>
+    <h2>Questions? We've Got Answers.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Do I need to be tech-savvy? <span class="faq-toggle">→</span></h3>
+        <p>No. TrinTech installs and configures everything for you. You don't need to touch a command line. We handle the technical side — you get the peace of mind.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work for small businesses with just 3-5 computers? <span class="faq-toggle">→</span></h3>
+        <p>Absolutely. Sentinel is perfect for small setups. Even with a few computers, you're vulnerable. Hackers target small businesses because they're easier to crack.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will Sentinel slow down my systems? <span class="faq-toggle">→</span></h3>
+        <p>No. Sentinel is designed to be lightweight — it uses zero external libraries and minimal resources. Your network performance won't be affected at all.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens when an alert fires? <span class="faq-toggle">→</span></h3>
+        <p>You get an immediate alert via email with details: what happened, from where, and what we did (or recommend). Critical alerts include auto-blocked IPs. You can always call us.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this legal? <span class="faq-toggle">→</span></h3>
+        <p>Sentinel runs exclusively on systems you own or have authorization to monitor. All activities are fully legal under Trinidad & Tobago's Cybercrimes Act and international law.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I see the source code? <span class="faq-toggle">→</span></h3>
+        <p>Sentinel is open source at <a href="https://github.com/trintechdigitaldefense/Sentinel" style="color: var(--blue);">github.com/trintechdigitaldefense/Sentinel</a>. But we recommend managed service — configuring and maintaining it yourself takes significant expertise.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I get false alerts? <span class="faq-toggle">→</span></h3>
+        <p>We fine-tune Sentinel during setup to minimize false positives. If a legitimate device triggers an alert, we add it to your "known devices" list. It learns and improves over time.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Stop Guessing.<br>Start Knowing.</h2>
+    <p>Your network is under attack right now. Not tomorrow. Not next week. <strong>Right now.</strong> Book a free scoping call and we'll show you exactly what Sentinel can find on your network.</p>
+    <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/" class="btn-primary" style="font-size: 1.1rem; padding: 1.1rem 2.5rem;">
+      <i class="fas fa-calendar"></i> Book Your Free Scoping Call
+    </a>
+    <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+      🇹🇹 Serving businesses across Trinidad & Tobago and the Caribbean
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://trintechdigitaldefense.github.io">TrinTech Website</a>
+      <a href="https://github.com/trintechdigitaldefense/Sentinel">Sentinel GitHub</a>
+      <a href="https://exile-aerobic-saddle-rough.2n6.me/booking/">Book a Call</a>
+      <a href="mailto:trintechdigitaldefense@gmail.com">Contact</a>
+      <a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407">LinkedIn</a>
+    </div>
+    <p>© 2026 TrinTech Digital Defense 🇹🇹 — Sentinel™ is a trademark of TrinTech Digital Defense</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">All rights reserved. For authorized security testing only.</p>
+  </footer>
+
+  <script>
+    function playVideo() {
+      var video = document.getElementById('sentinelVideo');
+      var placeholder = document.getElementById('videoPlaceholder');
+      video.play();
+      placeholder.style.display = 'none';
+    }
+
+    // Intersection Observer for animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.step-card, .detection-card, .problem-card, .pricing-card, .alert-card').forEach(el => {
+      el.style.opacity = '0';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

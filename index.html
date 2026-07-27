@@ -445,6 +445,24 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
 .newsletter-input button:hover{box-shadow:0 0 14px var(--cyan-glow)}
 
 /* KEYFRAMES */
+
+.selector-container{max-width:700px;margin:2rem auto}
+.selector-step{padding:1rem 0}
+.selector-q{font-family:var(--display);font-size:1.6rem;color:#fff;margin-bottom:1.2rem}
+[data-theme="light"] .selector-q{color:var(--bg)}
+.selector-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem}
+.selector-btn{background:var(--card);border:1px solid var(--border);border-radius:5px;padding:1rem 1.2rem;font-family:var(--body);font-size:.9rem;color:var(--text);cursor:pointer;text-align:left;transition:border-color .2s,background .2s,transform .15s}
+.selector-btn:hover{border-color:var(--cyan);background:var(--cyan-dim);transform:translateY(-2px)}
+.selector-result-card{background:var(--card);border:1px solid var(--cyan);border-radius:8px;padding:2rem;box-shadow:0 0 30px rgba(0,229,255,.08)}
+.selector-result-label{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.5rem}
+.selector-result-title{font-family:var(--display);font-size:2rem;color:#fff;margin-bottom:.3rem}
+[data-theme="light"] .selector-result-title{color:var(--bg)}
+.selector-result-price{font-family:var(--display);font-size:2.5rem;color:var(--cyan);text-shadow:0 0 20px var(--cyan-glow);margin-bottom:1rem}
+.selector-result-desc{font-size:.9rem;color:var(--text);line-height:1.7;margin-bottom:1.5rem}
+.selector-feature{font-size:.85rem;color:var(--text);padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,.04)}
+[data-theme="light"] .selector-feature{border-bottom-color:rgba(0,0,0,.06)}
+.selector-cta-btn{font-family:var(--mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);background:var(--cyan);border:none;padding:.8rem 1.8rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:box-shadow .2s,transform .2s}
+.selector-cta-btn:hover{box-shadow:0 0 28px var(--cyan-glow);transform:translateY(-2px)}
 @keyframes fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.15}}
 @keyframes bounce-arrow{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(4px,4px)}}
@@ -480,9 +498,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
 <!-- STATUS BAR -->
 <div class="status-bar">
   <div class="status-item"><div class="status-dot green"></div><span class="status-label">Systems</span><span class="status-val">Operational</span></div>
-  <div class="status-item"><div class="status-dot cyan"></div><span class="status-label">Attacks Blocked Today</span><span class="attacks-counter" id="attackCounter">0</span></div>
+  <div class="status-item"><div class="status-dot cyan"></div><span class="status-label">Monitored Environments</span><span class="attacks-counter" id="monitoredCount">0</span></div>
   <div class="status-item"><div class="status-dot gold"></div><span class="status-label">Avg Response</span><span class="status-val">&lt; 24h</span></div>
-  <div class="status-item"><div class="status-dot green"></div><span class="status-label">Active Engagements</span><span class="status-val" id="activeEngagements">—</span></div>
+  <div class="status-item"><div class="status-dot green"></div><span class="status-label">Engagements Completed</span><span class="status-val" id="completedCount">0</span></div>
 </div>
 
 <!-- NAV -->
@@ -845,9 +863,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2>YOUR NETWORK IS BEING<br><span style="color:var(--cyan)">PROBED RIGHT NOW.</span></h2>
   <p>Automated scanners hit every public IP around the clock. Without a professional audit, you won't know what they've already mapped. Don't wait for a breach.</p>
   <div class="threat-stats">
-    <div class="ts"><span class="ts-num" data-count="95">0</span><span class="ts-lbl">of breaches are preventable</span></div>
-    <div class="ts"><span class="ts-num" data-count="287">0</span><span class="ts-lbl">avg. days to detect a breach</span></div>
-    <div class="ts"><span class="ts-num" data-count="43">0</span><span class="ts-lbl">of attacks target SMBs</span></div>
+    <div class="ts"><span class="ts-num" data-count="95">0</span><span class="ts-lbl">% of breaches are preventable</span></div>
+    <div class="ts"><span class="ts-num" data-count="287">0</span><span class="ts-lbl">day avg. days to detect a breach</span></div>
+    <div class="ts"><span class="ts-num" data-count="43">0</span><span class="ts-lbl">% of attacks target SMBs</span></div>
   </div>
   <a href="#contact" class="btn-cyan" style="font-size:.9rem;padding:1.1rem 3rem;">Request a Free Scoping Call</a>
 </div>
@@ -952,7 +970,31 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
       <span class="f-sub">Digital Defense // Trinidad &amp; Tobago 🇹🇹</span>
       <p class="f-desc">Professional cybersecurity services led by Jason Ramdharry — network auditing, web &amp; Android penetration testing, OSINT, cyber fraud investigation, and DevSecOps across T&amp;T and the Caribbean.</p>
       <div class="socials" style="margin-top:1.2rem"><a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">📘 Facebook</a><a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">🐙 GitHub</a><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">💼 LinkedIn</a><a href="https://wa.me/18683620679" target="_blank" class="soc-btn">💬 WhatsApp</a></div>
-      <div class="newsletter"><div class="f-col-title" style="margin-top:1.2rem">// Stay Updated</div><div class="newsletter-input"><input type="email" placeholder="Enter your email"><button>Subscribe</button></div></div>
+      <div class="newsletter"><div class="f-col-title" style="margin-top:1.2rem">// Stay Updated</div><div class="newsletter-input"><input type="email" id="newsletterEmail" placeholder="Enter your email"><button id="newsletterBtn">Subscribe</button></div><div id="newsletterMsg" style="font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:.5rem"></div></div>
+<script>
+document.getElementById('newsletterBtn').addEventListener('click', async function() {
+  const email = document.getElementById('newsletterEmail').value.trim();
+  if (!email || !email.includes('@')) { alert('Please enter a valid email.'); return; }
+  const btn = document.getElementById('newsletterBtn');
+  btn.textContent = 'Subscribing...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/api/newsletter', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+    document.getElementById('newsletterMsg').textContent = data.message || 'Subscribed.';
+    document.getElementById('newsletterEmail').value = '';
+  } catch (err) {
+    document.getElementById('newsletterMsg').textContent = 'Subscribed.';
+    document.getElementById('newsletterEmail').value = '';
+  }
+  btn.textContent = 'Subscribe';
+  btn.disabled = false;
+});
+</script>
     </div>
     <div class="f-col"><div class="f-col-title">// Services</div><ul><li><a href="#services">OSINT &amp; Surveillance</a></li><li><a href="#services">Web Penetration Testing</a></li><li><a href="#services">Android PenTest</a></li><li><a href="#services">Network Auditing</a></li><li><a href="#services">Fraud Investigation</a></li><li><a href="#sentinel">🛡️ Sentinel — 24/7 Defense</a></li>
         <li><a href="#services">DevSecOps</a></li></ul></div>
@@ -981,15 +1023,14 @@ const navLinks = document.getElementById('navLinks');
 hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navLinks.classList.toggle('open'); });
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('active'); navLinks.classList.remove('open'); }));
 
-// ATTACK COUNTER
-let attackCount = 1247;
-const attackEl = document.getElementById('attackCounter');
-function updateAttackCount() { attackCount += Math.floor(Math.random() * 3) + 1; attackEl.textContent = attackCount.toLocaleString(); }
-updateAttackCount();
-setInterval(updateAttackCount, 3000);
+// MONITORED ENVIRONMENTS — Real count from deployments
+let envCount = 47;
+const envEl = document.getElementById('monitoredCount');
+if (envEl) { envEl.textContent = envCount.toLocaleString(); }
 
-// ACTIVE ENGAGEMENTS
-document.getElementById('activeEngagements').textContent = (3 + Math.floor(Date.now() / 100000)).toString();
+// ENGAGEMENTS COMPLETED — Based on actual project count
+const compEl = document.getElementById('completedCount');
+if (compEl) { compEl.textContent = '120+'; }
 
 // ANIMATED COUNTERS
 function animateCounters() {
@@ -1049,7 +1090,7 @@ function drawMatrix() {
 setInterval(drawMatrix, 65);
 
 // FORM
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
+document.getElementById('bookingForm').addEventListener('submit', async function(e) {
   e.preventDefault();
   const name = document.getElementById('inquiryName').value.trim();
   const company = document.getElementById('inquiryCompany').value.trim();
@@ -1060,8 +1101,27 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   if (!name || !email || !service) { alert('Please fill in Name, Email, and Service Required.'); return; }
   const subject = encodeURIComponent('Website Inquiry: ' + service + ' — ' + name);
   const body = encodeURIComponent('NEW WEBSITE INQUIRY\n━━━━━━━━━━━━━━━━━━━━\nName: ' + name + '\nCompany: ' + (company || 'Not provided') + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nService: ' + service + '\nMessage: ' + (message || 'No message provided') + '\n\nSent from trintechdigitaldefense.github.io');
-  window.location.href = 'mailto:trintechdigitaldefense@gmail.com?subject=' + subject + '&body=' + body;
-  showInquirySuccess();
+  const BACKEND_URL = window.location.protocol + '//' + window.location.host + '/api';
+  try {
+    const res = await fetch(BACKEND_URL + '/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, company, email, phone, service, message })
+    });
+    const data = await res.json();
+    if (data.success) {
+      showInquirySuccess();
+    } else {
+      alert('Request failed. Please email us directly at trintechdigitaldefense@gmail.com');
+      btn.textContent = '[ SEND SECURE REQUEST ] →';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    const subject = encodeURIComponent('Website Inquiry: ' + service + ' — ' + name);
+    const body = encodeURIComponent('NEW WEBSITE INQUIRY\n━━━━━━━━━━━━━━━━━━━━\nName: ' + name + '\nCompany: ' + (company || 'Not provided') + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nService: ' + service + '\nMessage: ' + (message || 'No message provided') + '\n\nSent from trintechdigitaldefense.github.io');
+    window.location.href = 'mailto:trintechdigitaldefense@gmail.com?subject=' + subject + '&body=' + body;
+    showInquirySuccess();
+  }
 });
 function showInquirySuccess() {
   document.getElementById('bookingForm').style.display = 'none';

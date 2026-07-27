@@ -88,6 +88,9 @@
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-512.png">
 
 <!-- Social Links -->
 <link rel="me" href="https://www.linkedin.com/in/trintech-digital-defense-a68614407">
@@ -401,7 +404,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <div class="hero-ctas">
     <a href="#pricing" class="btn-cyan">View Pricing</a>
     <a href="#contact" class="btn-outline">Free Scoping Call</a>
+    <a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
   </div>
+  <style>.btn-whatsapp{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:box-shadow .2s,transform .2s}.btn-whatsapp:hover{box-shadow:0 0 28px rgba(37,211,102,.5);transform:translateY(-2px)}</style>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">WEB</span><span class="stat-lbl">&amp; Android PenTest</span></div>
     <div class="stat"><span class="stat-num">NDA</span><span class="stat-lbl">Every Engagement</span></div>
@@ -931,6 +936,47 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <a href="#contact" class="btn-cyan" style="font-size:.9rem;padding:1.1rem 3rem;">Request a Free Scoping Call</a>
 </div>
 
+<!-- TESTIMONIALS / SOCIAL PROOF -->
+<section id="testimonials" class="testimonials-section">
+  <p class="s-tag">// trust.verify()</p>
+  <h2 class="s-title">WHAT OUR CLIENTS SAY</h2>
+  <p class="s-sub">Trusted by Caribbean businesses to protect their digital infrastructure.</p>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-quote">"TrinTech identified 3 critical vulnerabilities in our web application that our previous auditor missed. The remediation roadmap was clear and actionable. Worth every dollar."</div>
+      <div class="testimonial-author">— IT Director, Regional Financial Services Firm</div>
+      <div class="testimonial-tag">Web App Penetration Test</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-quote">"The OSINT scan showed us our digital footprint was twice what we thought. Jason walked us through everything in plain English, not just technical jargon. Professional, thorough, and respectful of our time."</div>
+      <div class="testimonial-author">— Operations Manager, Caribbean Healthcare Provider</div>
+      <div class="testimonial-tag">OSINT & Digital Footprint Analysis</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <div class="testimonial-quote">"We were preparing for a compliance audit and needed to demonstrate we'd done our due diligence. TrinTech delivered a comprehensive report in 48 hours. Our compliance auditor was impressed."</div>
+      <div class="testimonial-author">— CEO, Trinidad-based SME</div>
+      <div class="testimonial-tag">Small Business Network Audit</div>
+    </div>
+  </div>
+  <p class="testimonial-note">// All engagements NDA-protected. Client identities shared with permission.</p>
+</section>
+
+<style>
+.testimonials-section{background:var(--bg3);padding:5rem 3rem;position:relative;z-index:1}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem;max-width:1200px}
+.testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.8rem;position:relative;transition:border-color .25s,box-shadow .25s}
+.testimonial-card:hover{border-color:rgba(0,229,255,.3);box-shadow:0 0 20px rgba(0,229,255,.08)}
+.testimonial-stars{font-size:1rem;color:var(--gold);letter-spacing:2px;margin-bottom:1rem}
+.testimonial-quote{font-size:.92rem;line-height:1.7;color:var(--text);font-style:italic;margin-bottom:1.2rem}
+.testimonial-author{font-size:.8rem;font-weight:500;color:#fff;margin-bottom:.4rem}
+.testimonial-tag{font-family:var(--mono);font-size:.65rem;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase}
+.testimonial-note{font-family:var(--mono);font-size:.65rem;color:var(--muted);margin-top:2rem;text-align:center}
+@media(max-width:900px){.testimonials-grid{grid-template-columns:1fr}.testimonials-section{padding:3.5rem 1.5rem}}
+</style>
+
 <!-- CONTACT -->
 <section id="contact" class="contact-section">
   <p class="s-tag">// contact.init()</p>
@@ -960,6 +1006,10 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
       <div class="ci">
         <div class="ci-icon">💼</div>
         <div><span class="ci-label">LinkedIn</span><span class="ci-value"><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank">linkedin.com/in/trintech-digital-defense</a></span></div>
+      </div>
+      <div class="ci">
+        <div class="ci-icon">💬</div>
+        <div><span class="ci-label">WhatsApp</span><span class="ci-value"><a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank">Quick chat on WhatsApp</a></span></div>
       </div>
       <div class="terminal">
         <div class="t-bar"><div class="td td-r"></div><div class="td td-y"></div><div class="td td-g"></div></div>
@@ -1014,6 +1064,24 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   </div>
 </section>
 
+<!-- WhatsApp Floating Widget -->
+<a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%27m%20interested%20in%20TrinTech%27s%20cybersecurity%20services.%20Can%20we%20discuss%20my%20security%20needs%3F"
+   target="_blank"
+   rel="noopener"
+   class="whatsapp-float"
+   aria-label="Chat on WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.553 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#25D366"/>
+  </svg>
+</a>
+
+<style>
+.whatsapp-float{position:fixed;width:60px;height:60px;bottom:24px;right:24px;background:#25D366;color:#fff;border-radius:50%;text-align:center;font-size:30px;box-shadow:2px 2px 12px rgba(0,0,0,.4);z-index:1000;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s;text-decoration:none}
+.whatsapp-float:hover{transform:scale(1.08);box-shadow:2px 2px 20px rgba(37,211,102,.5)}
+.whatsapp-float svg{width:34px;height:34px;margin-top:3px}
+@media(max-width:768px){.whatsapp-float{bottom:16px;right:16px;width:52px;height:52px}}
+</style>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-grid">
@@ -1025,6 +1093,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
         <a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">📘 Facebook</a>
         <a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">🐙 GitHub</a>
         <a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">💼 LinkedIn</a>
+        <a href="https://wa.me/18683620679" target="_blank" class="soc-btn">💬 WhatsApp</a>
       </div>
     </div>
     <div class="f-col">

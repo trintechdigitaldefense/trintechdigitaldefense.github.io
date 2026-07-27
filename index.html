@@ -1056,31 +1056,14 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
   const service = document.getElementById('inquiryService').value;
   const message = document.getElementById('inquiryMessage').value.trim();
   if (!name || !email || !service) { alert('Please fill in Name, Email, and Service Required.'); return; }
-  const btn = document.getElementById('inquirySubmitBtn'); btn.textContent = '[ PROCESSING... ]'; btn.disabled = true;
   const subject = encodeURIComponent('Website Inquiry: ' + service + ' — ' + name);
-  const body = encodeURIComponent('NEW WEBSITE INQUIRY
-━━━━━━━━━━━━━━━━━━━━
-Name: ' + name + '
-Company: ' + (company || 'Not provided') + '
-Email: ' + email + '
-Phone: ' + (phone || 'Not provided') + '
-Service: ' + service + '
-Message: ' + (message || 'No message provided') + '
-━━━━━━━━━━━━━━━━━━━━
-Sent from trintechdigitaldefense.github.io');
-  fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, company, email, phone, service, message, source: 'website-inquiry' }) })
-    .then(r => r.json()).then(res => { if (res.ok || (r && r.ok)) { showInquirySuccess(); } else { fallbackMailto(); } })
-    .catch(() => { fallbackMailto(); });
-});
-function fallbackMailto() {
-  setTimeout(() => { window.location.href = 'mailto:trintechdigitaldefense@gmail.com?subject=Website Inquiry&body=New inquiry from TrinTech website'; }, 500);
+  const body = encodeURIComponent('NEW WEBSITE INQUIRY\n━━━━━━━━━━━━━━━━━━━━\nName: ' + name + '\nCompany: ' + (company || 'Not provided') + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nService: ' + service + '\nMessage: ' + (message || 'No message provided') + '\n\nSent from trintechdigitaldefense.github.io');
+  window.location.href = 'mailto:trintechdigitaldefense@gmail.com?subject=' + subject + '&body=' + body;
   showInquirySuccess();
-}
+});
 function showInquirySuccess() {
   document.getElementById('bookingForm').style.display = 'none';
   document.getElementById('successMsg').style.display = 'block';
-  document.getElementById('inquirySubmitBtn').textContent = '[ SEND SECURE REQUEST ] →';
-  document.getElementById('inquirySubmitBtn').disabled = false;
 }
 
 // SCROLL REVEAL

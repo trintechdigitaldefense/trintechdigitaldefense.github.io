@@ -89,9 +89,9 @@ Lightweight, multi-threaded OSINT and infrastructure auditing suite with subdoma
 <div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
 
 **[🛡️ Sentinel](https://github.com/trintechdigitaldefense/Sentinel)**
-*Python · Device Activity Tracker*
+*Python · Active Deception Device Tracker*
 
-Advanced device monitoring with active deception capabilities. Tracks device activity patterns and detects anomalies for security operations.
+Advanced device activity tracker with active deception engine. Deploys decoy artifacts to trap intruders, continuously monitors behavioral patterns (persistence hunting), and alerts on new devices, auth failures, and decoy access.
 
 `Python` `Monitoring` `Deception` `Detection`
 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrinTech — Facebook Token Generator</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a1628;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            background: #111d33;
+            border: 1px solid #1686ff33;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #1686ff;
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+        .subtitle { color: #8899aa; font-size: 0.9em; margin-bottom: 24px; }
+        .btn {
+            display: inline-block;
+            background: #1686ff;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            margin: 8px 0;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        .btn:hover { background: #1a9dff; }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #1686ff;
+            color: #1686ff;
+        }
+        .btn-outline:hover { background: #1686ff22; }
+        .btn-success { background: #22c55e; }
+        textarea {
+            width: 100%;
+            min-height: 80px;
+            background: #0a1628;
+            border: 1px solid #334;
+            color: #e0e0e0;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 0.75em;
+            resize: vertical;
+            margin: 12px 0;
+        }
+        .status {
+            padding: 12px;
+            border-radius: 8px;
+            margin: 12px 0;
+            font-size: 0.9em;
+        }
+        .status.success { background: #22c55e22; border: 1px solid #22c55e; color: #22c55e; }
+        .status.error { background: #ef444422; border: 1px solid #ef4444; color: #ef4444; }
+        .status.info { background: #1686ff22; border: 1px solid #1686ff; color: #1686ff; }
+        .steps {
+            text-align: left;
+            background: #0a1628;
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .steps li {
+            margin: 8px 0;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        .steps li strong { color: #1686ff; }
+        .hidden { display: none; }
+        .copy-btn {
+            background: #1686ff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+        .warn { color: #f59e0b; font-size: 0.85em; margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 TrinTech Facebook Token</h1>
+        <p class="subtitle">Get your Page Access Token with all required permissions</p>
+
+        <div id="step1">
+            <div class="steps">
+                <ol>
+                    <li>Click the button below to open Facebook's token generator</li>
+                    <li>Click <strong>"Generate Token"</strong></li>
+                    <li>Click <strong>"Get User Access Token"</strong></li>
+                    <li>Check these boxes: <strong>pages_manage_posts</strong>, <strong>pages_read_engagement</strong>, <strong>pages_show_list</strong></li>
+                    <li>Select your page: <strong>TrinTech Digital Defense</strong></li>
+                    <li>Copy the token and paste it below</li>
+                </ol>
+            </div>
+            <a class="btn" id="fbLink" href="#">Open Facebook Token Generator →</a>
+            <p class="warn">Tip: Use Desktop site mode in your browser for better experience</p>
+        </div>
+
+        <div id="step2" class="hidden">
+            <p>Paste your access token below:</p>
+            <textarea id="tokenInput" placeholder="EAAU..."></textarea>
+            <button class="btn btn-outline" onclick="testToken()">Test Token</button>
+            <div id="result"></div>
+        </div>
+
+        <div id="step3" class="hidden">
+            <div class="status success" id="tokenStatus"></div>
+            <textarea id="finalToken" readonly></textarea>
+            <button class="copy-btn" onclick="copyToken()">📋 Copy Token</button>
+            <p class="warn" style="margin-top: 12px; color: #22c55e;">Token verified! Save it securely.</p>
+        </div>
+    </div>
+
+    <script>
+        const PAGE_ID = '1280108201846741';
+
+        // Build the redirect URL
+        const APP_ID = ''; // Will use direct permissions URL
+        const REDIRECT_URI = window.location.href.split('?')[0];
+
+        document.getElementById('fbLink').href =
+            'https://www.facebook.com/dialog/oauth?' +
+            'client_id=&' +
+            'redirect_uri=' + encodeURIComponent(window.location.href.split('?')[0]) +
+            '&response_type=code,' +
+            'scope=pages_manage_posts,pages_read_engagement,pages_show_list&' +
+            'prompt=consent';
+
+        // Actually, let's use a simpler approach: open the Graph API Explorer
+        document.getElementById('fbLink').href =
+            'https://developers.facebook.com/tools/explorer/?' +
+            'client_id=&' +
+            'redirect_uri=' + encodeURIComponent(window.location.href.split('?')[0]) +
+            '&response_type=token,' +
+            'scope=pages_manage_posts,pages_read_engagement,pages_show_list';
+
+        function showStep(id) {
+            document.querySelectorAll('.container > div[id^="step"]').forEach(d => d.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+
+        async function testToken() {
+            const token = document.getElementById('tokenInput').value.trim();
+            const result = document.getElementById('result');
+
+            result.innerHTML = '<div class="status info">Testing token...</div>';
+
+            try {
+                const res = await fetch(
+                    `https://graph.facebook.com/v25.0/me/accounts?access_token=${encodeURIComponent(token)}`
+                );
+                const data = await res.json();
+
+                if (data.error) {
+                    result.innerHTML = `<div class="status error">Error: ${data.error.message}</div>
+                        <p class="warn">Try selecting ALL THREE permissions: pages_manage_posts, pages_read_engagement, pages_show_list</p>`;
+                } else {
+                    const page = data.data?.[0];
+                    if (page) {
+                        result.innerHTML = `<div class="status success">✅ Verified: ${page.name} (ID: ${page.id})<br>
+                            Permissions: ${page.tasks?.join(', ') || 'unknown'}</div>`;
+
+                        document.getElementById('finalToken').value = token;
+                        setTimeout(() => showStep('step3'), 1500);
+                    } else {
+                        result.innerHTML = '<div class="status error">No pages found. Make sure you selected the TrinTech page.</div>';
+                    }
+                }
+            } catch (e) {
+                result.innerHTML = `<div class="status error">Network error: ${e.message}</div>`;
+            }
+        }
+
+        function copyToken() {
+            const token = document.getElementById('finalToken');
+            token.select();
+            document.execCommand('copy');
+            alert('Token copied! Save it in a secure place.');
+        }
+
+        // Check if we were redirected back with a token
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('access_token')) {
+            document.getElementById('tokenInput').value = params.get('access_token');
+            showStep('step2');
+        } else if (params.get('code')) {
+            // Exchange code for token (requires server)
+            showStep('step2');
+            document.getElementById('tokenInput').placeholder = 'Enter token from Facebook redirect...';
+        }
+    </script>
+</body>
+</html>

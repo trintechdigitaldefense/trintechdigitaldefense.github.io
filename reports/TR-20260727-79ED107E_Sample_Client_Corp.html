@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Assessment Report — Sample Client Corp</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap');
+        
+        :root {
+            --bg: #030a0e; --bg2: #050f15; --cyan: #00e5ff; --green: #00ff9d;
+            --text: #c8d8e0; --muted: #4a6475; --border: rgba(0,229,255,0.14);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; line-height: 1.7; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; padding: 40px 0 30px; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+        .logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--cyan); letter-spacing: .1em; }
+        .tagline { font-family: 'Share Tech Mono', monospace; font-size: .7rem; color: var(--muted); letter-spacing: .2em; }
+        .report-id { font-family: 'Share Tech Mono', monospace; font-size: .65rem; color: var(--muted); margin-top: 1rem; letter-spacing: .1em; }
+        h1 { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #fff; letter-spacing: .05em; margin: 2rem 0 1rem; }
+        h2 { font-family: 'Share Tech Mono', monospace; font-size: .7rem; color: var(--cyan); letter-spacing: .2em; text-transform: uppercase; margin: 2rem 0 .5rem; }
+        .section { margin-bottom: 2rem; }
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+        .meta-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 14px; }
+        .meta-label { font-family: 'Share Tech Mono', monospace; font-size: .6rem; color: var(--muted); letter-spacing: .15em; text-transform: uppercase; }
+        .meta-value { font-size: .9rem; color: #fff; margin-top: .3rem; }
+        .footer { text-align: center; padding: 30px 0 20px; border-top: 1px solid var(--border); margin-top: 3rem; font-size: .75rem; color: var(--muted); }
+        .nda { background: #0a1520; border: 1px dashed var(--border); border-radius: 6px; padding: 14px; margin: 1.5rem 0; font-size: .8rem; color: var(--muted); }
+        @media print {
+            body { background: #fff; color: #333; }
+            .section { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">TrinTech Digital Defense</div>
+            <div class="tagline">DEFEND. DETECT. DOMINATE. — Trinidad & Tobago 🇹🇹</div>
+            <div class="report-id">REPORT ID: TR-20260727-79ED107E | CLASSIFICATION: CONFIDENTIAL — NDA PROTECTED</div>
+        </div>
+        
+        <!-- META -->
+        <div class="meta-grid">
+            <div class="meta-item">
+                <div class="meta-label">Client</div>
+                <div class="meta-value">Sample Client Corp</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Service Type</div>
+                <div class="meta-value">Security Assessment</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Date</div>
+                <div class="meta-value">July 27, 2026</div>
+            </div>
+            <div class="meta-item">
+                <div class="meta-label">Prepared By</div>
+                <div class="meta-value">Jason Ramdharry, Founder</div>
+            </div>
+        </div>
+        
+        <!-- EXECUTIVE SUMMARY -->
+        <h2>EXECUTIVE SUMMARY</h2>
+        <div class="section">
+            <p style="font-size:.95rem;margin-bottom:1rem">
+                TrinTech Digital Defense conducted a security assessment for <strong style="color:#fff">Sample Client Corp</strong>
+                on July 27, 2026. This report presents the findings, risk analysis, and
+                prioritized remediation recommendations.
+            </p>
+            
+    <div style="background:#0a1520;border:1px solid var(--border);border-radius:8px;padding:20px;margin-bottom:1.5rem">
+        <div style="font-size:.6rem;letter-spacing:.2em;color:#888;text-transform:uppercase;margin-bottom:.5rem">OVERALL RISK ASSESSMENT</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff">🔴 CRITICAL — Immediate action required</div>
+    </div>
+    
+    <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <div style="background:#0a1520;border:1px solid #ff3333;border-radius:8px;padding:16px;text-align:center;flex:1;min-width:120px"><div style="font-size:2rem;font-weight:700;color:#ff3333">1</div><div style="font-size:.6rem;letter-spacing:.1em;color:#888;text-transform:uppercase;margin-top:.3rem">CRITICAL</div></div><div style="background:#0a1520;border:1px solid #ff7700;border-radius:8px;padding:16px;text-align:center;flex:1;min-width:120px"><div style="font-size:2rem;font-weight:700;color:#ff7700">1</div><div style="font-size:.6rem;letter-spacing:.1em;color:#888;text-transform:uppercase;margin-top:.3rem">HIGH</div></div><div style="background:#0a1520;border:1px solid #ffcc00;border-radius:8px;padding:16px;text-align:center;flex:1;min-width:120px"><div style="font-size:2rem;font-weight:700;color:#ffcc00">1</div><div style="font-size:.6rem;letter-spacing:.1em;color:#888;text-transform:uppercase;margin-top:.3rem">MEDIUM</div></div><div style="background:#0a1520;border:1px solid #33aaff;border-radius:8px;padding:16px;text-align:center;flex:1;min-width:120px"><div style="font-size:2rem;font-weight:700;color:#33aaff">1</div><div style="font-size:.6rem;letter-spacing:.1em;color:#888;text-transform:uppercase;margin-top:.3rem">LOW</div></div>
+    </div>
+    
+    <div style="font-size:.85rem;color:#888;margin-bottom:.5rem">
+        📊 <strong>4</strong> findings identified across <strong>Sample Client Corp</strong><br>
+        📅 Scan conducted: <strong>July 27, 2026</strong><br>
+        🔒 All findings are NDA-protected under TrinTech Digital Defense engagement terms.
+    </div>
+    
+        </div>
+        
+        <!-- ALL FINDINGS -->
+        <h2>DETAILED FINDINGS</h2>
+        <div class="section">
+            <table style="width:100%;border-collapse:collapse;margin-top:1rem">
+        <thead>
+            <tr style="background:var(--cyan);color:#000">
+                <th style="padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.5px;text-transform:uppercase">Severity</th>
+                <th style="padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.5px;text-transform:uppercase">Finding</th>
+                <th style="padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.5px;text-transform:uppercase">Details</th>
+                <th style="padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.5px;text-transform:uppercase">Remediation</th>
+                <th style="padding:12px 16px;text-align:left;font-size:12px;letter-spacing:.5px;text-transform:uppercase">Affected</th>
+            </tr>
+        </thead>
+        <tbody><tr style="background:#0a1520">
+            <td style="padding:12px 16px;width:120px"><span style="background:#ff3333;color:#fff;padding:2px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.5px">CRITICAL</span></td>
+            <td style="padding:12px 16px;font-weight:600;color:#fff">Unpatched Apache Log4j (CVE-2021-44228)</td>
+            <td style="padding:12px 16px;color:var(--text)">Apache Log4j 2.x found on web server with RCE vulnerability. Remote attackers can execute arbitrary code.</td>
+            <td style="padding:12px 16px;color:#00e5ff">Update Log4j to version 2.17.1 or later immediately</td>
+            <td style="padding:12px 16px;color:#888;font-size:12px">web-server-01.trintech.tt:443</td>
+        </tr><tr style="background:#0d1a25">
+            <td style="padding:12px 16px;width:120px"><span style="background:#ff7700;color:#fff;padding:2px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.5px">HIGH</span></td>
+            <td style="padding:12px 16px;font-weight:600;color:#fff">SSL/TLS Weak Cipher Suites Enabled</td>
+            <td style="padding:12px 16px;color:var(--text)">Server supports RC4 and 3DES cipher suites which are known weak encryption algorithms.</td>
+            <td style="padding:12px 16px;color:#00e5ff">Disable weak cipher suites, enable only TLS 1.2+ with AES-GCM ciphers</td>
+            <td style="padding:12px 16px;color:#888;font-size:12px">web-server-01.trintech.tt:443</td>
+        </tr><tr style="background:#0a1520">
+            <td style="padding:12px 16px;width:120px"><span style="background:#ffcc00;color:#fff;padding:2px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.5px">MEDIUM</span></td>
+            <td style="padding:12px 16px;font-weight:600;color:#fff">Missing X-Frame-Options Header</td>
+            <td style="padding:12px 16px;color:var(--text)">Web application does not set X-Frame-Options header, allowing clickjacking attacks.</td>
+            <td style="padding:12px 16px;color:#00e5ff">Add 'X-Frame-Options: DENY' header to all pages</td>
+            <td style="padding:12px 16px;color:#888;font-size:12px">web-app.trintech.tt</td>
+        </tr><tr style="background:#0d1a25">
+            <td style="padding:12px 16px;width:120px"><span style="background:#33aaff;color:#fff;padding:2px 10px;border-radius:3px;font-size:11px;font-weight:700;letter-spacing:.5px">LOW</span></td>
+            <td style="padding:12px 16px;font-weight:600;color:#fff">Default SSH Configuration (Port 22)</td>
+            <td style="padding:12px 16px;color:var(--text)">SSH service running on default port 22, increasing brute-force attack surface.</td>
+            <td style="padding:12px 16px;color:#00e5ff">Change SSH to non-standard port, disable password authentication, use key-based auth only</td>
+            <td style="padding:12px 16px;color:#888;font-size:12px">192.168.1.10</td>
+        </tr></tbody>
+    </table>
+        </div>
+        
+        <!-- REMEDIATION ROADMAP -->
+        <h2>REMEDIATION ROADMAP</h2>
+        <div class="section">
+            <div style='margin-bottom:1.5rem'><div style='font-size:.7rem;letter-spacing:.2em;color:#ff3333;text-transform:uppercase;margin-bottom:.5rem'>⚡ IMMEDIATE (0-24 HOURS)</div><div style='background:#1a0000;border-left:3px solid #ff3333;padding:10px 14px;margin-bottom:6px;border-radius:0 4px 4px 0'><strong style='color:#fff'>Unpatched Apache Log4j (CVE-2021-44228)</strong><br><span style='color:#aaa;font-size:.8rem'>Update Log4j to version 2.17.1 or later immediately</span></div></div><div style='margin-bottom:1.5rem'><div style='font-size:.7rem;letter-spacing:.2em;color:#ff7700;text-transform:uppercase;margin-bottom:.5rem'>⏰ SHORT-TERM (1-7 DAYS)</div><div style='background:#1a1000;border-left:3px solid #ff7700;padding:10px 14px;margin-bottom:6px;border-radius:0 4px 4px 0'><strong style='color:#fff'>SSL/TLS Weak Cipher Suites Enabled</strong><br><span style='color:#aaa;font-size:.8rem'>Disable weak cipher suites, enable only TLS 1.2+ with AES-GCM ciphers</span></div></div><div style='margin-bottom:1.5rem'><div style='font-size:.7rem;letter-spacing:.2em;color:#ffcc00;text-transform:uppercase;margin-bottom:.5rem'>📋 MEDIUM-TERM (1-4 WEEKS)</div><div style='background:#1a1500;border-left:3px solid #ffcc00;padding:10px 14px;margin-bottom:6px;border-radius:0 4px 4px 0'><strong style='color:#fff'>Missing X-Frame-Options Header</strong><br><span style='color:#aaa;font-size:.8rem'>Add 'X-Frame-Options: DENY' header to all pages</span></div></div><div><div style='font-size:.7rem;letter-spacing:.2em;color:#33aaff;text-transform:uppercase;margin-bottom:.5rem'>📌 ONGOING (1-3 MONTHS)</div><div style='background:#00101a;border-left:3px solid #33aaff;padding:10px 14px;margin-bottom:6px;border-radius:0 4px 4px 0'><strong style='color:#fff'>Default SSH Configuration (Port 22)</strong><br><span style='color:#aaa;font-size:.8rem'>Change SSH to non-standard port, disable password authentication, use key-based auth only</span></div></div>
+        </div>
+        
+        <!-- NDA NOTICE -->
+        <div class="nda">
+            <strong style="color:var(--cyan)">🔒 NDA-CONFIDENTIAL</strong><br>
+            This report contains proprietary security findings protected under the Non-Disclosure Agreement
+            between TrinTech Digital Defense and Sample Client Corp. Unauthorized distribution, reproduction,
+            or disclosure of this document is strictly prohibited. This report is intended solely for the
+            use of Sample Client Corp and their authorized representatives.
+        </div>
+        
+        <!-- NEXT STEPS -->
+        <h2>NEXT STEPS</h2>
+        <div class="section">
+            <p style="font-size:.85rem;color:#888">
+                1. Review findings with internal IT/security team<br>
+                2. Prioritize CRITICAL and HIGH remediation actions<br>
+                3. Schedule remediation implementation<br>
+                4. Book follow-up assessment to verify fixes<br>
+                5. <strong style="color:var(--cyan)">Contact us:</strong> trintechdigitaldefense@gmail.com | +1 (868) 362-0679
+            </p>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            TrinTech Digital Defense 🛡️ Trinidad & Tobago 🇹🇹<br>
+            trintechdigitaldefense@gmail.com | +1 (868) 362-0679 | https://trintechdigitaldefense.github.io<br>
+            <span style="font-size:.65rem;letter-spacing:.2em;opacity:.6">DEFEND. DETECT. DOMINATE.</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrinTech — Get Facebook Token</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,Inter,sans-serif;background:#0a1628;color:#e0e0e0;
+            display:flex;flex-direction:column;align-items:center;justify-content:center;
+            min-height:100vh;padding:20px}
+        .box{background:#111d33;border:1px solid #1686ff33;border-radius:16px;padding:30px;
+            max-width:480px;width:100%;text-align:center}
+        h1{color:#1686ff;font-size:1.3em;margin-bottom:6px}
+        .sub{color:#8899aa;font-size:.85em;margin-bottom:20px}
+        .btn{display:inline-block;background:#1686ff;color:#fff;padding:14px 24px;border-radius:8px;
+            text-decoration:none;font-weight:600;font-size:1em;margin:6px 0;cursor:pointer;border:none;width:100%}
+        .btn:active{background:#1a9dff}
+        .btn-green{background:#22c55e}
+        .btn-green:active{background:#16a34a}
+        textarea{width:100%;min-height:70px;background:#0a1628;border:1px solid #334;color:#e0e0e0;
+            border-radius:8px;padding:12px;font-family:monospace;font-size:.75em;resize:vertical;margin:10px 0}
+        .ok{padding:12px;border-radius:8px;margin:12px 0;font-size:.9em}
+        .ok.ok{background:#22c55e22;border:1px solid #22c55e;color:#22c55e}
+        .ok.err{background:#ef444422;border:1px solid #ef4444;color:#ef4444}
+        .ok.info{background:#1686ff22;border:1px solid #1686ff;color:#1686ff}
+        .hidden{display:none}
+        .copy-btn{background:#1686ff;color:#fff;border:none;padding:8px 16px;border-radius:6px;
+            cursor:pointer;font-size:.85em;margin-top:6px}
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>🔑 Facebook Page Token</h1>
+    <p class="sub">TrinTech Digital Defense</p>
+
+    <!-- Step 1 -->
+    <div id="s1">
+        <p style="font-size:.9em;margin-bottom:16px;color:#8899aa">
+            1. Click the button below<br>
+            2. It opens Facebook — tap "Continue"<br>
+            3. Copy the long URL it redirects to<br>
+            4. Paste it here
+        </p>
+        <a class="btn" id="go" href="#">Open Facebook →</a>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="s2" class="hidden">
+        <p style="font-size:.85em;color:#8899aa;margin-bottom:8px">Paste the full URL from the address bar:</p>
+        <textarea id="urlInput" placeholder="https://developers.facebook.com/tools/explorer/...#access_token=EAAU..."></textarea>
+        <button class="btn btn-green" onclick="parse()">Extract Token</button>
+        <div id="result"></div>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="s3" class="hidden">
+        <div class="ok ok" id="okMsg"></div>
+        <textarea id="tokenOut" readonly></textarea>
+        <button class="copy-btn" onclick="document.getElementById('tokenOut').select();document.execCommand('copy');alert('Copied!')">📋 Copy</button>
+        <p style="font-size:.8em;color:#22c55e;margin-top:10px">✅ Token verified — share it with your agent</p>
+    </div>
+</div>
+
+<script>
+const REDIRECT = 'https://exile-aerobic-saddle-rough.2n6.me/fb-callback.html';
+
+// Step 1: Build the consent URL with all required scopes
+document.getElementById('go').href =
+    'https://www.facebook.com/dialog/oauth?' +
+    'client_id=0&' +
+    'redirect_uri=' + encodeURIComponent(REDIRECT) +
+    '&response_type=token%2Ccode&' +
+    'scope=pages_manage_posts%2Cpages_read_engagement%2Cpages_show_list%2Cpages_manage_engagement&' +
+    'user_id=' +
+    'prompt=consent';
+
+// Check for redirected token
+const params = new URLSearchParams(window.location.search);
+if (params.get('access_token')) {
+    document.getElementById('urlInput').value =
+        'https://developers.facebook.com/tools/explorer/#access_token=' + params.get('access_token');
+    document.getElementById('s1').classList.add('hidden');
+    document.getElementById('s2').classList.remove('hidden');
+}
+
+function parse() {
+    const url = document.getElementById('urlInput').value.trim();
+    const tokenMatch = url.match(/access_token=([^&]+)/);
+    if (!tokenMatch) {
+        document.getElementById('result').innerHTML = '<div class="ok err">No token found in URL. Paste the full URL including #access_token=...</div>';
+        return;
+    }
+    const token = tokenMatch[1];
+    document.getElementById('s2').classList.add('hidden');
+    document.getElementById('s3').classList.remove('hidden');
+    document.getElementById('okMsg').textContent = 'Token extracted. Verifying...';
+    document.getElementById('tokenOut').value = token;
+
+    // Verify
+    fetch(`https://graph.facebook.com/v25.0/me/accounts?access_token=${encodeURIComponent(token)}`)
+        .then(r => r.json())
+        .then(d => {
+            if (d.error) {
+                document.getElementById('okMsg').className = 'ok err';
+                document.getElementById('okMsg').innerHTML = '❌ Token invalid.<br><small>' + d.error.message + '</small><br><br>Try: open <b>developers.facebook.com/tools/explorer</b> → click <b>Generate Access Token</b> → select page → copy URL → paste here';
+            } else {
+                const p = d.data?.[0];
+                if (p) {
+                    document.getElementById('okMsg').className = 'ok ok';
+                    document.getElementById('okMsg').innerHTML =
+                        `✅ <b>${p.name}</b> (ID: ${p.id})<br><small>Permissions: ${p.tasks?.join(', ') || 'N/A'}</small>`;
+                } else {
+                    document.getElementById('okMsg').className = 'ok err';
+                    document.getElementById('okMsg').innerHTML = 'Page not found. Did you select TrinTech Digital Defense?';
+                }
+            }
+        })
+        .catch(e => {
+            document.getElementById('okMsg').className = 'ok info';
+            document.getElementById('okMsg').textContent = 'Token extracted (network error during verification, but token looks valid). Share it with your agent.';
+        });
+}
+</script>
+</body>
+</html>

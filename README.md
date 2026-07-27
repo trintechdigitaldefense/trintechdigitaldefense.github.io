@@ -1,86 +1,159 @@
-# 👋 Hi, I'm Jason Ramdharry — Founder of TrinTech Digital Defense
+# Jason Ramdharry
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.12+-blue?style=flat-square&logo=python)](https://www.python.org)
-[![Cybersecurity](https://img.shields.io/badge/Cybersecurity-Offensive%20Security-red?style=flat-square&logo=metasploit)](https://www.metasploit.com)
-[![OSINT](https://img.shields.io/badge/OSINT-Intel%20Gathering-orange?style=flat-square)](https://en.wikipedia.org/wiki/OSINT)
-[![PenTesting](https://img.shields.io/badge/Penetration%20Testing-Certified-brightgreen?style=flat-square)](https://www.offensive-security.com)
+**Cybersecurity Consultant · Founder of TrinTech Digital Defense** 🇹🇹  
+*Protecting Caribbean businesses through professional security assessments.*
 
-**Cybersecurity Consultant · TrinTech Digital Defense**  
-**Trinidad & Tobago 🇹🇹 · Protecting Caribbean businesses**
+[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)](https://kernel.org)
+[![Security](https://img.shields.io/badge/Cybersecurity-%23ff5a5a?style=for-the-badge&logo=metasploit)](https://www.metasploit.com)
 
-[Website](https://trintechdigitaldefense.github.io) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Book Consultation](https://exile-aerobic-saddle-rough.2n6.me/booking/)
+[🌐 Website](https://trintechdigitaldefense.github.io) ·
+[💼 LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) ·
+[📧 Contact](mailto:trintechdigitaldefense@gmail.com)
 
 </div>
 
 ---
 
-## 🔥 What I Do
+## About
 
-I build cybersecurity tools and provide professional security services for businesses across Trinidad & Tobago and the Caribbean region. My work spans **offensive security testing**, **OSINT intelligence gathering**, **infrastructure auditing**, and **security automation**.
+Cybersecurity consultant based in Trinidad & Tobago, serving businesses across the Caribbean. I specialize in **penetration testing**, **network auditing**, **OSINT reconnaissance**, and **incident response** — helping organizations identify vulnerabilities before attackers do.
 
-### Services (TrinTech Digital Defense)
-- 🛡️ **Penetration Testing** — Web, Mobile (Android), and Network
-- 🕵️ **OSINT Reconnaissance** — Digital footprint analysis
-- 🔍 **Network Audits** — Micro to enterprise-scale assessments
-- 🕵️ **Cyber Fraud Investigation** — Digital forensics support
-- 🤖 **Security Automation** — Custom tools and pipelines
+Every engagement begins with a signed NDA. Professional, thorough, and confidential.
 
----
+<div align="center">
 
-## 📁 Featured Repositories
+### 🔗 Book a Consultation
 
-| Project | Description | Language |
-|---------|-------------|----------|
-| [**Apex-Recon**](https://github.com/trintechdigitaldefense/Apex-Recon) | Enterprise-grade network audit & intelligence platform with modular scanning framework | [Python](https://python.org) |
-| [**Trin-Tech-Recon-Suite**](https://github.com/trintechdigitaldefense/Trin-Tech-Recon-Suite) | Lightweight, multi-threaded OSINT and infrastructure auditing suite | [Python](https://python.org) |
-| [**Recon-framework-v2.0**](https://github.com/trintechdigitaldefense/Recon-framework-v2.0) | Cybersecurity reconnaissance framework with automated discovery tools | [Python](https://python.org) |
-| [**Sentinel**](https://github.com/trintechdigitaldefense/Sentinel) | Advanced device activity tracker — active deception meets persistence hunting | [Python](https://python.org) |
-| [**devsecops-pipeline**](https://github.com/trintechdigitaldefense/devsecops-pipeline) | Robust automation framework for offensive and defensive security testing | [Shell](https://shellscript.dev) |
+[![Book Now](https://img.shields.io/badge/Book%20Free%20Scoping%20Call-Click%20Here-blue?style=for-the-badge&logo=calendly)](https://exile-aerobic-saddle-rough.2n6.me/booking/)
+
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+## Featured Projects
 
-### Core Technologies
-```text
-Python  • Bash • SQL • HTML/CSS • JavaScript
-```
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px;">
 
-### Security Tools
-```text
-Nmap • Wireshark • Burp Suite • Metasploit • SQLMap • Hydra • Hashcat • Maltego
-```
+<!-- Project 1 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
 
-### Platforms & Infrastructure
-```text
-Linux (Kali, Debian) • Docker • GitHub Actions • Caddy • Flask • FastAPI
-```
+**[🔍 Trin-Tech-Audit](https://github.com/trintechdigitaldefense/trin-tech-audit)**
+*Python · Full Network Audit Suite*
+
+End-to-end automated security audit pipeline. Runs network reconnaissance, web scanning, OSINT gathering, and CVE-mapped vulnerability assessment. Generates professional PDF reports with security scores and remediation roadmaps.
+
+`Python` `nmap` `PDF Reports` `Security Automation`
+
+</div>
+
+<!-- Project 2 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
+
+**[⚡ Apex-Recon](https://github.com/trintechdigitaldefense/Apex-Recon-)**
+*Python · Enterprise Network Audit Framework*
+
+Enterprise-grade modular network audit platform with deep visibility into infrastructure security postures. Features multi-threaded scanning, automated reporting, and configurable scanning profiles.
+
+`Python` `Modular` `Network Security` `Multi-threaded`
+
+</div>
+
+<!-- Project 3 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
+
+**[🕵️ Recon Framework](https://github.com/trintechdigitaldefense/Recon-framework-v2.0)**
+*Python · Automated Reconnaissance*
+
+Multi-threaded reconnaissance framework with automated subdomain discovery, DNS enumeration, SSL analysis, and HTML/JSON reporting.
+
+`Python` `DNS` `SSL/TLS` `Termux`
+
+</div>
+
+<!-- Project 4 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
+
+**[📡 Trin-Tech-Recon-Suite](https://github.com/trintechdigitaldefense/Trin-Tech-Recon-Suite)**
+*Python · OSINT & Infrastructure Auditing*
+
+Lightweight, multi-threaded OSINT and infrastructure auditing suite with subdomain enumeration, service fingerprinting, and intelligence gathering.
+
+`Python` `OSINT` `Lightweight`
+
+</div>
+
+<!-- Project 5 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
+
+**[🛡️ Sentinel](https://github.com/trintechdigitaldefense/Sentinel)**
+*Python · Device Activity Tracker*
+
+Advanced device monitoring with active deception capabilities. Tracks device activity patterns and detects anomalies for security operations.
+
+`Python` `Monitoring` `Deception` `Detection`
+
+</div>
+
+<!-- Project 6 -->
+<div style="border: 1px solid #d0d7de; border-radius: 8px; padding: 12px;">
+
+**[🔄 DevSecOps Pipeline](https://github.com/trintechdigitaldefense/devsecops-pipeline)**
+*Shell · Security Automation Framework*
+
+Robust automation framework for offensive and defensive security testing — optimized for automated CI/CD security gates.
+
+`Shell` `Automation` `CI/CD` `Security Testing`
+
+</div>
+
+</div>
 
 ---
 
-## 📊 Impact
+## Services
 
-| Metric | Detail |
-|--------|--------|
-| 🇹🇹 **Based in** | Trinidad & Tobago — serving the Caribbean region |
-| 🏢 **Company** | TrinTech Digital Defense — professional cybersecurity services |
-| 🔧 **Projects** | 6 open-source security tools & frameworks |
-| 📞 **Reach** | +1 (868) 362-0679 |
-| 📧 **Email** | trintechdigitaldefense@gmail.com |
+| Service | Details |
+|---------|---------|
+| **Free Scoping Call** | 30-minute consultation |
+| **Website & OSINT Recon** | $150/hr · Digital footprint analysis |
+| **Micro-Business Audit** | $1,000 · 1–5 devices · Full assessment |
+| **Small Business Audit** | $2,200 · 5–15 devices · All modules + CVE mapping |
+| **Penetration Testing** | Custom quote · Web, mobile, network |
+| **Cyber Fraud Investigation** | Custom quote · Digital forensics |
 
 ---
 
-## ⚠️ Legal Notice
+## Technical Expertise
 
-All tools and frameworks in this organization are designed for **authorized security testing only**. Unauthorized access to computer systems is illegal under Trinidad & Tobago's Cybercrimes Act and international law.
+<div align="left">
+
+### Languages & Frameworks
+`Python` · `Bash/Shell` · `SQL` · `HTML/CSS` · `JavaScript` · `FastAPI` · `Flask`
+
+### Security Tools & Platforms
+`Nmap` · `Burp Suite` · `Metasploit` · `SQLMap` · `Hydra` · `Hashcat` · `Nikto` · `Maltego` · `Wireshark`
+
+### Infrastructure & DevOps
+`Linux (Debian, Kali)` · `Docker` · `Caddy` · `systemd` · `GitHub Actions`
+
+</div>
 
 ---
 
 <div align="center">
 
-**DEFEND. DETECT. DOMINATE.**  
-🛡️ [TrinTech Digital Defense](https://trintechdigitaldefense.github.io) 🇹🇹
+**[TrinTech Digital Defense](https://trintechdigitaldefense.github.io)**  
+*Professional cybersecurity consulting · Trinidad & Tobago*
+
+📧 [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com)  
+📱 +1 (868) 362-0679 · WhatsApp  
+💼 [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407)
+
+---
+
+*All tools and frameworks are designed for **authorized security testing** only.*
 
 </div>

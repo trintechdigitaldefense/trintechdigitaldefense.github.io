@@ -1,0 +1,5 @@
+# Security headers for GitHub Pages via Caddy reverse proxy
+# These are set in the Caddyfile to avoid needing per-page headers
+
+# Note: GitHub Pages doesn't support headers natively,
+# but Caddy reverse proxy can add them.

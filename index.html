@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+<meta name="theme-color" content="#071a22" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f5f8fa" media="(prefers-color-scheme: light)" />
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,7 +11,8 @@
 <meta name="author" content="Jason Ramdharry">
 <meta name="robots" content="index, follow"/>
 
-<meta name="google-site-verification" content="[ADD_AFTER_GOOGLE_SEARCH_CONSOLE_SETUP]" />
+<!-- Google Site Verification: Replace with your actual token from Google Search Console -->
+<meta name="google-site-verification" content="GSC_VERIFICATION_TOKEN_HERE" />
 <!--
   GSC Setup: https://search.google.com/search-console -> Add Property -> HTML File
   1. Upload 'google[xxxxxxxx].html' to repo root
@@ -506,6 +509,16 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   .comparison-table th,.comparison-table td{padding:.6rem .5rem}
 }
 </style>
+<!-- Google Analytics 4 — REPLACE G-XXXXXXXXXX with your GA4 ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+<!-- Microsoft Clarity — REPLACE clarity-id with your Clarity ID -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","clarity-id");</script>
 </head>
 <body>
 <!-- Noscript: trust badges for crawlers that skip JS -->
@@ -528,7 +541,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
 <!-- NAV -->
 <nav>
   <div class="nav-logo">
-    <div class="nav-shield">🛡️</div>
+    <div class="nav-shield" aria-label="TrinTech Shield">T</div>
     <div>
       <div class="nav-main">TRINTECH</div>
       <div class="nav-sub">Digital Defense</div>
@@ -543,20 +556,20 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
     <li><a href="#contact">Contact</a></li>
     <li><button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">🌙</button></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get Protected</a>
+  <a href="#contact" class="nav-cta" style="display:inline-block">Get Protected</a>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section id="main-content" class="hero">
-  <p class="hero-tag">Trinidad &amp; Tobago 🇹🇹 — Professional Cybersecurity</p>
+  <p class="hero-tag">Trinidad &amp; Tobago — Professional Cybersecurity</p>
   <h1>DEFEND.<br><span class="accent">DETECT.</span><br>DOMINATE.</h1>
   <div class="hero-divider"></div>
   <p class="hero-sub"><strong>TrinTech Digital Defense</strong> — led by certified cybersecurity specialist Jason Ramdharry. Penetration testing, network auditing, OSINT intelligence, Android security, and cyber fraud investigation for businesses across the Caribbean.</p>
   <div class="hero-ctas">
     <a href="#pricing" class="btn-cyan">View Pricing</a>
     <a href="#contact" class="btn-outline">Free Scoping Call</a>
-    <a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank" style="font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:box-shadow .2s,transform .2s">💬 WhatsApp</a>
+    <a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank" style="font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:box-shadow .2s,transform .2s">WhatsApp</a>
   </div>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num" data-count="24">0</span><span class="stat-lbl">H Response Time</span></div>
@@ -579,14 +592,14 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">MEET THE SPECIALIST</h2>
   <div class="about-grid">
     <div class="about-profile">
-      <div class="profile-avatar">👤</div>
+      <div class="profile-avatar">[PHOTO]</div>
       <div class="profile-name">JASON RAMDHARRY</div>
       <div class="profile-title">Cybersecurity Consultant · Security Auditor</div>
       <div class="profile-org">Founder — TrinTech Digital Defense</div>
       <div class="profile-divider"></div>
-      <div class="profile-detail">📍 <span>Trinidad and Tobago 🇹🇹</span></div>
-      <div class="profile-detail">📞 <span>+1 (868) 362-0679</span></div>
-      <div class="profile-detail">📧 <span style="font-size:.68rem">trintechdigitaldefense@gmail.com</span></div>
+      <div class="profile-detail">Location: <span>Trinidad and Tobago</span></div>
+      <div class="profile-detail"><span>+1 (868) 362-0679</span></div>
+      <div class="profile-detail"><span style="font-size:.68rem">trintechdigitaldefense@gmail.com</span></div>
       <div class="profile-divider"></div>
       <div style="font-family:var(--mono);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);margin-bottom:.8rem">Core Competencies</div>
       <div class="competency-pills">
@@ -619,17 +632,17 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <p class="s-sub">Formally trained and certified with a strong foundation across cybersecurity, IT, and digital disciplines.</p>
   <div class="certs-grid">
     <div class="cert-card">
-      <img src="images/cyber-threats-banner.png" alt="Cybersecurity: Understand Threats and Prevent Attacks" style="width:100%;border-radius:4px;margin-bottom:.8rem">
+      <img src="images/cyber-threats-banner.png" loading="lazy" alt="Cybersecurity: Understand Threats and Prevent Attacks" style="width:100%;border-radius:4px;margin-bottom:.8rem">
       <div class="cert-name">Cybersecurity: Understand Threats &amp; Prevent Attacks</div>
       <div class="cert-detail">Published by Crafty E-learning</div>
     </div>
     <div class="cert-card">
-      <img src="images/diploma-cyber-banner.png" alt="Diploma in Cyber Security" style="width:100%;border-radius:4px;margin-bottom:.8rem">
+      <img src="images/diploma-cyber-banner.png" loading="lazy" alt="Diploma in Cyber Security" style="width:100%;border-radius:4px;margin-bottom:.8rem">
       <div class="cert-name">Diploma in Cyber Security</div>
       <div class="cert-detail">Published by Skill Tutor</div>
     </div>
     <div class="cert-card">
-      <img src="images/isms-audit-banner.png" alt="Internal Auditing — Information Security Management Systems" style="width:100%;border-radius:4px;margin-bottom:.8rem">
+      <img src="images/isms-audit-banner.png" loading="lazy" alt="Internal Auditing — Information Security Management Systems" style="width:100%;border-radius:4px;margin-bottom:.8rem">
       <div class="cert-name">Internal Auditing — ISMS</div>
       <div class="cert-detail">Published by Exoexcellence Consultants</div>
     </div>
@@ -641,12 +654,12 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <p class="s-tag" style="text-align:center">// trust.verify()</p>
   <h2 class="s-title" style="text-align:center">WHY BUSINESSES TRUST US</h2>
   <div class="trust-badges">
-    <div class="trust-badge"><div class="trust-icon">🔒</div><div class="trust-text"><strong>NDA-Protected</strong>All engagements start with a signed NDA</div></div>
-    <div class="trust-badge"><div class="trust-icon">📝</div><div class="trust-text"><strong>Written Reports</strong>Full findings, evidence &amp; remediation plans</div></div>
-    <div class="trust-badge"><div class="trust-icon">⚡</div><div class="trust-text"><strong>24H Response</strong>Quick turnaround on all inquiries</div></div>
-    <div class="trust-badge"><div class="trust-icon">🇹🇹</div><div class="trust-text"><strong>Local Expert</strong>Based in Trinidad, serving the Caribbean</div></div>
-    <div class="trust-badge"><div class="trust-icon">📱</div><div class="trust-text"><strong>Mobile Ready</strong>On-device testing via Termux &amp; Ubuntu</div></div>
-    <div class="trust-badge"><div class="trust-icon">🏆</div><div class="trust-text"><strong>50+ Engagements</strong>Proven track record across the region</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>NDA-Protected</strong>All engagements start with a signed NDA</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>Written Reports</strong>Full findings, evidence &amp; remediation plans</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>24H Response</strong>Quick turnaround on all inquiries</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>Local Expert</strong>Based in Trinidad, serving the Caribbean</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>Mobile Ready</strong>On-device testing via Termux &amp; Ubuntu</div></div>
+    <div class="trust-badge"><div class="trust-text"><strong>50+ Engagements</strong>Proven track record across the region</div></div>
   </div>
 </section>
 
@@ -656,14 +669,14 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">WHAT WE OFFER</h2>
   <p class="s-sub">Full-spectrum offensive and defensive cybersecurity for businesses across Trinidad &amp; Tobago and the wider Caribbean.</p>
   <div class="services-grid">
-    <div class="service-card"><div class="sc-num">01 //</div><div class="sc-icon">🌐</div><div class="sc-name">OSINT &amp; DIGITAL SURVEILLANCE</div><div class="sc-desc">Deep-dive digital footprint analysis and corporate intelligence gathering using theHarvester, Maltego, Sherlock, SpiderFoot, Blackbird and Recon-ng to fully map your online exposure.</div><div class="sc-tags"><span class="tag">theHarvester</span><span class="tag">Maltego</span><span class="tag">Sherlock</span><span class="tag">SpiderFoot</span><span class="tag">Blackbird</span></div></div>
-    <div class="service-card"><div class="sc-num">02 //</div><div class="sc-icon">⚔️</div><div class="sc-name">WEB PENETRATION TESTING</div><div class="sc-desc">Authorized real-world attack simulation targeting your web applications. SQL injection, XSS, authentication bypass, and more — with full written findings and remediation guidance.</div><div class="sc-tags"><span class="tag">SQLMap</span><span class="tag">XSSStrike</span><span class="tag">Metasploit</span><span class="tag">Nikto</span><span class="tag">Nuclei</span></div></div>
-    <div class="service-card"><div class="sc-num">03 //</div><div class="sc-icon">📱</div><div class="sc-name">ANDROID PENETRATION TESTING</div><div class="sc-desc">Specialized authorized penetration testing of Android devices and mobile applications to identify, document, and remediate critical security flaws. Deployed on-device using Termux &amp; Ubuntu.</div><div class="sc-tags"><span class="tag">Termux</span><span class="tag">Ubuntu</span><span class="tag">Android</span><span class="tag">Mobile APK</span><span class="tag">On-Device</span></div></div>
-    <div class="service-card"><div class="sc-num">04 //</div><div class="sc-icon">🔍</div><div class="sc-name">NETWORK AUDITING</div><div class="sc-desc">Comprehensive internal and external network mapping, port scanning, topology analysis, and automated vulnerability discovery for businesses of all sizes.</div><div class="sc-tags"><span class="tag">Nmap</span><span class="tag">Nuclei</span><span class="tag">Nikto</span><span class="tag">Whois</span><span class="tag">Nslookup</span></div></div>
-    <div class="service-card"><div class="sc-num">05 //</div><div class="sc-icon">🕵️</div><div class="sc-name">CYBER FRAUD INVESTIGATION</div><div class="sc-desc">Robust methodologies for tracking, auditing, and documenting digital fraud incidents and forensic trails. Professional documentation suitable for legal proceedings and corporate reporting.</div><div class="sc-tags"><span class="tag">Forensics</span><span class="tag">OSINT</span><span class="tag">Evidence Docs</span><span class="tag">Fraud Trail</span></div></div>
-    <div class="service-card"><div class="sc-num">06 //</div><div class="sc-icon">🔑</div><div class="sc-name">CREDENTIAL RESILIENCE TESTING</div><div class="sc-desc">Password strength analysis, brute-force resilience auditing with Hydra, and cryptographic decryption testing with Hashcat. Includes password auditing and policy recommendations.</div><div class="sc-tags"><span class="tag">Hydra</span><span class="tag">Hashcat</span><span class="tag">Brute-Force</span><span class="tag">Rockyou</span></div></div>
-    <div class="service-card"><div class="sc-num">07 //</div><div class="sc-icon">🗄️</div><div class="sc-name">DATABASE AUDITING</div><div class="sc-desc">Targeted SQL injection testing and database security auditing. Automated and manual input sanitization verification to protect your data integrity.</div><div class="sc-tags"><span class="tag">SQLMap</span><span class="tag">Injection Testing</span><span class="tag">Sanitization</span></div></div>
-    <div class="service-card"><div class="sc-num">08 //</div><div class="sc-icon">🔧</div><div class="sc-name">DEVSECOPS PIPELINE</div><div class="sc-desc">Security integrated directly into your CI/CD workflow. Automated scanning, secret detection, and compliance checks using our custom DevSecOps pipeline framework.</div><div class="sc-tags"><span class="tag">CI/CD</span><span class="tag">Automation</span><span class="tag">Shell</span><span class="tag">Compliance</span></div></div>
+    <div class="service-card"><div class="sc-num">01 //</div><div <span class="sc-icon" aria-label="NETWORK">N</span><div class="sc-name">OSINT &amp; DIGITAL SURVEILLANCE</div><div class="sc-desc">Deep-dive digital footprint analysis and corporate intelligence gathering using theHarvester, Maltego, Sherlock, SpiderFoot, Blackbird and Recon-ng to fully map your online exposure.</div><div class="sc-tags"><span class="tag">theHarvester</span><span class="tag">Maltego</span><span class="tag">Sherlock</span><span class="tag">SpiderFoot</span><span class="tag">Blackbird</span></div></div>
+    <div class="service-card"><div class="sc-num">02 //</div><div <span class="sc-icon" aria-label="WEAPON">W</span><div class="sc-name">WEB PENETRATION TESTING</div><div class="sc-desc">Authorized real-world attack simulation targeting your web applications. SQL injection, XSS, authentication bypass, and more — with full written findings and remediation guidance.</div><div class="sc-tags"><span class="tag">SQLMap</span><span class="tag">XSSStrike</span><span class="tag">Metasploit</span><span class="tag">Nikto</span><span class="tag">Nuclei</span></div></div>
+    <div class="service-card"><div class="sc-num">03 //</div><div <span class="sc-icon" aria-label="PHONE">P</span><div class="sc-name">ANDROID PENETRATION TESTING</div><div class="sc-desc">Specialized authorized penetration testing of Android devices and mobile applications to identify, document, and remediate critical security flaws. Deployed on-device using Termux &amp; Ubuntu.</div><div class="sc-tags"><span class="tag">Termux</span><span class="tag">Ubuntu</span><span class="tag">Android</span><span class="tag">Mobile APK</span><span class="tag">On-Device</span></div></div>
+    <div class="service-card"><div class="sc-num">04 //</div><div <span class="sc-icon" aria-label="SEARCH">S</span><div class="sc-name">NETWORK AUDITING</div><div class="sc-desc">Comprehensive internal and external network mapping, port scanning, topology analysis, and automated vulnerability discovery for businesses of all sizes.</div><div class="sc-tags"><span class="tag">Nmap</span><span class="tag">Nuclei</span><span class="tag">Nikto</span><span class="tag">Whois</span><span class="tag">Nslookup</span></div></div>
+    <div class="service-card"><div class="sc-num">05 //</div><div <span class="sc-icon" aria-label="DETECTIVE">D</span><div class="sc-name">CYBER FRAUD INVESTIGATION</div><div class="sc-desc">Robust methodologies for tracking, auditing, and documenting digital fraud incidents and forensic trails. Professional documentation suitable for legal proceedings and corporate reporting.</div><div class="sc-tags"><span class="tag">Forensics</span><span class="tag">OSINT</span><span class="tag">Evidence Docs</span><span class="tag">Fraud Trail</span></div></div>
+    <div class="service-card"><div class="sc-num">06 //</div><div <span class="sc-icon" aria-label="KEY">K</span><div class="sc-name">CREDENTIAL RESILIENCE TESTING</div><div class="sc-desc">Password strength analysis, brute-force resilience auditing with Hydra, and cryptographic decryption testing with Hashcat. Includes password auditing and policy recommendations.</div><div class="sc-tags"><span class="tag">Hydra</span><span class="tag">Hashcat</span><span class="tag">Brute-Force</span><span class="tag">Rockyou</span></div></div>
+    <div class="service-card"><div class="sc-num">07 //</div><div <span class="sc-icon" aria-label="DATABASE">D</span><div class="sc-name">DATABASE AUDITING</div><div class="sc-desc">Targeted SQL injection testing and database security auditing. Automated and manual input sanitization verification to protect your data integrity.</div><div class="sc-tags"><span class="tag">SQLMap</span><span class="tag">Injection Testing</span><span class="tag">Sanitization</span></div></div>
+    <div class="service-card"><div class="sc-num">08 //</div><div <span class="sc-icon" aria-label="TOOL">T</span><div class="sc-name">DEVSECOPS PIPELINE</div><div class="sc-desc">Security integrated directly into your CI/CD workflow. Automated scanning, secret detection, and compliance checks using our custom DevSecOps pipeline framework.</div><div class="sc-tags"><span class="tag">CI/CD</span><span class="tag">Automation</span><span class="tag">Shell</span><span class="tag">Compliance</span></div></div>
   </div>
   <div class="section-cta"><a href="#pricing" class="btn-cyan">See Pricing →</a></div>
 </section>
@@ -733,23 +746,23 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">THE TOOLKIT</h2>
   <p class="s-sub">Professional-grade security tools deployed on every engagement — across both desktop and mobile (Termux/Ubuntu) environments.</p>
   <div class="tools-grid">
-    <div class="tool-card"><div class="tool-icon">🗺️</div><div class="tool-name">Maltego</div><div class="tool-desc">OSINT visualization &amp; relationship mapping</div><div class="tool-category">OSINT</div></div>
-    <div class="tool-card"><div class="tool-icon">🌾</div><div class="tool-name">theHarvester</div><div class="tool-desc">Email, domain &amp; host intelligence</div><div class="tool-category">OSINT</div></div>
-    <div class="tool-card"><div class="tool-icon">🕵️</div><div class="tool-name">Sherlock</div><div class="tool-desc">Username hunt across 400+ platforms</div><div class="tool-category">OSINT</div></div>
-    <div class="tool-card"><div class="tool-icon">🕸️</div><div class="tool-name">SpiderFoot</div><div class="tool-desc">Automated OSINT &amp; threat intel</div><div class="tool-category">OSINT</div></div>
-    <div class="tool-card"><div class="tool-icon">🐦</div><div class="tool-name">Blackbird</div><div class="tool-desc">Advanced account OSINT &amp; enumeration</div><div class="tool-category">OSINT</div></div>
-    <div class="tool-card"><div class="tool-icon">🔭</div><div class="tool-name">Recon-ng</div><div class="tool-desc">Web reconnaissance framework</div><div class="tool-category">RECON</div></div>
-    <div class="tool-card"><div class="tool-icon">📡</div><div class="tool-name">Nmap</div><div class="tool-desc">Network discovery &amp; port scanning</div><div class="tool-category">SCANNING</div></div>
-    <div class="tool-card"><div class="tool-icon">⚡</div><div class="tool-name">Nuclei</div><div class="tool-desc">Template-based vulnerability scanner</div><div class="tool-category">SCANNING</div></div>
-    <div class="tool-card"><div class="tool-icon">🔪</div><div class="tool-name">Nikto</div><div class="tool-desc">Web server misconfiguration scanner</div><div class="tool-category">SCANNING</div></div>
-    <div class="tool-card"><div class="tool-icon">💥</div><div class="tool-name">Metasploit</div><div class="tool-desc">Exploitation framework &amp; PoC</div><div class="tool-category">EXPLOIT</div></div>
-    <div class="tool-card"><div class="tool-icon">✖️</div><div class="tool-name">XSSStrike</div><div class="tool-desc">Advanced XSS detection &amp; exploitation</div><div class="tool-category">EXPLOIT</div></div>
-    <div class="tool-card"><div class="tool-icon">💉</div><div class="tool-name">SQLMap</div><div class="tool-desc">Automated SQL injection detection</div><div class="tool-category">DATABASE</div></div>
-    <div class="tool-card"><div class="tool-icon">🌊</div><div class="tool-name">Hydra</div><div class="tool-desc">Network login brute-force auditing</div><div class="tool-category">CREDENTIALS</div></div>
-    <div class="tool-card"><div class="tool-icon">🔓</div><div class="tool-name">Hashcat</div><div class="tool-desc">GPU-accelerated password recovery</div><div class="tool-category">CREDENTIALS</div></div>
-    <div class="tool-card"><div class="tool-icon">📱</div><div class="tool-name">Termux + Ubuntu</div><div class="tool-desc">Mobile security assessment platform</div><div class="tool-category">PLATFORM</div></div>
-    <div class="tool-card"><div class="tool-icon">🛸</div><div class="tool-name">Recon Suite</div><div class="tool-desc">Custom multi-threaded OSINT toolkit</div><div class="tool-category">CUSTOM</div></div>
-    <div class="tool-card"><div class="tool-icon">🔁</div><div class="tool-name">DevSecOps Pipeline</div><div class="tool-desc">Custom automated security pipeline</div><div class="tool-category">CUSTOM</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="M">M</span><div class="tool-name">Maltego</div><div class="tool-desc">OSINT visualization &amp; relationship mapping</div><div class="tool-category">OSINT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="H">H</span><div class="tool-name">theHarvester</div><div class="tool-desc">Email, domain &amp; host intelligence</div><div class="tool-category">OSINT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="S">S</span><div class="tool-name">Sherlock</div><div class="tool-desc">Username hunt across 400+ platforms</div><div class="tool-category">OSINT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="S">S</span><div class="tool-name">SpiderFoot</div><div class="tool-desc">Automated OSINT &amp; threat intel</div><div class="tool-category">OSINT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="B">B</span><div class="tool-name">Blackbird</div><div class="tool-desc">Advanced account OSINT &amp; enumeration</div><div class="tool-category">OSINT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="R">R</span><div class="tool-name">Recon-ng</div><div class="tool-desc">Web reconnaissance framework</div><div class="tool-category">RECON</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="N">N</span><div class="tool-name">Nmap</div><div class="tool-desc">Network discovery &amp; port scanning</div><div class="tool-category">SCANNING</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="N">N</span><div class="tool-name">Nuclei</div><div class="tool-desc">Template-based vulnerability scanner</div><div class="tool-category">SCANNING</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="N">N</span><div class="tool-name">Nikto</div><div class="tool-desc">Web server misconfiguration scanner</div><div class="tool-category">SCANNING</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="M">M</span><div class="tool-name">Metasploit</div><div class="tool-desc">Exploitation framework &amp; PoC</div><div class="tool-category">EXPLOIT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="X">X</span><div class="tool-name">XSSStrike</div><div class="tool-desc">Advanced XSS detection &amp; exploitation</div><div class="tool-category">EXPLOIT</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="S">S</span><div class="tool-name">SQLMap</div><div class="tool-desc">Automated SQL injection detection</div><div class="tool-category">DATABASE</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="H">H</span><div class="tool-name">Hydra</div><div class="tool-desc">Network login brute-force auditing</div><div class="tool-category">CREDENTIALS</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="H">H</span><div class="tool-name">Hashcat</div><div class="tool-desc">GPU-accelerated password recovery</div><div class="tool-category">CREDENTIALS</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="T">T</span><div class="tool-name">Termux + Ubuntu</div><div class="tool-desc">Mobile security assessment platform</div><div class="tool-category">PLATFORM</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="R">R</span><div class="tool-name">Recon Suite</div><div class="tool-desc">Custom multi-threaded OSINT toolkit</div><div class="tool-category">CUSTOM</div></div>
+    <div class="tool-card"><div <span class="tool-icon" aria-label="D">D</span><div class="tool-name">DevSecOps Pipeline</div><div class="tool-desc">Custom automated security pipeline</div><div class="tool-category">CUSTOM</div></div>
     <div class="tool-card"><div class="tool-icon">🧠</div><div class="tool-name">Fraud Investigation Framework</div><div class="tool-desc">Custom forensic tracking methodology</div><div class="tool-category">CUSTOM</div></div>
   </div>
 </section>
@@ -762,12 +775,12 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">TECHNICAL PROJECTS</h2>
   <p class="s-sub">Real tools, real methodologies — built and deployed by Jason Ramdharry in the field.</p>
   <div class="projects-grid">
-    <div class="proj-card"><div class="proj-num">PROJECT 01 //</div><div class="proj-icon">📱</div><div class="proj-name">ADVANCED TERMUX ENVIRONMENT</div><div class="proj-desc">Mastered and deployed a comprehensive suite of professional security tools on mobile platforms (Android/Termux + Ubuntu) to conduct on-the-go security assessments and field research. A full penetration testing lab in your pocket.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Termux</span><span class="tag">Ubuntu</span><span class="tag">Android</span><span class="tag">Mobile PenTest</span></div></div>
-    <div class="proj-card"><div class="proj-num">PROJECT 02 //</div><div class="proj-icon">🕵️</div><div class="proj-name">CYBER FRAUD INVESTIGATION FRAMEWORK</div><div class="proj-desc">Developed robust, repeatable methodologies for tracking, auditing, and documenting digital fraud incidents and forensic trails. Designed for use in corporate investigations and formal legal evidence preparation.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Forensics</span><span class="tag">OSINT</span><span class="tag">Legal Docs</span><span class="tag">Audit Trail</span></div></div>
-    <div class="proj-card"><div class="proj-num">PROJECT 03 //</div><div class="proj-icon">🌐</div><div class="proj-name">WEB PENTESTING PORTFOLIO</div><div class="proj-desc">Focused research and hands-on practice identifying common web vulnerabilities including SQL injection and XSS, assisting companies in securing their online assets and protecting data integrity against real-world attack vectors.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">SQLi</span><span class="tag">XSS</span><span class="tag">Web Apps</span><span class="tag">Data Integrity</span></div></div>
-    <div class="proj-card"><div class="proj-num">PROJECT 04 //</div><div class="proj-icon">🔭</div><div class="proj-name">TRIN-TECH RECON SUITE</div><div class="proj-desc">A lightweight, multi-threaded OSINT and infrastructure auditing suite built in Python. Combines passive reconnaissance, active scanning, and structured reporting into a single streamlined workflow.</div><a href="https://github.com/trintechdigitaldefense/Trin-Tech-Recon-Suite" target="_blank" class="proj-link" style="display:inline-block;margin-top:1rem">View on GitHub →</a></div>
-    <div class="proj-card"><div class="proj-num">PROJECT 05 //</div><div class="proj-icon">🔁</div><div class="proj-name">DEVSECOPS PIPELINE</div><div class="proj-desc">A robust, lightweight automation framework built for offensive and defensive security testing. Optimized for both mobile and desktop environments, enabling security professionals to automate repetitive assessment tasks.</div><a href="https://github.com/trintechdigitaldefense/devsecops-pipeline" target="_blank" class="proj-link" style="display:inline-block;margin-top:1rem">View on GitHub →</a></div>
-    <div class="proj-card"><div class="proj-num">PROJECT 06 //</div><div class="proj-icon">🗺️</div><div class="proj-name">MALTEGO OSINT INVESTIGATIONS</div><div class="proj-desc">Leveraging Maltego's Transforms to automate data collection from OSINT sources, social media, and databases. Creates visual intelligence maps linking domains, IPs, emails, and organisations for comprehensive threat actor profiling.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Maltego</span><span class="tag">Transforms</span><span class="tag">Threat Profiling</span></div></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 01 //</div><div <span class="proj-icon" aria-label="A">A</span><div class="proj-name">ADVANCED TERMUX ENVIRONMENT</div><div class="proj-desc">Mastered and deployed a comprehensive suite of professional security tools on mobile platforms (Android/Termux + Ubuntu) to conduct on-the-go security assessments and field research. A full penetration testing lab in your pocket.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Termux</span><span class="tag">Ubuntu</span><span class="tag">Android</span><span class="tag">Mobile PenTest</span></div></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 02 //</div><div <span class="proj-icon" aria-label="F">F</span><div class="proj-name">CYBER FRAUD INVESTIGATION FRAMEWORK</div><div class="proj-desc">Developed robust, repeatable methodologies for tracking, auditing, and documenting digital fraud incidents and forensic trails. Designed for use in corporate investigations and formal legal evidence preparation.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Forensics</span><span class="tag">OSINT</span><span class="tag">Legal Docs</span><span class="tag">Audit Trail</span></div></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 03 //</div><div <span class="proj-icon" aria-label="W">W</span><div class="proj-name">WEB PENTESTING PORTFOLIO</div><div class="proj-desc">Focused research and hands-on practice identifying common web vulnerabilities including SQL injection and XSS, assisting companies in securing their online assets and protecting data integrity against real-world attack vectors.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">SQLi</span><span class="tag">XSS</span><span class="tag">Web Apps</span><span class="tag">Data Integrity</span></div></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 04 //</div><div <span class="proj-icon" aria-label="R">R</span><div class="proj-name">TRIN-TECH RECON SUITE</div><div class="proj-desc">A lightweight, multi-threaded OSINT and infrastructure auditing suite built in Python. Combines passive reconnaissance, active scanning, and structured reporting into a single streamlined workflow.</div><a href="https://github.com/trintechdigitaldefense/Trin-Tech-Recon-Suite" target="_blank" class="proj-link" style="display:inline-block;margin-top:1rem">View on GitHub →</a></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 05 //</div><div <span class="proj-icon" aria-label="D">D</span><div class="proj-name">DEVSECOPS PIPELINE</div><div class="proj-desc">A robust, lightweight automation framework built for offensive and defensive security testing. Optimized for both mobile and desktop environments, enabling security professionals to automate repetitive assessment tasks.</div><a href="https://github.com/trintechdigitaldefense/devsecops-pipeline" target="_blank" class="proj-link" style="display:inline-block;margin-top:1rem">View on GitHub →</a></div>
+    <div class="proj-card"><div class="proj-num">PROJECT 06 //</div><div <span class="proj-icon" aria-label="M">M</span><div class="proj-name">MALTEGO OSINT INVESTIGATIONS</div><div class="proj-desc">Leveraging Maltego's Transforms to automate data collection from OSINT sources, social media, and databases. Creates visual intelligence maps linking domains, IPs, emails, and organisations for comprehensive threat actor profiling.</div><div class="sc-tags" style="margin-top:.5rem"><span class="tag">Maltego</span><span class="tag">Transforms</span><span class="tag">Threat Profiling</span></div></div>
   </div>
 </section>
 
@@ -780,10 +793,10 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <p class="s-sub">One of the most powerful OSINT platforms available. Used by TrinTech to visually map the connections between people, domains, IPs, and social networks.</p>
   <div class="maltego-grid">
     <div>
-      <div class="maltego-card"><div class="mc-icon">🔄</div><div><div class="mc-title">Automated Data Collection</div><div class="mc-desc">Queries OSINT sources, public databases, and social media using Transforms to automatically pull and correlate intelligence on any target.</div></div></div>
-      <div class="maltego-card"><div class="mc-icon">🗺️</div><div><div class="mc-title">Infrastructure Mapping</div><div class="mc-desc">Traces network connections and digital footprints — revealing how domains, IPs, email addresses, and organisations are interconnected.</div></div></div>
-      <div class="maltego-card"><div class="mc-icon">🔎</div><div><div class="mc-title">Pattern Discovery</div><div class="mc-desc">Uncovers hidden connections and clusters within data — critical for fraud investigations and threat actor profiling.</div></div></div>
-      <div class="maltego-card"><div class="mc-icon">📧</div><div><div class="mc-title">Full Footprint Tracing</div><div class="mc-desc">Tracks emails, domains, and IPs across the internet to build a complete picture of any organisation's digital exposure.</div></div></div>
+      <div class="maltego-card"><div <span class="mc-icon" aria-label="C">C</span><div><div class="mc-title">Automated Data Collection</div><div class="mc-desc">Queries OSINT sources, public databases, and social media using Transforms to automatically pull and correlate intelligence on any target.</div></div></div>
+      <div class="maltego-card"><div <span class="mc-icon" aria-label="M">M</span><div><div class="mc-title">Infrastructure Mapping</div><div class="mc-desc">Traces network connections and digital footprints — revealing how domains, IPs, email addresses, and organisations are interconnected.</div></div></div>
+      <div class="maltego-card"><div <span class="mc-icon" aria-label="P">P</span><div><div class="mc-title">Pattern Discovery</div><div class="mc-desc">Uncovers hidden connections and clusters within data — critical for fraud investigations and threat actor profiling.</div></div></div>
+      <div class="maltego-card"><div <span class="mc-icon" aria-label="E">E</span><div><div class="mc-title">Full Footprint Tracing</div><div class="mc-desc">Tracks emails, domains, and IPs across the internet to build a complete picture of any organisation's digital exposure.</div></div></div>
     </div>
     <div class="maltego-visual">
       <div class="mv-title">MALTEGO</div>
@@ -955,13 +968,13 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">LET'S SECURE YOUR SYSTEMS</h2>
   <div class="contact-grid">
     <div>
-      <div class="ci"><div class="ci-icon">👤</div><div><span class="ci-label">Lead Specialist</span><span class="ci-value" style="font-size:1.05rem;font-weight:500;color:#fff">Jason Junior Ramdharry</span><br><span style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em">Cybersecurity Consultant · Security Auditor</span></div></div>
-      <div class="ci"><div class="ci-icon">📞</div><div><span class="ci-label">Phone / WhatsApp</span><span class="ci-value"><a href="tel:+18683620679">+1 (868) 362-0679</a></span></div></div>
-      <div class="ci"><div class="ci-icon">📧</div><div><span class="ci-label">Email</span><span class="ci-value"><a href="mailto:trintechdigitaldefense@gmail.com">trintechdigitaldefense@gmail.com</a></span></div></div>
-      <div class="ci"><div class="ci-icon">📍</div><div><span class="ci-label">Location</span><span class="ci-value">Trinidad &amp; Tobago 🇹🇹<br><span style="color:var(--muted);font-size:.85rem">Serving T&amp;T &amp; the wider Caribbean</span></span></div></div>
-      <div class="ci"><div class="ci-icon">🐙</div><div><span class="ci-label">GitHub</span><span class="ci-value"><a href="https://github.com/trintechdigitaldefense" target="_blank">github.com/trintechdigitaldefense</a></span></div></div>
-      <div class="ci"><div class="ci-icon">💼</div><div><span class="ci-label">LinkedIn</span><span class="ci-value"><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank">linkedin.com/in/trintech-digital-defense</a></span></div></div>
-      <div class="ci"><div class="ci-icon">💬</div><div><span class="ci-label">WhatsApp</span><span class="ci-value"><a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank">Quick chat on WhatsApp</a></span></div></div>
+      <div class="ci"><div><span class="ci-label">Lead Specialist</span><span class="ci-value" style="font-size:1.05rem;font-weight:500;color:#fff">Jason Junior Ramdharry</span><br><span style="font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em">Cybersecurity Consultant · Security Auditor</span></div></div>
+      <div class="ci"><div><span class="ci-label">Phone / WhatsApp</span><span class="ci-value"><a href="tel:+18683620679">+1 (868) 362-0679</a></span></div></div>
+      <div class="ci"><div><span class="ci-label">Email</span><span class="ci-value"><a href="mailto:trintechdigitaldefense@gmail.com">trintechdigitaldefense@gmail.com</a></span></div></div>
+      <div class="ci"><div><span class="ci-label">Location</span><span class="ci-value">Trinidad &amp; Tobago<br><span style="color:var(--muted);font-size:.85rem">Serving T&amp;T &amp; the wider Caribbean</span></span></div></div>
+      <div class="ci"><div><span class="ci-label">GitHub</span><span class="ci-value"><a href="https://github.com/trintechdigitaldefense" target="_blank">github.com/trintechdigitaldefense</a></span></div></div>
+      <div class="ci"><div><span class="ci-label">LinkedIn</span><span class="ci-value"><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank">linkedin.com/in/trintech-digital-defense</a></span></div></div>
+      <div class="ci"><div><span class="ci-label">WhatsApp</span><span class="ci-value"><a href="https://wa.me/18683620679?text=Hi%20Jason%2C%20I%20need%20cybersecurity%20help." target="_blank">Quick chat on WhatsApp</a></span></div></div>
       <div class="terminal">
         <div class="t-bar"><div class="td td-r"></div><div class="td td-y"></div><div class="td td-g"></div></div>
         <div class="t-line"><span class="t-prompt">jason@trintech:~$ </span><span class="t-cmd">./initiate-engagement.sh</span></div>
@@ -972,10 +985,10 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
         <div class="t-line"><span class="t-prompt">jason@trintech:~$ </span><span class="cursor"></span></div>
       </div>
       <div class="socials">
-        <a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">📘 Facebook</a>
-        <a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">🐙 GitHub</a>
-        <a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">💼 LinkedIn</a>
-        <a href="https://wa.me/18683620679" target="_blank" class="soc-btn">💬 WhatsApp</a>
+        <a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">Facebook</a>
+        <a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">LinkedIn</a>
+        <a href="https://wa.me/18683620679" target="_blank" class="soc-btn">WhatsApp</a>
       </div>
     </div>
     <div>
@@ -1005,9 +1018,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <div class="footer-grid">
     <div>
       <span class="f-brand">TRINTECH</span>
-      <span class="f-sub">Digital Defense // Trinidad &amp; Tobago 🇹🇹</span>
+      <span class="f-sub">Digital Defense // Trinidad &amp; Tobago</span>
       <p class="f-desc">Professional cybersecurity services led by Jason Ramdharry — network auditing, web &amp; Android penetration testing, OSINT, cyber fraud investigation, and DevSecOps across T&amp;T and the Caribbean.</p>
-      <div class="socials" style="margin-top:1.2rem"><a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">📘 Facebook</a><a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">🐙 GitHub</a><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">💼 LinkedIn</a><a href="https://wa.me/18683620679" target="_blank" class="soc-btn">💬 WhatsApp</a></div>
+      <div class="socials" style="margin-top:1.2rem"><a href="https://www.facebook.com/share/1ZCKz7dfpY/" target="_blank" class="soc-btn">Facebook</a><a href="https://github.com/trintechdigitaldefense" target="_blank" class="soc-btn">GitHub</a><a href="https://www.linkedin.com/in/trintech-digital-defense-a68614407" target="_blank" class="soc-btn">LinkedIn</a><a href="https://wa.me/18683620679" target="_blank" class="soc-btn">WhatsApp</a></div>
       <div class="newsletter"><div class="f-col-title" style="margin-top:1.2rem">// Stay Updated</div><div class="newsletter-input"><input type="email" id="newsletterEmail" placeholder="Enter your email" required autocomplete="email" aria-label="Email address for newsletter"/><button id="newsletterBtn">Subscribe</button></div><div id="newsletterMsg" style="font-family:var(--mono);font-size:.6rem;color:var(--muted);margin-top:.5rem"></div></div>
 <script>
 document.getElementById('newsletterBtn').addEventListener('click', async function() {
@@ -1034,7 +1047,7 @@ document.getElementById('newsletterBtn').addEventListener('click', async functio
 });
 </script>
     </div>
-    <div class="f-col"><div class="f-col-title">// Services</div><ul><li><a href="#services">OSINT &amp; Surveillance</a></li><li><a href="#services">Web Penetration Testing</a></li><li><a href="#services">Android PenTest</a></li><li><a href="#services">Network Auditing</a></li><li><a href="#services">Fraud Investigation</a></li><li><a href="/sentinel/">🛡️ Sentinel — 24/7 Defense</a></li>
+    <div class="f-col"><div class="f-col-title">// Services</div><ul><li><a href="#services">OSINT &amp; Surveillance</a></li><li><a href="#services">Web Penetration Testing</a></li><li><a href="#services">Android PenTest</a></li><li><a href="#services">Network Auditing</a></li><li><a href="#services">Fraud Investigation</a></li><li><a href="/sentinel/">Sentinel — 24/7 Defense</a></li>
         <li><a href="#services">DevSecOps</a></li></ul></div>
     <div class="f-col"><div class="f-col-title">// Pricing</div><ul><li><a href="#pricing">OSINT Recon — $150/hr</a></li><li><a href="#pricing">Micro Audit — $1,000</a></li><li><a href="#pricing">Small Biz Audit — $2,200</a></li><li><a href="#pricing">SQLMap — +$450</a></li><li><a href="#pricing">Credentials — +$650</a></li><li><a href="#pricing">Exploitation — +$1,200</a></li></ul></div>
     <div class="f-col"><div class="f-col-title">// Resources</div><ul><li><a href="#process">How It Works</a></li><li><a href="#testimonials">Client Testimonials</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://wa.me/18683620679" target="_blank">WhatsApp Support</a></li></ul></div>
@@ -1176,6 +1189,26 @@ document.querySelectorAll('.service-card, .pkg, .step, .ci, .maltego-card, .tool
 let counterAnimated = false;
 const counterObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting && !counterAnimated) { counterAnimated = true; animateCounters(); } }); }, { threshold: 0.3 });
 document.querySelectorAll('.counters-section, .threat-stats, .hero-stats').forEach(el => counterObs.observe(el));
+
+// THEME TOGGLE
+(function(){
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const saved = localStorage.getItem('trintech-theme');
+  if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); btn.textContent = '☀'; }
+  btn.addEventListener('click', function(){
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.textContent = '🌙';
+      localStorage.setItem('trintech-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      btn.textContent = '☀';
+      localStorage.setItem('trintech-theme', 'light');
+    }
+  });
+})();
 </script>
 
 <script src="/enhancements.js"></script>

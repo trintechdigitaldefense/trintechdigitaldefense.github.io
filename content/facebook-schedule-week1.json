@@ -1,0 +1,164 @@
+{
+  "schedule_name": "Week 1: Foundation - Building Authority",
+  "date_range": "2026-08-03 to 2026-08-07",
+  "posts": [
+    {
+      "day": "MONDAY",
+      "date": "2026-08-03",
+      "time": "09:00",
+      "type": "Industry Insight",
+      "title": "The Cost of a Breach",
+      "content": "A cybersecurity breach costs Caribbean businesses an average of $4,800 per record in 2026. The average cost of a data breach globally now exceeds $5 million. For small and medium businesses, the financial impact of a breach can be existential.\n\nMost attacks targeting Caribbean organizations follow the same pattern: initial access through a vulnerable web application, lateral movement across the network, and data exfiltration that goes undetected for weeks or months.\n\nThe difference between a manageable security incident and a catastrophic breach usually comes down to three factors.\n\nFirst, detection speed. Organizations with active monitoring identify breaches in an average of 195 days. Organizations without detection may never know they have been compromised until data appears in public forums.\n\nSecond, network segmentation. A well-segmented network limits what an attacker can reach after the initial compromise. Without segmentation, a single vulnerability can expose the entire organization.\n\nThird, incident response readiness. Having a documented response plan and tested procedures means the difference between containing an issue and losing everything.\n\nTrinTech Digital Defense provides penetration testing, network auditing, and incident response services for businesses across Trinidad and Tobago and the wider Caribbean. If your business has not had a professional security assessment in the past 12 months, the risk is already on your balance sheet.\n\nContact us for a free scoping call to discuss your security posture.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "MONDAY",
+      "date": "2026-08-03",
+      "time": "12:00",
+      "type": "Service Spotlight",
+      "title": "Penetration Testing",
+      "content": "Penetration testing is not an annual checkbox exercise. It is the most direct way to validate whether your security controls actually work.\n\nA TrinTech penetration test simulates a real attack against your web applications, network infrastructure, or Android systems. We identify vulnerabilities before an attacker does, then provide clear remediation guidance for each finding.\n\nOur testing methodology covers OWASP Top 10 vulnerabilities, authentication bypasses, input validation failures, and configuration issues. Every engagement produces a written report with severity ratings, proof of concept, and prioritized remediation steps.\n\nWe operate across the Caribbean and specialize in security testing for businesses that run web applications, POS systems, or custom software. No generic scanner report. Every finding is verified manually.\n\nBook a free scoping call to discuss your next penetration test.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "MONDAY",
+      "date": "2026-08-03",
+      "time": "16:00",
+      "type": "Blog Crosspost",
+      "title": "5 SQL Injection Mistakes Every Business Owner Should Know",
+      "content": "SQL injection remains one of the most critical web vulnerabilities for businesses in 2026. According to OWASP, it has consistently ranked in the top 10 web application security risks for over a decade.\n\nMost SQL injection vulnerabilities come from five common development mistakes.\n\nFirst, using raw string concatenation to build database queries. This is the single easiest vulnerability to introduce and the easiest to fix.\n\nSecond, trusting client-side validation alone. JavaScript form checks provide convenience, not security. Any attacker can bypass them entirely.\n\nThird, not using parameterized queries or ORM frameworks. These are not optional. They are the baseline defense for any application that interacts with a database.\n\nFourth, displaying detailed error messages to users. When your application returns full database errors, you are essentially giving attackers a walkthrough of your data structure.\n\nFifth, relying solely on a Web Application Firewall without addressing the root cause. WAFs catch a portion of attacks but should never be your only defense.\n\nRead our full article on our blog:\nhttps://trintechdigitaldefense.github.io/blog/sql-injection-mistakes.html\n\nIf your business has any web application that interacts with a database, it needs a security audit.",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes.html",
+      "status": "pending"
+    },
+    {
+      "day": "TUESDAY",
+      "date": "2026-08-04",
+      "time": "09:00",
+      "type": "Educational",
+      "title": "What Is OSINT and Why It Matters for Your Business",
+      "content": "OSINT, or Open Source Intelligence, is the practice of collecting and analyzing information from publicly available sources. It sounds benign until you realize that the same techniques used for legitimate intelligence gathering can reveal your entire digital footprint.\n\nA professional OSINT assessment can map:\n\n- All employee email addresses and organizational structure from public sources\n- Exposed cloud infrastructure and development servers\n- Employee credential leaks from public breach databases\n- Social engineering vectors through LinkedIn and public profiles\n- Domain assets and subdomains that belong to your organization\n\nFor most businesses, the amount of publicly available information is far greater than what their IT team can account for.\n\nTrinTech Digital Defense offers OSINT assessments that simulate how an attacker would research your organization. The result is a detailed report showing every exposed asset and a prioritized remediation plan.\n\nRequest an OSINT assessment:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io",
+      "status": "pending"
+    },
+    {
+      "day": "TUESDAY",
+      "date": "2026-08-04",
+      "time": "12:00",
+      "type": "Client Alert",
+      "title": "Phishing Campaigns Targeting Caribbean Businesses",
+      "content": "Phishing campaigns targeting Caribbean businesses have increased significantly in the first half of 2026. Attackers are shifting away from generic bulk campaigns and moving toward targeted, localized attacks.\n\nThe current trend involves phishing emails that reference Trinidad and Tobago institutions, government agencies, and local businesses. The emails use context that makes them appear legitimate to Caribbean recipients.\n\nThese targeted campaigns are designed to bypass both technical controls and human vigilance. They typically begin with a credential-harvesting email and escalate to social engineering calls if the initial approach succeeds.\n\nThree defenses that make a measurable difference:\n\n1. Multi-factor authentication on all external-facing services\n2. Email filtering that inspects URLs in real time\n3. Regular security awareness training that includes simulated phishing tests\n\nIf you are not sure how resistant your organization is to phishing, we offer security awareness assessments and can run a controlled phishing simulation.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "TUESDAY",
+      "date": "2026-08-04",
+      "time": "16:00",
+      "type": "Blog Crosspost",
+      "title": "What Your Digital Footprint Reveals About Your Business",
+      "content": "A digital footprint is the trail of information your business leaves across the internet. For most organizations, the actual footprint is far larger than what internal IT teams have documented.\n\nWhat attackers can find in minutes using publicly available information:\n\n- Email addresses and employee names from LinkedIn, press releases, and job postings\n- Exposed cloud storage buckets with default permissions\n- Subdomains pointing to development servers still accessible online\n- Employee email addresses found in public data breach databases\n\nSmall businesses in Trinidad and the Caribbean are increasingly targeted because they often lack dedicated security teams. The attack infrastructure costs less than the audit would.\n\nWhat your business should do:\n\n1. Map your own footprint using the same tools attackers use\n2. Secure all cloud storage and SharePoint sites from public access\n3. Monitor breach databases for your corporate email domains\n4. Review what personal information employees post about their workplace\n\nRead our full article:\nhttps://trintechdigitaldefense.github.io/blog/digital-footprint-reveals.html\n\nWe perform OSINT assessments that simulate how an attacker would research your business.\n\nRequest one:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals.html",
+      "status": "pending"
+    },
+    {
+      "day": "WEDNESDAY",
+      "date": "2026-08-05",
+      "time": "09:00",
+      "type": "Industry Insight",
+      "title": "Ransomware Trends in the Caribbean Region",
+      "content": "Ransomware attacks against Caribbean businesses have tripled over the past 18 months. The strategy has evolved from encrypting systems and demanding payment to a two-stage approach: encrypt first, then exfiltrate data and threaten public release.\n\nWhat makes the Caribbean particularly vulnerable:\n\n- Lower investment in security detection capabilities compared to US or European markets\n- Heavy reliance on third-party managed service providers with limited security oversight\n- Banking and retail sectors with large transaction volumes and limited security teams\n- Regulatory frameworks that are still maturing in many jurisdictions\n\nThe average ransom demand in the Caribbean region for medium-sized businesses is between $50,000 and $150,000. Most businesses that pay do not recover all their data, and paying does not prevent follow-up attacks.\n\nThe most effective defense against ransomware is the same as the most effective defense against any breach: regular penetration testing to find and fix vulnerabilities before attackers do, combined with network segmentation and active monitoring.\n\nTrinTech provides penetration testing, network auditing, and incident response services. Contact us for a free scoping call.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "WEDNESDAY",
+      "date": "2026-08-05",
+      "time": "12:00",
+      "type": "Service Spotlight",
+      "title": "Network Auditing",
+      "content": "A network audit maps every device, service, and connection on your network. It identifies unauthorized access points, misconfigured firewalls, outdated software, and vulnerabilities that automated scans miss.\n\nA TrinTech network audit covers:\n\n- Network mapping and asset discovery\n- Port and service enumeration\n- Firewall rule analysis and configuration review\n- Detection of unauthorized wireless access points\n- Vulnerability assessment with manual verification\n- Network segmentation review\n\nMost businesses think they know what is running on their network. A TrinTech audit consistently finds assets that IT teams did not know existed. These unknown assets are often the first point of entry for attackers.\n\nWe serve businesses across Trinidad and Tobago. Contact us to schedule a network audit.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "WEDNESDAY",
+      "date": "2026-08-05",
+      "time": "16:00",
+      "type": "Case Study",
+      "title": "How We Secured a Port of Spain Retail Business",
+      "content": "A retail business in Port of Spain engaged TrinTech for a comprehensive security assessment after experiencing unusual activity on their POS network.\n\nThe audit revealed three critical findings:\n\nThe POS systems were running outdated Android firmware with known vulnerabilities. USB debugging was enabled on multiple devices. The payment network shared the same subnet as guest WiFi.\n\nEach finding on its own would be concerning. Together, they represented a complete path from the guest network to payment card data.\n\nTrinTech provided a prioritized remediation plan. Within four weeks, the client had segmented their POS network onto a dedicated VLAN, updated all device firmware, disabled USB debugging, and deployed network monitoring.\n\nA follow-up assessment confirmed all vulnerabilities were resolved. The business has not experienced a security incident since.\n\nIf your business runs POS systems or payment processing, do not wait for an incident to validate your security.\n\nSchedule a security audit:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io",
+      "status": "pending"
+    },
+    {
+      "day": "THURSDAY",
+      "date": "2026-08-06",
+      "time": "09:00",
+      "type": "Educational",
+      "title": "Password Security for Small Businesses",
+      "content": "Most password breaches in small businesses happen in one of two ways: employees using the same password across multiple services, or password hashes from old data breaches being cracked.\n\nThe statistics are straightforward. Approximately 65% of people reuse passwords across multiple accounts. When one service is breached, attackers immediately try those credentials on other platforms.\n\nPassword hygiene for small businesses should follow these principles:\n\nUse a company password manager. Every team member should have access to one that stores credentials encrypted and generates unique passwords for every service.\n\nEnforce multi-factor authentication everywhere. MFA is the single most effective control against credential theft. It should be enabled on email, banking, cloud services, and any system with access to business data.\n\nRotate compromised credentials immediately. If any employee email address appears in a breach database, change all passwords associated with that email within 24 hours.\n\nTrain your team. Password policies only work if your team understands the reasoning behind them. Explain why reuse is dangerous and why MFA is non-negotiable.\n\nIf you are not sure where your business stands, a TrinTech credential resilience assessment will identify your weakest points and provide a step-by-step improvement plan.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "THURSDAY",
+      "date": "2026-08-06",
+      "time": "12:00",
+      "type": "Blog Crosspost",
+      "title": "Why Android POS Systems Are Under Attack",
+      "content": "Android-powered point-of-sale systems are replacing legacy payment terminals across the Caribbean. The lower cost and flexibility are appealing. The security implications are often overlooked.\n\nThree vulnerabilities we consistently find in POS deployments:\n\nOutdated Android firmware with known vulnerabilities that have been patched for years. The patch never gets applied because the vendor has stopped supporting the device.\n\nRoot accessibility. Android devices can be rooted, which gives full control over the operating system. Some POS installations already run with root-level privileges.\n\nUSB and Bluetooth access. Physical access to a rooted Android POS device allows attackers to intercept payment data through USB debugging or Bluetooth vulnerabilities.\n\nOur recommendations for POS security:\n\n- Isolate POS devices on a separate VLAN\n- Enforce regular firmware updates with a maintenance schedule\n- Disable USB debugging and Bluetooth unless absolutely required\n- Conduct regular penetration tests on your POS infrastructure\n\nRead our full article:\nhttps://trintechdigitaldefense.github.io/blog/android-pos-under-attack.html\n\nWe conduct on-device penetration testing using Termux and Ubuntu.\n\nBook an assessment:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io/blog/android-pos-under-attack.html",
+      "status": "pending"
+    },
+    {
+      "day": "THURSDAY",
+      "date": "2026-08-06",
+      "time": "16:00",
+      "type": "Service Spotlight",
+      "title": "Incident Response and Forensic Investigation",
+      "content": "When a security incident occurs, the first hour determines the outcome. An effective incident response plan includes:\n\nContainment procedures to prevent the breach from spreading across your network. Evidence preservation to maintain the integrity of digital evidence for legal or insurance purposes. Root cause analysis to understand how the attack happened and prevent recurrence. Business recovery planning to restore operations with minimal disruption.\n\nTrinTech Digital Defense provides incident response services for businesses across Trinidad and Tobago. We have worked with organizations that experienced data breaches, ransomware attacks, and unauthorized system access.\n\nOur response process includes:\n\n- Immediate containment and evidence preservation\n- Full forensic investigation with written report\n- Identification of the attack vector and scope of impact\n- Remediation guidance and recovery planning\n- Post-incident review to strengthen your security posture\n\nHaving an incident response plan before you need one is not optional. Contact us to discuss incident response readiness.",
+      "has_link": false,
+      "status": "pending"
+    },
+    {
+      "day": "FRIDAY",
+      "date": "2026-08-07",
+      "time": "09:00",
+      "type": "Industry Insight",
+      "title": "Compliance Landscape: Data Protection and PCI-DSS",
+      "content": "The regulatory landscape for data protection in Trinidad and Tobago has evolved significantly. The Data Protection Act establishes requirements for how businesses collect, process, and store personal data.\n\nFor businesses in regulated sectors, additional frameworks apply:\n\nPCI-DSS applies to any business that processes, stores, or transmits payment card data. Compliance is mandatory for payment processors and strongly recommended for any business handling cardholder information.\n\nISO 27001 provides a framework for establishing, implementing, and maintaining an information security management system. Certification demonstrates to clients and partners that your organization takes security seriously.\n\nMany Caribbean businesses are unaware that they fall under these requirements. Others know they need to comply but lack the technical expertise to implement the necessary controls.\n\nA security audit from TrinTech Digital Defense identifies your compliance gaps and provides a clear path to remediation. Every audit report is structured to align with common regulatory frameworks.\n\nContact us to discuss your compliance requirements:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io",
+      "status": "pending"
+    },
+    {
+      "day": "FRIDAY",
+      "date": "2026-08-07",
+      "time": "12:00",
+      "type": "Client Reminder",
+      "title": "Free Scoping Calls Available",
+      "content": "TrinTech Digital Defense offers free scoping calls to discuss your cybersecurity needs. There is no obligation. The purpose is to understand your environment, identify immediate risks, and determine whether our services match your requirements.\n\nA typical scoping call covers:\n\n- Your current IT infrastructure and security posture\n- Known vulnerabilities or security incidents\n- Compliance requirements relevant to your industry\n- Budget considerations and timeline\n\nNo sales pitch. Just a conversation about your security.\n\nBook a call:\nhttps://trintechdigitaldefense.github.io\n\nOr contact us directly at +1 (868) 362-0679.",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io",
+      "status": "pending"
+    },
+    {
+      "day": "FRIDAY",
+      "date": "2026-08-07",
+      "time": "16:00",
+      "type": "Company Update",
+      "title": "About TrinTech Digital Defense",
+      "content": "TrinTech Digital Defense is a cybersecurity services provider based in Trinidad and Tobago. Our focus is on helping Caribbean businesses understand and reduce their security risk.\n\nWhat we do:\n\nPenetration testing for web applications, networks, and Android systems. Network auditing and vulnerability assessment. OSINT and digital footprint analysis. Incident response and forensic investigation. Compliance security assessments. DevSecOps pipeline integration.\n\nWhat we believe:\n\nSecurity should not be a luxury reserved for large corporations. Every business that handles customer data or processes payments has a baseline right to security. Professional-grade security services should be accessible to Trinidad and Tobago businesses.\n\nEvery engagement begins with a free scoping call. Contact us:\nhttps://trintechdigitaldefense.github.io",
+      "has_link": true,
+      "link": "https://trintechdigitaldefense.github.io",
+      "status": "pending"
+    }
+  ]
+}

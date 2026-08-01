@@ -56,7 +56,7 @@ All saved in `/opt/baal-agent/workspace/trintechdigitaldefense.github.io/`
 8. **Add Services section:**
    - Go to your profile → scroll to bottom → "Providing these services"
    - Click "Add a service"
-   - Add: Penetration Testing, Cybersecurity Audits, OSINT & Digital Footprint Analysis, Cyber Fraud Investigation
+   - Add: Vulnerability Assessment, Cybersecurity Audits, OSINT & Digital Footprint Analysis, Cyber Fraud Investigation
 
 9. **Add Featured links:**
    - Website: https://trintechdigitaldefense.github.io

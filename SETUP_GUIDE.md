@@ -54,10 +54,10 @@ Fill out every field:
 
 | Field | Value |
 |-------|-------|
-| **Description** | TrinTech Digital Defense provides enterprise-grade cybersecurity consulting for businesses across Trinidad & Tobago and the Caribbean. From OSINT reconnaissance to penetration testing, fraud investigation to business audits — we protect what matters. |
-| **Short Description** | Caribbean cybersecurity consulting. OSINT, pen testing, fraud investigation, business audits. |
+| **Description** | TrinTech Digital Defense provides enterprise-grade cybersecurity consulting for businesses across Trinidad & Tobago and the Caribbean. From OSINT reconnaissance to vulnerability assessment, fraud investigation to business audits — we protect what matters. |
+| **Short Description** | Caribbean cybersecurity consulting. OSINT, vulnerability assessment, fraud investigation, business audits. |
 | **Category** | Business Consultant |
-| **Services** | Cybersecurity Consulting, Penetration Testing, OSINT Investigation, Business Audit |
+| **Services** | Cybersecurity Consulting, Vulnerability Assessment, OSINT Investigation, Business Audit |
 | **Website** | trintechdigitaldefense.github.io |
 | **Phone** | +1 (868) 362-0679 |
 | **Email** | trintechdigitaldefense@gmail.com |
@@ -73,7 +73,7 @@ Add:
 - **Founded:** 2026
 - **Industry:** Cybersecurity
 - **Company size:** 1-10 employees
-- **Specialties:** Cybersecurity, OSINT, Penetration Testing, Fraud Investigation, Business Audits
+- **Specialties:** Cybersecurity, OSINT, Vulnerability Assessment, Fraud Investigation, Business Audits
 
 ---
 
@@ -87,7 +87,7 @@ Once we have the token working, I can post these. Here's the plan:
 
 Caribbean businesses are facing an unprecedented wave of cyber threats. We're here to change that.
 
-From OSINT reconnaissance to penetration testing, fraud investigation to comprehensive business audits — TrinTech provides enterprise-grade cybersecurity for Trinidad & Tobago and the wider Caribbean.
+From OSINT reconnaissance to vulnerability assessment, fraud investigation to comprehensive business audits — TrinTech provides enterprise-grade cybersecurity for Trinidad & Tobago and the wider Caribbean.
 
 🔒 Your business is a target. Are you protected?
 

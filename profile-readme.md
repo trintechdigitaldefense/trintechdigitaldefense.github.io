@@ -13,7 +13,7 @@
 
 ## 🎯 About
 
-I'm a cybersecurity consultant based in Trinidad & Tobago, specializing in penetration testing, network auditing, OSINT reconnaissance, and cyber fraud investigation. I help Caribbean businesses protect themselves from evolving digital threats.
+I'm a cybersecurity consultant based in Trinidad & Tobago, specializing in vulnerability assessment, network auditing, OSINT reconnaissance, and cyber fraud investigation. I help Caribbean businesses protect themselves from evolving digital threats.
 
 Every engagement starts with a signed NDA. Professional. Thorough. Confidential.
 
@@ -38,7 +38,7 @@ I develop security tools and frameworks for professional pentesting and reconnai
 | Website & OSINT Recon | $150/hr |
 | Micro-Business Audit (1-5 devices) | $1,000 |
 | Small Business Audit (5-15 devices) | $2,200 |
-| Penetration Testing | Custom quote |
+| Vulnerability Assessment | Custom quote |
 | Cyber Fraud Investigation | Custom quote |
 
 ## 🔧 Tech Stack

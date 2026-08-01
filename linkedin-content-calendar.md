@@ -130,12 +130,12 @@ Pen testing IS:
 
 For Caribbean businesses, the ROI is clear:
 • Average cost of a data breach in the Caribbean: $4-8M+
-• Cost of a professional pen test: Starting at $150/hr
+• Cost of a professional security assessment: Starting at $150/hr
 • Cost of preventing the breach: Often just a few patching cycles
 
 It's not an expense. It's insurance.
 
-What's your biggest question about penetration testing?
+What's your biggest question about vulnerability assessment?
 
 #PenetrationTesting #CyberSecurity #InfoSec #CaribbeanBusiness #Trinidad #TrinTech
 ```
@@ -187,7 +187,7 @@ Not a tech expert? That's why we offer a FREE 30-minute scoping call first. We'l
 🕐 9:00 AM — Morning threat intelligence check
 Scanning for new CVEs, Caribbean threat reports, and zero-day vulnerabilities. Staying ahead means knowing what's coming.
 
-🕐 10:30 AM — Client penetration test in progress
+🕐 10:30 AM — Client security assessment in progress
 Running authorized security assessments on a client's web application. Finding vulnerabilities before real attackers do. This is what we do.
 
 🕐 1:00 PM — Lunch + reading latest security research

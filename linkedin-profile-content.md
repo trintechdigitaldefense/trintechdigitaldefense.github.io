@@ -28,7 +28,7 @@ I help organizations across Trinidad & Tobago and the Caribbean region identify 
 
 I'm Jason Ramdharry, founder of TrinTech Digital Defense, a Trinidad-based cybersecurity consultancy specializing in:
 
-🔹 Penetration Testing — Web applications, Android mobile apps, and network infrastructure
+🔹 Vulnerability Assessment — Web applications, Android mobile apps, and network infrastructure
 🔹 OSINT Reconnaissance — Digital footprint analysis and exposure mapping  
 🔹 Network Audits — From micro-businesses (1-5 devices) to mid-market environments
 🔹 Cyber Fraud Investigation — Digital forensics support and incident analysis
@@ -81,7 +81,7 @@ July 2026 — Present | Port of Spain, Trinidad and Tobago
 
 Founded Trinidad & Tobago-based cybersecurity consultancy specializing in offensive security, OSINT, and infrastructure auditing for Caribbean businesses.
 
-• Provide penetration testing, network audits, and OSINT reconnaissance services
+• Provide vulnerability assessment, network audits, and OSINT reconnaissance services
 • Develop custom security tools and automation frameworks (Python, Bash, Docker)
 • Deliver comprehensive security assessments with NDA-protected engagements
 • Serve clients across financial services, healthcare, hospitality, and SME sectors
@@ -107,7 +107,7 @@ Note: Jason, add your actual certifications if you have any. If none yet, consid
 ## 5. SKILLS (Add 50 skills, reorder by relevance)
 
 **Core Skills:**
-1. Penetration Testing
+1. Vulnerability Assessment
 2. Cybersecurity
 3. OSINT (Open Source Intelligence)
 4. Network Security
@@ -148,7 +148,7 @@ Note: Jason, add your actual certifications if you have any. If none yet, consid
 
 Add these services on LinkedIn Services:
 
-1. **Penetration Testing** - "Comprehensive web, mobile, and network penetration testing for Caribbean businesses. NDA-protected engagements with detailed reporting."
+1. **Vulnerability Assessment** - "Comprehensive web, mobile, and network vulnerability assessment for Caribbean businesses. NDA-protected engagements with detailed reporting."
 2. **Cybersecurity Audits** - "Full infrastructure security assessments for businesses of all sizes. From micro-business audits ($1K) to enterprise-level evaluations."
 3. **OSINT & Digital Footprint Analysis** - "Discover what attackers can see about your organization. Digital exposure mapping and reputation analysis."
 4. **Cyber Fraud Investigation** - "Digital forensics support for fraud cases, financial crimes, and incident response in the Caribbean."

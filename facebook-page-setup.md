@@ -24,7 +24,7 @@
 We protect Caribbean businesses from cyber threats through professional, affordable security services.
 
 SERVICES:
-• Penetration Testing (Web, Mobile, Network)
+• Vulnerability Assessment (Web, Mobile, Network)
 • OSINT Reconnaissance & Digital Footprint Analysis
 • Micro-Business Network Audits ($1,000)
 • Small Business Network Audits ($2,200)
@@ -70,7 +70,7 @@ Use the generated TrinTech shield logo (512x512px)
 Professional cybersecurity services for businesses across Trinidad & Tobago and the Caribbean.
 
 We specialize in:
-• Penetration Testing
+• Vulnerability Assessment
 • OSINT Reconnaissance
 • Network Audits
 • Cyber Fraud Investigation

@@ -984,7 +984,7 @@ document.getElementById('newsletterBtn').addEventListener('click', async functio
   const btn = document.getElementById('newsletterBtn');
   btn.textContent = 'Subscribing...';
   btn.disabled = true;
-  const API_URL = 'https://trincontact.trintechdigitaldefense.workers.dev/api';
+  const API_URL = '/api';
   try {
     const res = await fetch(API_URL + '/newsletter', {
       method: 'POST',
@@ -1110,7 +1110,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
   btn.textContent = 'Sending...';
   btn.disabled = true;
   msgEl.innerHTML = '<span style="color:var(--cyan)">// Transmitting secure inquiry...</span>';
-  const BACKEND_URL = 'https://trincontact.trintechdigitaldefense.workers.dev/api';
+  const BACKEND_URL = '/api';
   try {
     const res = await fetch(BACKEND_URL + '/contact', {
       method: 'POST',

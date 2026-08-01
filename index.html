@@ -8,6 +8,8 @@
 <meta name="keywords" content="cybersecurity, penetration testing, Trinidad Tobago, OSINT, network audit, cybersecurity consultant, Caribbean security, TrinTech, infosec, vulnerability assessment">
 <meta name="author" content="Jason Ramdharry">
 <meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="canonical" href="https://trintechdigitaldefense.github.io"/>
 
 <!-- Open Graph / Facebook -->
@@ -328,6 +330,10 @@ section{padding:6rem 3rem;position:relative;z-index:1}
 .ts-lbl{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
 
 /* ANIMATED COUNTERS */
+
+.trust-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;padding:1.5rem;background:var(--bg3);border-bottom:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--text);white-space:nowrap}
+.trust-icon{font-size:1rem}
 .counters-section{background:var(--bg3);padding:4rem 3rem}
 .counters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:0 auto}
 @media(max-width:768px){.counters-grid{grid-template-columns:repeat(2,1fr)}}
@@ -515,7 +521,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-      <li><a href="#sentinel">Sentinel</a></li>
+      <li><a href="/sentinel/">Sentinel</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -771,11 +777,18 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
 </section>
 
 <!-- ANIMATED COUNTERS -->
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-icon">&#128274;</span><span>NDA-Protected Engagements</span></div>
+  <div class="trust-item"><span class="trust-icon">&#9201;</span><span>Response in &lt; 24 Hours</span></div>
+  <div class="trust-item"><span class="trust-icon">&#127757;</span><span>Caribbean-Based</span></div>
+  <div class="trust-item"><span class="trust-icon">&#127891;</span><span>Free Scoping Call</span></div>
+</div>
 <section class="counters-section">
   <div class="counters-grid">
-    <div class="counter-item"><span class="counter-num" data-target="50">0</span><span class="counter-lbl">Engagements</span></div>
-    <div class="counter-item"><span class="counter-num" data-target="200">0</span><span class="counter-lbl">Vulns Found</span></div>
-    <div class="counter-item"><span class="counter-num" data-target="15">0</span><span class="counter-lbl">Countries Served</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="24">0</span><span class="counter-lbl">Hour Response Time</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="100">0</span><span class="counter-lbl">% NDA Protected</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="1">0</span><span class="counter-lbl">Free Scoping Call</span></div>
     <div class="counter-item"><span class="counter-num" data-target="100">0</span><span class="counter-lbl">% Confidential</span></div>
   </div>
 </section>
@@ -876,9 +889,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">WHAT OUR CLIENTS SAY</h2>
   <p class="s-sub">Trusted by Caribbean businesses to protect their digital infrastructure.</p>
   <div class="testimonials-grid">
-    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"TrinTech identified 3 critical vulnerabilities in our web application that our previous auditor missed. The remediation roadmap was clear and actionable. Worth every dollar."</div><div class="testimonial-author">— IT Director, Regional Financial Services Firm</div><div class="testimonial-tag">Web App Penetration Test</div></div>
-    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"The OSINT scan showed us our digital footprint was twice what we thought. Jason walked us through everything in plain English, not just technical jargon. Professional, thorough, and respectful of our time."</div><div class="testimonial-author">— Operations Manager, Caribbean Healthcare Provider</div><div class="testimonial-tag">OSINT & Digital Footprint Analysis</div></div>
-    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"We were preparing for a compliance audit and needed to demonstrate we'd done our due diligence. TrinTech delivered a comprehensive report in 48 hours. Our compliance auditor was impressed."</div><div class="testimonial-author">— CEO, Trinidad-based SME</div><div class="testimonial-tag">Small Business Network Audit</div></div>
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"TrinTech identified 3 critical vulnerabilities in our web application that our previous auditor missed. The remediation roadmap was clear and actionable. Worth every dollar."</div><div class="testimonial-author">— IT Director, Financial Services Firm, Port of Spain</div><div class="testimonial-tag">Web App Penetration Test</div></div>
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"The OSINT scan showed us our digital footprint was twice what we thought. Jason walked us through everything in plain English, not just technical jargon. Professional, thorough, and respectful of our time."</div><div class="testimonial-author">— Operations Manager, Healthcare Provider, San Fernando</div><div class="testimonial-tag">OSINT & Digital Footprint Analysis</div></div>
+    <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-quote">"We were preparing for a compliance audit and needed to demonstrate we'd done our due diligence. TrinTech delivered a comprehensive report in 48 hours. Our compliance auditor was impressed."</div><div class="testimonial-author">— Managing Director, Professional Services Firm, Port of Spain</div><div class="testimonial-tag">Small Business Network Audit</div></div>
   </div>
   <p class="testimonial-note">// All engagements NDA-protected. Client identities shared with permission.</p>
   <div class="section-cta"><a href="#contact" class="btn-cyan">Join Our Client List →</a></div>
@@ -905,9 +918,9 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   <h2 class="s-title">LATEST INSIGHTS</h2>
   <p class="s-sub">Security tips and industry updates from the TrinTech team.</p>
   <div class="blog-grid">
-    <div class="blog-card"><div class="blog-cat">Web Security</div><div class="blog-title">5 SQL Injection Mistakes Every Business Owner Should Know</div><div class="blog-excerpt">SQL injection remains one of the most critical web vulnerabilities. Learn the top 5 mistakes that leave businesses exposed and how to fix them.</div><div class="blog-date">July 2026</div></div>
-    <div class="blog-card"><div class="blog-cat">OSINT</div><div class="blog-title">What Your Digital Footprint Reveals About Your Business</div><div class="blog-excerpt">A deep dive into the open-source intelligence available about any business online — and how attackers use it to plan targeted attacks.</div><div class="blog-date">June 2026</div></div>
-    <div class="blog-card"><div class="blog-cat">Android Security</div><div class="blog-title">Why Android POS Systems Are Under Attack</div><div class="blog-excerpt">Point-of-sale systems running Android are increasingly targeted. Here's what you need to know about securing your mobile payment infrastructure.</div><div class="blog-date">May 2026</div></div>
+    <a href="/blog/sql-injection-mistakes/" class="blog-card" style="text-decoration:none;color:inherit"><div class="blog-cat">Web Security</div><div class="blog-title">5 SQL Injection Mistakes Every Business Owner Should Know</div><div class="blog-excerpt">SQL injection remains one of the most critical web vulnerabilities. Learn the top 5 mistakes that leave businesses exposed and how to fix them.</div><div class="blog-date">July 2026</div></a>
+    <a href="/blog/digital-footprint-reveals/" class="blog-card" style="text-decoration:none;color:inherit"><div class="blog-cat">OSINT</div><div class="blog-title">What Your Digital Footprint Reveals About Your Business</div><div class="blog-excerpt">A deep dive into the open-source intelligence available about any business online — and how attackers use it to plan targeted attacks.</div><div class="blog-date">June 2026</div></a>
+    <a href="/blog/android-pos-under-attack/" class="blog-card" style="text-decoration:none;color:inherit"><div class="blog-cat">Android Security</div><div class="blog-title">Why Android POS Systems Are Under Attack</div><div class="blog-excerpt">Point-of-sale systems running Android are increasingly targeted. Here's what you need to know about securing your mobile payment infrastructure.</div><div class="blog-date">May 2026</div></a>
   </div>
   <div class="section-cta"><a href="#contact" class="btn-outline">Discuss Your Security →</a></div>
 </section>
@@ -949,7 +962,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
         <div class="form-group"><label>Service Required *</label><select id="inquiryService" required><option value="">— Select a service —</option><option>Website &amp; OSINT Recon — $150/hr</option><option>Micro-Business Network Audit (1–5 devices) — $1,000</option><option>Small Business Network Audit (5–15 devices) — $2,200</option><option>Android Penetration Testing</option><option>Cyber Fraud Investigation</option><option>+ Database Auditing (SQLMap) — +$450</option><option>+ Credential Resilience Testing — +$650</option><option>+ Exploitation Validation (Metasploit) — +$1,200</option><option>Custom engagement — Let's discuss</option></select></div>
         <div class="form-group"><label>Describe Your Environment &amp; Goals</label><textarea id="inquiryMessage" placeholder="Tell us about your systems, number of devices (web or Android), what you need assessed, your timeline, and any specific concerns…"></textarea></div>
         <button class="form-submit" id="inquirySubmitBtn" type="submit">[ SEND SECURE REQUEST ] →</button>
-        <p class="form-note">// All communications strictly confidential. NDA available on request.</p>
+        <p class="form-note">// All communications strictly confidential. We sign an NDA before any engagement begins. Your information is never shared with third parties.</p>
       </div>
       <div class="success-msg" id="successMsg">[+] Request received successfully.<br>[+] Jason Ramdharry will respond within 24 hours.<br>[+] Email: trintechdigitaldefense@gmail.com<br>[+] WhatsApp: +1 (868) 362-0679</div>
     </div>
@@ -996,12 +1009,12 @@ document.getElementById('newsletterBtn').addEventListener('click', async functio
 });
 </script>
     </div>
-    <div class="f-col"><div class="f-col-title">// Services</div><ul><li><a href="#services">OSINT &amp; Surveillance</a></li><li><a href="#services">Web Penetration Testing</a></li><li><a href="#services">Android PenTest</a></li><li><a href="#services">Network Auditing</a></li><li><a href="#services">Fraud Investigation</a></li><li><a href="#sentinel">🛡️ Sentinel — 24/7 Defense</a></li>
+    <div class="f-col"><div class="f-col-title">// Services</div><ul><li><a href="#services">OSINT &amp; Surveillance</a></li><li><a href="#services">Web Penetration Testing</a></li><li><a href="#services">Android PenTest</a></li><li><a href="#services">Network Auditing</a></li><li><a href="#services">Fraud Investigation</a></li><li><a href="/sentinel/">🛡️ Sentinel — 24/7 Defense</a></li>
         <li><a href="#services">DevSecOps</a></li></ul></div>
     <div class="f-col"><div class="f-col-title">// Pricing</div><ul><li><a href="#pricing">OSINT Recon — $150/hr</a></li><li><a href="#pricing">Micro Audit — $1,000</a></li><li><a href="#pricing">Small Biz Audit — $2,200</a></li><li><a href="#pricing">SQLMap — +$450</a></li><li><a href="#pricing">Credentials — +$650</a></li><li><a href="#pricing">Exploitation — +$1,200</a></li></ul></div>
     <div class="f-col"><div class="f-col-title">// Resources</div><ul><li><a href="#process">How It Works</a></li><li><a href="#testimonials">Client Testimonials</a></li><li><a href="#faq">FAQ</a></li><li><a href="https://wa.me/18683620679" target="_blank">WhatsApp Support</a></li></ul></div>
   </div>
-  <div class="f-bottom"><p>© 2026 TrinTech Digital Defense. All rights reserved. 🇹🇹</p><span class="f-owner">Jason Junior Ramdharry — Founder &amp; Lead Consultant</span><p>// Ethical hacking · Responsible disclosure · Professional integrity.</p></div>
+  <div class="f-bottom"><p>© 2026 TrinTech Digital Defense. All rights reserved. 🇹🇹</p><span class="f-owner">Jason Junior Ramdharry — Founder &amp; Lead Consultant</span><p>// Ethical hacking · Responsible disclosure · Professional integrity.</p><p style="margin-top:.5rem;font-size:.7rem"><a href="/privacy/" style="color:var(--muted);text-decoration:underline">Privacy Policy</a> · <a href="/terms/" style="color:var(--muted);text-decoration:underline">Terms of Engagement</a></p></div>
 </footer>
 
 <script>
@@ -1117,10 +1130,9 @@ document.getElementById('bookingForm').addEventListener('submit', async function
       btn.disabled = false;
     }
   } catch (err) {
-    const subject = encodeURIComponent('Website Inquiry: ' + service + ' — ' + name);
-    const body = encodeURIComponent('NEW WEBSITE INQUIRY\n━━━━━━━━━━━━━━━━━━━━\nName: ' + name + '\nCompany: ' + (company || 'Not provided') + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nService: ' + service + '\nMessage: ' + (message || 'No message provided') + '\n\nSent from trintechdigitaldefense.github.io');
-    window.location.href = 'mailto:trintechdigitaldefense@gmail.com?subject=' + subject + '&body=' + body;
-    showInquirySuccess();
+    alert('Unable to connect. Please email us directly at trintechdigitaldefense@gmail.com or message on WhatsApp.');
+    btn.textContent = '[ SEND SECURE REQUEST ] →';
+    btn.disabled = false;
   }
 });
 function showInquirySuccess() {

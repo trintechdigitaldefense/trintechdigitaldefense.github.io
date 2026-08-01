@@ -8,6 +8,14 @@
 <meta name="keywords" content="cybersecurity, penetration testing, Trinidad Tobago, OSINT, network audit, cybersecurity consultant, Caribbean security, TrinTech, infosec, vulnerability assessment">
 <meta name="author" content="Jason Ramdharry">
 <meta name="robots" content="index, follow"/>
+
+<meta name="google-site-verification" content="[ADD_AFTER_GOOGLE_SEARCH_CONSOLE_SETUP]" />
+<!--
+  GSC Setup: https://search.google.com/search-console -> Add Property -> HTML File
+  1. Upload 'google[xxxxxxxx].html' to repo root
+  2. Or use meta tag above — replace content value from GSC
+  3. Submit sitemap: https://search.google.com/search-console/sitemaps
+-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -970,6 +978,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
         <div class="form-group"><label>Service Required *</label><select id="inquiryService" required><option value="">— Select a service —</option><option>Website &amp; OSINT Recon — $150/hr</option><option>Micro-Business Network Audit (1–5 devices) — $1,000</option><option>Small Business Network Audit (5–15 devices) — $2,200</option><option>Android Penetration Testing</option><option>Cyber Fraud Investigation</option><option>+ Database Auditing (SQLMap) — +$450</option><option>+ Credential Resilience Testing — +$650</option><option>+ Exploitation Validation (Metasploit) — +$1,200</option><option>Custom engagement — Let's discuss</option></select></div>
         <div class="form-group"><label>Describe Your Environment &amp; Goals</label><textarea id="inquiryMessage" placeholder="Tell us about your systems, number of devices (web or Android), what you need assessed, your timeline, and any specific concerns…"></textarea></div>
         <button class="form-submit" id="inquirySubmitBtn" type="submit">[ SEND SECURE REQUEST ] →</button>
+        <div id="inquiryMsg" style="font-family:var(--mono);font-size:.65rem;margin-top:1rem;min-height:1.5em"></div>
         <p class="form-note">// All communications strictly confidential. We sign an NDA before any engagement begins. Your information is never shared with third parties.</p>
       </div>
       <div class="success-msg" id="successMsg">[+] Request received successfully.<br>[+] Jason Ramdharry will respond within 24 hours.<br>[+] Email: trintechdigitaldefense@gmail.com<br>[+] WhatsApp: +1 (868) 362-0679</div>
@@ -1119,9 +1128,12 @@ document.getElementById('bookingForm').addEventListener('submit', async function
   const phone = document.getElementById('inquiryPhone').value.trim();
   const service = document.getElementById('inquiryService').value;
   const message = document.getElementById('inquiryMessage').value.trim();
-  if (!name || !email || !service) { alert('Please fill in Name, Email, and Service Required.'); return; }
-  const subject = encodeURIComponent('Website Inquiry: ' + service + ' — ' + name);
-  const body = encodeURIComponent('NEW WEBSITE INQUIRY\n━━━━━━━━━━━━━━━━━━━━\nName: ' + name + '\nCompany: ' + (company || 'Not provided') + '\nEmail: ' + email + '\nPhone: ' + (phone || 'Not provided') + '\nService: ' + service + '\nMessage: ' + (message || 'No message provided') + '\n\nSent from trintechdigitaldefense.github.io');
+  const msgEl = document.getElementById('inquiryMsg');
+  if (!name || !email || !service) { msgEl.innerHTML = '<span style="color:#ff6b6b">// Error: Fill in Name, Email, and Service Required.</span>'; return; }
+  const btn = document.getElementById('inquirySubmitBtn');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  msgEl.innerHTML = '<span style="color:var(--cyan)">// Transmitting secure inquiry...</span>';
   const BACKEND_URL = window.location.protocol + '//' + window.location.host + '/api';
   try {
     const res = await fetch(BACKEND_URL + '/contact', {
@@ -1133,12 +1145,12 @@ document.getElementById('bookingForm').addEventListener('submit', async function
     if (data.success) {
       showInquirySuccess();
     } else {
-      alert('Request failed. Please email us directly at trintechdigitaldefense@gmail.com');
+      msgEl.innerHTML = '<span style="color:#ff6b6b">// Delivery failed. Please email trintechdigitaldefense@gmail.com directly.</span>';
       btn.textContent = '[ SEND SECURE REQUEST ] →';
       btn.disabled = false;
     }
   } catch (err) {
-    alert('Unable to connect. Please email us directly at trintechdigitaldefense@gmail.com or message on WhatsApp.');
+    msgEl.innerHTML = '<span style="color:#ff6b6b">// Connection error. Please email trintechdigitaldefense@gmail.com or WhatsApp +1 (868) 362-0679.</span>';
     btn.textContent = '[ SEND SECURE REQUEST ] →';
     btn.disabled = false;
   }

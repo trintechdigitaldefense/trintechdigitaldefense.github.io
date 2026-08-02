@@ -526,7 +526,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
 }
 </style>
 <!-- Google Analytics 4 — REPLACE G-D0HQRWL4P2 with your GA4 ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0HQRWL4P2"></script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=G-D0HQRWL4P2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -1256,10 +1256,14 @@ calculateCost();
 // MATRIX RAIN
 const canvas = document.getElementById('matrix-canvas');
 const ctx = canvas.getContext('2d');
-function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-resizeCanvas(); window.addEventListener('resize', resizeCanvas);
+let matrixStarted = false;
+function startMatrix() {
+  if (matrixStarted) return;
+  matrixStarted = true;
+  function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resizeCanvas(); window.addEventListener('resize', resizeCanvas);
 const chars = '01アイウエオカキクケコABCDEF0123456789#$%&><';
-let drops = [];
+let drops = []; let matrixDrops = drops;
 function initDrops() { const cols = Math.floor(canvas.width / 18); drops = Array.from({length: cols}, () => Math.random() * -50); }
 initDrops(); window.addEventListener('resize', initDrops);
 function drawMatrix() {
@@ -1268,6 +1272,28 @@ function drawMatrix() {
   drops.forEach((y, i) => { const c = chars[Math.floor(Math.random() * chars.length)]; ctx.fillText(c, i * 18, y * 18); if (y * 18 > canvas.height && Math.random() > .975) drops[i] = 0; drops[i]++; });
 }
 setInterval(drawMatrix, 65);
+
+// Only run matrix when visible (user is on page)
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        if (!matrixStarted) {
+          const canvas2 = document.getElementById('matrix-canvas');
+          const ctx2 = canvas2.getContext('2d');
+          function resizeCanvas() { canvas2.width = window.innerWidth; canvas2.height = window.innerHeight; }
+          resizeCanvas(); window.addEventListener('resize', resizeCanvas);
+          const chars = '01アイウエオカキクケコABCDEF0123456789#$%&><';
+          let drops2 = [];
+          function initDrops() { const cols = Math.floor(canvas2.width / 18); drops2 = Array.from({length: cols}, () => Math.random() * -50); }
+          initDrops(); window.addEventListener('resize', initDrops);
+          matrixDrops = drops2;
+        }
+      }
+    });
+  }, { threshold: 0 });
+  obs.observe(canvas);
+}
 
 // FORM
 document.getElementById('bookingForm').addEventListener('submit', async function(e) {

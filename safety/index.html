@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<meta name="theme-color" content="#071a22" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#f5f8fa" media="(prefers-color-scheme: light)" />
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Online Safety Tips — TrinTech Digital Defense</title>
+<meta name="description" content="Protect yourself online. Free cybersecurity tips for password security, phishing, social engineering, device safety, and protecting your digital identity.">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="canonical" href="https://trintechdigitaldefense.github.io/safety/"/>
+<link rel="stylesheet" href="/styles.css"/>
+<style>
+.safety-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10rem 3rem 5rem;
+  position: relative;
+}
+.safety-hero h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+.safety-hero h1 .accent {
+  color: var(--cyan);
+  text-shadow: 0 0 20px var(--cyan-glow);
+}
+.safety-hero p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 650px;
+  line-height: 1.7;
+}
+.safety-hero .btn-cyan {
+  margin-top: 2rem;
+}
+.safety-back {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: .78rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  transition: color .2s;
+}
+.safety-back:hover { color: var(--cyan); }
+
+.safety-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 6rem;
+}
+.safety-category {
+  margin-bottom: 4rem;
+}
+.safety-category h2 {
+  font-size: 1.8rem;
+  margin-bottom: .3rem;
+  color: var(--cyan);
+  text-shadow: 0 0 12px var(--cyan-glow);
+}
+.safety-category .cat-desc {
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+.tip-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.8rem;
+  transition: border-color .25s, box-shadow .25s;
+}
+.tip-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0,229,255,.08);
+}
+.tip-card .tip-num {
+  font-family: var(--mono);
+  font-size: .65rem;
+  color: var(--cyan);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: .6rem;
+}
+.tip-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: .8rem;
+  color: var(--text);
+}
+.tip-card p {
+  color: var(--muted);
+  font-size: .9rem;
+  line-height: 1.65;
+  margin: 0;
+}
+.tip-card .tip-level {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: .6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .6rem;
+  border-radius: 2px;
+  margin-top: .8rem;
+}
+.tip-card .tip-level.essential {
+  background: rgba(0,229,255,.12);
+  color: var(--cyan);
+}
+.tip-card .tip-level.advanced {
+  background: rgba(180,74,255,.12);
+  color: var(--purple);
+}
+.tip-card .tip-level.expert {
+  background: rgba(255,107,107,.12);
+  color: #ff6b6b;
+}
+
+.safety-cta {
+  background: var(--card);
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+.safety-cta h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.safety-cta p {
+  color: var(--muted);
+  max-width: 550px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .safety-hero { padding: 8rem 1.5rem 3rem; }
+  .safety-hero h1 { font-size: 2.2rem; }
+  .safety-content { padding: 2rem 1rem 4rem; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .safety-cta { padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-shield" aria-label="TrinTech Shield">T</div>
+    <div>
+      <div class="nav-main">TRINTECH</div>
+      <div class="nav-sub">Digital Defense</div>
+    </div>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/sentinel/">Sentinel</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Get Protected</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO -->
+<section class="safety-hero">
+  <a href="/" class="safety-back">&#8592; Back to TrinTech</a>
+  <h1>STAY <span class="accent">SAFE.</span><br>STAY ALERT.</h1>
+  <div class="hero-divider"></div>
+  <p>You can't control the threats out there. But you can control your defenses. These tips cover the fundamentals every person and business should follow.</p>
+  <a href="#guide" class="btn-cyan">Read the Guide</a>
+</section>
+
+<!-- GUIDE -->
+<section id="guide" class="safety-content">
+
+  <!-- PASSWORDS -->
+  <div class="safety-category">
+    <h2>&#128274; PASSWORDS &amp; AUTHENTICATION</h2>
+    <p class="cat-desc">Weak passwords are the #1 entry point for attackers. Fix this first.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 01</div>
+        <h3>Use a Password Manager</h3>
+        <p>Store unique passwords for every account. Tools like Bitwarden, KeePass, or 1Password generate and store 20+ character random passwords. You only need to remember one master password.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 02</div>
+        <h3>Enable 2FA Everywhere</h3>
+        <p>Two-factor authentication adds a second verification step. Use an authenticator app (Google Authenticator, Authy, Microsoft Authenticator) — never SMS if you can avoid it. SIM-swapping bypasses SMS 2FA entirely.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 03</div>
+        <h3>No Password Reuse</h3>
+        <p>One breach exposes every account with the same password. Attackers run automated "credential stuffing" attacks against every breached database. Your bank password stolen from a gym site? They try it everywhere.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 04</div>
+        <h3>Never Share Verification Codes</h3>
+        <p>No legitimate company will ever call, text, or email asking for your 2FA code, OTP, or password. If they do, they're the attacker. Block and report immediately.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 05</div>
+        <h3>Use Passkeys Where Available</h3>
+        <p>Passkeys (biometric authentication) are the future of passwordless login. They resist phishing and can't be stolen via keyloggers. Enable on Google, Apple, Microsoft, and any service that supports them.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHISHING -->
+  <div class="safety-category">
+    <h2>&#128065; PHISHING &amp; SOCIAL ENGINEERING</h2>
+    <p class="cat-desc">The most common attack vector. It's not a tech problem — it's a human problem.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 06</div>
+        <h3>Hover Before You Click</h3>
+        <p>Hover over every link in an email before clicking. Does the URL match the sender? Is it a legitimate domain or a lookalike? Example: `secure-bank-login.com` is not `bankoftrinidad.com`. Check the full domain, not just the visible text.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 07</div>
+        <h3>Verify Unexpected Messages</h3>
+        <p>If you get an email or text that seems urgent — account suspended, package delivery, invoice due — don't act on it. Open a new browser tab, navigate to the official site directly, and log in there. The link in the message could lead anywhere.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 08</div>
+        <h3>Suspicious Attachments = Kill</h3>
+        <p>Never open attachments from senders you didn't expect. Macros in Word documents, ZIP files, PDFs with embedded links — all common delivery methods for malware. If in doubt, delete or forward to your IT team.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 09</div>
+        <h3>Check for Urgency Tactics</h3>
+        <p>Phishing relies on creating panic: "Your account will be deleted in 24 hours." "Unauthorized login detected — click here." Legitimate security alerts come through official channels, not urgent emails asking for immediate action.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 10</div>
+        <h3>Inspect Email Headers</h3>
+        <p>Even senders that look legitimate can be spoofed. Check the "From" header, SPF/DKIM/DMARC results, and the actual return-path domain. Tools like Mail-Tester.com or Mimecast's email verifier can analyze suspicious messages.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NETWORKS & WiFi -->
+  <div class="safety-category">
+    <h2>&#128247; NETWORKS &amp; WIRELESS</h2>
+    <p class="cat-desc">Your network is your digital front door. Guard it.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 11</div>
+        <h3>Avoid Public WiFi for Sensitive Work</h3>
+        <p>Public networks (cafes, airports, hotels) let other users on the same network see your traffic. Even encrypted HTTPS is safer than HTTP, but attackers can perform SSL-stripping attacks. Use mobile data or a VPN for banking, work logins, and sensitive transactions on public WiFi.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 12</div>
+        <h3>Secure Your Home Router</h3>
+        <p>Change the default admin password. Use WPA3 (or WPA2 at minimum). Disable WPS. Turn off remote management. Update firmware regularly. Your router is the gateway to every device in your home.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 13</div>
+        <h3>Create a Guest Network</h3>
+        <p>Separate IoT devices (cameras, smart TVs, speakers) from your main network. These devices are poorly secured and commonly compromised, giving attackers a path into your personal devices.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEVICES -->
+  <div class="safety-category">
+    <h2>&#128268; DEVICE SECURITY</h2>
+    <p class="cat-desc">Every connected device is a potential attack surface.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 14</div>
+        <h3>Keep Everything Updated</h3>
+        <p>OS updates, browser updates, app updates — they all contain security patches. Turn on automatic updates. Unpatched software is the easiest entry point for attackers. Most breaches exploit known vulnerabilities with patches already available.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 15</div>
+        <h3>Use Full-Disk Encryption</h3>
+        <p>BitLocker (Windows), FileVault (Mac), device encryption (Android/iOS). If your laptop or phone is stolen, unencrypted data is accessible to anyone. Encryption requires the password to unlock.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 16</div>
+        <h3>Install Antivirus &amp; Firewall</h3>
+        <p>Windows Defender is sufficient for most users. macOS has built-in protection but isn't immune. Android apps from Google Play Store are generally safe. Never sideload APKs from unknown sources.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 17</div>
+        <h3>Lock Your Devices</h3>
+        <p>Use a PIN, pattern, password, or biometric lock. Never use your device without screen lock protection. A simple PIN beats a thief having 30 seconds of access. Enable auto-lock after 1-2 minutes of inactivity.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 18</div>
+        <h3>Remove Unused Apps &amp; Extensions</h3>
+        <p>Browser extensions with excessive permissions can track your browsing, steal cookies, or inject malicious code. Android apps requesting unnecessary permissions (contacts, SMS, location) can leak data. Audit regularly.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DATA & PRIVACY -->
+  <div class="safety-category">
+    <h2>&#128272; DATA PRIVACY &amp; DIGITAL FOOTPRINT</h2>
+    <p class="cat-desc">Your data is being collected right now. Know what's out there.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 19</div>
+        <h3>Check Your Email Breach History</h3>
+        <p>Go to https://haveibeenpwned.com and enter your email addresses. It shows every known data breach where your credentials were exposed. Change passwords for any compromised accounts immediately.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 20</div>
+        <h3>Limit What You Share Online</h3>
+        <p>Personal information on social media feeds attackers: birth dates, pet names, childhood schools — these are common password recovery questions. Review privacy settings, restrict who can see your posts, and avoid sharing sensitive personal details publicly.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 21</div>
+        <h3>Backup Your Data (3-2-1 Rule)</h3>
+        <p>Keep 3 copies of important data, on 2 different media types, with 1 offsite/offline. Ransomware encrypts everything attached to your network. An offline backup is your only recovery path if encrypted.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 22</div>
+        <h3>Be Careful with QR Codes</h3>
+        <p>QR code phishing ("quishing") is rising. Attackers print malicious QR codes on restaurant menus, parking receipts, or posters. Scanning could redirect to a phishing site or download malware. Verify the destination before scanning.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUSINESS -->
+  <div class="safety-category">
+    <h2>&#127979; BUSINESS &amp; EMPLOYEE SECURITY</h2>
+    <p class="cat-desc">If you run a business or employ people, these are non-negotiable.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">TIP 23</div>
+        <h3>Employee Security Training</h3>
+        <p>82% of breaches involve a human element. Regular phishing simulations, security awareness training, and clear reporting procedures turn employees from the weakest link into your first line of defense.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 24</div>
+        <h3>Principle of Least Privilege</h3>
+        <p>Every employee should only have access to the systems and data required for their role. When they leave, revoke immediately. When roles change, adjust access. Over-provisioned accounts are the #1 source of insider threats and lateral movement.</p>
+        <span class="tip-level essential">Essential</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 25</div>
+        <h3>Incident Response Plan</h3>
+        <p>When a breach happens, every second counts. Have a documented plan: who to call, what to preserve, how to contain, when to notify authorities. Practice it. Without a plan, panic causes evidence destruction and delayed response.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">TIP 26</div>
+        <h3>Vendor &amp; Third-Party Risk</h3>
+        <p>Your weakest link might not be internal. Vendors with access to your systems, cloud accounts, or data are an attack vector. Vet them, monitor their access, and require them to follow minimum security standards.</p>
+        <span class="tip-level advanced">Recommended</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="safety-cta">
+    <h2>Need More Than Tips?</h2>
+    <p>Tips are the first step. Real protection requires professional assessment, monitoring, and response. We help businesses in Trinidad &amp; Tobago build defenses that actually work.</p>
+    <a href="/#contact" class="btn-cyan">Book a Free Scoping Call</a>
+    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20read%20your%20safety%20tips%20and%20want%20to%20discuss%20protecting%20my%20business." target="_blank" style="font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;margin-left:1rem;">WhatsApp</a>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="footer-logo">T</div>
+      <div>
+        <div class="footer-name">TRINTECH</div>
+        <div>Trinidad and Tobago Cybersecurity</div>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Services</h4>
+        <a href="/#services">Penetration Testing</a>
+        <a href="/#services">OSINT</a>
+        <a href="/#services">Network Audits</a>
+        <a href="/#services">Incident Response</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="/safety/">Safety Tips</a>
+        <a href="/blog/">Blog</a>
+        <a href="/sentinel/">Sentinel</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 TrinTech Digital Defense. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// HAMBURGER
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navLinks.classList.toggle('open'); });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('active'); navLinks.classList.remove('open'); }));
+
+// SCROLL REVEAL
+const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; } }); }, { threshold: 0.07 });
+document.querySelectorAll('.tip-card, .safety-cta').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity 0.55s ease, transform 0.55s ease, border-color 0.25s, box-shadow 0.25s'; obs.observe(el); });
+
+// THEME TOGGLE
+(function(){
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  const saved = localStorage.getItem('trintech-theme');
+  if (saved === 'light') { document.documentElement.setAttribute('data-theme', 'light'); btn.textContent = 'LT'; }
+  btn.addEventListener('click', function(){
+    const current = document.documentElement.getAttribute('data-theme');
+    if (current === 'light') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      btn.textContent = 'DK';
+      localStorage.setItem('trintech-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      btn.textContent = 'LT';
+      localStorage.setItem('trintech-theme', 'light');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

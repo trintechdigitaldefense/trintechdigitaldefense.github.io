@@ -99,7 +99,7 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 #matrix-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;opacity:.032;pointer-events:none}
 
 /* STATUS BAR */
-.status-bar{background:linear-gradient(90deg,var(--bg2),var(--bg3),var(--bg2));border-bottom:1px solid var(--border);padding:.45rem 2rem;display:flex;justify-content:center;gap:2.5rem;align-items:center;font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;position:relative;z-index:501;flex-wrap:wrap}
+.status-bar{background:linear-gradient(90deg,var(--bg2),var(--bg3),var(--bg2));border-bottom:1px solid var(--border);padding:.45rem 2rem;display:flex;justify-content:center;gap:2.5rem;align-items:center;font-family:var(--mono);font-size:.65rem;letter-spacing:.1em;position:relative;z-index:500;flex-wrap:wrap}
 .status-item{display:flex;align-items:center;gap:.45rem;white-space:nowrap}
 .status-dot{width:6px;height:6px;border-radius:50%;animation:blink 2s infinite}
 .status-dot.green{background:var(--green);box-shadow:0 0 6px rgba(0,255,157,.5)}
@@ -110,7 +110,7 @@ body::before{content:'';position:fixed;inset:0;background:repeating-linear-gradi
 .attacks-counter{color:var(--cyan);text-shadow:0 0 8px var(--cyan-glow);font-weight:700;min-width:60px;text-align:right}
 
 /* NAV */
-nav{position:fixed;top:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(3,10,14,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:background .4s}
+nav{position:fixed;top:0;width:100%;z-index:505;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 3rem;background:rgba(3,10,14,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:background .4s}
 [data-theme="light"] nav{background:rgba(245,248,250,0.94)}
 .nav-logo{display:flex;align-items:center;gap:.85rem}
 .nav-shield{width:38px;height:38px;border:1.5px solid var(--cyan);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;box-shadow:0 0 14px var(--cyan-glow)}
@@ -123,6 +123,8 @@ nav{position:fixed;top:0;width:100%;z-index:500;display:flex;align-items:center;
 .nav-cta:hover{box-shadow:0 0 22px var(--cyan-glow)}
 .theme-toggle{background:none;border:1px solid var(--border);border-radius:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;transition:border-color .2s}
 .theme-toggle:hover{border-color:var(--cyan)}
+.nav-close{background:none;border:1px solid var(--border);border-radius:4px;width:36px;height:36px;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;color:var(--muted);transition:color .2s,border-color .2s;display:none}
+.nav-close:hover{color:var(--cyan);border-color:var(--cyan)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:22px;height:2px;background:var(--cyan);transition:transform .3s,opacity .3s;display:block}
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
@@ -505,6 +507,7 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
   .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:rgba(3,10,14,.97);backdrop-filter:blur(14px);flex-direction:column;padding:1.5rem;gap:1.2rem;border-bottom:1px solid var(--border)}
   [data-theme="light"] .nav-links{background:rgba(245,248,250,.97)}
   .nav-links.open{display:flex}
+  .nav-close{display:flex;align-items:center;justify-content:center}
   .nav-cta{display:none}
   .hamburger{display:flex}
   .hero,section{padding-left:1.5rem;padding-right:1.5rem}
@@ -572,9 +575,10 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/safety/">Safety Tips</a></li>
-    <li><button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">DT</button></li>
+    <li><button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">&#9728;</button></li>
+    <li><button class="nav-close" id="navClose" aria-label="Close menu" title="Close">&#10005;</button></li>
   </ul>
-  <a href="#contact" class="nav-cta" style="display:inline-block">Get Protected</a>
+  <a href="#contact" class="nav-cta">Get Protected</a>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 
@@ -1190,19 +1194,22 @@ document.getElementById('newsletterBtn').addEventListener('click', async functio
 const themeToggle = document.getElementById('themeToggle');
 const savedTheme = localStorage.getItem('trintech-theme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
-themeToggle.textContent = savedTheme === 'dark' ? 'LT' : 'DK';
+themeToggle.innerHTML = savedTheme === 'dark' ? '&#9790;' : '&#9728;';
 themeToggle.addEventListener('click', () => {
   const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', next);
   localStorage.setItem('trintech-theme', next);
-  themeToggle.textContent = next === 'dark' ? 'LT' : 'DK';
+  themeToggle.innerHTML = next === 'dark' ? '&#9790;' : '&#9728;';
 });
 
 // HAMBURGER
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
+const navClose = document.getElementById('navClose');
+const closeMenu = () => { hamburger.classList.remove('active'); navLinks.classList.remove('open'); };
 hamburger.addEventListener('click', () => { hamburger.classList.toggle('active'); navLinks.classList.toggle('open'); });
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hamburger.classList.remove('active'); navLinks.classList.remove('open'); }));
+navClose.addEventListener('click', closeMenu);
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
 // MONITORED ENVIRONMENTS — Real count from deployments
 let envCount = 47;

@@ -60,7 +60,7 @@ All saved in `/opt/baal-agent/workspace/trintechdigitaldefense.github.io/`
 
 9. **Add Featured links:**
    - Website: https://trintechdigitaldefense.github.io
-   - Booking: https://exile-aerobic-saddle-rough.2n6.me/booking/
+   - Booking: [BOOKING PORTAL UNAVAILABLE — Contact: trintechdigitaldefense@gmail.com]
    - Top repo: Apex-Recon
 
 10. **Make profile public:** Settings → Visibility → Profile visibility → "Your public profile" → ON

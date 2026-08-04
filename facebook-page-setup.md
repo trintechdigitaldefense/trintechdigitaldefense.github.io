@@ -40,7 +40,7 @@ EVERY ENGAGEMENT:
 📧 trintechdigitaldefense@gmail.com
 📱 WhatsApp: +1 (868) 362-0679
 🌐 https://trintechdigitaldefense.github.io
-📅 Book: https://exile-aerobic-saddle-rough.2n6.me/booking/
+📅 Book: https://trintechdigitaldefense.github.io (Contact form)
 
 DEFEND. DETECT. DOMINATE. 🇹🇹
 ```
@@ -53,11 +53,11 @@ Use the generated TrinTech shield logo (512x512px)
 
 ## 8. ACTION BUTTON
 - Set to: "Send WhatsApp Message" → +1 (868) 362-0679
-- Or "Contact Us" → https://exile-aerobic-saddle-rough.2n6.me/booking/
+- Or "Contact Us" → https://trintechdigitaldefense.github.io (Contact form)
 
 ## 9. PAGE LINKS
 - Website: https://trintechdigitaldefense.github.io
-- Booking: https://exile-aerobic-saddle-rough.2n6.me/booking/
+- Booking: https://trintechdigitaldefense.github.io (Contact form)
 - LinkedIn: https://www.linkedin.com/in/trintech-digital-defense-a68614407
 - GitHub: https://github.com/trintechdigitaldefense
 

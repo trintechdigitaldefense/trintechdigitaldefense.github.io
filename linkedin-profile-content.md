@@ -65,7 +65,7 @@ Caribbean financial institutions face increasing cyber threats — with attacks 
 📧 trintechdigitaldefense@gmail.com
 📱 WhatsApp: +1 (868) 362-0679
 🌐 https://trintechdigitaldefense.github.io
-📅 Book a free scoping call: https://exile-aerobic-saddle-rough.2n6.me/booking/
+📅 Book a free scoping call: https://trintechdigitaldefense.github.io/#contact (Contact form)
 
 DEFEND. DETECT. DOMINATE.
 ```
@@ -160,7 +160,7 @@ Add these services on LinkedIn Services:
 After optimizing the profile, add these to the Featured section:
 
 1. **Link to website**: https://trintechdigitaldefense.github.io
-2. **Link to booking portal**: https://exile-aerobic-saddle-rough.2n6.me/booking/
+2. **Link to booking portal**: https://trintechdigitaldefense.github.io/#contact (Contact form)
 3. **Link to top GitHub repo**: Apex-Recon (best showcase of technical capability)
 4. **A post** (see content plan below)
 

@@ -1398,5 +1398,16 @@ document.querySelectorAll('.counters-section, .threat-stats, .hero-stats').forEa
 </script>
 
 <script src="/enhancements.js"></script>
+<script>
+(function(){
+  var API='https://blossom-ginger-kiss-congress.2n6.me/analytics';
+  function track(page,referrer){
+    try{fetch(API+'/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:page||location.pathname,referrer:document.referrer,country:''}))}catch(e){}
+  }
+  track();
+  var observer=new MutationObserver(function(){track()});
+  observer.observe(document.body,{childList:true,subtree:true});
+})();
+</script>
 </body>
 </html>

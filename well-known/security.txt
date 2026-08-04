@@ -1,6 +1,0 @@
-Contact: mailto:trintechdigitaldefense@gmail.com
-Expires: 2027-12-31T23:59:59Z
-Encryption: https://trintechdigitaldefense.github.io/
-Preferred-Encodings: utf-8
-Policy: https://trintechdigitaldefense.github.io/terms/
-Hiring: mailto:trintechdigitaldefense@gmail.com

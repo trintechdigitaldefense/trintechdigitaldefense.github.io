@@ -3,403 +3,550 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrinTech Digital Defense — Custom Tools</title>
+<title>TrinTech Digital Defense — All Tools & Repos</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0a0a0f;
-    --bg-card: #12121a;
-    --bg-card-hover: #1a1a26;
-    --border: #2a2a3a;
-    --text: #e0e0e8;
-    --text-dim: #8888a0;
-    --accent: #4ade80;
-    --accent-dim: #22c55e;
-    --red: #f87171;
-    --yellow: #fbbf24;
-    --blue: #60a5fa;
-    --purple: #a78bfa;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+:root {
+  --bg: #0a0a0f;
+  --bg-card: #12121a;
+  --bg-card-hover: #1a1a26;
+  --border: #2a2a3a;
+  --text: #e0e0e8;
+  --text-dim: #8888a0;
+  --accent: #4ade80;
+  --accent-dim: #22c55e;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+a { text-decoration: none; color: inherit; }
 
-  /* Header */
-  .header {
-    background: linear-gradient(135deg, #0f0f18 0%, #1a1a2e 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 40px 20px 32px;
-    text-align: center;
-  }
-  .header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 8px;
-  }
-  .header h1 span { color: var(--accent); }
-  .header p { color: var(--text-dim); font-size: 1rem; max-width: 600px; margin: 0 auto; }
+.header {
+  background: linear-gradient(135deg, #0f0f18 0%, #1a1a2e 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 20px 32px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+.header h1 span { color: var(--accent); }
+.header p { color: var(--text-dim); font-size: 1rem; max-width: 600px; margin: 0 auto; }
 
-  /* Stats bar */
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    padding: 20px 20px 0;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-  }
-  .stat { text-align: center; }
-  .stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
-  .stat .label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 20px 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat .num { font-size: 1.5rem; font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+.stat .label { font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
 
-  /* Pipeline diagram */
-  .pipeline {
-    max-width: 800px;
-    margin: 24px auto;
-    padding: 0 20px;
-  }
-  .pipeline-flow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    font-size: 0.8rem;
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .pipeline-flow .node {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 6px 12px;
-    color: var(--text);
-    font-weight: 500;
-  }
-  .pipeline-flow .node.green { border-color: var(--accent); color: var(--accent); }
-  .pipeline-flow .node.blue { border-color: var(--blue); color: var(--blue); }
-  .pipeline-flow .node.purple { border-color: var(--purple); color: var(--purple); }
-  .pipeline-flow .arrow { color: var(--text-dim); }
+.categories {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 20px 60px;
+}
+.category-section { margin-bottom: 48px; }
+.category-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border);
+}
+.category-icon { font-size: 1.5rem; }
+.category-title { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.3px; }
+.category-count {
+  font-size: 0.75rem; padding: 3px 10px; border-radius: 12px;
+  background: rgba(255,255,255,0.06); color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+.category-desc {
+  color: var(--text-dim); font-size: 0.85rem;
+  margin-bottom: 16px; padding-left: 44px;
+}
 
-  /* Tool grid */
-  .grid {
-    max-width: 1100px;
-    margin: 32px auto;
-    padding: 0 20px 60px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
-  }
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-  }
-  .card:hover {
-    background: var(--bg-card-hover);
-    border-color: var(--accent-dim);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(74, 222, 128, 0.08);
-  }
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-  .card-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-  }
-  .card-icon.green { background: rgba(74, 222, 128, 0.15); }
-  .card-icon.blue { background: rgba(96, 165, 250, 0.15); }
-  .card-icon.purple { background: rgba(167, 139, 250, 0.15); }
-  .card-icon.yellow { background: rgba(251, 191, 36, 0.15); }
-  .card-icon.red { background: rgba(248, 113, 113, 0.15); }
-  .card-title { font-size: 1.05rem; font-weight: 600; }
-  .card-type { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
-  .card-desc { color: var(--text-dim); font-size: 0.88rem; line-height: 1.5; margin-bottom: 16px; flex-grow: 1; }
-  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .tag {
-    font-size: 0.7rem;
-    padding: 3px 8px;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.05);
-    color: var(--text-dim);
-    font-family: 'JetBrains Mono', monospace;
-  }
-  .card-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 12px;
-    border-top: 1px solid var(--border);
-    font-size: 0.78rem;
-  }
-  .status {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .status-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .status-dot.live { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
-  .status-dot.done { background: var(--blue); }
-  .status-dot.active { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
-  .card-action { color: var(--accent); font-weight: 500; }
-  .card:hover .card-action { text-decoration: underline; }
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+.tool-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.tool-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+.card-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 12px;
+}
+.card-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.card-title { font-size: 1.05rem; font-weight: 600; line-height: 1.2; }
+.card-subtitle {
+  font-size: 0.72rem; color: var(--text-dim);
+  text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px;
+}
+.card-desc {
+  color: var(--text-dim); font-size: 0.85rem;
+  line-height: 1.5; margin-bottom: 14px; flex-grow: 1;
+}
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.tag {
+  font-size: 0.68rem; padding: 3px 8px; border-radius: 4px;
+  background: rgba(255,255,255,0.04); color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+.card-stats {
+  display: flex; gap: 16px; margin-bottom: 14px;
+  font-size: 0.75rem; color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+.card-stat { display: flex; align-items: center; gap: 4px; }
+.card-stats .val { color: var(--text); }
+.card-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+}
+.card-action {
+  color: var(--accent); font-weight: 500;
+  display: flex; align-items: center; gap: 4px;
+}
+.tool-card:hover .card-action { text-decoration: underline; }
+.status-badge {
+  font-size: 0.68rem; padding: 2px 8px; border-radius: 10px; font-weight: 500;
+}
+.status-badge.featured { background: rgba(74,222,128,0.15); color: var(--accent); }
+.status-badge.repo-only { background: rgba(136,136,160,0.15); color: var(--text-dim); }
 
-  /* Architecture section */
-  .arch {
-    max-width: 1100px;
-    margin: 0 auto 40px;
-    padding: 0 20px;
-  }
-  .arch h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: var(--text);
-  }
-  .arch-box {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.82rem;
-    line-height: 1.6;
-    color: var(--text-dim);
-    overflow-x: auto;
-    white-space: pre;
-  }
-  .arch-box .hl-green { color: var(--accent); }
-  .arch-box .hl-blue { color: var(--blue); }
-  .arch-box .hl-purple { color: var(--purple); }
-  .arch-box .hl-yellow { color: var(--yellow); }
+.links {
+  text-align: center; padding: 20px 20px 40px;
+  color: var(--text-dim); font-size: 0.85rem;
+}
+.links a { color: var(--accent); margin: 0 12px; }
+.links a:hover { text-decoration: underline; }
 
-  /* Links */
-  .links {
-    text-align: center;
-    padding: 20px 20px 40px;
-    color: var(--text-dim);
-    font-size: 0.85rem;
-  }
-  .links a {
-    color: var(--accent);
-    text-decoration: none;
-    margin: 0 12px;
-  }
-  .links a:hover { text-decoration: underline; }
-
-  @media (max-width: 640px) {
-    .grid { grid-template-columns: 1fr; }
-    .stats { gap: 16px; }
-    .pipeline-flow { font-size: 0.7rem; }
-  }
+@media (max-width: 768px) {
+  .tool-grid { grid-template-columns: 1fr; }
+  .stats { gap: 16px; }
+  .header h1 { font-size: 1.6rem; }
+}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>🛡️ TrinTech <span>Digital Defense</span></h1>
-  <p>Custom-built AI security tools, autonomous scanners, and intelligence platforms</p>
+  <h1>🛡️ TrinTech <span>All Tools</span></h1>
+  <p>Every tool, framework, and utility in our GitHub portfolio — organized by purpose</p>
 </div>
 
 <div class="stats">
-  <div class="stat"><div class="num">6</div><div class="label">Tools</div></div>
-  <div class="stat"><div class="num">266</div><div class="label">Tests</div></div>
-  <div class="stat"><div class="num">~8.2k</div><div class="label">Lines</div></div>
-  <div class="stat"><div class="num">26</div><div class="label">Skills</div></div>
-  <div class="stat"><div class="num">100%</div><div class="label">Pass Rate</div></div>
+  <div class="stat"><div class="num">17</div><div class="label">Repos</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">Categories</div></div>
+  <div class="stat"><div class="num">~18k</div><div class="label">Lines of Code</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">With Dashboards</div></div>
+  <div class="stat"><div class="num">100%</div><div class="label">Open Source</div></div>
 </div>
 
-<div class="pipeline">
-  <div class="pipeline-flow">
-    <div class="node blue">🔍 FootprintScanner</div>
-    <span class="arrow">→</span>
-    <div class="node purple">📡 SPECTER</div>
-    <span class="arrow">→</span>
-    <div class="node">⚡ Log Correlator</div>
-    <span class="arrow">→</span>
-    <div class="node green">📋 Playbook Generator</div>
-    <span class="arrow">→</span>
-    <span class="hl-green">🚀 Response</span>
-  </div>
-  <div class="pipeline-flow" style="margin-top: 8px;">
-    <div class="node yellow">🪤 Mirage</div>
-    <span class="arrow">→</span>
-    <div class="node blue">🧠 TI-Corr</div>
-    <span class="arrow">↗</span>
-    <span class="arrow">enriches correlation</span>
-  </div>
-</div>
+<div class="categories">
 
-<div class="grid">
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">🔍</span>
+      <span class="category-title">Reconnaissance</span>
+      <span class="category-count">3 tools</span>
+    </div>
+    <p class="category-desc">Discovery, OSINT, and attack surface mapping tools</p>
+    <div class="tool-grid">
 
-  <!-- SPECTER -->
-  <div class="card" onclick="window.open('/trintech/specter/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon red">👻</div>
-      <div>
-        <div class="card-title">SPECTER / Rat-Detecter</div>
-        <div class="card-type">RAT & Malware Detection</div>
-      </div>
-    </div>
-    <div class="card-desc">Flask-based detection engine with 1,454+ threat signatures across 8 scan modules. Real-time dashboard, multi-format reports (PDF/HTML/JSON), and REST API.</div>
-    <div class="card-tags">
-      <span class="tag">1,628 lines</span>
-      <span class="tag">8 modules</span>
-      <span class="tag">1,454+ signatures</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot active"></span> Operational</div>
-      <span class="card-action">Open Dashboard →</span>
-    </div>
-  </div>
+      <a href="https://github.com/trintechdigitaldefense/Apex-Recon-" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(239,68,68, 0.15)">🔍</div>
+          <div>
+            <div class="card-title">Apex-Recon v2.0</div>
+            <div class="card-subtitle">Enterprise-Grade Network Audit & Intelligence Platform</div>
+          </div>
+        </div>
+        <div class="card-desc">ApexRecon v2.0 — a robust, modular framework for deep visibility into network security postures. Features multi-threaded scanning, automated recon, enterprise-grade reporting, and comprehensive attack surface mapping.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Multi-Threaded</span><span class="tag">Recon</span><span class="tag">V2.0</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~3,200</span></span> <span class="card-stat">📝 <span class="val">12</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
 
-  <!-- FootprintScanner -->
-  <div class="card" onclick="window.open('/trintech/footprintscanner/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon blue">🔍</div>
-      <div>
-        <div class="card-title">FootprintScanner</div>
-        <div class="card-type">Digital Footprint Scanner</div>
-      </div>
-    </div>
-    <div class="card-desc">Multi-scanner pipeline: DNS, domain, email, IP, certificate, social, and search. Automated PDF audit reports with remediation guidance.</div>
-    <div class="card-tags">
-      <span class="tag">~2,000 lines</span>
-      <span class="tag">33/33 tests</span>
-      <span class="tag">PDF reports</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot done"></span> Complete</div>
-      <span class="card-action">View Tool →</span>
-    </div>
-  </div>
+      <a href="https://github.com/trintechdigitaldefense/Recon-framework-v2.0" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(147,51,234, 0.15)">🔎</div>
+          <div>
+            <div class="card-title">Recon Framework v2.0</div>
+            <div class="card-subtitle">Automated Discovery & Mapping Framework</div>
+          </div>
+        </div>
+        <div class="card-desc">Automates subdomain enumeration, service discovery, vulnerability pre-scanning, and generates structured recon reports with actionable findings.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Subdomains</span><span class="tag">Mapping</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,500</span></span> <span class="card-stat">📝 <span class="val">8</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
 
-  <!-- Log Correlator -->
-  <div class="card" onclick="window.open('/trintech/log-correlator/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon yellow">⚡</div>
-      <div>
-        <div class="card-title">Log Correlator</div>
-        <div class="card-type">Unified Timeline Engine</div>
-      </div>
-    </div>
-    <div class="card-desc">Connective tissue for all TrinTech tools. Ingests from every scanner, correlates events into unified incident timelines with narrative generation.</div>
-    <div class="card-tags">
-      <span class="tag">~1,700 lines</span>
-      <span class="tag">64/64 tests</span>
-      <span class="tag">Flask API</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot done"></span> Complete</div>
-      <span class="card-action">View Tool →</span>
+      <a href="https://github.com/trintechdigitaldefense/Trin-Tech-Recon-Suite" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(59,130,246, 0.15)">🕵️</div>
+          <div>
+            <div class="card-title">Trin-Tech Recon Suite</div>
+            <div class="card-subtitle">Multi-Threaded OSINT & Infrastructure Auditing Suite</div>
+          </div>
+        </div>
+        <div class="card-desc">A lightweight, multi-threaded OSINT and infrastructure auditing suite. Threads concurrent DNS lookups, WHOIS queries, port scans, and service fingerprinting with real-time result aggregation.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Multi-Threaded</span><span class="tag">OSINT</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~800</span></span> <span class="card-stat">📝 <span class="val">6</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
     </div>
   </div>
 
-  <!-- Playbook Generator -->
-  <div class="card" onclick="window.open('/trintech/playbook/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon green">📋</div>
-      <div>
-        <div class="card-title">Playbook Generator</div>
-        <div class="card-type">Response Playbook Engine</div>
-      </div>
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">📊</span>
+      <span class="category-title">Detection</span>
+      <span class="category-count">4 tools</span>
     </div>
-    <div class="card-desc">Auto-generates MITRE-ATT&CK-mapped response playbooks with containment, eradication, and recovery steps. Includes notifications, PDF export, dedup, and status tracking.</div>
-    <div class="card-tags">
-      <span class="tag">~1,300 lines</span>
-      <span class="tag">84/84 tests</span>
-      <span class="tag">MITRE ATT&CK</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot done"></span> Complete</div>
-      <span class="card-action">Open API →</span>
+    <p class="category-desc">Vulnerability scanning, malware detection, and audit frameworks</p>
+    <div class="tool-grid">
+
+      <a href="/trintech/footprintscanner/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(59,130,246, 0.15)">🔍</div>
+          <div>
+            <div class="card-title">FootprintScanner</div>
+            <div class="card-subtitle">Digital Footprint Scanner</div>
+          </div>
+        </div>
+        <div class="card-desc">Multi-scanner pipeline: DNS, domain, email, IP, certificate, social, and search. Automated PDF audit reports with remediation guidance.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Multi-Scanner</span><span class="tag">PDF Reports</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~2,000</span></span> <span class="card-stat">📝 <span class="val">33/33</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/trintechdigitaldefense/fortifyone" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(34,197,94, 0.15)">🛡️</div>
+          <div>
+            <div class="card-title">FortifyOne</div>
+            <div class="card-subtitle">Complete Cybersecurity Audit Framework</div>
+          </div>
+        </div>
+        <div class="card-desc">Systematic security assessment including OWASP Top 10 checks, configuration hardening analysis, and compliance mapping (ISO 27001, NIST).</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Audit</span><span class="tag">OWASP</span><span class="tag">NIST</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~2,200</span></span> <span class="card-stat">📝 <span class="val">14</span></span> <span class="card-stat">📝 <span class="val">200+</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+
+      <a href="/trintech/specter/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(239,68,68, 0.15)">👻</div>
+          <div>
+            <div class="card-title">SPECTER / Rat-Detecter</div>
+            <div class="card-subtitle">RAT & Malware Detection Engine</div>
+          </div>
+        </div>
+        <div class="card-desc">Flask-based detection engine with 1,454+ threat signatures across 8 scan modules. Real-time dashboard, multi-format reports (PDF/HTML/JSON), and REST API.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">RAT</span><span class="tag">Malware</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,628</span></span> <span class="card-stat">📝 <span class="val">8</span></span> <span class="card-stat">📝 <span class="val">1,454+</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/trintechdigitaldefense/trin-tech-audit" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(234,179,8, 0.15)">📊</div>
+          <div>
+            <div class="card-title">TrinTech Audit Suite</div>
+            <div class="card-subtitle">Full Network Audit Suite</div>
+          </div>
+        </div>
+        <div class="card-desc">Comprehensive network audit suite covering infrastructure assessment, configuration review, compliance checking, and vulnerability enumeration with risk scoring.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Network Audit</span><span class="tag">Compliance</span><span class="tag">Risk Scoring</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~2,800</span></span> <span class="card-stat">📝 <span class="val">10</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
     </div>
   </div>
 
-  <!-- Mirage -->
-  <div class="card" onclick="window.open('/trintech/mirage/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon purple">🪤</div>
-      <div>
-        <div class="card-title">Mirage</div>
-        <div class="card-type">Deception Framework</div>
-      </div>
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">⚡</span>
+      <span class="category-title">Response</span>
+      <span class="category-count">3 tools</span>
     </div>
-    <div class="card-desc">Deploy decoy assets, detect lateral movement, and misdirect attackers. Modular lure system with browser-based dashboard for monitoring deception engagements.</div>
-    <div class="card-tags">
-      <span class="tag">~1,300 lines</span>
-      <span class="tag">41/41 tests</span>
-      <span class="tag">Lures</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot done"></span> Complete</div>
-      <span class="card-action">View Tool →</span>
+    <p class="category-desc">Incident correlation, threat intelligence, and automated response</p>
+    <div class="tool-grid">
+
+      <a href="/trintech/log-correlator/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(234,179,8, 0.15)">⚡</div>
+          <div>
+            <div class="card-title">Log Correlator</div>
+            <div class="card-subtitle">Unified Timeline Engine</div>
+          </div>
+        </div>
+        <div class="card-desc">Connective tissue for all TrinTech tools. Ingests from every scanner, correlates events into unified incident timelines with narrative generation.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Flask API</span><span class="tag">Timeline</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,700</span></span> <span class="card-stat">📝 <span class="val">64/64</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
+
+      <a href="/trintech/playbook/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(34,197,94, 0.15)">📋</div>
+          <div>
+            <div class="card-title">Playbook Generator</div>
+            <div class="card-subtitle">Response Playbook Engine</div>
+          </div>
+        </div>
+        <div class="card-desc">Auto-generates MITRE-ATT&CK-mapped response playbooks with containment, eradication, and recovery steps. Includes notifications, PDF export, dedup, and status tracking.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Flask API</span><span class="tag">MITRE ATT&CK</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,300</span></span> <span class="card-stat">📝 <span class="val">84/84</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
+
+      <a href="/trintech/ticorr/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(59,130,246, 0.15)">🧠</div>
+          <div>
+            <div class="card-title">TI-Corr</div>
+            <div class="card-subtitle">Threat Intelligence Correlator</div>
+          </div>
+        </div>
+        <div class="card-desc">Enriches events with external threat intelligence feeds. Correlates internal detections with known IOCs, TTPs, and threat actor profiles.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Feeds</span><span class="tag">IOC</span><span class="tag">TTP</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,500</span></span> <span class="card-stat">📝 <span class="val">34/34</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
     </div>
   </div>
 
-  <!-- TI-Corr -->
-  <div class="card" onclick="window.open('/trintech/ticorr/', '_blank')">
-    <div class="card-header">
-      <div class="card-icon blue">🧠</div>
-      <div>
-        <div class="card-title">TI-Corr</div>
-        <div class="card-type">Threat Intelligence Correlator</div>
-      </div>
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">🪤</span>
+      <span class="category-title">Deception</span>
+      <span class="category-count">1 tools</span>
     </div>
-    <div class="card-desc">Enriches events with external threat intelligence feeds. Correlates internal detections with known IOCs, TTPs, and threat actor profiles.</div>
-    <div class="card-tags">
-      <span class="tag">~1,500 lines</span>
-      <span class="tag">34/34 tests</span>
-      <span class="tag">Feeds</span>
-    </div>
-    <div class="card-footer">
-      <div class="status"><span class="status-dot done"></span> Complete</div>
-      <span class="card-action">View Tool →</span>
+    <p class="category-desc">Deception technology and adversary misdirection</p>
+    <div class="tool-grid">
+
+      <a href="/trintech/mirage/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(147,51,234, 0.15)">🪤</div>
+          <div>
+            <div class="card-title">Mirage</div>
+            <div class="card-subtitle">Deception Framework</div>
+          </div>
+        </div>
+        <div class="card-desc">Deploy decoy assets, detect lateral movement, and misdirect attackers. Modular lure system with browser-based dashboard for monitoring deception engagements.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Zero-Dependency</span><span class="tag">Lures</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,300</span></span> <span class="card-stat">📝 <span class="val">41/41</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
     </div>
   </div>
 
-</div>
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">🤖</span>
+      <span class="category-title">AI & Automation</span>
+      <span class="category-count">3 tools</span>
+    </div>
+    <p class="category-desc">AI-powered scanners, mobile platforms, and automated pipelines</p>
+    <div class="tool-grid">
 
-<div class="arch">
-  <h2>🏗️ Architecture</h2>
-  <div class="arch-box"><span class="hl-green">FootprintScanner</span> (external recon)
-    ↓
-<span class="hl-purple">SPECTER</span> (internal scan) → <span class="hl-yellow">Log Correlator</span> → <span class="hl-green">Playbook Generator</span> → Response
-    ↓                           ↑               ↑
-<span class="hl-blue">Mirage</span> (deception) → <span class="hl-blue">TI-Corr</span> (enrich) → /       \</div>
-</div>
+      <a href="https://github.com/trintechdigitaldefense/ai-tools" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(6,182,212, 0.15)">🤖</div>
+          <div>
+            <div class="card-title">AI Security Tools</div>
+            <div class="card-subtitle">AI-Powered Security Scanners & Intelligence</div>
+          </div>
+        </div>
+        <div class="card-desc">Custom-built AI security tools including autonomous scanners, intelligent threat detection engines, and AI-driven intelligence platforms with ML anomaly detection.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">AI/ML</span><span class="tag">Autonomous</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~4,500</span></span> <span class="card-stat">📝 <span class="val">5+</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/trintechdigitaldefense/apex-suite" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(6,182,212, 0.15)">📱</div>
+          <div>
+            <div class="card-title">Apex Suite</div>
+            <div class="card-subtitle">Mobile Cybersecurity Command Center</div>
+          </div>
+        </div>
+        <div class="card-desc">Mobile-optimized cybersecurity platform unifying network scanning, vulnerability assessment, ISMS compliance checking, and commercial reporting into a single automated command center.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Mobile</span><span class="tag">ISMS</span><span class="tag">Reporting</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,800</span></span> <span class="card-stat">📝 <span class="val">8</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/trintechdigitaldefense/devsecops-pipeline" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(6,182,212, 0.15)">⚙️</div>
+          <div>
+            <div class="card-title">DevSecOps Pipeline</div>
+            <div class="card-subtitle">Automated Security Testing Pipeline</div>
+          </div>
+        </div>
+        <div class="card-desc">Robust automation framework for offensive and defensive security testing. Optimized for mobile and desktop with CI/CD integration for continuous security validation.</div>
+        <div class="card-tags"><span class="tag">Shell</span><span class="tag">CI/CD</span><span class="tag">Automation</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~600</span></span> <span class="card-stat">📝 <span class="val">6</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">🔒</span>
+      <span class="category-title">Defense</span>
+      <span class="category-count">2 tools</span>
+    </div>
+    <p class="category-desc">Intrusion prevention, autonomous defense, and monitoring</p>
+    <div class="tool-grid">
+
+      <a href="/trintech/sentinel/" target="_self" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(34,197,94, 0.15)">🔒</div>
+          <div>
+            <div class="card-title">Sentinel</div>
+            <div class="card-subtitle">Line of Defense Engine</div>
+          </div>
+        </div>
+        <div class="card-desc">v2.0 Line of Defense Engine — FIM, SSH brute force blocking, process/audit scanning, reverse shell detection, system hardening, active deception, and persistence hunting.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">FIM</span><span class="tag">IDS</span><span class="tag">Hardening</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,800</span></span> <span class="card-stat">📝 <span class="val">7</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge featured">Featured</span>
+          <span class="card-action">Open Dashboard →</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/trintechdigitaldefense/trintech-guardian" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(34,197,94, 0.15)">🛡️</div>
+          <div>
+            <div class="card-title">TrinTech Guardian</div>
+            <div class="card-subtitle">Autonomous Network Defense Grid</div>
+          </div>
+        </div>
+        <div class="card-desc">Autonomous network defense grid and active intrusion prevention system. Features process masquerading, behavioral threat scoring, fail-safe circuit breakers, and automated JSON forensics.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">IDS/IPS</span><span class="tag">Behavioral Scoring</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~1,200</span></span> <span class="card-stat">📝 <span class="val">8</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="category-section">
+    <div class="category-header">
+      <span class="category-icon">🛠️</span>
+      <span class="category-title">Utility</span>
+      <span class="category-count">1 tools</span>
+    </div>
+    <p class="category-desc">Support tools, monitoring utilities, and operational helpers</p>
+    <div class="tool-grid">
+
+      <a href="https://github.com/trintechdigitaldefense/noise-monitor" target="_blank" class="tool-card">
+        <div class="card-header">
+          <div class="card-icon" style="background:rgba(107,114,128, 0.15)">🎵</div>
+          <div>
+            <div class="card-title">Noise Monitor</div>
+            <div class="card-subtitle">Audio & Noise Level Tracking Utility</div>
+          </div>
+        </div>
+        <div class="card-desc">Lightweight Python utility to track, log, and analyze ambient audio and noise levels in real time with automated workflows and structured report generation.</div>
+        <div class="card-tags"><span class="tag">Python</span><span class="tag">Audio</span><span class="tag">Monitoring</span></div>
+        <div class="card-stats"><span class="card-stat">📝 <span class="val">~400</span></span> <span class="card-stat">📝 <span class="val">Auto-log</span></span></div>
+        <div class="card-footer">
+          <span class="status-badge repo-only">GitHub Repo</span>
+          <span class="card-action">View on GitHub →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
 <div class="links">
-  <a href="https://github.com/trintechdigitaldefense/ai-tools" target="_blank">GitHub</a>
-  <a href="https://trintechdigitaldefense.github.io" target="_blank">Agent Interface</a>
+  <a href="https://github.com/trintechdigitaldefense" target="_blank">GitHub Organization</a>
+  <a href="/" target="_blank">Main Site</a>
+  <a href="/sentinel/" target="_blank">Sentinel Dashboard</a>
 </div>
 
 </body>

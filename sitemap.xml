@@ -1,58 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://trintechdigitaldefense.github.io/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://trintechdigitaldefense.github.io</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes/</loc>
+    <loc>https://trintechdigitaldefense.github.io/blog-section/</loc>
     <lastmod>2026-08-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://trintechdigitaldefense.github.io/blog/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/ai-supply-chain-attacks-2026/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/blog/android-pos-under-attack/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/phishing-trinidad-businesses/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/privacy/</loc>
     <lastmod>2026-08-01</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/reports/TR-20260727-79ED107E_Sample_Client_Corp/</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/safety/</loc>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/sentinel/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/terms/</loc>
     <lastmod>2026-08-01</lastmod>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/phishing-trinidad-businesses/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://trintechdigitaldefense.github.io/token-generator/</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://trintechdigitaldefense.github.io/trintech/</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <loc>https://trintechdigitaldefense.github.io/trintech/ai-tools/</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
-  </urlset>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/apex-recon/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/apex-suite/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/devsecops-pipeline/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/footprintscanner/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/fortifyone/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/log-correlator/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/mirage/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/noise-monitor/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/playbook/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/recon-framework-v2/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/specter/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/ticorr/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/trin-tech-audit/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/trin-tech-recon-suite/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/trintech/trintech-guardian/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

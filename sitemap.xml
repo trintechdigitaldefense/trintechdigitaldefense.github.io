@@ -2,15 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://trintechdigitaldefense.github.io</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://trintechdigitaldefense.github.io/blog-section/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/blog/</loc>
@@ -19,62 +13,56 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/ai-supply-chain-attacks-2026/</loc>
+    <loc>https://trintechdigitaldefense.github.io/blog/ai-supply-chain-attacks-2026</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/android-pos-under-attack/</loc>
+    <loc>https://trintechdigitaldefense.github.io/blog/android-pos-under-attack</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad/</loc>
+    <loc>https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/phishing-trinidad-businesses</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals/</loc>
+    <loc>https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/phishing-trinidad-businesses/</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad/</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <loc>https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes</loc>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/privacy/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://trintechdigitaldefense.github.io/reports/TR-20260727-79ED107E_Sample_Client_Corp/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/safety/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -86,19 +74,13 @@
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/terms/</loc>
-    <lastmod>2026-08-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://trintechdigitaldefense.github.io/token-generator/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/trintech/</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

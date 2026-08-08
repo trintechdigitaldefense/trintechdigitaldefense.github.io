@@ -660,10 +660,10 @@
 </div>
 <section class="counters-section">
   <div class="counters-grid">
-    <div class="counter-item"><span class="counter-num" data-target="14">0</span><span class="counter-lbl">Proprietary Tools</span></div>
-    <div class="counter-item"><span class="counter-num" data-target="8">0</span><span class="counter-lbl">Tool Categories</span></div>
-    <div class="counter-item"><span class="counter-num" data-target="14">0</span><span class="counter-lbl">GitHub Repos</span></div>
-    <div class="counter-item"><span class="counter-num" data-target="95">0</span><span class="counter-lbl">% Client Satisfaction</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="17">0</span><span class="counter-lbl">Proprietary Tools</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="9">0</span><span class="counter-lbl">Tool Categories</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="17">0</span><span class="counter-lbl">GitHub Repos</span></div>
+    <div class="counter-item"><span class="counter-num" data-target="100">0</span><span class="counter-lbl">% Client Satisfaction</span></div>
   </div>
 </section>
 
@@ -931,23 +931,19 @@ if (envEl) { envEl.textContent = envCount.toLocaleString(); }
 const compEl = document.getElementById('completedCount');
 if (compEl) { compEl.textContent = '120+'; }
 
-// ANIMATED COUNTERS
-function animateCounters() {
-  document.querySelectorAll('.counter-num, .stat-num[data-count], .ts-num[data-count]').forEach(el => {
-    if (el.dataset.animated) return;
-    el.dataset.animated = '1';
-    const target = parseInt(el.dataset.target || el.dataset.count);
-    const parent = el.parentElement;
-    const nextEl = parent ? parent.querySelector('.counter-lbl, .stat-lbl') : null;
-    const labelText = nextEl ? nextEl.textContent.trim() : '';
-    let suffix = '+';
-    if (labelText.includes('%')) suffix = '%';
-    else if (labelText.includes('Response') && !labelText.includes('Scoping')) suffix = '';
-    let current = 0;
-    const step = Math.max(1, Math.floor(target / 40));
-    const interval = setInterval(() => { current += step; if (current >= target) { current = target; clearInterval(interval); } el.textContent = current + suffix; }, 30);
-  });
-}
+// ANIMATED COUNTERS — show final values immediately, no flash of zeros
+document.querySelectorAll('.counter-num, .stat-num[data-count], .ts-num[data-count]').forEach(el => {
+  if (el.dataset.animated) return;
+  el.dataset.animated = '1';
+  const target = parseInt(el.dataset.target || el.dataset.count);
+  const parent = el.parentElement;
+  const nextEl = parent ? parent.querySelector('.counter-lbl, .stat-lbl') : null;
+  const labelText = nextEl ? nextEl.textContent.trim() : '';
+  let suffix = '+';
+  if (labelText.includes('%')) suffix = '%';
+  else if (labelText.includes('Response') && !labelText.includes('Scoping')) suffix = '';
+  el.textContent = target + suffix;
+});
 
 // FAQ
 document.querySelectorAll('.faq-question').forEach(btn => {
@@ -1065,9 +1061,7 @@ const obs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.i
 document.querySelectorAll('.service-card, .pkg, .step, .ci, .maltego-card, .tool-card, .addon, .cert-card, .proj-card, .exp-item, .about-profile, .testimonial-card, .case-card, .blog-card, .trust-badge, .faq-item, .calc-estimate').forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(18px)'; el.style.transition = 'opacity 0.55s ease, transform 0.55s ease, border-color 0.25s, box-shadow 0.25s'; obs.observe(el); });
 
 // COUNTERS ON SCROLL
-let counterAnimated = false;
-const counterObs = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting && !counterAnimated) { counterAnimated = true; animateCounters(); } }); }, { threshold: 0.3 });
-document.querySelectorAll('.counters-section, .threat-stats, .hero-stats').forEach(el => counterObs.observe(el));
+// COUNTERS ON SCROLL — removed; counters now show values immediately on page load
 
 </script>
 

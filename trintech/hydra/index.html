@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydra Testing — TrinTech Digital Defense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f; --bg-card: #12121a; --border: #2a2a3a; --text: #e0e0e8; --text-dim: #8888a0;
+    --accent: #fbbf24; --accent-dim: #f59e0b; --green: #4ade80; --yellow: #fbbf24; --blue: #60a5fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+  .back { display: inline-block; color: var(--text-dim); text-decoration: none; font-size: 0.85rem; margin: 24px 20px 0; }
+  .back:hover { color: var(--accent); }
+  .header { padding: 24px 20px 32px; text-align: center; }
+  .header h1 { font-size: 1.8rem; font-weight: 700; }
+  .header h1 span { color: var(--accent); }
+  .header p { color: var(--text-dim); font-size: 0.95rem; margin-top: 4px; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; margin-top: 10px; }
+  .badge.green { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge.yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+  .metrics { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 20px 20px; justify-content: center; }
+  .metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 24px; text-align: center; min-width: 140px; }
+  .metric .val { font-size: 1.5rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .metric .lbl { font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .section { max-width: 700px; margin: 24px auto; padding: 0 20px; }
+  .section h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+  .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+  .mod { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .mod h3 { font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+  .mod p { font-size: 0.75rem; color: var(--text-dim); line-height: 1.4; }
+  .mod .sig { color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+  .output-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 12px; }
+  .output-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; text-align: center; }
+  .output-item h3 { font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; color: var(--accent); }
+  .output-item p { font-size: 0.75rem; color: var(--text-dim); }
+  .footer { text-align: center; padding: 30px 20px; color: var(--text-dim); font-size: 0.8rem; }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<a class="back" href="/">← Back to TrinTech Portfolio</a>
+
+<div class="header">
+  <h1>🔑 <span>Hydra Testing</span></h1>
+  <p>Professional credential resilience testing service — validates password policies and brute-force resistance</p>
+  <span class="badge green">● Operational</span>
+  <span class="badge yellow">Engagement-based</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="val" style="color:var(--accent)">20+</div><div class="lbl">Protocols</div></div>
+  <div class="metric"><div class="val" style="color:var(--green)">100+</div><div class="lbl">Attack Types</div></div>
+  <div class="metric"><div class="val" style="color:var(--yellow)">Custom</div><div class="lbl">Wordlists</div></div>
+  <div class="metric"><div class="val" style="color:var(--blue)">Report</div><div class="lbl">Deliverable</div></div>
+</div>
+
+<div class="section">
+  <h2>🔍 Testing Modules</h2>
+  <div class="modules">
+    <div class="mod"><h3>🔐 Web Form Credential Stuffing</h3><p>Tests login forms against custom wordlists and breach-sourced credentials with rate-limit detection</p><span class="sig">Multi-form support</span></div>
+    <div class="mod"><h3>🖥️ SSH Brute-Force</h3><p>Validates SSH key and password authentication strength across port 22 and non-standard ports</p><span class="sig">Key-based + password</span></div>
+    <div class="mod"><h3>📂 FTP Authentication Testing</h3><p>Tests anonymous access, default credentials, and weak FTP password policies</p><span class="sig">Anonymous check</span></div>
+    <div class="mod"><h3>🌐 API Endpoint Testing</h3><p>Tests authentication endpoints including REST, SOAP, and GraphQL for credential weaknesses</p><span class="sig">Auth type detection</span></div>
+    <div class="mod"><h3>📚 Dictionary &amp; Hybrid Attacks</h3><p>Wordlist-based, rule-based, and hybrid attacks with custom permutation patterns</p><span class="sig">Custom rulesets</span></div>
+    <div class="mod"><h3>🔑 Password Spraying</h3><p>Tests common passwords across multiple accounts to bypass account lockout policies</p><span class="sig">Low-and-slow</span></div>
+    <div class="mod"><h3>🔓 GPU-Accelerated Cracking</h3><p>Hashcat-based GPU-accelerated password hash cracking for compromised credential stores</p><span class="sig">RTX 4090 available</span></div>
+    <div class="mod"><h3>📊 Credential Risk Scoring</h3><p>Assigns risk scores to discovered credentials and prioritizes remediation by impact</p><span class="sig">CVSS-based</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📄 Deliverables</h2>
+  <div class="output-grid">
+    <div class="output-item"><h3>💯 Credential Risk Score</h3><p>Quantitative score (0-100) measuring overall credential resilience of target systems</p></div>
+    <div class="output-item"><h3>📋 Attack Methodology Report</h3><p>Detailed breakdown of each test, protocols used, success rate, and time-to-compromise</p></div>
+    <div class="output-item"><h3>🗺️ Remediation Roadmap</h3><p>Step-by-step password policy recommendations, MFA deployment guide, and technical fixes</p></div>
+  </div>
+</div>
+
+<div class="footer">
+  Part of <a href="https://github.com/trintechdigitaldefense" target="_blank">trintechdigitaldefense</a> org · <a href="/">Back to Portfolio</a>
+</div>
+</body>
+</html>

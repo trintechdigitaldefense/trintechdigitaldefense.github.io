@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShadowStack — TrinTech Digital Defense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f; --bg-card: #12121a; --border: #2a2a3a; --text: #e0e0e8; --text-dim: #8888a0;
+    --accent: #a78bfa; --accent-dim: #8b5cf6; --green: #4ade80; --yellow: #fbbf24; --blue: #60a5fa;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+  .back { display: inline-block; color: var(--text-dim); text-decoration: none; font-size: 0.85rem; margin: 24px 20px 0; }
+  .back:hover { color: var(--accent); }
+  .header { padding: 24px 20px 32px; text-align: center; }
+  .header h1 { font-size: 1.8rem; font-weight: 700; }
+  .header h1 span { color: var(--accent); }
+  .header p { color: var(--text-dim); font-size: 0.95rem; margin-top: 4px; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; margin-top: 10px; }
+  .badge.green { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge.yellow { background: rgba(251,191,36,0.15); color: var(--yellow); }
+  .metrics { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 20px 20px; justify-content: center; }
+  .metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 24px; text-align: center; min-width: 140px; }
+  .metric .val { font-size: 1.5rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .metric .lbl { font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .section { max-width: 700px; margin: 24px auto; padding: 0 20px; }
+  .section h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+  .modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+  .mod { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .mod h3 { font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; }
+  .mod p { font-size: 0.78rem; color: var(--text-dim); line-height: 1.4; }
+  .mod .sig { color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
+  .compliance-list { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+  .comp { padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border); background: var(--bg-card); }
+  .comp.pass { border-color: var(--green); color: var(--green); }
+  .footer { text-align: center; padding: 30px 20px; color: var(--text-dim); font-size: 0.8rem; }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<a class="back" href="/">← Back to TrinTech Portfolio</a>
+
+<div class="header">
+  <h1>🛡️ <span>ShadowStack</span></h1>
+  <p>Filesystem integrity monitoring and tamper detection engine with automated compliance reporting</p>
+  <span class="badge green">● Operational</span>
+  <span class="badge yellow">v1.0</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="val" style="color:var(--accent)">6</div><div class="lbl">Detection Modules</div></div>
+  <div class="metric"><div class="val" style="color:var(--green)">Real-time</div><div class="lbl">Alert Speed</div></div>
+  <div class="metric"><div class="val" style="color:var(--yellow)">SHA-256</div><div class="lbl">Hash Algorithm</div></div>
+  <div class="metric"><div class="val" style="color:var(--blue)">5</div><div class="lbl">Compliance Frameworks</div></div>
+</div>
+
+<div class="section">
+  <h2>🔍 Detection Modules</h2>
+  <div class="modules">
+    <div class="mod"><h3>📁 File Integrity Monitor</h3><p>Hashes critical system files and alerts on any modification using SHA-256 verification</p><span class="sig">Real-time scanning</span></div>
+    <div class="mod"><h3>⚙️ Configuration Drift</h3><p>Monitors SSH, Apache, Nginx, and other service configs for unauthorized changes</p><span class="sig">Baseline comparison</span></div>
+    <div class="mod"><h3>🔐 Privilege Escalation</h3><p>Detects unauthorized sudo usage, SUID binary changes, and privilege modifications</p><span class="sig">Audit trail logging</span></div>
+    <div class="mod"><h3>📋 Compliance Mapping</h3><p>Maps findings to PCI-DSS, NIST, and ISO 27001 requirements automatically</p><span class="sig">5 frameworks</span></div>
+    <div class="mod"><h3>📊 Incident Logging</h3><p>Automated incident tickets with full audit trail, timestamps, and affected file details</p><span class="sig">SIEM-ready output</span></div>
+    <div class="mod"><h3>🔗 Threat Correlation</h3><p>Correlates file changes with security events from SIEM and EDR platforms</p><span class="sig">Multi-source analysis</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📄 Compliance Support</h2>
+  <div class="compliance-list">
+    <span class="comp pass">PCI-DSS 11.5</span>
+    <span class="comp pass">NIST CSF PR.DS-5</span>
+    <span class="comp pass">ISO 27001 A.12.4</span>
+    <span class="comp pass">SOC 2 CC6.1</span>
+    <span class="comp pass">HIPAA 164.312</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📄 Output</h2>
+  <div class="report" style="background:var(--bg-card); border:1px solid var(--border); border-radius:10px; padding:20px; margin-top:16px;">
+    <h3 style="color:var(--accent); margin-bottom:6px;">Automated Compliance Reports</h3>
+    <p style="font-size:0.82rem; color:var(--text-dim); line-height:1.5;">Generates structured compliance reports mapping integrity findings to specific regulatory requirements. Includes executive summary, detailed findings per file, risk scoring, and remediation guidance. Delivered as PDF, HTML, and JSON for SIEM integration.</p>
+  </div>
+</div>
+
+<div class="footer">
+  Part of <a href="https://github.com/trintechdigitaldefense" target="_blank">trintechdigitaldefense</a> org · <a href="/">Back to Portfolio</a>
+</div>
+</body>
+</html>

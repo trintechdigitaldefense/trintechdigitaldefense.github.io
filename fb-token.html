@@ -49,7 +49,7 @@
     <div id="s2" class="hidden">
         <p style="font-size:.85em;color:#8899aa;margin-bottom:8px">Paste the full URL from the address bar:</p>
         <textarea id="urlInput" placeholder="https://developers.facebook.com/tools/explorer/...#access_token=EAAU..."></textarea>
-        <button class="btn btn-green" onclick="parse()">Extract Token</button>
+        <button type="button" class="btn btn-green" onclick="parse()">Extract Token</button>
         <div id="result"></div>
     </div>
 
@@ -57,7 +57,7 @@
     <div id="s3" class="hidden">
         <div class="ok ok" id="okMsg"></div>
         <textarea id="tokenOut" readonly></textarea>
-        <button class="copy-btn" onclick="document.getElementById('tokenOut').select();document.execCommand('copy');alert('Copied!')">📋 Copy</button>
+        <button type="button" class="copy-btn" onclick="document.getElementById('tokenOut').select();document.execCommand('copy');alert('Copied!')">📋 Copy</button>
         <p style="font-size:.8em;color:#22c55e;margin-top:10px">✅ Token verified — share it with your agent</p>
     </div>
 </div>
@@ -68,10 +68,10 @@ const REDIRECT = 'https://exile-aerobic-saddle-rough.2n6.me/fb-callback.html';
 // Step 1: Build the consent URL with all required scopes
 document.getElementById('go').href =
     'https://www.facebook.com/dialog/oauth?' +
-    'client_id=4504917533102808&' +
+    'client_id=4504917533102808&amp;' +
     'redirect_uri=' + encodeURIComponent(REDIRECT) +
-    '&response_type=token%2Ccode&' +
-    'scope=pages_manage_posts%2Cpages_read_engagement%2Cpages_show_list%2Cpages_manage_engagement&' +
+    '&amp;response_type=token%2Ccode&amp;' +
+    'scope=pages_manage_posts%2Cpages_read_engagement%2Cpages_show_list%2Cpages_manage_engagement&amp;' +
     'user_id=' +
     'prompt=consent';
 
@@ -86,7 +86,7 @@ if (params.get('access_token')) {
 
 function parse() {
     const url = document.getElementById('urlInput').value.trim();
-    const tokenMatch = url.match(/access_token=([^&]+)/);
+    const tokenMatch = url.match(/access_token=([^&amp;]+)/);
     if (!tokenMatch) {
         document.getElementById('result').innerHTML = '<div class="ok err">No token found in URL. Paste the full URL including #access_token=...</div>';
         return;

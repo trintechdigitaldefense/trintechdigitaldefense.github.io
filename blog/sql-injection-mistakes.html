@@ -62,44 +62,48 @@ footer{text-align:center;padding:2rem 1rem;font-family:'Share Tech Mono',monospa
   <p class="s-tag">// Web Security</p>
   <h1>5 SQL Injection Mistakes Every Business Owner Should Know</h1>
   <p class="post-meta">2026-07-01 · TrinTech Digital Defense</p>
-  <div class="post-content"><h2>SQL Injection: Why Your Business Is at Risk</h2>
+  <div class="post-content">
+<p>SQL injection (SQLi) remains one of the most critical web vulnerabilities. According to OWASP, it has consistently ranked in the top 10 web application security risks for over a decade. In Trinidad and Tobago, businesses of all sizes are affected — from small retailers processing online payments to financial institutions managing customer databases.</p>
 
-SQL injection remains one of the most critical web vulnerabilities. According to OWASP, it has consistently ranked in the top 10 web application security risks for over a decade. Here are the five most common mistakes that leave businesses exposed.
+<p>SQL injection occurs when an attacker inserts malicious SQL code into an input field, tricking the database into executing unintended commands. This can lead to data theft, data manipulation, authentication bypass, and complete server compromise.</p>
 
-<h3>1. Using Raw String Concatenation in Queries
+<h3>1. Using Raw String Concatenation in Queries</h3>
 
-The most fundamental mistake. Building SQL queries by concatenating user input directly into strings is the quickest path to a data breach.
+<p>The most fundamental mistake. Building SQL queries by concatenating user input directly into strings is the quickest path to a data breach. This is especially common in legacy systems and custom-built applications.</p>
 
-Vulnerable:
-<pre><pre><code>query = "SELECT * FROM users WHERE username = '" + username + "'"
-</code></pre></pre>
+<p><strong>Vulnerable code example:</strong></p>
+<pre><code>query = "SELECT * FROM users WHERE username = '" + username + "'"
+</code></pre>
 
-Safe:
-<pre><pre><code>cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
-</code></pre></pre>
+<p><strong>Safe approach using parameterized queries:</strong></p>
+<pre><code>cursor.execute("SELECT * FROM users WHERE username = %s", (username,))
+</code></pre>
 
-<h3>2. Trusting Client-Side Validation Alone
+<p>The parameterized query sends the SQL structure and data separately to the database, so user input is never interpreted as SQL commands.</p>
 
-Client-side validation (JavaScript form checks) provides convenience, not security. Any attacker can bypass it entirely.
+<h3>2. Trusting Client-Side Validation Alone</h3>
 
-<h3>3. Not Using Parameterized Queries or ORMs
+<p>Client-side validation (JavaScript form checks, HTML5 input types) provides convenience and better user experience, but it is not security. Any attacker can bypass it entirely using tools like browser developer consoles, curl, or Burp Suite.</p>
 
-Parameterized queries and Object-Relational Mappers (ORMs) are not optional — they are the baseline defense. Frameworks like Django, SQLAlchemy, and Laravel include protection by default.
+<h3>3. Not Using Parameterized Queries or ORMs</h3>
 
-<h3>4. Overly Detailed Error Messages
+<p>Parameterized queries and Object-Relational Mappers (ORMs) are not optional — they are the baseline defense. Modern frameworks like Django, SQLAlchemy, Laravel, and Spring Boot include protection by default when used correctly.</p>
 
-When your application returns database errors to the user, you are essentially giving attackers a walkthrough of your data structure.
+<h3>4. Overly Detailed Error Messages</h3>
 
-<h3>5. No WAF or Input Filtering Layer
+<p>When your application returns full database error messages to the user, you are essentially giving attackers a walkthrough of your data structure. A generic "Something went wrong" message is far safer than showing table names and SQL syntax errors.</p>
 
-A Web Application Firewall acts as a safety net. While it should never be your only defense, it catches attacks that manual code reviews miss.
+<h3>5. No WAF or Input Filtering Layer</h3>
 
-<h2>The Bottom Line
+<p>A Web Application Firewall (WAF) acts as a safety net between your application and the internet. Popular options include Cloudflare and AWS WAF. Even a basic WAF configuration will block a significant percentage of automated SQL injection attacks.</p>
 
-If your business has any web application that interacts with a database, it needs a security audit. TrinTech specializes in identifying and remediating SQL injection vulnerabilities before attackers exploit them.
+<h2>The Bottom Line</h2>
 
-<a href="/#contact" style="color:var(--cyan);text-decoration:underline">Contact us for a security assessment</a></div>
-  <a href="https://trintechdigitaldefense.github.io/#contact" class="back-link">← Back to TrinTech</a>
+<p>If your business has any web application that interacts with a database, it needs a security audit. SQL injection is not just a developer problem — it is a business risk that can result in data breaches and loss of customer trust.</p>
+
+<p>TrinTech Digital Defense specializes in identifying and remediating SQL injection vulnerabilities before attackers exploit them.</p>
+
+<a href="/#contact" style="color:var(--cyan);text-decoration:underline">Contact us for a security assessment →</a>
 </div>
 <footer>© 2026 TrinTech Digital Defense · Trinidad &amp; Tobago  · <a href="https://trintechdigitaldefense.github.io" style="color:var(--muted)">trintechdigitaldefense.github.io</a></footer>
 </body>

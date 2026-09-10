@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VulnScan — TrinTech Digital Defense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f; --bg-card: #12121a; --border: #2a2a3a; --text: #e0e0e8; --text-dim: #8888a0;
+    --accent: #a78bfa; --accent-dim: #8b5cf6; --green: #4ade80; --yellow: #fbbf24; --blue: #60a5fa;
+    --red: #f87171; --orange: #fb923c;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+  .back { display: inline-block; color: var(--text-dim); text-decoration: none; font-size: 0.85rem; margin: 24px 20px 0; }
+  .back:hover { color: var(--accent); }
+  .header { padding: 24px 20px 32px; text-align: center; }
+  .header h1 { font-size: 1.8rem; font-weight: 700; }
+  .header h1 span { color: var(--accent); }
+  .header p { color: var(--text-dim); font-size: 0.95rem; margin-top: 4px; }
+  .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; margin-top: 10px; margin-right: 6px; }
+  .badge.green { background: rgba(74,222,128,0.15); color: var(--green); }
+  .badge.purple { background: rgba(167,139,250,0.15); color: var(--accent); }
+  .metrics { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 20px 20px; justify-content: center; }
+  .metric { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 24px; text-align: center; min-width: 140px; }
+  .metric .val { font-size: 1.5rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; }
+  .metric .lbl { font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+  .section { max-width: 700px; margin: 24px auto; padding: 0 20px; }
+  .section h2 { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
+  .feat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+  .feat h3 { font-size: 0.88rem; font-weight: 600; margin-bottom: 4px; color: var(--accent); }
+  .feat p { font-size: 0.78rem; color: var(--text-dim); line-height: 1.4; }
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-top: 12px; }
+  .svc { background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 0.78rem; }
+  .svc .name { font-weight: 600; color: var(--text); }
+  .svc .desc { font-size: 0.7rem; color: var(--text-dim); }
+  .api-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.8rem; }
+  .api-table th { text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); color: var(--text-dim); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.5px; }
+  .api-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  .api-table code { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; background: var(--bg); padding: 2px 6px; border-radius: 4px; color: var(--accent); }
+  .api-table .method { font-weight: 600; }
+  .api-table .get .method { color: var(--green); }
+  .api-table .post .method { color: var(--blue); }
+  .api-table .delete .method { color: var(--red); }
+  .cheatsheet { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; margin-top: 16px; }
+  .cheatsheet h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 12px; color: var(--accent); }
+  .cheat-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .cheat-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .cheat-item .title { font-size: 0.82rem; font-weight: 600; margin-bottom: 4px; color: var(--yellow); }
+  .cheat-item pre { background: var(--bg); padding: 10px 14px; border-radius: 6px; overflow-x: auto; font-size: 0.75rem; line-height: 1.6; border: 1px solid var(--border); }
+  .cheat-item pre .comment { color: #555; }
+  .cheat-item pre .cmd { color: var(--green); }
+  .cheat-item pre .flag { color: var(--orange); }
+  .cheat-item pre .str { color: var(--accent); }
+  .cheat-item pre .hdr { color: var(--yellow); }
+  .architecture { margin-top: 16px; }
+  .arch-flow { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; line-height: 2; color: var(--text-dim); text-align: center; }
+  .arch-flow .node { color: var(--text); font-weight: 600; }
+  .arch-flow .arrow { color: var(--accent); }
+  .report-types { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .rpt { padding: 6px 14px; border-radius: 6px; font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border); background: var(--bg-card); }
+  .rpt.html { border-color: var(--accent); color: var(--accent); }
+  .rpt.api { border-color: var(--blue); color: var(--blue); }
+  .score-bar { margin-top: 12px; }
+  .score-bar .label { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 6px; }
+  .score-bar .bar { height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
+  .score-bar .fill { height: 100%; border-radius: 4px; }
+  .score-bar .fill.good { background: var(--green); }
+  .score-bar .fill.warn { background: var(--yellow); }
+  .score-bar .fill.bad { background: var(--red); }
+  .footer { text-align: center; padding: 30px 20px; color: var(--text-dim); font-size: 0.8rem; }
+  .footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<a class="back" href="/trintech/">← Back to TrinTech Portfolio</a>
+
+<div class="header">
+  <h1>🔬 <span>VulnScan</span></h1>
+  <p>Automated vulnerability assessment with CVE matching, baseline comparison, and T&amp;T CMA compliance</p>
+  <span class="badge green">● Operational</span>
+  <span class="badge purple">v1.0</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="val" style="color:var(--accent)">59</div><div class="lbl">Tests Passing</div></div>
+  <div class="metric"><div class="val" style="color:var(--green)">13</div><div class="lbl">Services Known</div></div>
+  <div class="metric"><div class="val" style="color:var(--blue)">~1,200</div><div class="lbl">Lines of Code</div></div>
+  <div class="metric"><div class="val" style="color:var(--yellow)">5056</div><div class="lbl">Server Port</div></div>
+</div>
+
+<!-- Features -->
+<div class="section">
+  <h2>🔬 Core Features</h2>
+  <div class="features">
+    <div class="feat">
+      <h3>🌐 Network Discovery</h3>
+      <p>python-nmap powered ping sweep, port scanning, and service version detection across target subnets.</p>
+    </div>
+    <div class="feat">
+      <h3>🔑 CVE Matching</h3>
+      <p>Real-time CVE lookup via NVD NIST API (free, no key required) mapped to detected service+version combos.</p>
+    </div>
+    <div class="feat">
+      <h3>📊 Baseline Comparison</h3>
+      <p>Save scan baselines, diff between runs: ports closed/opened, CVEs fixed/added, security score delta.</p>
+    </div>
+    <div class="feat">
+      <h3>🛡️ Service Intelligence</h3>
+      <p>13 services with attack paths, remediation steps, why-open analysis, and how-to-close guidance.</p>
+    </div>
+    <div class="feat">
+      <h3>🎯 Security Scoring</h3>
+      <p>0–100 score based on CVE severity weighted by CVSS, open port count, and service risk factors.</p>
+    </div>
+    <div class="feat">
+      <h3>📜 CMA Compliance</h3>
+      <p>UK Computer Misuse Act references embedded in all generated reports — audit-ready documentation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Known Services -->
+<div class="section">
+  <h2>🛠️ Supported Services (13)</h2>
+  <p style="color:var(--text-dim);font-size:0.82rem;margin-bottom:12px">Each service includes attack paths, remediation, and risk scoring</p>
+  <div class="services">
+    <div class="svc"><div class="name">SSH / OpenSSH</div><div class="desc">Brute force, version exploits</div></div>
+    <div class="svc"><div class="name">HTTP / Apache</div><div class="desc">Directory traversal, RCE</div></div>
+    <div class="svc"><div class="name">Nginx</div><div class="desc">Config misconfig, buffer overflow</div></div>
+    <div class="svc"><div class="name">MySQL</div><div class="desc">Auth bypass, SQL injection</div></div>
+    <div class="svc"><div class="name">PostgreSQL</div><div class="desc">Auth bypass, SQL injection</div></div>
+    <div class="svc"><div class="name">Redis</div><div class="desc">Unauth access, RCE via modules</div></div>
+    <div class="svc"><div class="name">MongoDB</div><div class="desc">No-auth access, data exfil</div></div>
+    <div class="svc"><div class="name">Elasticsearch</div><div class="desc">Unauth RCE, index dump</div></div>
+    <div class="svc"><div class="name">FTP / vsftpd</div><div class="desc">Anonymous login, backdoor</div></div>
+    <div class="svc"><div class="name">SMB / Samba</div><div class="desc">EternalBlue, LLMNR poisoning</div></div>
+    <div class="svc"><div class="name">SMTP / Postfix</div><div class="desc">Open relay, spam relay</div></div>
+    <div class="svc"><div class="name">DNS / BIND</div><div class="desc">Zone transfer, cache poisoning</div></div>
+    <div class="svc"><div class="name">SNMP / Net-SNMP</div><div class="desc">Community string brute-force</div></div>
+  </div>
+</div>
+
+<!-- Baseline Comparison -->
+<div class="section">
+  <h2>📊 Baseline Comparison</h2>
+  <div class="feat" style="margin-bottom:12px">
+    <h3>Track Security Over Time</h3>
+    <p>Save scan results as baselines and compare against new scans to see:</p>
+  </div>
+  <div class="feat">
+    <h3>🔻 Ports Closed</h3>
+    <p>Ports that were open in the baseline but closed in the current scan — improved security posture.</p>
+  </div>
+  <div class="feat">
+    <h3>🔺 Ports Opened</h3>
+    <p>Newly opened ports flagged for review — potential unauthorized changes or misconfigurations.</p>
+  </div>
+  <div class="feat">
+    <h3>📈 Security Score Delta</h3>
+    <p>Point change in overall security score between baseline and current scan.</p>
+  </div>
+  <div class="score-bar" style="margin-top:14px">
+    <div class="label">Example score progression: baseline 42 → after hardening 78 (+36)</div>
+    <div class="bar"><div class="fill good" style="width:78%"></div></div>
+  </div>
+</div>
+
+<!-- API Endpoints -->
+<div class="section">
+  <h2>🔗 API Endpoints</h2>
+  <table class="api-table">
+    <thead><tr><th>Method</th><th>Path</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr class="get"><td class="method">GET</td><td><code>/api/health</code></td><td>Health check</td></tr>
+      <tr class="post"><td class="method">POST</td><td><code>/api/scan</code></td><td>Start vulnerability scan</td></tr>
+      <tr class="get"><td class="method">GET</td><td><code>/api/scan/status</code></td><td>Get scan progress/results</td></tr>
+      <tr class="get"><td class="method">GET</td><td><code>/api/baseline</code></td><td>List saved baselines</td></tr>
+      <tr class="post"><td class="method">POST</td><td><code>/api/baseline</code></td><td>Save scan as baseline</td></tr>
+      <tr class="delete"><td class="method">DELETE</td><td><code>/api/baseline/:id</code></td><td>Delete a baseline</td></tr>
+      <tr class="post"><td class="method">POST</td><td><code>/api/baseline/compare</code></td><td>Compare scan to baseline</td></tr>
+      <tr class="post"><td class="method">POST</td><td><code>/api/report</code></td><td>Generate HTML report</td></tr>
+      <tr class="post"><td class="method">POST</td><td><code>/api/logcorr/ingest</code></td><td>Push findings to Log Correlator</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Architecture -->
+<div class="section">
+  <h2>🏗️ Architecture</h2>
+  <div class="architecture">
+    <div class="arch-flow">
+      <span class="node">Target Subnet</span> <span class="arrow">→</span>
+      <span class="node">python-nmap</span> <span class="arrow">→</span>
+      <span class="node">Open Ports &amp; Services</span> <span class="arrow">→</span>
+      <span class="node">NVD API</span> <span class="arrow">→</span>
+      <span class="node">CVE Match</span> <span class="arrow">→</span>
+      <span class="node">Log Correlator</span>
+    </div>
+  </div>
+  <div class="report-types" style="margin-top:16px">
+    <span class="rpt html">HTML — Report &amp; Dashboard</span>
+    <span class="rpt api">JSON — REST API</span>
+    <span class="rpt api">Baseline — SQLite Store</span>
+  </div>
+</div>
+
+<!-- Cheatsheet -->
+<div class="section">
+  <h2>📖 Quick Reference Cheatsheet</h2>
+  <div class="cheatsheet">
+
+    <div class="cheat-item">
+      <div class="title">Start the Server</div>
+      <pre><span class="comment"># Launch the Flask API server</span>
+<span class="cmd">cd</span> <span class="str">/opt/baal-agent/workspace/TrinTech/VulnScan</span>
+<span class="cmd">python3</span> vulnscan_server.py <span class="flag">--port</span> 5056</pre>
+    </div>
+
+    <div class="cheat-item">
+      <div class="title">Run a Network Scan</div>
+      <pre><span class="comment"># Scan a subnet for common ports</span>
+<span class="cmd">curl</span> <span class="flag">-X POST</span> http://localhost:5056/api/scan \
+  <span class="flag">-H</span> <span class="str">"Content-Type: application/json"</span> \
+  <span class="flag">-d</span> <span class="str">'{"subnet": "192.168.1.0/24", "ports": "22,80,443,3306,8080"}'</span>
+
+<span class="comment"># Check scan progress</span>
+<span class="cmd">curl</span> http://localhost:5056/api/scan/status</pre>
+    </div>
+
+    <div class="cheat-item">
+      <div class="title">Baseline Management</div>
+      <pre><span class="comment"># Save a baseline after a scan completes</span>
+<span class="cmd">curl</span> <span class="flag">-X POST</span> http://localhost:5056/api/baseline \
+  <span class="flag">-H</span> <span class="str">"Content-Type: application/json"</span> \
+  <span class="flag">-d</span> <span class="str">'{"label": "initial-audit", "scan_result": {...}}'</span>
+
+<span class="comment"># List all baselines</span>
+<span class="cmd">curl</span> http://localhost:5056/api/baseline
+
+<span class="comment"># Compare current scan against a baseline</span>
+<span class="cmd">curl</span> <span class="flag">-X POST</span> http://localhost:5056/api/baseline/compare \
+  <span class="flag">-H</span> <span class="str">"Content-Type: application/json"</span> \
+  <span class="flag">-d</span> <span class="str">'{"baseline_id": "baseline-xxx", "subnet": "192.168.1.0/24"}'</span></pre>
+    </div>
+
+    <div class="cheat-item">
+      <div class="title">Report Generation</div>
+      <pre><span class="comment"># Generate HTML vulnerability report</span>
+<span class="cmd">curl</span> <span class="flag">-X POST</span> http://localhost:5056/api/report \
+  <span class="flag">-H</span> <span class="str">"Content-Type: application/json"</span> \
+  <span class="flag">-d</span> <span class="str">'{"scan_result": {...}}'</span>
+
+<span class="comment"># Push findings to Log Correlator</span>
+<span class="cmd">curl</span> <span class="flag">-X POST</span> http://localhost:5056/api/logcorr/ingest \
+  <span class="flag">-H</span> <span class="str">"Content-Type: application/json"</span> \
+  <span class="flag">-d</span> <span class="str">'{"target": "http://localhost:5053", "findings": [...]}'</span></pre>
+    </div>
+
+    <div class="cheat-item">
+      <div class="title">OpenSSH Service Intel</div>
+      <pre><span class="comment">// Service: SSH (OpenSSH)</span>
+<span class="comment">// Why open: Remote administration access</span>
+<span class="comment">// Attack paths: Brute force, version exploits, key auth bypass</span>
+<span class="comment">// How to close: systemctl stop sshd; disable non-essential access</span>
+<span class="comment">// Risk: HIGH — remote access vector, common attack target</span>
+<span class="comment">// Remediation: Disable root login, use key auth only, fail2ban</span></pre>
+    </div>
+
+    <div class="cheat-item">
+      <div class="title">Scoring Breakdown</div>
+      <pre><span class="comment">// Score formula: 100 - (weighted CVEs + open port penalty)</span>
+<span class="comment">//   100 = fully hardened</span>
+<span class="comment">//   0   = completely exposed with critical CVEs</span>
+<span class="comment">// Example: 3 CRITICAL CVEs + 2 open risky ports = score ~35</span>
+<span class="comment">//   → Red: &lt;30  Yellow: 30-69  Green: 70-100</span></pre>
+    </div>
+
+  </div>
+</div>
+
+<div class="footer">
+  Part of <a href="https://github.com/trintechdigitaldefense/ai-tools" target="_blank">ai-tools</a> repo · <a href="/trintech/">Back to Portfolio</a>
+</div>
+</body>
+</html>

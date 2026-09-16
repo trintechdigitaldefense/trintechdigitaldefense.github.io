@@ -1,0 +1,52 @@
+{
+  "posts": [
+    {
+      "slug": "ai-supply-chain-attacks-2026",
+      "category": "Threat Analysis",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/ai-supply-chain-attacks-2026"
+    },
+    {
+      "slug": "android-pos-under-attack",
+      "category": "Android Security",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/android-pos-under-attack"
+    },
+    {
+      "slug": "cyber-insurance-requirements-2026",
+      "category": "Business Risk / Compliance",
+      "date": "Sep 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/cyber-insurance-requirements-2026"
+    },
+    {
+      "slug": "cybersecurity-compliance-trinidad",
+      "category": "Compliance",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad"
+    },
+    {
+      "slug": "digital-footprint-reveals",
+      "category": "OSINT",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/digital-footprint-reveals"
+    },
+    {
+      "slug": "phishing-trinidad-businesses",
+      "category": "Threat Analysis",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/phishing-trinidad-businesses"
+    },
+    {
+      "slug": "ransomware-defense-trinidad",
+      "category": "Threat Analysis",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad"
+    },
+    {
+      "slug": "sql-injection-mistakes",
+      "category": "Web Security",
+      "date": "Aug 2026",
+      "url": "https://trintechdigitaldefense.github.io/blog/sql-injection-mistakes"
+    }
+  ]
+}

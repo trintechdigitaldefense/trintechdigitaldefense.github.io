@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "rpa-security-threats-2026",
+      "title": "Robotic Process Automation Security: The Hidden Threat Growing in Trinidad Businesses",
+      "date": "2026-09-16",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "RPA",
+        "robot process automation",
+        "bot security",
+        "credentials",
+        "orchestrator",
+        "Trinidad"
+      ],
+      "word_count": 2219,
+      "url": "https://trintechdigitaldefense.github.io/blog/rpa-security-threats-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/rpa-security-2026.png"
+    },
+    {
       "slug": "ai-supply-chain-attacks-2026",
       "category": "Threat Analysis",
       "date": "Aug 2026",

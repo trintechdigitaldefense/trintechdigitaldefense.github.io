@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "deepfake-fraud-trinidad-2026",
+      "title": "Deepfake Fraud in Trinidad: What TTSEC Alerts Mean for Your Business",
+      "date": "2026-10-07",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "deepfake",
+        "AI fraud",
+        "TTSEC",
+        "FATF",
+        "wire fraud",
+        "Trinidad"
+      ],
+      "word_count": 2511,
+      "url": "https://trintechdigitaldefense.github.io/blog/deepfake-fraud-trinidad-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/deepfake-fraud-2026.png"
+    },
+    {
       "slug": "rpa-security-threats-2026",
       "title": "Robotic Process Automation Security: The Hidden Threat Growing in Trinidad Businesses",
       "date": "2026-09-16",

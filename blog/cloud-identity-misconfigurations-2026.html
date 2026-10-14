@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta name="theme-color" content="#030a0e" media="(prefers-color-scheme: dark)" >
+<meta name="theme-color" content="#f5f8fa" media="(prefers-color-scheme: light)" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Afford to Ignore — TrinTech Digital Defense</title>
+<meta name="description" content="83% of cloud breaches begin with compromised identities. 97% of AWS accounts have weak IAM controls. Cloud misconfigurations caused 27% of AI breaches. Trinidad businesses are increasingly vulnerable as T&T phishing and BEC incidents surge 70% of all local incidents.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trintechdigitaldefense.github.io/blog/cloud-identity-misconfigurations-2026">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://trintechdigitaldefense.github.io/blog/cloud-identity-misconfigurations-2026">
+<meta property="og:title" content="Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Afford to Ignore">
+<meta property="og:description" content="83% of cloud breaches begin with compromised identities. 97% of AWS accounts have weak IAM controls. Trinidad businesses face rising BEC and phishing as the primary vector.">
+<meta property="og:image" content="https://trintechdigitaldefense.github.io/images/cloud-identity-misconfigurations-2026.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Afford to Ignore">
+<meta name="twitter:description" content="83% of cloud breaches begin with compromised identities. 97% of AWS accounts have weak IAM controls.">
+<meta name="twitter:image" content="https://trintechdigitaldefense.github.io/images/cloud-identity-misconfigurations-2026.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<style>
+:root{--bg:#030a0e;--bg2:#050f15;--cyan:#00e5ff;--muted:#4a6475;--border:rgba(0,229,255,0.14);--card:rgba(5,18,26,0.95);--mono:'Share Tech Mono',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif}
+[data-theme="light"]{--bg:#f5f8fa;--bg2:#e8eef2;--cyan:#0077aa;--muted:#5a7485;--border:rgba(0,119,170,0.18);--card:rgba(255,255,255,0.95)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#c8d8e0;font-family:var(--body);font-weight:300;line-height:1.8;transition:background .4s,color .4s}
+[data-theme="light"] body{color:#1a2a35}
+header{padding:2rem 3rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.header-logo{font-family:var(--display);font-size:1.3rem;letter-spacing:.1em;color:var(--cyan)}
+.header-home{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-decoration:none;letter-spacing:.1em}
+.header-home:hover{color:var(--cyan)}
+article{max-width:720px;margin:4rem auto;padding:0 2rem}
+article h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;color:#fff;margin-bottom:.6rem}
+[data-theme="light"] article h1{color:var(--bg)}
+.article-meta{font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.08em;margin-bottom:3rem}
+article p{margin-bottom:1.6rem;font-size:.95rem;color:var(--text)}
+article h2{font-family:var(--display);font-size:1.8rem;color:#fff;margin:2.5rem 0 1rem;letter-spacing:.03em}
+[data-theme="light"] article h2{color:var(--bg)}
+article ul{margin:1rem 0 1.6rem 1.5rem}
+article li{margin-bottom:.5rem;font-size:.92rem;color:var(--text);position:relative;padding-left:.5rem}
+article li::before{content:'-';position:absolute;left:-.8rem;color:var(--cyan)}
+.article-callout{background:var(--card);border-left:3px solid var(--cyan);padding:1.5rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.article-callout p{margin:0;font-size:.9rem}
+.article-cta{background:var(--cyan);color:var(--bg);padding:1.5rem 2rem;border-radius:6px;text-align:center;margin:3rem 0}
+.article-cta h3{font-family:var(--display);font-size:1.6rem;letter-spacing:.05em;margin-bottom:.5rem}
+.article-cta p{color:var(--bg2);opacity:.8;margin:0;font-size:.85rem}
+.article-cta a{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);text-decoration:none;border:2px solid var(--bg2);padding:.6rem 1.5rem;border-radius:3px;transition:background .2s,color .2s}
+.article-cta a:hover{background:var(--bg2);color:var(--cyan)}
+footer{padding:3rem;border-top:1px solid var(--border);text-align:center}
+footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em}
+.blog-nav{display:flex;align-items:center;gap:1.5rem;padding:1rem 0;margin-bottom:2rem;border-bottom:1px solid var(--border)}
+.blog-nav-logo{font-family:'Share Tech Mono',monospace;font-size:1rem;color:var(--cyan);text-decoration:none;letter-spacing:.1em}
+.blog-nav-link{font-family:'Share Tech Mono',monospace;font-size:.68rem;color:var(--muted);text-decoration:none;letter-spacing:.06em;transition:color .2s}
+.blog-nav-link:hover{color:var(--cyan)}
+</style>
+</head>
+<body>
+<header>
+<span class="header-logo">TRINTECH</span>
+<a href="/" class="header-home">- Back to TrinTech</a>
+</header>
+<article>
+<p class="article-meta"><span class="article-cat">Threat Analysis</span> <span class="article-cat">Business Risk</span> <span>October 2026</span></p>
+
+<h1>Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Ignore</h1>
+
+<p>In the second half of 2025, attackers got into 83 percent of the cloud and SaaS environments that Mandiant investigated -- Google Cloud's incident response arm -- by compromising identities. Not by exploiting infrastructure, not by exploiting software vulnerabilities in the cloud platform itself, but by signing in with stolen or improperly managed credentials. The remaining attacks used software exploitation (44.5 percent inside Google Cloud workloads specifically) and misconfigurations, but identity was the single largest attack vector by a wide margin.</p>
+
+<p>That number is not a global abstraction. It is directly relevant to Trinidad and Tobago. According to the Trinidad and Tobago Cybersecurity Incident Response Team's 2025 annual report, 63 of the 91 total cyber incidents officially reported -- nearly 70 percent -- were phishing and business email compromise. Phishing is identity theft by social engineering. BEC is the financial result of compromised credentials. Together, they represent the same attack chain that Mandiant identified as the dominant threat in cloud environments worldwide: identity compromise.</p>
+
+<p>The cost of cloud breaches is also accelerating. IBM's 2026 report on data breach costs found that breaches involving data stored in the public cloud cost an average of US$5.38 million, up from US$4.68 million in the previous edition, compared to a global average of US$4.99 million for all breach types. Misconfigurations caused 27 percent of AI-related breaches, at an average cost of US$5.25 million. In Trinidad, the local banking community lost over TT$3 million to cyber-enabled fraud in the fiscal year preceding October 2025.</p>
+
+<p>This article explains why cloud identity and misconfiguration attacks are the leading threat in 2026, what the data shows about how they work, how they relate to Trinidad's own incident patterns, and what businesses should do before the next attack chain reaches their organization.</p>
+
+<h2>The Cloud Identity Crisis in 2026</h2>
+
+<p>The cloud environment has fundamentally changed the attack surface. In an on-premises world, your perimeter was your network boundary. You controlled who plugged into your switches, who had physical access to your servers, who could reach your firewalls. In the cloud, the perimeter is identity. If an attacker has a valid credential with the right permissions, they are inside, regardless of where they are physically located.</p>
+
+<p>The statistics from 2026 reports paint a concerning picture of the identity landscape across all providers:</p>
+
+<ul>
+<li>97 percent of AWS accounts, 90 percent of Azure accounts, and 87 percent of Google Cloud accounts had weak identity and access management controls over a 12-month period to July 2026, according to Intruder's 2026 Cloud Security Index covering 3,000 organizations.</li>
+<li>37 percent of organizations had an Infrastructure as a Service administrator account with multi-factor authentication disabled, according to Verizon's 2026 Data Breach Investigations Report.</li>
+<li>35 percent of all cloud incidents in 2025 involved valid account abuse -- attackers who did not break in but instead signed in with stolen or compromised credentials that were never revoked, according to CrowdStrike's 2026 Global Threat Report.</li>
+<li>82 percent of CrowdStrike's 2025 detections were malware-free, because attackers moved through environments using valid credentials, trusted identity flows, and approved SaaS integrations rather than deploying malicious software.</li>
+</ul>
+
+<p>These numbers are not theoretical. They describe environments where credentials sit in configuration files, where access keys have not been rotated for years, and where administrators operate without the most basic layer of authentication. The Cloud Security Alliance's 2026 top threats survey elevated inadequate identity and access management to first place, demoting the infrastructure and provider concerns that dominated the 2024 list.</p>
+
+<h2>Misconfigurations: The Low-Hanging Fruit That Keeps Getting Plucked</h2>
+
+<p>While identity compromise is the leading attack vector, misconfigurations remain the underlying enabler. A misconfigured environment is one where access controls are too permissive, logging is disabled, encryption is absent, or services are exposed to the internet without authentication requirements.</p>
+
+<p>The breadth of the problem is captured in a few data points from 2026 research:</p>
+
+<ul>
+<li>Intruder's 2026 index found that 83 percent of AWS accounts had permissive ingress rules allowing unnecessary port access, and 83 percent had overly permissive network access control lists. On Azure, 67 percent had storage account key rotation disabled, and 61 percent had public network access enabled on storage accounts.</li>
+<li>Google Cloud was comparatively better secured by default, but 77 percent of its accounts still had OS Login multi-factor authentication disabled, and 75 percent had unused service accounts.</li>
+<li>Datadog's September 2025 posture data showed that 54 percent of managed Google Kubernetes Engine clusters had internet-exposed API servers, 39 percent of Amazon EKS clusters did, and 34 percent of Azure Kubernetes Service clusters did. An exposed Kubernetes API server gives any internet-connected attacker direct access to the cluster control plane.</li>
+<li>97 percent of organizations surveyed by Red Hat reported at least one cloud-native security incident in the past year, with misconfiguration of cloud infrastructure and known vulnerabilities leading the incident types. Seventy-eight percent reported specific misconfigurations.</li>
+</ul>
+
+<p>What makes misconfigurations particularly dangerous for businesses is that they compound. A misconfigured S3 bucket exposed to the internet can leak credentials. Those credentials, if they have broader permissions, can be used to escalate access into the wider cloud environment. A Kubernetes cluster with an exposed API server can be used to run pods with elevated privileges, which can then access secrets stored in the cluster, which can then be used to assume roles with access to production databases.</p>
+
+<p>This is not a hypothetical chain. A November 2025 intrusion analyzed by the security company Sysdig followed exactly this path: the attacker found valid credentials in public S3 buckets, escalated through an overly permissive Lambda function role, moved across 19 AWS principals, and invoked Amazon Bedrock models and launched GPU compute instances. The path from the initial credential discovery to code execution took eight minutes.</p>
+
+<h2>The Speed Gap: Attackers Move in Minutes, Defenders Respond in Weeks</h2>
+
+<p>One of the most alarming trends in 2026 reports is the widening gap between attacker speed and defender response time. The data comes from CrowdStrike, Mandiant, and Sysdig:</p>
+
+<ul>
+<li>The average eCrime breakout time -- from initial access to lateral movement within an environment -- fell to 29 minutes in 2025, with the fastest observed breakout taking 27 seconds, according to CrowdStrike's 2026 Global Threat Report.</li>
+<li>In one recorded intrusion, data exfiltration began within four minutes of initial access.</li>
+<li>In another, account takeover to data theft occurred in under five minutes in the first half of 2026.</li>
+<li>CrowdStrike found that 88 percent of proof-of-concept exploitation observed across all environments from January to June 2026 happened within 48 hours of the exploit's public release. The React2Shell vulnerability, for example, was exploited for cryptocurrency miner deployment within approximately 48 hours of disclosure.</li>
+<li>Meanwhile, the median dwell time before detection across Mandiant's 2025 investigations was 14 days, and the median time to fully remediate known exploited vulnerabilities was 43 days according to Verizon's 2026 report.</li>
+<li>Intruder measured that organizations with 1,000 to 5,000 employees took an average of 35 days to remediate cloud misconfigurations.</li>
+</ul>
+
+<p>The contrast is stark. An attacker who gains access through a compromised cloud credential can move laterally, escalate privileges, and exfiltrate data within minutes. The defender's median detection time is measured in weeks. The remediation time is measured in months. The organizations that fall in the middle -- mid-market companies -- take the longest to respond because they have neither the automation of enterprises nor the agility of small teams.</p>
+
+<p>For Trinidad and Tobago businesses, this speed gap is compounded by the reality that many organizations in the region operate with limited in-house security teams or no dedicated security staff at all. When an identity is compromised or a misconfiguration is exploited, the time to detect and respond may be even longer than the global averages suggest.</p>
+
+<h2>How These Attacks Reach Trinidad Businesses</h2>
+
+<p>The attack chain that leads to cloud identity compromise and misconfiguration exploitation follows predictable stages, and each stage is well-documented in Trinidad's own incident data.</p>
+
+<p><strong>Stage one: credential theft through phishing and BEC.</strong> Trinidad and Tobago recorded 63 phishing and BEC incidents out of 91 total reported incidents in 2025, according to TT-CSIRT. These campaigns are the primary vector for credential theft. An employee receives a convincing phishing email, enters their credentials into a fake login page, and the attacker now has a valid username and password for the organization's cloud environment. The attacker does not need to exploit any cloud misconfiguration at this stage. They already have an identity with access.</p>
+
+<p><strong>Stage two: reconnaissance and privilege mapping.</strong> Once inside, the attacker explores the environment. They check what permissions their stolen credentials provide. They look for overprivileged accounts, for service accounts with excessive roles, for unrotated access keys, for exposed storage buckets, for Kubernetes API servers. Datadog's research showed that 19.4 percent of EC2 instances were overprivileged, and 23 percent of Google Cloud VMs had overly permissive access to their project. The attacker is not guessing. The environment tells them exactly what they can reach.</p>
+
+<p><strong>Stage three: lateral movement and escalation.</strong> With mapped privileges, the attacker moves from one account or service to another. They use stolen credentials to assume more powerful roles. They abuse over-permissive IAM policies. They exploit the fact that 59 percent of AWS IAM users still hold access keys older than a year, and 65 percent of organizations hold unused or unrotated ghost credentials, according to Tenable's 2026 Cloud and AI Security Risk Report.</p>
+
+<p><strong>Stage four: data exfiltration or ransom.</strong> The attacker reaches their objective. In many Trinidad cases, the objective is financial fraud -- redirecting vendor payments, accessing banking platforms, or stealing customer data that can be sold. In others, it is data encryption for ransom, or data exfiltration with no immediate financial demand.</p>
+
+<p>The regional hospitality sector already experienced this chain. Regional organizations reported over 2,500 cyber attacks per week, and regional penetration testing data revealed that 42 percent of successful bypasses were due to improperly configured devices and systems, according to the 2025 Cybersecurity-TT annual report. A ransomware attack on the Otelier booking platform in March 2025 crippled operations for dependent resort groups across the Caribbean.</p>
+
+<h2>The AI and Cloud Misconfiguration Overlap</h2>
+
+<p>A new and rapidly growing attack vector emerges from the intersection of AI adoption and cloud misconfigurations. As Trinidad and Caribbean businesses increasingly deploy AI services and models in cloud environments, they are inheriting old cloud mistakes in new ways.</p>
+
+<p>IBM's 2026 breach cost report found that 27 percent of AI-related breaches were caused by cloud misconfigurations affecting AI workloads, at an average cost of US$5.25 million. Twenty-seven percent of organizations had granted AI services administrative permissions that are rarely audited, according to Tenable, and 73 percent of Amazon SageMaker roles and 70 percent of Amazon Bedrock agent roles were inactive -- privileges waiting to be claimed by an attacker who gains access.</p>
+
+<p>AI services hold standing privileges that are more powerful than most human user accounts. When those privileges are granted and never reviewed, they create a path from any cloud breach straight into the organization's most sensitive data and most powerful systems. GitGuardian's 2026 State of Secrets Sprawl report found 1,275,105 AI service secrets in public GitHub commits in 2025, an 81 percent increase from the previous year.</p>
+
+<p>For organizations in Trinidad considering or already deploying AI services in the cloud, this means that AI is not a separate security problem. It is a cloud identity and misconfiguration problem wearing an AI label.</p>
+
+<h2>What Trinidad Businesses Should Do</h2>
+
+<p>The good news is that most of the fixes for cloud identity and misconfiguration vulnerabilities are not complex or expensive. They are foundational security practices that many organizations skip or delay because they lack a clear understanding of their cloud environment or the resources to implement proper controls.</p>
+
+<p><strong>Audit your cloud identities.</strong> Start by listing every identity that has access to your cloud environment: human user accounts, service accounts, API keys, third-party integrations, and automation roles. Tenable found that 59 percent of AWS IAM users had access keys older than a year, and 65 percent of organizations held unused ghost credentials. Rotate or delete every credential that you cannot account for. Enforce a maximum key age of 90 days for all access keys. Replace long-lived access keys with short-lived credentials and workload identity federation wherever the provider supports it.</p>
+
+<p><strong>Enable multi-factor authentication on every account that supports it.</strong> Verizon found that 37 percent of organizations had an IaaS administrator account with MFA disabled. Intruder found 55 percent of Azure accounts had Entra users without MFA and 77 percent of Google Cloud accounts without OS Login MFA. MFA is the single most impactful control against identity compromise, and it is free. It stops more than 99 percent of identity-based attacks according to Microsoft's 2025 Digital Defense Report. If your cloud administrator account does not have MFA, the gap is not a risk that requires a security assessment to justify remediation.</p>
+
+<p><strong>Apply secure defaults at the account level.</strong> Where cloud providers offer secure defaults -- such as AWS S3 Block Public Access, IMDSv2 enforcement, or encryption by default -- turn them on for every account. Intruder found that organizations that enable regional defaults enforce IMDSv2 on 95 percent of their instances, compared to 49 percent for organizations that manage it manually. Secure defaults outperform manual hardening, and they reduce the attack surface for every new resource created in the future.</p>
+
+<p><strong>Remove public exposure from storage and API endpoints.</strong> Check your S3 buckets, Azure blob storage, and Google Cloud storage for publicly accessible data. Check your Kubernetes API servers for internet exposure. Check your network access control lists for unnecessary port access. Intruder found 87 percent of S3 buckets do not enforce HTTPS and 84 percent have permissive ingress to sensitive ports. One percent of S3 buckets are effectively public now, down from 1.5 percent, but one percent of any organization's buckets is still too many. Eliminate public access for all storage that does not require it, and use private endpoints for API servers.</p>
+
+<p><strong>Implement least privilege across all IAM policies.</strong> Audit every IAM role and policy to confirm it grants the minimum permissions required for its function. Intruder found that 83 percent of AWS accounts had IAM policies that allowed privilege escalation. Most organizations grant more permissions than they need because it is easier at the time of provisioning. But that convenience becomes a vulnerability when credentials are compromised. Review permissions quarterly, not annually. Remove access for every inactive identity. Tenable found that 49 percent of identities with critical excessive permissions were dormant.</p>
+
+<p><strong>Enable logging and monitoring on every cloud account.</strong> Intruder found that 98 percent of AWS accounts and 82 percent of Google Cloud accounts were missing logging and alerting. Without logs, you cannot detect identity compromise. Without alerting, you cannot detect it in real time. Turn on CloudTrail on AWS, Cloud Audit Logs on Google Cloud, and Activity Log on Azure. Configure alerts for admin actions, for access key creation, for unusual geographic login patterns, and for mass data access. Mandiant found that organizations detected 52 percent of intrusions internally in 2025, up from 43 percent in 2024 -- but that improvement came from organizations that had logging in place.</p>
+
+<p><strong>Treat third-party integrations as part of your attack surface.</strong> Tenable found that the average organization runs 13 third-party integration roles in AWS, and 12.2 percent of third-party integrations are dangerously overprivileged, able to read all data in the account or take it over. Every third-party integration is a trust relationship that can be abused. Review them regularly, enforce minimum permissions, and remove them when they are no longer needed.</p>
+
+<h2>The Compliance Angle</h2>
+
+<p>For Trinidad businesses in regulated sectors -- banks, insurance companies, financial services providers, healthcare organizations -- cloud identity and misconfiguration risks are not purely technical issues. They are compliance issues with audit implications.</p>
+
+<p>IBM found that implementing identity and access management lowered the average breach cost by US$225,622, and offensive security testing lowered it by US$211,339. Both are factors that appear in audit evidence. SOC 2 Type II, ISO 27001, and PCI DSS all require documented access controls, periodic access reviews, and evidence of least-privilege enforcement. Cloud misconfigurations that expose data or enable unauthorized access are direct violations of these frameworks.</p>
+
+<p>The Trinidad and Tobago landscape adds additional regulatory pressure. The CARICOM Cyber Security and Cybercrime Action Plan (CCSCAP), updated and launched in Port-of-Spain on October 31, 2025, provides the framework for harmonizing cybercrime legislation and incident response protocols across member states. The Telecommunications Authority of Trinidad and Tobago (TATT) finalized its 2025-2028 Strategic Plan in collaboration with PwC, embedding cybersecurity priorities into the foundational regulations governing telecommunications and digital services. Organizations that fail to demonstrate proper cloud security controls may find themselves non-compliant with these evolving regulatory frameworks.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>Cloud identity compromise and misconfiguration attacks are not a future threat for Trinidad and Tobago businesses. They are active, documented, and accelerating. The statistics are consistent across every major 2026 report: identity is the leading attack vector, misconfigurations remain near-universal, attackers move in minutes, and defenders respond in weeks.</p>
+
+<p>The data from Trinidad's own TT-CSIRT -- 70 percent of incidents being phishing and BEC -- confirms the same pattern: attackers are not breaching cloud platforms. They are compromising the people and credentials that manage them. The $5.38 million average cost of a cloud breach, the TT$3 million lost by the local banking community, and the regional resort sector experiencing 2,500 attacks per week are not projections. They are current operational realities.</p>
+
+<p>The fixes are not easy, but they are well-understood. Audit your identities. Enable MFA everywhere. Apply secure defaults. Remove public exposure. Enforce least privilege. Turn on logging. Review third-party integrations. These are foundational controls that lower breach costs, satisfy audit requirements, and reduce the probability that the next phishing email that reaches your employees leads to a cloud breach.</p>
+
+<p>For organizations in Trinidad that do not have dedicated cloud security staff, which is the majority, the choice is not between implementing these controls yourself or not implementing them at all. The choice is between engaging a security provider who can assess your cloud environment, identify the identity gaps and misconfigurations, and help you implement the controls before an attacker exploits them.</p>
+
+<div class="article-callout">
+<p><strong>Key takeaway:</strong> Identity is the new perimeter in cloud computing. With 83 percent of cloud breaches starting through compromised identities and 97 percent of cloud accounts having weak IAM controls, the most effective defense is not better software -- it is strict identity management, mandatory multi-factor authentication, and continuous monitoring of misconfigurations across every account and service.</p>
+</div>
+
+<div class="article-cta">
+<h3>Is Your Organization's Cloud Identity Exposed?</h3>
+<p>TrinTech provides cloud security assessments that audit your IAM configurations, identify misconfigured services, and implement the controls that prevent identity compromise and unauthorized access.</p>
+<a href="/#contact">Contact TrinTech</a>
+</div>
+</article>
+<footer>
+<div>
+<p>TRINTECH</p>
+<p style="color:var(--muted);font-size:.55rem;margin-top:.3rem">Trinidad and Tobago Cybersecurity</p>
+</div>
+<div style="margin-top:1.5rem">
+<a href="/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Home</a>
+<a href="/blog/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Blog</a>
+<a href="/sentinel/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Sentinel</a>
+<a href="/#contact" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Contact</a>
+</div>
+<div style="margin-top:1rem">
+<p>- 2026 TrinTech Digital Defense. All rights reserved.-</p>
+</div>
+</footer>
+</body>
+</html>

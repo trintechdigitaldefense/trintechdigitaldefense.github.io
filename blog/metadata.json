@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "cloud-identity-misconfigurations-2026",
+      "title": "Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Ignore",
+      "date": "2026-10-14",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "cloud security",
+        "IAM",
+        "misconfiguration",
+        "BEC",
+        "identity attacks",
+        "Trinidad"
+      ],
+      "word_count": 2847,
+      "url": "https://trintechdigitaldefense.github.io/blog/cloud-identity-misconfigurations-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/cloud-identity-misconfigurations-2026.png"
+    },
+    {
       "slug": "deepfake-fraud-trinidad-2026",
       "title": "Deepfake Fraud in Trinidad: What TTSEC Alerts Mean for Your Business",
       "date": "2026-10-07",

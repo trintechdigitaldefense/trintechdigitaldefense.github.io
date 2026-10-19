@@ -14,20 +14,32 @@ Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean
 
 TrinTech Digital Defense specialises in authorized security assessments and managed defense for SMBs that need real visibility without enterprise budgets. Founded and led by Jason Ramdharry. Every engagement is under NDA and ends with a written report plus actionable fixes.
 
-## Core Tools
+## Flagship platforms
+
+These three are the defense line on the [pricing page](https://trintechdigitaldefense.github.io/#pricing).
 
 | Tool | Role | Repo |
 |------|------|------|
-| **FortifyOne** | Audit / assessment engine | [fortifyone](https://github.com/trintechdigitaldefense/fortifyone) |
-| **Sentinel** | Continuous threat detection & response (FIM, reverse-shell detection, persistence hunting, active deception, managed IR) | [Sentinel](https://github.com/trintechdigitaldefense/Sentinel) |
-| **Mirage** | Lightweight network deception (fake services, canaries, honey tokens) | [Mirage](https://github.com/trintechdigitaldefense/Mirage) |
+| **Sentinel** | Line of Defense Engine. Core sold product: FIM, SSH brute-force blocking, reverse-shell detection, active deception, hardening checks. | [Sentinel](https://github.com/trintechdigitaldefense/Sentinel) |
+| **Mirage** | Deception layer, sold standalone. Fake services, honey tokens, canary files. | [Mirage](https://github.com/trintechdigitaldefense/Mirage) |
+| **CyberGuardian** | Coordinating platform for detection and human-gated response. Approval before isolate, kill, or block. Not a full SOC. | [cyberguardian](https://github.com/trintechdigitaldefense/cyberguardian) |
 
-## Pilot Platforms
+## Audit and monitoring line
 
-| Platform | Status | Repo |
-|----------|--------|------|
-| **CyberGuardian** | Pilot-stage active defense / IPS | [cyberguardian](https://github.com/trintechdigitaldefense/cyberguardian) |
-| **CyberFortress** | Pilot-stage defense platform | [CyberFortress](https://github.com/trintechdigitaldefense/CyberFortress) |
+Separate from the defense platforms. Still public.
+
+| Tool | Role | Repo |
+|------|------|------|
+| **FortifyOne** | Professional network audit | [fortifyone](https://github.com/trintechdigitaldefense/fortifyone) |
+| **Apex-Recon** | OSINT, SMB auditing, web scanning | [Apex-Recon-](https://github.com/trintechdigitaldefense/Apex-Recon-) |
+| **CyberAudit** | Live audit operations console | [cyberaudit-dashboard](https://github.com/trintechdigitaldefense/cyberaudit-dashboard) |
+| **CaribWatch** | Caribbean threat visibility | [caribwatch](https://github.com/trintechdigitaldefense/caribwatch) |
+
+## Not archived, not flagship
+
+**CyberFortress** is a separate incident-response and containment pilot. It stays public. It is not the same product as CyberGuardian, and it has not been archived.
+
+`trintech-guardian` is archived for reference. Its successor is CyberGuardian. `trin-tech-audit` is superseded by FortifyOne and kept for reference.
 
 ## Services
 

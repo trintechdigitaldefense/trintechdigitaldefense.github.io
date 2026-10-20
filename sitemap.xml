@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://trintechdigitaldefense.github.io/blog/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25,8 +25,26 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/cloud-identity-misconfigurations-2026</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/cyber-insurance-requirements-2026</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://trintechdigitaldefense.github.io/blog/cybersecurity-compliance-trinidad</loc>
     <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/deepfake-fraud-trinidad-2026</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,6 +63,12 @@
   <url>
     <loc>https://trintechdigitaldefense.github.io/blog/ransomware-defense-trinidad</loc>
     <lastmod>2026-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trintechdigitaldefense.github.io/blog/rpa-security-threats-2026</loc>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

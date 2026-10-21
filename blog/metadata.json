@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "insider-threats-2026",
+      "title": "Insider Threats in 2026: The $19.5M Problem Trinidad Businesses Are Ignoring",
+      "date": "2026-10-21",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "insider threat",
+        "privileged access",
+        "credential theft",
+        "DPRK",
+        "AI data exfiltration",
+        "Trinidad"
+      ],
+      "word_count": 3012,
+      "url": "https://trintechdigitaldefense.github.io/blog/insider-threats-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/insider-threats-2026.png"
+    },
+    {
       "slug": "cloud-identity-misconfigurations-2026",
       "title": "Cloud Identity and Misconfiguration Attacks: The 2026 Threat Trinidad Businesses Can't Ignore",
       "date": "2026-10-14",

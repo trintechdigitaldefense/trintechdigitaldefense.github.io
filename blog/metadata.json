@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "lateral-movement-network-segmentation-2026",
+      "title": "Lateral Movement Attacks: Why Network Segmentation Is Trinidad's Missing Security Control",
+      "date": "2026-10-28",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "lateral movement",
+        "network segmentation",
+        "zero trust",
+        "RDP",
+        "NTLM",
+        "Trinidad"
+      ],
+      "word_count": 2890,
+      "url": "https://trintechdigitaldefense.github.io/blog/lateral-movement-network-segmentation-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/lateral-movement-network-segmentation-2026.png"
+    },
+    {
       "slug": "insider-threats-2026",
       "title": "Insider Threats in 2026: The $19.5M Problem Trinidad Businesses Are Ignoring",
       "date": "2026-10-21",

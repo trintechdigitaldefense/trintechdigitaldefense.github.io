@@ -4,30 +4,51 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TrinTech Digital Defense — Cybersecurity Services Trinidad & Tobago</title>
-<meta name="description" content="TrinTech Digital Defense — managed defense packages (Mirage, CyberGuardian, Sentinel), vulnerability assessments, OSINT, network audits for Trinidad & Tobago.">
+<meta name="description" content="TrinTech Digital Defense — 24/7 monitoring, active deception, and reporting for Trinidad & Tobago. Managed packages with Mirage, Sentinel, FortifyOne, and CyberGuardian.">
 <meta name="author" content="TrinTech Digital Defense">
 <link rel="canonical" href="https://trintechdigitaldefense.github.io">
 <meta property="og:title" content="TrinTech Digital Defense — Cybersecurity Trinidad & Tobago">
-<meta property="og:description" content="Managed defense: Mirage $850/mo · Mirage+CyberGuardian $1,500/mo · Sentinel $2,200/mo. Professional cybersecurity for T&T.">
+<meta property="og:description" content="Managed defense from TT$1,350/mo. 24/7 monitoring, active deception, and reporting for T&T businesses.">
 <meta property="og:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <meta property="og:url" content="https://trintechdigitaldefense.github.io">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+:root{--status-bar-height:36px;--nav-height:64px;--header-offset:calc(var(--status-bar-height)+var(--nav-height))}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--cyan,#00e5ff);color:#000;padding:.5rem 1rem;z-index:9999;font-family:var(--mono),monospace;font-size:.75rem;text-decoration:none}
+.skip-link:focus{top:0}
+.site-header{position:sticky;top:0;z-index:510}
+.status-bar{position:relative!important;z-index:511;min-height:var(--status-bar-height)}
+nav.site-nav,nav{position:sticky!important;top:0!important;z-index:512}
+section[id],#main-content{scroll-margin-top:calc(var(--header-offset)+12px)}
+.device-note{margin:-1.5rem 0 2.5rem;padding:1.1rem 1.4rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.04);font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:1.55;max-width:900px}
+.contact-simple{margin-top:2rem;display:grid;gap:.85rem;max-width:480px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.contact-simple a{color:var(--cyan)}
+.contact-simple .ci-label{display:inline-block;min-width:8rem;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-right:.5rem}
+.btn-wa{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;text-decoration:none;display:inline-block}
+.profile-avatar{background:linear-gradient(135deg,var(--cyan),var(--purple));color:#fff;font-size:2.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--mono);width:100px;height:100px;border-radius:50%;margin:0 auto 1rem}
+.site-footer{padding:3rem;border-top:1px solid var(--border);text-align:center;font-family:var(--mono);font-size:.7rem;color:var(--muted)}
+.site-footer a{color:var(--muted);margin:0 .35rem}
+.site-footer p{margin:.4rem 0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+@media(max-width:768px){:root{--status-bar-height:48px;--nav-height:56px}}
+</style>
 </head>
 <body>
-<a href="#main-content" style="position:absolute;top:-100px;left:0;background:var(--cyan);color:#000;padding:.5rem 1rem;z-index:9999;font-family:'Share Tech Mono',monospace;font-size:.75rem;text-decoration:none">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-<div class="status-bar">
+<header class="site-header">
+<div class="status-bar" role="status" aria-label="Service status">
   <div class="status-item"><div class="status-dot green"></div><span class="status-label">Systems</span><span class="status-val">Operational</span></div>
-  <div class="status-item"><div class="status-dot cyan"></div><span class="status-label">Managed Defense</span><span class="status-val">Active</span></div>
+  <div class="status-item"><div class="status-dot cyan"></div><span class="status-label">Monitoring</span><span class="status-val">24/7</span></div>
   <div class="status-item"><div class="status-dot gold"></div><span class="status-label">Avg Response</span><span class="status-val">< 24h</span></div>
-  <div class="status-item"><div class="status-dot green"></div><span class="status-label">NDA</span><span class="status-val">100%</span></div>
+  <div class="status-item"><div class="status-dot green"></div><span class="status-label">NDA</span><span class="status-val">Standard</span></div>
 </div>
 
-<nav>
+<nav class="site-nav" aria-label="Primary">
   <div class="nav-logo">
-    <div class="nav-shield" aria-label="TrinTech Shield">T</div>
+    <div class="nav-shield" aria-hidden="true">T</div>
     <div><div class="nav-main">TRINTECH</div><div class="nav-sub">Digital Defense</div></div>
   </div>
   <ul class="nav-links" id="navLinks">
@@ -42,38 +63,37 @@
     <li><button type="button" class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">&#9728;</button></li>
   </ul>
   <a href="#contact" class="nav-cta">Get Protected</a>
-  <button type="button" class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
 </nav>
+</header>
 
-<section id="main-content" class="hero">
-  <p class="hero-tag">Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean</p>
+<main id="main-content">
+<section class="hero">
+  <p class="hero-tag">Based in Trinidad & Tobago — serving Trinidad & Tobago</p>
   <h1>DEFEND.<br><span class="accent">DETECT.</span><br>DOMINATE.</h1>
   <div class="hero-divider"></div>
-  <p class="hero-sub"><strong>TrinTech Digital Defense</strong> is a Trinidad & Tobago cybersecurity firm led by Jason Ramdharry. Managed defense packages, vulnerability assessments, network audits, OSINT, and cyber fraud investigation — built for Caribbean SMBs that need real visibility without enterprise budgets.</p>
+  <p class="hero-sub"><strong>TrinTech Digital Defense</strong> is a Trinidad & Tobago cybersecurity firm led by Jason Ramdharry. 24/7 monitoring, active deception, and reporting — plus authorised assessments for businesses that need real visibility without a full enterprise SOC budget.</p>
   <div class="hero-ctas">
     <a href="#pricing" class="btn-cyan">View Packages</a>
     <a href="#contact" class="btn-outline">Free Scoping Call</a>
-    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20need%20cybersecurity%20help." target="_blank" rel="noopener" style="font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:#25D366;border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block">WhatsApp</a>
+    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20need%20cybersecurity%20help." target="_blank" rel="noopener" class="btn-wa">WhatsApp</a>
   </div>
   <div class="hero-stats">
-    <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">H Response Time</span></div>
-    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">NDA Protected</span></div>
-    <div class="stat"><span class="stat-num">3</span><span class="stat-lbl">Managed Packages</span></div>
-    <div class="stat"><span class="stat-num">100%</span><span class="stat-lbl">Written Reports</span></div>
+    <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">H Response Target</span></div>
+    <div class="stat"><span class="stat-num">NDA</span><span class="stat-lbl">On Every Engagement</span></div>
+    <div class="stat"><span class="stat-num">2</span><span class="stat-lbl">Managed Packages</span></div>
+    <div class="stat"><span class="stat-num">Report</span><span class="stat-lbl">With Every Engagement</span></div>
   </div>
 </section>
 
-<div class="ticker"><div class="ticker-inner">
-  <span class="ticker-item">✦ Mirage Standalone — $850/mo</span>
-  <span class="ticker-item">✦ Mirage + CyberGuardian — $1,500/mo</span>
-  <span class="ticker-item">✦ Sentinel Standalone — $2,200/mo</span>
-  <span class="ticker-item">✦ Web & Android Vulnerability Assessment</span>
-  <span class="ticker-item">✦ Network Auditing · OSINT · Fraud Investigation</span>
+<div class="ticker" aria-hidden="true"><div class="ticker-inner">
+  <span class="ticker-item">✦ Package 1 — TT$1,350/mo · Mirage + Sentinel + FortifyOne</span>
+  <span class="ticker-item">✦ Package 2 — TT$2,350/mo · Full stack + CyberAudit + CyberGuardian</span>
+  <span class="ticker-item">✦ 24/7 monitoring · Active deception · Reporting</span>
   <span class="ticker-item">✦ WhatsApp: 1-868-362-0679</span>
   <span class="ticker-item">✦ Trinidad & Tobago</span>
-  <span class="ticker-item">✦ Mirage Standalone — $850/mo</span>
-  <span class="ticker-item">✦ Mirage + CyberGuardian — $1,500/mo</span>
-  <span class="ticker-item">✦ Sentinel Standalone — $2,200/mo</span>
+  <span class="ticker-item">✦ Package 1 — TT$1,350/mo · Mirage + Sentinel + FortifyOne</span>
+  <span class="ticker-item">✦ Package 2 — TT$2,350/mo · Full stack + CyberAudit + CyberGuardian</span>
 </div></div>
 
 <section id="about" class="about-section">
@@ -81,7 +101,7 @@
   <h2 class="s-title">THE LEAD ANALYST</h2>
   <div class="about-grid">
     <div class="about-profile">
-      <div class="profile-avatar" style="background:linear-gradient(135deg, var(--cyan), var(--purple));color:#fff;font-size:2.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:var(--mono)">JR</div>
+      <div class="profile-avatar" aria-hidden="true">JR</div>
       <div class="profile-name">JASON RAMDHARRY</div>
       <div class="profile-title">Lead Security Analyst · Founder</div>
       <div class="profile-org">TrinTech Digital Defense</div>
@@ -91,13 +111,13 @@
       <div class="profile-detail"><span style="font-size:.68rem">trintechdigitaldefense@gmail.com</span></div>
     </div>
     <div class="about-content">
-      <div class="about-summary">Results-driven cybersecurity professional and founder of TrinTech Digital Defense. Specialising in vulnerability assessment, network auditing, OSINT, and managed defense platforms (Mirage, CyberGuardian, Sentinel) for businesses in Trinidad and Tobago.</div>
-      <div style="font-family:var(--mono);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);margin-bottom:1.5rem">// Core Offerings</div>
+      <div class="about-summary">Founder of TrinTech Digital Defense. Focused on vulnerability assessment, network auditing, OSINT, and managed monitoring with active deception for businesses in Trinidad and Tobago.</div>
+      <div class="s-tag" style="margin-bottom:1rem">// Core offerings</div>
       <ul class="exp-bullets">
-        <li>Managed continuous monitoring and active deception (Mirage / Sentinel)</li>
-        <li>Authorized web, Android, and network vulnerability assessments</li>
+        <li>24/7 monitoring with active deception and client reporting</li>
+        <li>Authorised web, Android, and network assessments</li>
         <li>OSINT, digital footprint analysis, and cyber fraud investigation</li>
-        <li>NDA-protected engagements with written reports and remediation roadmaps</li>
+        <li>NDA-backed engagements with written findings and remediation guidance</li>
       </ul>
     </div>
   </div>
@@ -107,15 +127,15 @@
   <div class="section-header">
     <p class="s-tag">// services.list()</p>
     <h2 class="s-title">WHAT WE OFFER</h2>
-    <p class="s-sub">Flagship defense: Sentinel, Mirage, and CyberGuardian — the monthly packages below. Audits are a separate line: FortifyOne, Apex-Recon, CyberAudit, and CaribWatch.</p>
+    <p class="s-sub">Managed monitoring packages use Mirage, Sentinel, FortifyOne, CyberAudit, and CyberGuardian. Assessments are scoped separately when you need a one-time review.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card"><div class="sc-num">01 //</div><div class="sc-name">Managed Defense Packages</div><div class="sc-desc">Monthly Sentinel, Mirage, and CyberGuardian. Sentinel is the line-of-defense engine, Mirage is deception sold standalone, and CyberGuardian coordinates detection with human approval before isolate, kill, or block.</div></div>
-    <div class="service-card"><div class="sc-num">02 //</div><div class="sc-name">OSINT & Digital Surveillance</div><div class="sc-desc">Deep digital footprint analysis using theHarvester, Maltego, Sherlock, SpiderFoot and more.</div></div>
-    <div class="service-card"><div class="sc-num">03 //</div><div class="sc-name">Web & Android Assessment</div><div class="sc-desc">Authorized vulnerability testing of web apps and Android devices with full written findings.</div></div>
-    <div class="service-card"><div class="sc-num">04 //</div><div class="sc-name">Network Auditing</div><div class="sc-desc">Separate from the monthly defense packages. FortifyOne is the audit engine, with Apex-Recon, CyberAudit, and CaribWatch for assessment and regional visibility.</div></div>
-    <div class="service-card"><div class="sc-num">05 //</div><div class="sc-name">Cyber Fraud Investigation</div><div class="sc-desc">Tracking, auditing, and documenting digital fraud with evidence suitable for corporate and legal use.</div></div>
-    <div class="service-card"><div class="sc-num">06 //</div><div class="sc-name">Credential & Database Audits</div><div class="sc-desc">Password resilience testing, SQL injection audits, and sanitization verification.</div></div>
+    <div class="service-card"><div class="sc-num">01 //</div><div class="sc-name">24/7 Monitoring & Deception</div><div class="sc-desc">Continuous monitoring, active deception, and reporting. Not a full enterprise SOC — clear human oversight and scoped response.</div></div>
+    <div class="service-card"><div class="sc-num">02 //</div><div class="sc-name">OSINT & Digital Surveillance</div><div class="sc-desc">Digital footprint analysis using theHarvester, Maltego, Sherlock, SpiderFoot and related tooling.</div></div>
+    <div class="service-card"><div class="sc-num">03 //</div><div class="sc-name">Web & Android Assessment</div><div class="sc-desc">Authorised testing of web apps and Android devices with written findings.</div></div>
+    <div class="service-card"><div class="sc-num">04 //</div><div class="sc-name">Network Auditing</div><div class="sc-desc">Mapping, scanning, and vulnerability discovery. FortifyOne and related audit tooling support this line of work.</div></div>
+    <div class="service-card"><div class="sc-num">05 //</div><div class="sc-name">Cyber Fraud Investigation</div><div class="sc-desc">Tracking and documenting digital fraud with evidence suitable for corporate use.</div></div>
+    <div class="service-card"><div class="sc-num">06 //</div><div class="sc-name">Credential & Database Reviews</div><div class="sc-desc">Password resilience checks and injection-focused database security reviews under authorisation.</div></div>
   </div>
   <div class="section-cta"><a href="#pricing" class="btn-cyan">See Pricing →</a></div>
 </section>
@@ -123,32 +143,32 @@
 <section id="cases">
   <div class="section-header">
     <p class="s-tag">// cases.list()</p>
-    <h2 class="s-title">RESULTS WE'VE DELIVERED</h2>
-    <p class="s-sub">Anonymized engagements with measurable outcomes. All work conducted under NDA.</p>
+    <h2 class="s-title">ENGAGEMENT EXAMPLES</h2>
+    <p class="s-sub">Illustrative, anonymised scenarios based on typical engagement patterns under NDA. Figures are examples, not guarantees.</p>
   </div>
   <div class="cases-grid">
     <div class="case-card">
-      <div class="case-header"><span class="case-industry">Financial Services</span><span class="case-scope">Port of Spain · 200-person firm</span></div>
+      <div class="case-header"><span class="case-industry">Financial Services</span><span class="case-scope">Port of Spain · example scope</span></div>
       <div class="case-body">
-        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>3 critical web app vulnerabilities in customer portal</li><li>Outdated TLS configuration</li><li>No vulnerability management process</li></ul></div>
-        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>All 3 critical vulnerabilities remediated within 1 week</li><li>TLS hardened to A+ rating</li><li>Quarterly assessment schedule established</li></ul></div>
-        <div class="case-results"><div class="case-results-label">RESULTS</div><p>Critical vulnerabilities reduced from 3 to 0. Client retention maintained after near-miss breach attempt.</p></div>
+        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>Critical issues in customer-facing web app</li><li>Weak TLS configuration</li><li>No structured vulnerability process</li></ul></div>
+        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>Critical findings addressed with remediation plan</li><li>TLS hardened</li><li>Follow-up assessment schedule defined</li></ul></div>
+        <div class="case-results"><div class="case-results-label">OUTCOME</div><p>Written report, prioritised fixes, and clearer ownership of web risk.</p></div>
       </div>
     </div>
     <div class="case-card">
-      <div class="case-header"><span class="case-industry">Healthcare</span><span class="case-scope">San Fernando · Regional clinic</span></div>
+      <div class="case-header"><span class="case-industry">Healthcare</span><span class="case-scope">San Fernando · example scope</span></div>
       <div class="case-body">
-        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>Digital footprint 2x larger than expected</li><li>Employee credentials exposed on pastebin</li><li>No email security headers</li></ul></div>
-        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>Exposed credentials rotated</li><li>Full OSINT remediation plan delivered</li><li>Staff phishing training completed</li></ul></div>
-        <div class="case-results"><div class="case-results-label">RESULTS</div><p>Digital exposure reduced by 87%. No further credential leaks in 6-month monitoring period.</p></div>
+        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>Larger digital footprint than expected</li><li>Exposed credentials found in open sources</li><li>Missing email security headers</li></ul></div>
+        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>Credentials rotated</li><li>OSINT remediation plan delivered</li><li>Staff awareness session completed</li></ul></div>
+        <div class="case-results"><div class="case-results-label">OUTCOME</div><p>Reduced public exposure and clearer monitoring of staff-related leaks.</p></div>
       </div>
     </div>
     <div class="case-card">
-      <div class="case-header"><span class="case-industry">Retail / POS</span><span class="case-scope">Trinidad · Multi-location chain</span></div>
+      <div class="case-header"><span class="case-industry">Retail / POS</span><span class="case-scope">Trinidad · example scope</span></div>
       <div class="case-body">
-        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>Android POS on outdated OS</li><li>No network segmentation between POS and guest WiFi</li><li>Unrestricted USB ports on terminals</li></ul></div>
-        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>POS network isolated on dedicated VLAN</li><li>USB port controls enforced</li><li>OS update schedule with quarterly audits</li></ul></div>
-        <div class="case-results"><div class="case-results-label">RESULTS</div><p>POS attack surface reduced by 94%. Zero payment-related incidents since remediation.</p></div>
+        <div class="case-before"><div class="case-before-title">BEFORE</div><ul class="case-before-list"><li>Android POS on outdated OS</li><li>POS and guest Wi-Fi not segmented</li><li>Open USB ports on terminals</li></ul></div>
+        <div class="case-after"><div class="case-after-title">AFTER</div><ul class="case-after-list"><li>POS isolated on a dedicated segment</li><li>USB controls applied</li><li>Update and review schedule defined</li></ul></div>
+        <div class="case-results"><div class="case-results-label">OUTCOME</div><p>Smaller payment attack surface and clearer device hygiene.</p></div>
       </div>
     </div>
   </div>
@@ -157,70 +177,55 @@
 <section id="pricing" class="pricing-section">
   <p class="s-tag">// pricing.query()</p>
   <div class="pricing-header">
-    <div><h2 class="s-title">SERVICE PRICING</h2><p class="s-sub">Transparent pricing. Every engagement includes a signed NDA and a detailed written report.</p>
-    <p class="s-sub" style="margin-top:.6rem;color:var(--cyan);font-family:var(--mono);font-size:.78rem">All prices in USD (US$). TT$ equivalents available on request.</p></div>
+    <div>
+      <h2 class="s-title">SERVICE PRICING</h2>
+      <p class="s-sub">Prices in Trinidad & Tobago dollars (TT$). Every managed package includes 24/7 monitoring, active deception, and reporting. Not a full enterprise SOC.</p>
+    </div>
     <div class="pricing-note">Direct engagement<br>trintechdigitaldefense@gmail.com<br>WhatsApp: +1 (868) 362-0679</div>
   </div>
 
-  <div class="pricing-cat">[ MANAGED DEFENSE PACKAGES ] — Monthly · Continuous protection</div>
+  <div class="pricing-cat">[ MANAGED DEFENSE PACKAGES ] — Monthly · 24/7 monitoring · Active deception · Reporting</div>
   <div class="baseline-grid">
-    <div class="pkg">
+    <div class="pkg featured">
+      <div class="pkg-badge">Core</div>
       <div class="pkg-tier">[ PACKAGE 1 ]</div>
-      <div class="pkg-name">MIRAGE STANDALONE</div>
-      <div class="pkg-scope">Continuous Visibility & Monitoring</div>
-      <div class="pkg-desc">Comprehensive network visibility and automated security monitoring. Lightweight deception layer that turns attacker interaction into clear, real-time alerts.</div>
-      <div class="pkg-price"><sup>$</sup>850<span>/mo</span></div>
-      <div class="pkg-note">// Managed monthly · Deployed on your network<br>// +$150 if monitoring device required</div>
+      <div class="pkg-name">MIRAGE + SENTINEL + FORTIFYONE</div>
+      <div class="pkg-scope">24/7 monitoring · Active deception · Reporting</div>
+      <div class="pkg-desc">Mirage deception, Sentinel host defense, and FortifyOne audit capability in one monthly package. Continuous visibility and reporting without claiming a full SOC.</div>
+      <div class="pkg-price"><sup>TT$</sup>1,350<span>/mo</span></div>
+      <div class="pkg-note">// Managed monthly · 24/7 monitoring<br>// +TT$200 one-time if monitoring device required</div>
       <ul class="pkg-features">
-        <li>Fake services & honey tokens</li>
-        <li>Canary files with real-time alerts</li>
-        <li>Network visibility dashboard</li>
-        <li>Automated security monitoring</li>
-        <li>Client-ready incident summaries</li>
+        <li>Mirage — network deception & canaries</li>
+        <li>Sentinel — FIM, SSH defense, persistence hunting</li>
+        <li>FortifyOne — audit and assessment support</li>
+        <li>24/7 monitoring and active deception</li>
+        <li>Client-ready reporting</li>
         <li>WhatsApp / Telegram alert options</li>
       </ul>
-      <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;">Get Mirage</a>
-    </div>
-    <div class="pkg featured">
-      <div class="pkg-badge">Recommended</div>
-      <div class="pkg-tier">[ PACKAGE 2 ]</div>
-      <div class="pkg-name">MIRAGE & CYBERGUARDIAN</div>
-      <div class="pkg-scope">Detection & Human-Gated Response</div>
-      <div class="pkg-desc">Mirage deception plus CyberGuardian detection. Isolate, kill, and block require human approval. Not a full SOC.</div>
-      <div class="pkg-price"><sup>$</sup>1,500<span>/mo</span></div>
-      <div class="pkg-note">// Managed monthly · Full defense stack<br>// +$150 if monitoring device required</div>
-      <ul class="pkg-features">
-        <li>Everything in Mirage Standalone</li>
-        <li>Linux detection and risk scoring</li>
-        <li>Human approval before isolate, kill, or block</li>
-        <li>Fleet visibility and network inventory</li>
-        <li>Issue memory and operator reports</li>
-        <li>Pilot scope — not a 24/7 SOC</li>
-      </ul>
-      <a href="#contact" class="btn-cyan" style="width:100%;text-align:center;display:block;">Get Package</a>
+      <a href="#contact" class="btn-cyan" style="width:100%;text-align:center;display:block;">Get Package 1</a>
     </div>
     <div class="pkg">
-      <div class="pkg-tier">[ PACKAGE 3 ]</div>
-      <div class="pkg-name">SENTINEL STANDALONE</div>
-      <div class="pkg-scope">Comprehensive Threat Detection & Response</div>
-      <div class="pkg-desc">FIM, reverse-shell detection, persistence hunting, active deception, and managed incident response. Full line-of-defense engine for continuous visibility without a full SOC.</div>
-      <div class="pkg-price"><sup>$</sup>2,200<span>/mo</span></div>
-      <div class="pkg-note">// Managed monthly · Enterprise-grade visibility<br>// +$150 if monitoring device required</div>
+      <div class="pkg-tier">[ PACKAGE 2 ]</div>
+      <div class="pkg-name">FULL STACK + CYBERAUDIT + CYBERGUARDIAN</div>
+      <div class="pkg-scope">Everything in Package 1 · Plus coordination layer</div>
+      <div class="pkg-desc">All of Package 1, plus CyberAudit Dashboard and CyberGuardian for detection coordination with human-approved response actions. Still not a full enterprise SOC.</div>
+      <div class="pkg-price"><sup>TT$</sup>2,350<span>/mo</span></div>
+      <div class="pkg-note">// Managed monthly · 24/7 monitoring<br>// +TT$200 one-time if monitoring device required</div>
       <ul class="pkg-features">
-        <li>File integrity monitoring (FIM)</li>
-        <li>SSH brute-force blocking</li>
-        <li>Reverse-shell & persistence hunting</li>
-        <li>Active deception + canary watcher</li>
-        <li>Multi-host central agent support</li>
-        <li>Professional PDF client reports</li>
+        <li>Everything in Package 1</li>
+        <li>CyberAudit Dashboard</li>
+        <li>CyberGuardian — human-gated response</li>
+        <li>Fleet visibility and operator reports</li>
+        <li>24/7 monitoring and active deception</li>
+        <li>Clearer coordination across tools</li>
       </ul>
-      <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;">Get Sentinel</a>
+      <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;">Get Package 2</a>
     </div>
   </div>
 
-  <div class="device-note" style="margin:-1.5rem 0 2.5rem;padding:1.1rem 1.4rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.04);font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:1.55;max-width:900px">
-    <strong style="color:var(--cyan)">Device requirement:</strong> Active monitoring requires a dedicated device on the client network.
-    If the client does not have a suitable device, TrinTech will provide a mobile monitoring device at an additional <strong style="color:var(--text)">$150</strong> (one-time, added to the selected package).
+  <div class="device-note">
+    <strong>Device requirement:</strong> Active monitoring needs a dedicated device on the client network.
+    If you do not have a suitable device, TrinTech can provide a mobile monitoring device for an additional <strong>TT$200</strong> (one-time, added to the selected package).
   </div>
 
   <div class="pricing-cat">[ BASELINE ASSESSMENT PACKAGES ] — One-time engagements</div>
@@ -229,8 +234,8 @@
       <div class="pkg-tier">[ OSINT ]</div>
       <div class="pkg-name">WEBSITE & OSINT RECON</div>
       <div class="pkg-scope">Any size · Web or Android</div>
-      <div class="pkg-desc">Deep-dive digital footprint analysis. Full open-source intelligence gathering on your domain, emails, subdomains, and digital exposure.</div>
-      <div class="pkg-price"><sup>$</sup>150<span>/hr</span></div>
+      <div class="pkg-desc">Digital footprint analysis: domains, emails, subdomains, and public exposure.</div>
+      <div class="pkg-price"><sup>TT$</sup>150<span>/hr</span></div>
       <div class="pkg-note">// Hourly · Min 2 hrs · Written report included</div>
       <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;margin-top:1.5rem;">Book OSINT</a>
     </div>
@@ -238,8 +243,8 @@
       <div class="pkg-tier">[ MICRO AUDIT ]</div>
       <div class="pkg-name">MICRO-BUSINESS AUDIT</div>
       <div class="pkg-scope">1 – 5 devices</div>
-      <div class="pkg-desc">Internal network mapping and automated vulnerability discovery for small offices and SMBs.</div>
-      <div class="pkg-price"><sup>$</sup>1,000</div>
+      <div class="pkg-desc">Internal mapping and automated discovery for small offices and SMBs.</div>
+      <div class="pkg-price"><sup>TT$</sup>1,000</div>
       <div class="pkg-note">// One-time · Full report + debrief</div>
       <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;margin-top:1.5rem;">Book Audit</a>
     </div>
@@ -247,8 +252,8 @@
       <div class="pkg-tier">[ SMALL BIZ ]</div>
       <div class="pkg-name">SMALL BUSINESS AUDIT</div>
       <div class="pkg-scope">5 – 15 devices</div>
-      <div class="pkg-desc">Full network security inventory, topology mapping, and CVSS-scored vulnerability report.</div>
-      <div class="pkg-price"><sup>$</sup>2,200</div>
+      <div class="pkg-desc">Broader inventory, topology, and CVSS-scored findings.</div>
+      <div class="pkg-price"><sup>TT$</sup>2,200</div>
       <div class="pkg-note">// One-time · Executive + technical report</div>
       <a href="#contact" class="btn-outline" style="width:100%;text-align:center;display:block;margin-top:1.5rem;">Book Audit</a>
     </div>
@@ -260,50 +265,86 @@
   <p class="s-tag" style="text-align:center">// faq.resolve()</p>
   <h2 class="s-title" style="text-align:center">FREQUENTLY ASKED QUESTIONS</h2>
   <div class="faq-grid">
-    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How long does a security assessment take?<span class="faq-icon">+</span></button><div class="faq-answer"><p>A standard web or Android security assessment takes 1-3 business days depending on scope. OSINT reconnaissance is typically completed within 2 hours. Full engagements including reporting and debrief run 1-5 business days.</p></div></div>
-    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Is every engagement confidential?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Absolutely. Every engagement begins with a signed Non-Disclosure Agreement (NDA). Your information, findings, and our methods are never shared without your written permission.</p></div></div>
-    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">What do I get after a security assessment?<span class="faq-icon">+</span></button><div class="faq-answer"><p>You receive a comprehensive written report with CVSS severity ratings, detailed evidence, screenshots, a technical appendix, and a clear remediation roadmap. You also get a debrief call.</p></div></div>
-    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Do you work outside Trinidad & Tobago?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean. Engagements are conducted on-site or remotely across the region.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Is this a full 24/7 SOC?<span class="faq-icon">+</span></button><div class="faq-answer"><p>No. Packages include 24/7 monitoring, active deception, and reporting. Response actions (especially isolate, kill, or block under CyberGuardian) are scoped and human-approved. We do not claim a full enterprise SOC.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">How long does an assessment take?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Typical web or Android assessments take 1–3 business days depending on scope. OSINT recon is often within a few hours. Full engagements including reporting usually run 1–5 business days.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">Is every engagement under NDA?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. Engagements begin with a signed NDA. Findings and methods are not shared without your written permission.</p></div></div>
+    <div class="faq-item"><button type="button" class="faq-question" aria-expanded="false">What do I receive after work is done?<span class="faq-icon">+</span></button><div class="faq-answer"><p>A written report with severity ratings, evidence, and a remediation roadmap, plus a debrief when scoped.</p></div></div>
   </div>
 </section>
 
 <section id="contact" class="contact-section">
   <p class="s-tag">// contact.open()</p>
   <h2 class="s-title">LET'S SECURE YOUR SYSTEMS</h2>
-  <p class="s-sub">NDA first. Clear scope. Written report. Fast response.</p>
-  <div style="margin-top:2.5rem;display:grid;gap:1rem;max-width:480px">
-    <div style="font-family:var(--mono);font-size:.85rem;color:var(--muted)">Lead Analyst <strong style="color:var(--text)">Jason Ramdharry</strong></div>
-    <div style="font-family:var(--mono);font-size:.85rem;color:var(--muted)">Phone / WhatsApp <a href="https://wa.me/18683620679" style="color:var(--cyan)">+1 (868) 362-0679</a></div>
-    <div style="font-family:var(--mono);font-size:.85rem;color:var(--muted)">Email <a href="mailto:trintechdigitaldefense@gmail.com" style="color:var(--cyan)">trintechdigitaldefense@gmail.com</a></div>
-    <div style="font-family:var(--mono);font-size:.85rem;color:var(--muted)">Location <strong style="color:var(--text)">Trinidad & Tobago</strong></div>
-    <div style="font-family:var(--mono);font-size:.85rem;color:var(--muted)">GitHub <a href="https://github.com/trintechdigitaldefense" style="color:var(--cyan)">github.com/trintechdigitaldefense</a></div>
+  <p class="s-sub">NDA first. Clear scope. Written report. Contact us by WhatsApp or email — we do not collect enquiry data through a web form on this site.</p>
+  <div class="contact-simple">
+    <div><span class="ci-label">Lead Analyst</span> <strong>Jason Ramdharry</strong></div>
+    <div><span class="ci-label">Phone / WhatsApp</span> <a href="https://wa.me/18683620679">+1 (868) 362-0679</a></div>
+    <div><span class="ci-label">Email</span> <a href="mailto:trintechdigitaldefense@gmail.com">trintechdigitaldefense@gmail.com</a></div>
+    <div><span class="ci-label">Location</span> <strong>Trinidad & Tobago</strong></div>
+    <div><span class="ci-label">GitHub</span> <a href="https://github.com/trintechdigitaldefense">github.com/trintechdigitaldefense</a></div>
   </div>
   <div class="section-cta" style="text-align:left;margin-top:2rem">
     <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20want%20to%20discuss%20a%20managed%20defense%20package." target="_blank" rel="noopener" class="btn-cyan">WhatsApp Now</a>
   </div>
 </section>
+</main>
 
-<footer style="padding:3rem;border-top:1px solid var(--border);text-align:center;font-family:var(--mono);font-size:.7rem;color:var(--muted)">
+<footer class="site-footer">
   <p>© 2026 TrinTech Digital Defense. All rights reserved.</p>
-  <p style="margin-top:.5rem">Jason Ramdharry — Founder & Lead Security Analyst</p>
-  <p style="margin-top:.5rem"><a href="/privacy/" style="color:var(--muted)">Privacy</a> · <a href="/terms/" style="color:var(--muted)">Terms</a> · <a href="/sentinel/" style="color:var(--muted)">Sentinel</a> · <a href="/safety/" style="color:var(--muted)">Safety Tips</a> · <a href="/trintech/" style="color:var(--muted)">Tools</a></p>
+  <p>Jason Ramdharry — Founder & Lead Security Analyst</p>
+  <p><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sentinel/">Sentinel</a> · <a href="/safety/">Safety Tips</a> · <a href="/trintech/">Tools</a> · <a href="/blog/">Blog</a></p>
 </footer>
 
 <script>
-const themeToggle=document.getElementById('themeToggle');
-const savedTheme=localStorage.getItem('trintech-theme')||'dark';
-document.documentElement.setAttribute('data-theme',savedTheme);
-if(themeToggle){themeToggle.innerHTML=savedTheme==='dark'?'&#9790;':'&#9728;';
-themeToggle.addEventListener('click',()=>{const next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
-document.documentElement.setAttribute('data-theme',next);localStorage.setItem('trintech-theme',next);
-themeToggle.innerHTML=next==='dark'?'&#9790;':'&#9728;';});}
-const hamburger=document.getElementById('hamburger');const navLinks=document.getElementById('navLinks');
-if(hamburger&&navLinks){hamburger.addEventListener('click',()=>{hamburger.classList.toggle('active');navLinks.classList.toggle('open');});}
-document.querySelectorAll('.faq-question').forEach(btn=>{
-  btn.addEventListener('click',()=>{const item=btn.parentElement;const was=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');const q=i.querySelector('.faq-question');if(q)q.setAttribute('aria-expanded','false');});
-  if(!was){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});
-});
+(function(){
+  var root=document.documentElement;
+  var themeToggle=document.getElementById('themeToggle');
+  var saved=localStorage.getItem('trintech-theme')||'dark';
+  root.setAttribute('data-theme',saved);
+  if(themeToggle){
+    themeToggle.innerHTML=saved==='dark'?'\u263E':'\u2600';
+    themeToggle.addEventListener('click',function(){
+      var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+      root.setAttribute('data-theme',next);
+      localStorage.setItem('trintech-theme',next);
+      themeToggle.innerHTML=next==='dark'?'\u263E':'\u2600';
+    });
+  }
+  var hamburger=document.getElementById('hamburger');
+  var navLinks=document.getElementById('navLinks');
+  function closeMenu(){
+    if(!hamburger||!navLinks)return;
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','Open menu');
+  }
+  function openMenu(){
+    hamburger.classList.add('active');
+    navLinks.classList.add('open');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','Close menu');
+  }
+  if(hamburger&&navLinks){
+    hamburger.addEventListener('click',function(){
+      if(navLinks.classList.contains('open'))closeMenu();else openMenu();
+    });
+    navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  }
+  document.querySelectorAll('.faq-question').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.parentElement;
+      var was=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        var q=i.querySelector('.faq-question');
+        if(q)q.setAttribute('aria-expanded','false');
+      });
+      if(!was){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+    });
+  });
+})();
 </script>
 </body>
 </html>

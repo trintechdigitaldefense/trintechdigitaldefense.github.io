@@ -2,241 +2,58 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sentinel — 24/7 Network Monitoring and Intrusion Detection | TrinTech Digital Defense</title>
-<meta name="description" content="Sentinel — TrinTech Digital Defense live security monitoring system. Real-time threat detection, file integrity monitoring, and SSH brute-force blocking.">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sentinel — TrinTech Digital Defense</title>
+<meta name="description" content="Continuous host monitoring and early warning for Caribbean SMBs. Detect · Alert · Report.">
 <link rel="canonical" href="https://trintechdigitaldefense.github.io/sentinel/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://trintechdigitaldefense.github.io/sentinel/">
-<meta property="og:title" content="Sentinel — 24/7 Network Monitoring and Intrusion Detection">
-<meta property="og:description" content="TrinTech's proprietary network monitoring platform. Continuous device tracking, deception engineering, and real-time alerting.">
-<meta property="og:image" content="https://trintechdigitaldefense.github.io/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sentinel — 24/7 Network Monitoring and Intrusion Detection">
-<meta name="twitter:description" content="TrinTech's proprietary network monitoring platform.">
-<meta name="twitter:image" content="https://trintechdigitaldefense.github.io/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Bebas+Neue&amp;family=DM+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/style.css">
 <style>
-:root{--bg:#030a0e;--bg2:#050f15;--bg3:#071218;--cyan:#00e5ff;--cyan-dim:rgba(0,229,255,0.09);--cyan-glow:rgba(0,229,255,0.35);--green:#00ff9d;--purple:#b44aff;--red:#ff2d55;--muted:#4a6475;--border:rgba(0,229,255,0.14);--card:rgba(5,18,26,0.95);--mono:'Share Tech Mono',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif}
-[data-theme="light"]{--bg:#f5f8fa;--bg2:#e8eef2;--bg3:#dde5eb;--cyan:#0077aa;--muted:#5a7485;--border:rgba(0,119,170,0.18);--card:rgba(255,255,255,0.95)}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:#c8d8e0;font-family:var(--body);font-weight:300;line-height:1.7;transition:background .4s,color .4s}
-[data-theme="light"] body{color:#1a2a35}
-nav{position:fixed;top:0;width:100%;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:rgba(3,10,14,0.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
-[data-theme="light"] nav{background:rgba(245,248,250,0.94)}
-.nav-logo{display:flex;align-items:center;gap:.85rem}
-.nav-text{font-family:var(--display);font-size:1.35rem;letter-spacing:.1em;color:var(--cyan)}
-.nav-text .sub{font-family:var(--mono);font-size:.55rem;color:var(--muted);letter-spacing:.2em;display:block}
-.nav-links{display:flex;gap:1.5rem;list-style:none}
-.nav-links a{font-family:var(--mono);font-size:.7rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover{color:var(--cyan)}
-.hero{padding:8rem 3rem 4rem;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,rgba(0,229,255,.06) 0%,transparent 50%);pointer-events:none}
-.hero-tag{font-family:var(--mono);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:1rem}
-.hero h1{font-family:var(--display);font-size:clamp(2.8rem,7vw,6rem);letter-spacing:.03em;color:#fff;line-height:.95;margin-bottom:1.5rem}
-[data-theme="light"] .hero h1{color:var(--bg)}
-.hero h1 .accent{color:var(--cyan);text-shadow:0 0 30px var(--cyan-glow)}
-.hero-sub{font-size:1.05rem;color:var(--muted);max-width:600px;line-height:1.8;margin-bottom:2.5rem}
-.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-cyan{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);background:var(--cyan);border:none;padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:box-shadow .2s}
-.btn-cyan:hover{box-shadow:0 0 28px var(--cyan-glow)}
-.btn-outline{font-family:var(--mono);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);background:transparent;border:1px solid var(--cyan);padding:1rem 2.4rem;border-radius:3px;cursor:pointer;text-decoration:none;display:inline-block;transition:background .2s}
-.btn-outline:hover{background:var(--cyan-dim)}
-section{padding:5rem 3rem;position:relative}
-.s-tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);margin-bottom:.9rem}
-.s-title{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);letter-spacing:.04em;color:#fff;margin-bottom:1rem;line-height:1}
-[data-theme="light"] .s-title{color:var(--bg)}
-.s-sub{color:var(--muted);max-width:560px;line-height:1.7;font-size:.95rem;margin-bottom:3rem}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem;max-width:1100px}
-.feature-card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:2rem;transition:border-color .25s}
-.feature-card:hover{border-color:var(--cyan)}
-.feature-icon{font-size:1.5rem;margin-bottom:.8rem}
-.feature-name{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;color:var(--cyan);margin-bottom:.5rem}
-.feature-desc{font-size:.88rem;color:var(--muted);line-height:1.65}
-.architecture{background:var(--bg2);max-width:1100px;margin:0 auto}
-.arch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
-.arch-node{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.5rem;text-align:center;transition:border-color .2s,transform .2s}
-.arch-node:hover{border-color:var(--cyan);transform:translateY(-3px)}
-.arch-node-icon{font-size:1.4rem;margin-bottom:.5rem}
-.arch-node-name{font-family:var(--mono);font-size:.72rem;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.3rem}
-.arch-node-desc{font-size:.78rem;color:var(--muted);line-height:1.5}
-.pricing-section{max-width:1000px;margin:0 auto}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:2rem}
-.pkg{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:2.5rem 2rem;position:relative;transition:border-color .25s}
-.pkg:hover{border-color:var(--cyan)}
-.pkg.featured{border-color:var(--cyan);box-shadow:0 0 32px rgba(0,229,255,.07)}
-.pkg-badge{position:absolute;top:-11px;left:1.5rem;background:var(--cyan);color:var(--bg);font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.22rem .8rem;border-radius:2px}
-.pkg-tier{font-family:var(--mono);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.4rem;opacity:.7}
-.pkg-name{font-family:var(--display);font-size:1.7rem;color:#fff;margin-bottom:.4rem}
-[data-theme="light"] .pkg-name{color:var(--bg)}
-.pkg-desc{font-size:.84rem;color:var(--muted);line-height:1.55;margin-bottom:1.5rem}
-.pkg-features{list-style:none;margin-bottom:2rem}
-.pkg-features li{font-size:.84rem;color:var(--text);padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.04);display:flex;align-items:flex-start;gap:.6rem;line-height:1.4}
-[data-theme="light"] .pkg-features li{border-bottom-color:rgba(0,0,0,.06)}
-.pkg-features li::before{content:'▸';color:var(--cyan);font-size:.65rem;flex-shrink:0}
-.cta-section{background:linear-gradient(135deg,rgba(0,229,255,.05),transparent);border:1px solid var(--cyan);border-radius:8px;padding:3.5rem;text-align:center;margin:0 auto;max-width:800px}
-.cta-section h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;margin-bottom:1rem}
-[data-theme="light"] .cta-section h2{color:var(--bg)}
-.cta-section p{color:var(--muted);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
-footer{padding:2rem 3rem;border-top:1px solid var(--border);text-align:center}
-footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em}
-footer a{color:var(--cyan);text-decoration:none}
-@media(max-width:768px){nav{padding:1rem 1.5rem}.nav-links{display:none}.hero,section{padding-left:1.5rem;padding-right:1.5rem}
+.pp{max-width:1100px;margin:0 auto;padding:2rem 1.25rem 4rem}
+.top{display:flex;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(3,10,14,.94);z-index:40;font-family:var(--mono);font-size:.72rem}
+.top a{color:var(--muted);text-decoration:none;margin-left:1rem}.top .b{color:var(--text);letter-spacing:.12em}.top .b span{color:var(--cyan)}
+h1{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);margin:.4rem 0}
+.lead{color:var(--muted);max-width:640px;line-height:1.65}
+.badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .55rem;border:1px solid var(--border);border-radius:3px;color:var(--cyan);display:inline-block;margin:.3rem .3rem 0 0}
+.sec{margin-top:2rem}
+.sec h2{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.6rem}
+.sec p,.sec li{color:var(--muted);line-height:1.6;font-size:.92rem}
+table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.5rem}
+th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left}
+th{font-family:var(--mono);font-size:.62rem;color:var(--cyan);background:rgba(0,229,255,.08)}
+td{color:var(--muted)}
+.acts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.acts a{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.7rem 1.1rem;border-radius:3px}
+.primary{background:var(--cyan);color:#000}.secondary{border:1px solid var(--border);color:var(--cyan)}
+.note{margin-top:1rem;padding:1rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.06);font-size:.85rem;color:var(--muted)}
 </style>
 </head>
 <body>
-<nav>
-<div class="nav-logo">
-<span class="nav-text">SENTINEL<span class="sub">TrinTech Digital Defense</span></span>
+<div class="top"><a class="b" href="/">TRINTECH <span>// sentinel</span></a><div><a href="/trintech/">Products</a><a href="/#pricing">Pricing</a><a href="/#contact">Contact</a></div></div>
+<div class="pp">
+<header>
+<p style="font-family:var(--mono);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple)">// product.detail()</p>
+<h1>Sentinel</h1>
+<p class="lead">Continuous host monitoring and early warning for Caribbean SMBs. Detect · Alert · Report.</p>
+<span class="badge">v3.16.x</span>
+<span class="badge">Pilot candidate</span>
+<div class="acts"><a class="primary" href="https://github.com/trintechdigitaldefense/Sentinel" target="_blank" rel="noopener">GitHub</a><a class="secondary" href="/#pricing">Packages</a><a class="secondary" href="/#contact">Enquire</a></div>
+</header>
+<section class="sec"><h2>// capabilities</h2>
+<table><thead><tr><th>Capability</th><th>Status</th><th>Notes</th></tr></thead><tbody>
+<tr><td>FIM</td><td>Implemented · partial</td><td>Mode/owner/SUID; realtime needs inotify-tools</td></tr>
+<tr><td>Persistence hunting</td><td>Implemented · partial</td><td>Cron, systemd, keys, LD_PRELOAD</td></tr>
+<tr><td>Reverse-shell / behavioral</td><td>Implemented · partial</td><td>Heuristics — not proof alone</td></tr>
+<tr><td>Canary / deception files</td><td>Implemented</td><td>Tracked decoys alert on change</td></tr>
+<tr><td>Host firewall control</td><td>Implemented · dry-run default</td><td>Confirm to apply; lockout guard</td></tr>
+<tr><td>SSH defense</td><td>Implemented</td><td>Brute-force oriented controls</td></tr>
+<tr><td>Client PDF reports</td><td>Implemented</td><td>Supervision workflow</td></tr>
+</tbody></table></section>
+<section class="sec"><h2>// deployment</h2><p>Single-sensor pilot recommended: one always-on Linux host (Termux acceptable for light pilots). Run setup, doctor, continuous protection. Weekly: doctor, PDF, review alerts. See GitHub README for CLI.</p></section>
+<section class="sec"><h2>// limitations</h2><ul><li>Pilot candidate until release checklist approved.</li><li>Single sensor ≠ full fleet without agents.</li><li>Behavioral hits are heuristics.</li></ul>
+<div class="note">Authorised defensive use only. Not a full enterprise SOC by itself. Confirm details against the repository before formal proposals.</div></section>
+<section class="sec"><h2>// related</h2><div class="acts"><a class="secondary" href="/trintech/">Products</a> <a class="secondary" href="/trintech/mirage/">Mirage</a> <a class="secondary" href="/#pricing">Pricing</a></div></section>
 </div>
-<ul class="nav-links">
-<li><a href="/">Back to Home</a></li>
-<li><a href="/#contact">Contact</a></li>
-</ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-<p class="hero-tag">// v2.0.0 — Line of Defense Engine</p>
-<h1>NETWORK<br><span class="accent">MONITORING.</span><br>INTRUSION DETECTION.</h1>
-<div class="hero-sub"><strong>Sentinel</strong> is TrinTech's proprietary network monitoring and deception platform. It continuously scans your network for unauthorized devices, deploys deception artifacts to detect intruders, and generates real-time alerts so you always know who is on your network.</div>
-<div class="hero-cta">
-<a href="/#contact" class="btn-cyan">Request a Demo</a>
-<a href="#features" class="btn-outline">Learn More</a>
-</div>
-</section>
-
-<!-- FEATURES -->
-<section id="features">
-<div class="s-tag">// capabilities</div>
-<h2 class="s-title">WHAT SENTINEL DOES</h2>
-<p class="s-sub">Sentinel combines passive network monitoring with active deception to provide comprehensive security visibility for businesses that do not have a dedicated security team.</p>
-<div class="features-grid">
-<div class="feature-card">
-<div class="feature-icon">📡</div>
-<div class="feature-name">NETWORK DISCOVERY</div>
-<div class="feature-desc">Scans your network subnets to discover every connected device. Fingerprints each device to identify operating system, vendor, and hardware type. Maintains a persistent database of first and last seen timestamps for every device.</div>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🪤</div>
-<div class="feature-name">ACTIVE DECEPTION</div>
-<div class="feature-desc">Deploys decoy files containing fake credentials, API keys, and database configurations in strategic locations. If an unauthorized user accesses a decoy, the system logs exactly what they did and when. Fake SSH banners and service registries deter and track intruders.</div>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🐕</div>
-<div class="feature-name">PERSISTENCE HUNTING</div>
-<div class="feature-desc">Continuously monitors for new devices, new open ports, and authentication failures. Tracks behavioral patterns over time to identify anomalous activity that static tools would miss. Alerts on anything that should not be on your network.</div>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🚨</div>
-<div class="feature-name">ALERT SYSTEM</div>
-<div class="feature-desc">Generates structured alerts with severity classification. Alerts can be logged to file, sent via email via Gmail SMTP, or delivered through custom integrations. Console alerts with color-coded severity indicators for real-time monitoring.</div>
-</div>
-<div class="feature-card">
-<div class="feature-icon">📊</div>
-<div class="feature-name">REPORTING</div>
-<div class="feature-desc">Generates comprehensive reports showing all discovered devices, port information, deception deployment status, and recent alerts. Reports are designed for business owners, not just security professionals.</div>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🔒</div>
-<div class="feature-name">SYSTEM INTEGRITY</div>
-<div class="feature-desc">Monitors file integrity on critical system files, tracks changes to SSH configurations, detects new SUID binaries, and validates user account changes. Ensures that no unauthorized modifications occur on your systems.</div>
-</div>
-</div>
-</section>
-
-<!-- ARCHITECTURE -->
-<section style="background:var(--bg2)">
-<div class="architecture">
-<div class="s-tag">// architecture</div>
-<h2 class="s-title">HOW IT WORKS</h2>
-<p class="s-sub">Sentinel runs on a single machine. It connects to your network, discovers devices, deploys deception artifacts, and monitors continuously.</p>
-<div class="arch-grid">
-<div class="arch-node">
-<div class="arch-node-icon">1</div>
-<div class="arch-node-name">Deploy</div>
-<div class="feature-desc">Install Sentinel on any Linux machine connected to your network. Single command setup.</div>
-</div>
-<div class="arch-node">
-<div class="arch-node-icon">2</div>
-<div class="arch-node-name">Scan</div>
-<div class="feature-desc">Scans your network subnets, discovers all devices, fingerprints them, and builds a baseline.</div>
-</div>
-<div class="arch-node">
-<div class="arch-node-icon">3</div>
-<div class="arch-node-icon">3</div>
-<div class="arch-node-name">Deceive</div>
-<div class="feature-desc">Deploys decoy files, fake services, and deceptive banners across your network segments.</div>
-</div>
-<div class="arch-node">
-<div class="arch-node-icon">4</div>
-<div class="arch-node-name">Monitor</div>
-<div class="feature-desc">Continuously scans, detects changes, generates alerts, and maintains a persistent defense posture.</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- PRICING -->
-<section>
-<div class="pricing-section">
-<div class="s-tag">// engagement</div>
-<h2 class="s-title">HOW TO GET SENTINEL</h2>
-<p class="s-sub">Sentinel is available as a managed service or self-deployed. Both options include the same proprietary engine.</p>
-<div class="pricing-grid">
-<div class="pkg">
-<div class="pkg-tier">tier 01</div>
-<div class="pkg-name">Managed Monitoring</div>
-<div class="pkg-desc">We deploy Sentinel, manage the monitoring, and deliver reports. You get visibility without complexity.</div>
-<ul class="pkg-features">
-<li>Sentinel deployment and configuration</li>
-<li>Continuous network monitoring</li>
-<li>Deception artifact management</li>
-<li>Alert triage and analysis</li>
-<li>Weekly security reports</li>
-<li>24/7 alert monitoring</li>
-<li>Dedicated TrinTech analyst</li>
-</ul>
-<a href="/#contact" class="btn-cyan" style="width:100%;text-align:center;display:block">Request Quote</a>
-</div>
-<div class="pkg featured">
-<div class="pkg-badge">Recommended</div>
-<div class="pkg-tier">tier 02</div>
-<div class="pkg-name">Full Security Assessment + Sentinel</div>
-<div class="pkg-desc">A complete security assessment combined with Sentinel deployment. The most comprehensive approach.</div>
-<ul class="pkg-features">
-<li>Everything in Managed Monitoring</li>
-<li>Full penetration testing</li>
-<li>Network vulnerability assessment</li>
-<li>OSINT digital footprint analysis</li>
-<li>Incident response plan</li>
-<li>Compliance mapping report</li>
-<li>30-minute debrief call</li>
-</ul>
-<a href="/#contact" class="btn-cyan" style="width:100%;text-align:center;display:block">Request Quote</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CTA -->
-<section>
-<div class="cta-section">
-<h2>UNKNOWN DEVICES ON YOUR NETWORK ARE A RISK</h2>
-<p>Most businesses have devices on their network that they do not know about. Sentinel finds them. Contact TrinTech to learn how.</p>
-<a href="/#contact" class="btn-cyan">Schedule a Free Scoping Call</a>
-</div>
-</section>
-
-<footer>
-<p>Sentinel is a product of <a href="/">TrinTech Digital Defense</a> — Trinidad &amp; Tobago</p>
-<p>Proprietary cybersecurity research and development</p>
-</footer>
-</body>
-</html>
+<footer style="padding:2rem;text-align:center;font-family:var(--mono);font-size:.7rem;color:var(--muted);border-top:1px solid var(--border)">© 2026 TrinTech Digital Defense · <a href="/" style="color:var(--muted)">Home</a></footer>
+</body></html>

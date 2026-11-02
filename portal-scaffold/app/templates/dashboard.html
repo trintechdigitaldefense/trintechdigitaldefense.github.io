@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — TrinTech Portal</title>
+<style>
+body{font-family:system-ui,sans-serif;background:#030a0e;color:#e8eef2;margin:0}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid rgba(0,229,255,.15)}
+main{max-width:900px;margin:0 auto;padding:1.5rem}
+.card{background:#071a22;border:1px solid rgba(0,229,255,.15);border-radius:8px;padding:1rem 1.25rem;margin:.75rem 0}
+h1{font-size:1.3rem}h2{font-size:1rem;color:#00e5ff}
+button,form{display:inline}
+button{background:transparent;border:1px solid rgba(0,229,255,.3);color:#00e5ff;padding:.4rem .8rem;border-radius:4px;cursor:pointer}
+.muted{color:#7a8a96;font-size:.9rem}
+</style></head><body>
+<header>
+  <strong>TrinTech Portal</strong>
+  <form method="post" action="/logout"><button type="submit">Sign out</button></form>
+</header>
+<main>
+  <h1>Dashboard</h1>
+  <p class="muted">Signed in as {{ user.email }} · tenant {{ user.tenant_id }} · role {{ user.role }}</p>
+  <h2>Engagements</h2>
+  {% if engagements %}
+    {% for e in engagements %}
+    <div class="card"><strong>{{ e.title }}</strong> <span class="muted">— {{ e.status }}</span></div>
+    {% endfor %}
+  {% else %}
+    <div class="card muted">No engagements published for your organisation yet.</div>
+  {% endif %}
+  <h2>Reports</h2>
+  <div class="card muted">Report download will appear here after TrinTech publishes an approved deliverable for your tenant.</div>
+</main>
+</body></html>

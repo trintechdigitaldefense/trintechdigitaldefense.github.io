@@ -1,0 +1,49 @@
+/* TrinTech design tokens — Phase 2 */
+:root {
+  --bg: #030a0e;
+  --bg2: #071a22;
+  --bg3: #05121a;
+  --card: #0a1c26;
+  --text: #e8eef2;
+  --muted: #7a8a96;
+  --border: rgba(0, 229, 255, 0.12);
+  --cyan: #00e5ff;
+  --cyan-dim: rgba(0, 229, 255, 0.15);
+  --purple: #b44aff;
+  --gold: #f0c040;
+  --green: #3dd68c;
+  --danger: #ff5c5c;
+  --mono: "Share Tech Mono", ui-monospace, monospace;
+  --sans: "DM Sans", system-ui, sans-serif;
+  --display: "Bebas Neue", Impact, sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --status-bar-height: 36px;
+  --nav-height: 64px;
+  --header-offset: calc(var(--status-bar-height) + var(--nav-height));
+  --max-width: 1100px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+[data-theme="light"] {
+  --bg: #f0f4f8;
+  --bg2: #ffffff;
+  --bg3: #e8ecf0;
+  --card: #ffffff;
+  --text: #1a1a2e;
+  --muted: #5a6570;
+  --border: rgba(0, 0, 0, 0.1);
+  --cyan-dim: rgba(0, 120, 140, 0.08);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+@media (max-width: 768px) {
+  :root {
+    --status-bar-height: 48px;
+    --nav-height: 56px;
+  }
+}

@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "dark-web-credential-markets-2026",
+      "title": "Dark Web Credential Markets: Why Your Employees Passwords Are Already for Sale",
+      "date": "2026-11-04",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "dark web",
+        "credential theft",
+        "infostealer",
+        "session cookies",
+        "NHI",
+        "Trinidad"
+      ],
+      "word_count": 2780,
+      "url": "https://trintechdigitaldefense.github.io/blog/dark-web-credential-markets-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/dark-web-credential-markets-2026.png"
+    },
+    {
       "slug": "lateral-movement-network-segmentation-2026",
       "title": "Lateral Movement Attacks: Why Network Segmentation Is Trinidad's Missing Security Control",
       "date": "2026-10-28",

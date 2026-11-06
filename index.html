@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030a0e">
 <title>TrinTech Digital Defense — Cybersecurity Services Trinidad & Tobago</title>
 <meta name="description" content="TrinTech Digital Defense — 24/7 monitoring, active deception, and reporting for Trinidad & Tobago. Managed packages with Mirage, Sentinel, FortifyOne, and CyberGuardian.">
 <meta name="author" content="TrinTech Digital Defense">
@@ -11,7 +12,13 @@
 <meta property="og:description" content="Managed defense from TT$1,350/mo. 24/7 monitoring, active deception, and reporting for T&T businesses.">
 <meta property="og:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <meta property="og:url" content="https://trintechdigitaldefense.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TrinTech Digital Defense — Cybersecurity Trinidad & Tobago">
+<meta name="twitter:description" content="Managed defense, authorised security assessments, and practical cybersecurity services for Trinidad & Tobago businesses.">
+<meta name="twitter:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -20,7 +27,7 @@
 .skip-link:focus{top:0}
 .site-header{position:sticky;top:0;z-index:510}
 .status-bar{position:relative!important;z-index:511;min-height:var(--status-bar-height)}
-nav.site-nav,nav{position:sticky!important;top:0!important;z-index:512}
+nav.site-nav,nav{position:relative!important;top:auto!important;z-index:512}
 section[id],#main-content{scroll-margin-top:calc(var(--header-offset)+12px)}
 .device-note{margin:-1.5rem 0 2.5rem;padding:1.1rem 1.4rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.04);font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:1.55;max-width:900px}
 .contact-simple{margin-top:2rem;display:grid;gap:.85rem;max-width:480px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
@@ -286,14 +293,24 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 (function(){
   var root=document.documentElement;
   var themeToggle=document.getElementById('themeToggle');
-  var saved=localStorage.getItem('trintech-theme')||'dark';
+  var saved='dark';
+  try {
+    var stored=window.localStorage.getItem('trintech-theme');
+    if(stored==='dark'||stored==='light')saved=stored;
+  } catch(e) {
+    // Theme persistence is optional; keep the site usable when storage is blocked.
+  }
   root.setAttribute('data-theme',saved);
   if(themeToggle){
     themeToggle.innerHTML=saved==='dark'?'\u263E':'\u2600';
     themeToggle.addEventListener('click',function(){
       var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
       root.setAttribute('data-theme',next);
-      localStorage.setItem('trintech-theme',next);
+      try {
+        window.localStorage.setItem('trintech-theme',next);
+      } catch(e) {
+        // The theme still changes for this page view when storage is unavailable.
+      }
       themeToggle.innerHTML=next==='dark'?'\u263E':'\u2600';
     });
   }

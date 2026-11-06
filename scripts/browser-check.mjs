@@ -23,8 +23,9 @@ for (const path of paths) {
   const axe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   for (const violation of axe.violations) {
     const line = `${path}: axe ${violation.impact || "unknown"} ${violation.id} — ${violation.help}`;
-    if (["critical", "serious"].includes(violation.impact)) failures.push(line);
-    else console.log("WARN " + line);
+    const nodes = violation.nodes.map(node => `target=${node.target.join(" ")} ${(node.failureSummary || "").replace(/\\s+/g, " ").slice(0, 240)}`);
+    if (["critical", "serious"].includes(violation.impact)) failures.push(line + "\\n" + nodes.join("\\n"));
+    else console.log("WARN " + line + "\\n" + nodes.join("\\n"));
   }
 }
 
@@ -32,6 +33,10 @@ await page.goto(base + "/", { waitUntil: "domcontentloaded" });
 await page.setViewportSize({ width: 360, height: 800 });
 const mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
 if (mobileOverflow) failures.push("homepage has horizontal overflow at 360px viewport");
+await page.evaluate(() => document.activeElement?.blur());
+await page.keyboard.press("Tab");
+const firstFocus = await page.evaluate(() => document.activeElement?.className || "");
+if (!String(firstFocus).includes("skip-link")) failures.push("first keyboard tab does not focus the skip link");
 const hamburger = page.locator("#hamburger");
 if (await hamburger.count()) {
   await hamburger.click();
@@ -39,9 +44,6 @@ if (await hamburger.count()) {
   await page.keyboard.press("Escape");
   if (await hamburger.getAttribute("aria-expanded") !== "false") failures.push("Escape did not close mobile menu");
 }
-await page.keyboard.press("Tab");
-const firstFocus = await page.evaluate(() => document.activeElement?.className || "");
-if (!String(firstFocus).includes("skip-link")) failures.push("first keyboard tab does not focus the skip link");
 
 await page.setViewportSize({ width: 1365, height: 900 });
 const desktopOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);

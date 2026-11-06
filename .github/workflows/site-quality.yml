@@ -88,3 +88,37 @@ jobs:
           exit 1
       - name: Check mobile, desktop, keyboard, console and accessibility
         run: node scripts/browser-check.mjs
+
+  deployment-smoke:
+    name: Live GitHub Pages deployment checks
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify deployed public pages
+        run: |
+          set -e
+          for path in / /trust/ /enquiry/ /privacy/ /terms/ /safety/ /sitemap.xml /.well-known/security.txt; do
+            url="https://trintechdigitaldefense.github.io$path"
+            status=""
+            for attempt in $(seq 1 12); do
+              status=$(curl --silent --show-error --location --output /dev/null --write-out '%{http_code}' --max-time 20 "$url" || true)
+              if [ "$status" = "200" ]; then break; fi
+              sleep 10
+            done
+            if [ "$status" != "200" ]; then echo "Deployment check failed: $url returned $status"; exit 1; fi
+            echo "OK $status $url"
+          done
+      - name: Inspect production response security headers
+        run: |
+          curl --silent --show-error --head --location --max-time 20 https://trintechdigitaldefense.github.io/ > /tmp/site-headers.txt
+          for header in strict-transport-security x-content-type-options referrer-policy content-security-policy; do
+            if grep -qi "^$header:" /tmp/site-headers.txt; then
+              echo "FOUND $header"
+            else
+              echo "::warning::Production response is missing $header; configure it at the hosting/CDN edge and verify again."
+            fi
+          done
+      - name: Verify sitemap includes new public pages
+        run: |
+          curl --fail --silent --show-error --location https://trintechdigitaldefense.github.io/sitemap.xml | grep -q 'https://trintechdigitaldefense.github.io/trust/'
+          curl --fail --silent --show-error --location https://trintechdigitaldefense.github.io/sitemap.xml | grep -q 'https://trintechdigitaldefense.github.io/enquiry/'

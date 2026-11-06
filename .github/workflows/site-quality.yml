@@ -1,0 +1,90 @@
+name: Website quality assurance
+
+on:
+  push:
+    branches: [main, "maintenance/**", "chore/**"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-checks:
+    name: HTML, links, and JavaScript checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate HTML structure and local references
+        run: python scripts/check_site.py
+      - name: Check JavaScript syntax
+        run: |
+          find . -type f -name '*.js' -not -path './.git/*' -print0 | while IFS= read -r -d '' file; do
+            node --check "$file"
+          done
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          class Scripts(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.in_script=False; self.external=False; self.parts=[]; self.blocks=[]
+              def handle_starttag(self, tag, attrs):
+                  if tag == "script":
+                      self.in_script=True; self.external=any(k=="src" for k,_ in attrs); self.parts=[]
+              def handle_data(self, data):
+                  if self.in_script and not self.external: self.parts.append(data)
+              def handle_endtag(self, tag):
+                  if tag=="script" and self.in_script:
+                      if not self.external and "".join(self.parts).strip(): self.blocks.append("".join(self.parts))
+                      self.in_script=False
+          for page in Path(".").rglob("*.html"):
+              if ".git" in page.parts: continue
+              parser=Scripts(); parser.feed(page.read_text(encoding="utf-8"))
+              for i,script in enumerate(parser.blocks):
+                  out=Path("/tmp") / f"inline-{page.as_posix().replace('/','_')}-{i}.js"
+                  out.write_text(script,encoding="utf-8")
+                  import subprocess
+                  subprocess.run(["node","--check",str(out)],check=True)
+          PY
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress --exclude-mail --timeout 20 --max-retries 2 './**/*.html' './**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  browser-checks:
+    name: Android-sized and desktop browser checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser test dependencies
+        run: npm install --no-save playwright @axe-core/playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Start static site
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/site-server.log 2>&1 &
+          echo $! >/tmp/site-server.pid
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/site-server.log
+          exit 1
+      - name: Check mobile, desktop, keyboard, console and accessibility
+        run: node scripts/browser-check.mjs

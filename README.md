@@ -30,7 +30,7 @@ Separate from the defense platforms. Still public.
 
 | Tool | Role | Repo |
 |------|------|------|
-| **FortifyOne** | Professional network audit | [fortifyone](https://github.com/trintechdigitaldefense/fortifyone) |
+| **FortifyOne** | Professional network audit | Private repository (not publicly accessible) |
 | **Apex-Recon** | OSINT, SMB auditing, web scanning | [Apex-Recon-](https://github.com/trintechdigitaldefense/Apex-Recon-) |
 | **CyberAudit** | Live audit operations console | [cyberaudit-dashboard](https://github.com/trintechdigitaldefense/cyberaudit-dashboard) |
 | **CaribWatch** | Caribbean threat visibility | [caribwatch](https://github.com/trintechdigitaldefense/caribwatch) |

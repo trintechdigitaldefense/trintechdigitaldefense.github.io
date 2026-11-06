@@ -60,7 +60,7 @@ jobs:
       - name: Check external links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --exclude-mail --exclude 'https://trintechdigitaldefense\\.github\\.io/' --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
+          args: --verbose --no-progress --exclude 'https://trintechdigitaldefense\.github\.io/' --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -4,7 +4,7 @@
 
 Trinidad & Tobago cybersecurity firm. Practical security audits, digital footprint analysis, and continuous defense for Caribbean organisations.
 
-**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407)
+**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Trust Centre](https://trintechdigitaldefense.github.io/trust/) · [Service Enquiry](https://trintechdigitaldefense.github.io/#contact)
 
 Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean.
 
@@ -53,6 +53,12 @@ Separate from the defense platforms. Still public.
 - Cyber fraud investigation support
 
 The website currently lists prices in Trinidad & Tobago dollars (TT$). Baseline assessment prices shown there are TT$150/hour for OSINT (two-hour minimum), TT$1,000 for a Micro-Business Audit, and TT$2,200 for a Small Business Audit. Confirm scope and the current quote before accepting an engagement. See the [pricing section](https://trintechdigitaldefense.github.io/#pricing) for current details.
+
+## Client enquiries and trust
+
+- The homepage service enquiry form creates a draft email in the visitor’s own email application; it does not send form data to a website backend or store it on the site.
+- Enquiries are not authorisation to test. A written scope and explicit permission are required before any assessment begins.
+- The [Trust Centre](https://trintechdigitaldefense.github.io/trust/) collects privacy, engagement, security and responsible-disclosure information. Draft policy content is clearly marked for management and legal review.
 
 ## Legal
 

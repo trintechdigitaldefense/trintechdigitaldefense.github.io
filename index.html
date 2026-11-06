@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030a0e">
 <title>TrinTech Digital Defense — Cybersecurity Services Trinidad & Tobago</title>
 <meta name="description" content="TrinTech Digital Defense — 24/7 monitoring, active deception, and reporting for Trinidad & Tobago. Managed packages with Mirage, Sentinel, FortifyOne, and CyberGuardian.">
 <meta name="author" content="TrinTech Digital Defense">
@@ -11,7 +12,13 @@
 <meta property="og:description" content="Managed defense from TT$1,350/mo. 24/7 monitoring, active deception, and reporting for T&T businesses.">
 <meta property="og:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <meta property="og:url" content="https://trintechdigitaldefense.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TrinTech Digital Defense — Cybersecurity Trinidad & Tobago">
+<meta name="twitter:description" content="Managed defense, authorised security assessments, and practical cybersecurity services for Trinidad & Tobago businesses.">
+<meta name="twitter:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -20,7 +27,7 @@
 .skip-link:focus{top:0}
 .site-header{position:sticky;top:0;z-index:510}
 .status-bar{position:relative!important;z-index:511;min-height:var(--status-bar-height)}
-nav.site-nav,nav{position:sticky!important;top:0!important;z-index:512}
+nav.site-nav,nav{position:relative!important;top:auto!important;z-index:512}
 section[id],#main-content{scroll-margin-top:calc(var(--header-offset)+12px)}
 .device-note{margin:-1.5rem 0 2.5rem;padding:1.1rem 1.4rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.04);font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:1.55;max-width:900px}
 .contact-simple{margin-top:2rem;display:grid;gap:.85rem;max-width:480px;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
@@ -38,11 +45,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header class="site-header">
-<div class="status-bar" role="status" aria-label="Service status">
-  <div class="status-item"><div class="status-dot green"></div><span class="status-label">Systems</span><span class="status-val">Operational</span></div>
-  <div class="status-item"><div class="status-dot cyan"></div><span class="status-label">Monitoring</span><span class="status-val">24/7</span></div>
-  <div class="status-item"><div class="status-dot gold"></div><span class="status-label">Avg Response</span><span class="status-val">&lt; 24h</span></div>
-  <div class="status-item"><div class="status-dot green"></div><span class="status-label">NDA</span><span class="status-val">Standard</span></div>
+<div class="status-bar" role="group" aria-label="Service overview">
+  <div class="status-item"><div class="status-dot green" aria-hidden="true"></div><span class="status-label">Service</span><span class="status-val">Managed defense</span></div>
+  <div class="status-item"><div class="status-dot cyan" aria-hidden="true"></div><span class="status-label">Monitoring</span><span class="status-val">24/7 packages</span></div>
+  <div class="status-item"><div class="status-dot gold" aria-hidden="true"></div><span class="status-label">Response</span><span class="status-val">Scope-defined</span></div>
+  <div class="status-item"><div class="status-dot green" aria-hidden="true"></div><span class="status-label">Engagement</span><span class="status-val">NDA-backed</span></div>
 </div>
 <nav class="site-nav" aria-label="Primary">
   <div class="nav-logo">
@@ -59,9 +66,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/safety/">Safety Tips</a></li>
+    <li><a href="/trust/">Trust Centre</a></li>
     <li><button type="button" class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">&#9728;</button></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get Protected</a>
+  <a href="/enquiry/" class="nav-cta">Start Enquiry</a>
   <button type="button" class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
 </nav>
 </header>
@@ -74,7 +82,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
   <div class="hero-ctas">
     <a href="#pricing" class="btn-cyan">View Packages</a>
     <a href="#contact" class="btn-outline">Free Scoping Call</a>
-    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20need%20cybersecurity%20help." target="_blank" rel="noopener" class="btn-wa">WhatsApp</a>
+    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20need%20cybersecurity%20help." target="_blank" rel="noopener noreferrer" class="btn-wa">WhatsApp</a>
   </div>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">24</span><span class="stat-lbl">H Response Target</span></div>
@@ -264,7 +272,73 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 <section id="contact" class="contact-section">
   <p class="s-tag">// contact.open()</p>
   <h2 class="s-title">LET'S SECURE YOUR SYSTEMS</h2>
-  <p class="s-sub">NDA first. Clear scope. Written report. Contact us by WhatsApp or email — we do not collect enquiry data through a web form on this site.</p>
+  <p class="s-sub">Start with a short, privacy-conscious enquiry. We will review the request and agree scope and written authorisation before any assessment begins.</p>
+  <form id="enquiry-form" class="contact-form" action="mailto:trintechdigitaldefense@gmail.com" method="post" enctype="text/plain">
+    <div class="form-heading">
+      <h3>CLIENT ENQUIRY &amp; ASSESSMENT REQUEST</h3>
+      <p>Tell us what support you need. This form opens a draft email in your email app; it does not transmit or store your answers on this website.</p>
+    </div>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="enquiry-name">Your name <span aria-hidden="true">*</span></label>
+        <input id="enquiry-name" name="Name" type="text" autocomplete="name" maxlength="100" required>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-email">Work email <span aria-hidden="true">*</span></label>
+        <input id="enquiry-email" name="Reply email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-org">Organisation</label>
+        <input id="enquiry-org" name="Organisation" type="text" autocomplete="organization" maxlength="120">
+      </div>
+      <div class="form-field">
+        <label for="enquiry-service">Service requested <span aria-hidden="true">*</span></label>
+        <select id="enquiry-service" name="Service requested" required>
+          <option value="">Choose a service</option>
+          <option>Managed defence package</option>
+          <option>Network or infrastructure audit</option>
+          <option>Website or Android assessment</option>
+          <option>OSINT / digital footprint review</option>
+          <option>Credential resilience review</option>
+          <option>Cyber fraud investigation support</option>
+          <option>Not sure — please advise</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-size">Approximate device / asset count</label>
+        <select id="enquiry-size" name="Approximate scope">
+          <option value="">Not sure yet</option>
+          <option>1–5 devices</option>
+          <option>6–15 devices</option>
+          <option>16–50 devices</option>
+          <option>More than 50 devices</option>
+          <option>Website / application only</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-timing">Preferred timeframe</label>
+        <select id="enquiry-timing" name="Preferred timeframe">
+          <option value="">Flexible / to discuss</option>
+          <option>As soon as practical</option>
+          <option>Within 2 weeks</option>
+          <option>Within 30 days</option>
+          <option>Planning for a later date</option>
+        </select>
+      </div>
+      <div class="form-field form-field-full">
+        <label for="enquiry-details">What would you like help with?</label>
+        <textarea id="enquiry-details" name="Request summary" rows="5" maxlength="1200" placeholder="Briefly describe your goals and the type of environment. Do not include passwords, access tokens, personal records, IP addresses, vulnerability evidence or other confidential technical details."></textarea>
+        <small>Keep this high-level. Sensitive technical information is only exchanged through an agreed, secure process after scope and confidentiality arrangements are in place.</small>
+      </div>
+    </div>
+    <div class="form-consents">
+      <label class="consent-line"><input type="checkbox" name="Authorisation confirmation" value="I am authorised to request this discussion and will agree written scope before any testing." required> <span>I am authorised to request this discussion for the organisation or assets described. I understand that no testing starts until written scope and authorisation are agreed. <strong>*</strong></span></label>
+      <label class="consent-line"><input type="checkbox" name="Privacy acknowledgement" value="I understand this form creates an email draft and does not submit data to the website." required> <span>I understand this form creates an email draft in my email app. I choose whether to send it and have read the <a href="/privacy/">Privacy Notice</a>. <strong>*</strong></span></label>
+    </div>
+    <button class="btn-cyan enquiry-submit" type="submit">Prepare Enquiry Email →</button>
+    <p id="enquiry-status" class="form-status" role="status" aria-live="polite">Required fields are marked with an asterisk. This website does not receive or store the form contents.</p>
+    <noscript><p class="form-status">JavaScript is disabled. Submit using your email app's mailto support, or email <a href="mailto:trintechdigitaldefense@gmail.com">trintechdigitaldefense@gmail.com</a> directly.</p></noscript>
+  </form>
   <div class="contact-simple">
     <div><span class="ci-label">Lead Analyst</span> <strong>Jason Ramdharry</strong></div>
     <div><span class="ci-label">Phone / WhatsApp</span> <a href="https://wa.me/18683620679">+1 (868) 362-0679</a></div>
@@ -273,27 +347,37 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
     <div><span class="ci-label">GitHub</span> <a href="https://github.com/trintechdigitaldefense">github.com/trintechdigitaldefense</a></div>
   </div>
   <div class="section-cta" style="text-align:left;margin-top:2rem">
-    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20want%20to%20discuss%20a%20managed%20defense%20package." target="_blank" rel="noopener" class="btn-cyan">WhatsApp Now</a>
+    <a href="https://wa.me/18683620679?text=Hi%20TrinTech%2C%20I%20want%20to%20discuss%20a%20managed%20defense%20package." target="_blank" rel="noopener noreferrer" class="btn-cyan">WhatsApp Now</a>
   </div>
 </section>
 </main>
 <footer class="site-footer">
   <p>© 2026 TrinTech Digital Defense. All rights reserved.</p>
   <p>Jason Ramdharry — Founder &amp; Lead Security Analyst</p>
-  <p><a href="/about/">About</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sentinel/">Sentinel</a> · <a href="/safety/">Safety Tips</a> · <a href="/trintech/">Products</a> · <a href="/blog/">Blog</a></p>
+  <p><a href="/about/">About</a> · <a href="/enquiry/">Service Enquiry</a> · <a href="/trust/">Trust Centre</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sentinel/">Sentinel</a> · <a href="/safety/">Safety Tips</a> · <a href="/trintech/">Products</a> · <a href="/blog/">Blog</a></p>
 </footer>
 <script>
 (function(){
   var root=document.documentElement;
   var themeToggle=document.getElementById('themeToggle');
-  var saved=localStorage.getItem('trintech-theme')||'dark';
+  var saved='dark';
+  try {
+    var stored=window.localStorage.getItem('trintech-theme');
+    if(stored==='dark'||stored==='light')saved=stored;
+  } catch(e) {
+    // Theme persistence is optional; keep the site usable when storage is blocked.
+  }
   root.setAttribute('data-theme',saved);
   if(themeToggle){
     themeToggle.innerHTML=saved==='dark'?'\u263E':'\u2600';
     themeToggle.addEventListener('click',function(){
       var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
       root.setAttribute('data-theme',next);
-      localStorage.setItem('trintech-theme',next);
+      try {
+        window.localStorage.setItem('trintech-theme',next);
+      } catch(e) {
+        // The theme still changes for this page view when storage is unavailable.
+      }
       themeToggle.innerHTML=next==='dark'?'\u263E':'\u2600';
     });
   }
@@ -318,6 +402,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
     });
     navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  }
+  var enquiryForm=document.getElementById('enquiry-form');
+  if(enquiryForm){
+    enquiryForm.addEventListener('submit',function(event){
+      event.preventDefault();
+      if(!enquiryForm.reportValidity())return;
+      var formData=new FormData(enquiryForm);
+      var lines=[];
+      formData.forEach(function(value,key){
+        if(value)lines.push(key+': '+value);
+      });
+      var subject=encodeURIComponent('TrinTech service enquiry — '+(formData.get('Service requested')||'New request'));
+      var body=encodeURIComponent(lines.join('\n')+'\n\nSubmitted by the enquirer via their email application. No assessment is authorised until written scope and permission are agreed.');
+      var status=document.getElementById('enquiry-status');
+      if(status)status.textContent='Your email app should open with the enquiry prepared. Review it and press Send to contact TrinTech. If it does not open, email trintechdigitaldefense@gmail.com directly.';
+      window.location.href='mailto:trintechdigitaldefense@gmail.com?subject='+subject+'&body='+body;
+    });
   }
   document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.addEventListener('click',function(){

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030a0e">
+  <title>Trust Centre | TrinTech Digital Defense</title>
+  <meta name="description" content="Security, privacy, engagement and responsible-disclosure information for TrinTech Digital Defense.">
+  <link rel="canonical" href="https://trintechdigitaldefense.github.io/trust/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#030a0e;--panel:#071a22;--text:#d8e5ec;--muted:#9aafbc;--line:rgba(0,229,255,.2);--accent:#00d8ef;--warn:#ffd166}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif}
+    a{color:var(--accent);text-underline-offset:3px}
+    a:focus-visible{outline:3px solid var(--warn);outline-offset:3px;border-radius:3px}
+    .wrap{width:min(100% - 2rem,900px);margin:auto}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line);font: .78rem 'Share Tech Mono',monospace;letter-spacing:.08em}
+    .top a{text-decoration:none}
+    .brand{color:var(--text);font-weight:700}
+    .eyebrow{margin:3rem 0 .5rem;color:var(--accent);font: .72rem 'Share Tech Mono',monospace;letter-spacing:.18em;text-transform:uppercase}
+    h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.08;margin:.3rem 0 1rem}
+    h2{font-size:1.1rem;margin:0 0 .45rem}
+    p{margin:.45rem 0;color:var(--muted)}
+    .intro{max-width:700px;font-size:1.05rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;margin:2rem 0}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.25rem;min-width:0}
+    .status{display:inline-block;margin-bottom:.7rem;padding:.18rem .5rem;border:1px solid var(--line);border-radius:99px;color:var(--accent);font: .65rem 'Share Tech Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
+    .status.draft{color:var(--warn);border-color:rgba(255,209,102,.4)}
+    .notice{padding:1rem 1.2rem;border-left:3px solid var(--warn);background:rgba(255,209,102,.06);border-radius:4px}
+    .list{padding-left:1.2rem;color:var(--muted)}
+    .list li{margin:.45rem 0}
+    footer{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--line);font-size:.8rem}
+    @media(max-width:520px){.top{align-items:flex-start;flex-direction:column}.eyebrow{margin-top:2rem}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/">TRINTECH // DIGITAL DEFENSE</a>
+      <nav aria-label="Trust navigation"><a href="/enquiry/">Service enquiry</a> · <a href="/">Home</a></nav>
+    </header>
+    <main id="main">
+      <p class="eyebrow">Assurance &amp; transparency</p>
+      <h1>TRUST CENTRE</h1>
+      <p class="intro">The documents and contact routes below explain how to engage TrinTech, raise a security concern, and understand the current status of our public-facing policies.</p>
+
+      <div class="notice" role="note">
+        <strong>Policy status:</strong> Existing Privacy and Terms pages are published company documents, not a representation of independent legal certification. They should receive review by qualified Trinidad &amp; Tobago counsel. The responsible-disclosure document is explicitly a draft and is not an active safe-harbour or testing authorisation.
+      </div>
+
+      <section aria-labelledby="published">
+        <p class="eyebrow">01 // Published information</p>
+        <h2 id="published">Policies and engagement documents</h2>
+        <div class="grid">
+          <article class="card">
+            <span class="status">Published page</span>
+            <h2><a href="/privacy/">Privacy Notice</a></h2>
+            <p>Explains the enquiry information visitors choose to send by email or WhatsApp, how it is used, and how to request deletion.</p>
+          </article>
+          <article class="card">
+            <span class="status">Published page · legal review advised</span>
+            <h2><a href="/terms/">Terms of Engagement</a></h2>
+            <p>Describes scope, written authorisation, confidentiality and reporting expectations. Agree a project-specific scope before any testing.</p>
+          </article>
+          <article class="card">
+            <span class="status">Published contact file</span>
+            <h2><a href="/.well-known/security.txt">security.txt</a></h2>
+            <p>Lists the security contact and expiry date. No public encryption key or approved vulnerability-disclosure policy is currently advertised.</p>
+          </article>
+          <article class="card">
+            <span class="status">Published guide</span>
+            <h2><a href="/safety/">Online Safety Guide</a></h2>
+            <p>Practical cybersecurity guidance for individuals and organisations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="disclosure">
+        <p class="eyebrow">02 // Security reporting</p>
+        <h2 id="disclosure">Responsible disclosure</h2>
+        <p>To report a suspected vulnerability in a TrinTech-owned website or service, contact <a href="mailto:trintechdigitaldefense@gmail.com?subject=Security%20report">trintechdigitaldefense@gmail.com</a>. Share only the minimum information needed to describe the issue. Do not include passwords, access tokens, personal records, or data belonging to other people.</p>
+        <p>Do not test, scan, access, or disrupt any system unless you have explicit written authorisation and an agreed scope. Sending a report does not grant permission to test.</p>
+        <p><span class="status draft">Draft · not yet approved</span></p>
+        <p>The proposed <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/maintenance/2026-11-06/docs/RESPONSIBLE_DISCLOSURE_DRAFT.md">Responsible Disclosure Policy draft</a> identifies decisions that management and legal counsel must approve before a formal policy can be published. It does not promise response times, safe harbour, or a defined in-scope asset list.</p>
+      </section>
+
+      <section aria-labelledby="enquiries">
+        <p class="eyebrow">03 // Client information</p>
+        <h2 id="enquiries">Client enquiries and confidentiality</h2>
+        <p>The <a href="/enquiry/">service enquiry page</a> prepares a message in the visitor's own email application. The static website does not receive or store enquiry form fields. Email and WhatsApp providers process messages under their own terms and privacy practices.</p>
+        <ul class="list">
+          <li>Share only a high-level description in the first enquiry.</li>
+          <li>Never send passwords, private keys, access tokens, raw logs, vulnerability evidence or personal records through the public enquiry route.</li>
+          <li>Agree written scope and authorisation before assessment work begins.</li>
+          <li>Use an agreed secure channel for sensitive evidence and reports.</li>
+        </ul>
+        <p>There is no public client portal or customer login on this GitHub Pages site. See the <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/maintenance/2026-11-06/docs/CLIENT_PORTAL_ARCHITECTURE.md">client portal architecture note</a> for the separate, not-yet-deployed design.</p>
+      </section>
+
+      <section aria-labelledby="hosting">
+        <p class="eyebrow">04 // Hosting transparency</p>
+        <h2 id="hosting">Website security configuration</h2>
+        <p>This site is published through GitHub Pages. GitHub Pages does not apply a repository <code>.headers</code> file as HTTP response-header configuration. A CDN or other edge host must be configured separately for headers such as Content-Security-Policy, Referrer-Policy and Strict-Transport-Security.</p>
+        <p><strong>Current verification status:</strong> effective response headers and browser-side production behaviour have not been independently verified in this review. See the <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/maintenance/2026-11-06/docs/SECURITY_HEADERS.md">hosting security-header deployment notes</a>.</p>
+      </section>
+    </main>
+    <footer>
+      <p>TrinTech Digital Defense · Trinidad &amp; Tobago</p>
+      <p><a href="/">Home</a> · <a href="/enquiry/">Service enquiry</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -495,3 +495,25 @@ footer{padding:3rem;border-top:1px solid var(--border);position:relative;z-index
     font-size: 0.58rem;
   }
 }
+
+
+/* Client enquiry form — accessible, touch-friendly and responsive. */
+.contact-form{max-width:900px;margin:2.5rem 0 1.5rem;padding:clamp(1.1rem,3vw,2rem);border:1px solid var(--border);border-radius:10px;background:var(--card);text-align:left}
+.form-heading h3{font-family:var(--mono);font-size:1rem;letter-spacing:.08em;color:var(--cyan);margin-bottom:.55rem}
+.form-heading p,.form-field small,.form-status{font-size:.78rem;color:var(--muted);line-height:1.6}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.1rem;margin-top:1.5rem}
+.form-field{display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.form-field-full{grid-column:1/-1}
+.form-field label{font-family:var(--mono);font-size:.72rem;color:var(--text);letter-spacing:.04em}
+.form-field label span,.consent-line strong{color:var(--gold)}
+.form-field input,.form-field select,.form-field textarea{width:100%;min-height:48px;padding:.8rem .9rem;border:1px solid var(--border);border-radius:5px;background:var(--bg2);color:var(--text);font:inherit;font-size:16px}
+.form-field textarea{min-height:130px;resize:vertical}
+.form-field input:focus-visible,.form-field select:focus-visible,.form-field textarea:focus-visible,.contact-form button:focus-visible,.consent-line input:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.form-field small{font-size:.7rem}
+.form-consents{display:grid;gap:.85rem;margin:1.4rem 0}
+.consent-line{display:flex;align-items:flex-start;gap:.7rem;font-size:.78rem;line-height:1.55;color:var(--muted)}
+.consent-line input{width:20px;height:20px;min-width:20px;margin-top:.1rem;accent-color:var(--cyan)}
+.consent-line a{color:var(--cyan)}
+.enquiry-submit{font:inherit;cursor:pointer;min-height:48px}
+.form-status{margin-top:.85rem}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}.form-field-full{grid-column:auto}.contact-form{padding:1rem}.enquiry-submit{width:100%;min-height:52px}}

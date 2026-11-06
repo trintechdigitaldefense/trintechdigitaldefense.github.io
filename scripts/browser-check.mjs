@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 
 const base = process.env.SITE_URL || "http://127.0.0.1:8000";
-const paths = ["/", "/about/", "/privacy/", "/terms/", "/safety/", "/trust/", "/trintech/"];
+const paths = ["/", "/about/", "/privacy/", "/terms/", "/safety/", "/trust/", "/enquiry/", "/sentinel/", "/trintech/"];
 const browser = await chromium.launch({ headless: true });
 const errors = [];
 const failures = [];
@@ -20,6 +20,12 @@ for (const path of paths) {
   const response = await page.goto(base + path, { waitUntil: "domcontentloaded" });
   if (!response || !response.ok()) failures.push(path + " did not return a successful response");
   if (!(await page.title()).trim()) failures.push(path + " has no document title");
+  const mobileOverflowForPage = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+  if (mobileOverflowForPage) failures.push(path + " has horizontal overflow at 360px viewport");
+  await page.setViewportSize({ width: 1365, height: 900 });
+  const desktopOverflowForPage = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+  if (desktopOverflowForPage) failures.push(path + " has horizontal overflow at 1365px viewport");
+  await page.setViewportSize({ width: 360, height: 800 });
   const axe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   for (const violation of axe.violations) {
     const line = `${path}: axe ${violation.impact || "unknown"} ${violation.id} — ${violation.help}`;

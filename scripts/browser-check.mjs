@@ -24,7 +24,14 @@ for (const path of paths) {
   if (mobileOverflowForPage) failures.push(path + " has horizontal overflow at 360px viewport");
   await page.setViewportSize({ width: 1365, height: 900 });
   const desktopOverflowForPage = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
-  if (desktopOverflowForPage) failures.push(path + " has horizontal overflow at 1365px viewport");
+  if (desktopOverflowForPage) {
+    const offenders = await page.evaluate(() => Array.from(document.querySelectorAll("body *")).map(el => {
+      const rect = el.getBoundingClientRect();
+      const style = getComputedStyle(el);
+      return { tag: el.tagName, id: el.id, className: typeof el.className === "string" ? el.className : "", left: Math.round(rect.left), right: Math.round(rect.right), width: Math.round(rect.width), scrollWidth: el.scrollWidth, clientWidth: el.clientWidth, position: style.position, overflowX: style.overflowX };
+    }).filter(item => item.right > window.innerWidth + 1 && item.width > 0).sort((a,b) => b.right - a.right).slice(0,12));
+    failures.push(path + " has horizontal overflow at 1365px viewport: " + JSON.stringify(offenders));
+  }
   await page.setViewportSize({ width: 360, height: 800 });
   const axe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   for (const violation of axe.violations) {

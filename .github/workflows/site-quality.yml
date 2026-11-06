@@ -64,8 +64,8 @@ jobs:
             --verbose
             --no-progress
             --root-dir .
-            --exclude 'https://trintechdigitaldefense\\.github\\.io/'
-            --exclude 'https://www\\.linkedin\\.com/'
+            --exclude 'https://trintechdigitaldefense.github.io/'
+            --exclude 'https://www.linkedin.com/'
             --exclude-path 'portal-scaffold/**'
             --timeout 20
             --max-retries 2

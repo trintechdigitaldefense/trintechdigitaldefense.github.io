@@ -36,7 +36,7 @@ body{padding-top:0}
 .pc-card .links a:hover{text-decoration:underline}
 .pc-badge{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;border:1px solid var(--border);color:var(--muted)}
 .pc-badge.flag{border-color:rgba(0,229,255,.4);color:var(--cyan)}
-.pc-compare{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:1rem}
+.pc-compare{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:1rem;table-layout:fixed}.pc-compare th,.pc-compare td{overflow-wrap:anywhere}
 .pc-compare th,.pc-compare td{border:1px solid var(--border);padding:.65rem .75rem;text-align:left}
 .pc-compare th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:rgba(0,229,255,.04)}
 .pc-compare td{color:var(--muted)}
@@ -163,7 +163,7 @@ body{padding-top:0}
   <section id="compare" class="pc-section">
     <h2>// compare.flagship</h2>
     <p class="sub">High-level comparison for package conversations. Validate details against each repo before formal proposals.</p>
-    <table class="pc-compare">
+    <div class="pc-compare-wrap" role="region" aria-label="Product comparison table" tabindex="0" style="max-width:100%;overflow-x:auto"><table class="pc-compare">
       <thead>
         <tr><th>Capability</th><th>Mirage</th><th>Sentinel</th><th>CyberGuardian</th></tr>
       </thead>
@@ -174,7 +174,7 @@ body{padding-top:0}
         <tr><td>Reporting</td><td>Alerts & summaries</td><td>Security reports</td><td>Operator reports</td></tr>
         <tr><td>Managed packages</td><td>1 & 2</td><td>1 & 2</td><td>Package 2</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <section class="pc-section">

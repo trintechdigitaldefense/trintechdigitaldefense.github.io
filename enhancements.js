@@ -1,3 +1,9 @@
+// LEGACY MODULE — NOT LOADED BY THE WEBSITE.
+// The service selector below contains historical pricing and descriptions.
+// Do not include this file in any page until every recommendation is revalidated
+// against the current published source of truth and independently tested.
+// The homepage enquiry and pricing experience are maintained in index.html.
+
 // ═══════════════════════════════════════════════════════
 // TRINTECH DIGITAL DEFENSE — ENHANCEMENTS MODULE
 // Case studies moved to main index.html. This file handles:

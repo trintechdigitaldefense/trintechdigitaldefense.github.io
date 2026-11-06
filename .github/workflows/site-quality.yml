@@ -60,7 +60,7 @@ jobs:
       - name: Check external links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --root-dir . --exclude 'https://(trintechdigitaldefense.github.io|www.linkedin.com)/' --timeout 20 --max-retries 2 './index.html' './about/**/*.html' './blog/**/*.html' './privacy/**/*.html' './terms/**/*.html' './safety/**/*.html' './trust/**/*.html' './enquiry/**/*.html' './sentinel/**/*.html' './trintech/**/*.html' './README.md' './docs/*.md' './style.css' './assets/**/*.css' './assets/**/*.js' './enhancements.js'
+          args: --verbose --no-progress --root-dir . --exclude 'https://trintechdigitaldefense.github.io/' --exclude 'https://www.linkedin.com/' --timeout 20 --max-retries 2 './index.html' './about/**/*.html' './blog/**/*.html' './privacy/**/*.html' './terms/**/*.html' './safety/**/*.html' './trust/**/*.html' './enquiry/**/*.html' './sentinel/**/*.html' './trintech/**/*.html' './README.md' './docs/*.md' './style.css' './assets/**/*.css' './assets/**/*.js' './enhancements.js'
             --verbose
             --no-progress
             --root-dir .

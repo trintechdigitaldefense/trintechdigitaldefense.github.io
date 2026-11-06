@@ -66,6 +66,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="/safety/">Safety Tips</a></li>
+    <li><a href="/trust/">Trust Centre</a></li>
     <li><button type="button" class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light theme">&#9728;</button></li>
   </ul>
   <a href="#contact" class="nav-cta">Get Protected</a>
@@ -271,7 +272,73 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 <section id="contact" class="contact-section">
   <p class="s-tag">// contact.open()</p>
   <h2 class="s-title">LET'S SECURE YOUR SYSTEMS</h2>
-  <p class="s-sub">NDA first. Clear scope. Written report. Contact us by WhatsApp or email — we do not collect enquiry data through a web form on this site.</p>
+  <p class="s-sub">Start with a short, privacy-conscious enquiry. We will review the request and agree scope and written authorisation before any assessment begins.</p>
+  <form id="enquiry-form" class="contact-form" action="mailto:trintechdigitaldefense@gmail.com" method="post" enctype="text/plain">
+    <div class="form-heading">
+      <h3>CLIENT ENQUIRY &amp; ASSESSMENT REQUEST</h3>
+      <p>Tell us what support you need. This form opens a draft email in your email app; it does not transmit or store your answers on this website.</p>
+    </div>
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="enquiry-name">Your name <span aria-hidden="true">*</span></label>
+        <input id="enquiry-name" name="Name" type="text" autocomplete="name" maxlength="100" required>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-email">Work email <span aria-hidden="true">*</span></label>
+        <input id="enquiry-email" name="Reply email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-org">Organisation</label>
+        <input id="enquiry-org" name="Organisation" type="text" autocomplete="organization" maxlength="120">
+      </div>
+      <div class="form-field">
+        <label for="enquiry-service">Service requested <span aria-hidden="true">*</span></label>
+        <select id="enquiry-service" name="Service requested" required>
+          <option value="">Choose a service</option>
+          <option>Managed defence package</option>
+          <option>Network or infrastructure audit</option>
+          <option>Website or Android assessment</option>
+          <option>OSINT / digital footprint review</option>
+          <option>Credential resilience review</option>
+          <option>Cyber fraud investigation support</option>
+          <option>Not sure — please advise</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-size">Approximate device / asset count</label>
+        <select id="enquiry-size" name="Approximate scope">
+          <option value="">Not sure yet</option>
+          <option>1–5 devices</option>
+          <option>6–15 devices</option>
+          <option>16–50 devices</option>
+          <option>More than 50 devices</option>
+          <option>Website / application only</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="enquiry-timing">Preferred timeframe</label>
+        <select id="enquiry-timing" name="Preferred timeframe">
+          <option value="">Flexible / to discuss</option>
+          <option>As soon as practical</option>
+          <option>Within 2 weeks</option>
+          <option>Within 30 days</option>
+          <option>Planning for a later date</option>
+        </select>
+      </div>
+      <div class="form-field form-field-full">
+        <label for="enquiry-details">What would you like help with?</label>
+        <textarea id="enquiry-details" name="Request summary" rows="5" maxlength="1200" placeholder="Briefly describe your goals and the type of environment. Do not include passwords, access tokens, personal records, IP addresses, vulnerability evidence or other confidential technical details."></textarea>
+        <small>Keep this high-level. Sensitive technical information is only exchanged through an agreed, secure process after scope and confidentiality arrangements are in place.</small>
+      </div>
+    </div>
+    <div class="form-consents">
+      <label class="consent-line"><input type="checkbox" name="Authorisation confirmation" value="I am authorised to request this discussion and will agree written scope before any testing." required> <span>I am authorised to request this discussion for the organisation or assets described. I understand that no testing starts until written scope and authorisation are agreed. <strong>*</strong></span></label>
+      <label class="consent-line"><input type="checkbox" name="Privacy acknowledgement" value="I understand this form creates an email draft and does not submit data to the website." required> <span>I understand this form creates an email draft in my email app. I choose whether to send it and have read the <a href="/privacy/">Privacy Notice</a>. <strong>*</strong></span></label>
+    </div>
+    <button class="btn-cyan enquiry-submit" type="submit">Prepare Enquiry Email →</button>
+    <p id="enquiry-status" class="form-status" role="status" aria-live="polite">Required fields are marked with an asterisk. This website does not receive or store the form contents.</p>
+    <noscript><p class="form-status">JavaScript is disabled. Submit using your email app's mailto support, or email <a href="mailto:trintechdigitaldefense@gmail.com">trintechdigitaldefense@gmail.com</a> directly.</p></noscript>
+  </form>
   <div class="contact-simple">
     <div><span class="ci-label">Lead Analyst</span> <strong>Jason Ramdharry</strong></div>
     <div><span class="ci-label">Phone / WhatsApp</span> <a href="https://wa.me/18683620679">+1 (868) 362-0679</a></div>
@@ -287,7 +354,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
 <footer class="site-footer">
   <p>© 2026 TrinTech Digital Defense. All rights reserved.</p>
   <p>Jason Ramdharry — Founder &amp; Lead Security Analyst</p>
-  <p><a href="/about/">About</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sentinel/">Sentinel</a> · <a href="/safety/">Safety Tips</a> · <a href="/trintech/">Products</a> · <a href="/blog/">Blog</a></p>
+  <p><a href="/about/">About</a> · <a href="/trust/">Trust Centre</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/sentinel/">Sentinel</a> · <a href="/safety/">Safety Tips</a> · <a href="/trintech/">Products</a> · <a href="/blog/">Blog</a></p>
 </footer>
 <script>
 (function(){
@@ -335,6 +402,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offse
     });
     navLinks.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+  }
+  var enquiryForm=document.getElementById('enquiry-form');
+  if(enquiryForm){
+    enquiryForm.addEventListener('submit',function(event){
+      event.preventDefault();
+      if(!enquiryForm.reportValidity())return;
+      var formData=new FormData(enquiryForm);
+      var lines=[];
+      formData.forEach(function(value,key){
+        if(value)lines.push(key+': '+value);
+      });
+      var subject=encodeURIComponent('TrinTech service enquiry — '+(formData.get('Service requested')||'New request'));
+      var body=encodeURIComponent(lines.join('\n')+'\n\nSubmitted by the enquirer via their email application. No assessment is authorised until written scope and permission are agreed.');
+      var status=document.getElementById('enquiry-status');
+      if(status)status.textContent='Your email app should open with the enquiry prepared. Review it and press Send to contact TrinTech. If it does not open, email trintechdigitaldefense@gmail.com directly.';
+      window.location.href='mailto:trintechdigitaldefense@gmail.com?subject='+subject+'&body='+body;
+    });
   }
   document.querySelectorAll('.faq-question').forEach(function(btn){
     btn.addEventListener('click',function(){

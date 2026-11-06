@@ -107,8 +107,9 @@ if security.exists() and legacy_security.exists() and security.read_text() != le
     ERRORS.append("security.txt and .well-known/security.txt differ")
 
 homepage = ROOT / "index.html"
-if homepage.exists() and "enhancements.js" in homepage.read_text(encoding="utf-8"):
-    ERRORS.append("Homepage must not load the unverified legacy enhancements.js module")
+for page in PAGES:
+    if "enhancements.js" in page.read_text(encoding="utf-8"):
+        ERRORS.append(f"{page.relative_to(ROOT)}: must not load the unverified legacy enhancements.js module")
 
 print(f"Checked {len(PAGES)} HTML pages and {len(LINKS)} local/external references.")
 if ERRORS:

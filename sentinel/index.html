@@ -13,13 +13,14 @@
 .pp{max-width:1100px;margin:0 auto;padding:2rem 1.25rem 4rem}
 .top{display:flex;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(3,10,14,.94);z-index:40;font-family:var(--mono);font-size:.72rem}
 .top a{color:var(--muted);text-decoration:none;margin-left:1rem}.top .b{color:var(--text);letter-spacing:.12em}.top .b span{color:var(--cyan)}
+@media(max-width:600px){.top{flex-wrap:wrap;gap:.6rem}.top>div{display:flex;flex-wrap:wrap;gap:.6rem}.top a{margin-left:0}}
 h1{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);margin:.4rem 0}
 .lead{color:var(--muted);max-width:640px;line-height:1.65}
 .badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .55rem;border:1px solid var(--border);border-radius:3px;color:var(--cyan);display:inline-block;margin:.3rem .3rem 0 0}
 .sec{margin-top:2rem}
 .sec h2{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.6rem}
 .sec p,.sec li{color:var(--muted);line-height:1.6;font-size:.92rem}
-table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.5rem}
+.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain} .table-wrap table{min-width:560px} table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.5rem}
 th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left}
 th{font-family:var(--mono);font-size:.62rem;color:var(--cyan);background:rgba(0,229,255,.08)}
 td{color:var(--muted)}
@@ -41,7 +42,7 @@ td{color:var(--muted)}
 <div class="acts"><a class="primary" href="https://github.com/trintechdigitaldefense/Sentinel" target="_blank" rel="noopener noreferrer">GitHub</a><a class="secondary" href="/#pricing">Packages</a><a class="secondary" href="/#contact">Enquire</a></div>
 </header>
 <section class="sec"><h2>// capabilities</h2>
-<table><thead><tr><th>Capability</th><th>Status</th><th>Notes</th></tr></thead><tbody>
+<div class="table-wrap" role="region" aria-label="Sentinel capability table" tabindex="0"><table><thead><tr><th>Capability</th><th>Status</th><th>Notes</th></tr></thead><tbody>
 <tr><td>FIM</td><td>Implemented · partial</td><td>Mode/owner/SUID; realtime needs inotify-tools</td></tr>
 <tr><td>Persistence hunting</td><td>Implemented · partial</td><td>Cron, systemd, keys, LD_PRELOAD</td></tr>
 <tr><td>Reverse-shell / behavioral</td><td>Implemented · partial</td><td>Heuristics — not proof alone</td></tr>
@@ -49,7 +50,7 @@ td{color:var(--muted)}
 <tr><td>Host firewall control</td><td>Implemented · dry-run default</td><td>Confirm to apply; lockout guard</td></tr>
 <tr><td>SSH defense</td><td>Implemented</td><td>Brute-force oriented controls</td></tr>
 <tr><td>Client PDF reports</td><td>Implemented</td><td>Supervision workflow</td></tr>
-</tbody></table></section>
+</tbody></table></div></section>
 <section class="sec"><h2>// deployment</h2><p>Single-sensor pilot recommended: one always-on Linux host (Termux acceptable for light pilots). Run setup, doctor, continuous protection. Weekly: doctor, PDF, review alerts. See GitHub README for CLI.</p></section>
 <section class="sec"><h2>// limitations</h2><ul><li>Pilot candidate until release checklist approved.</li><li>Single sensor ≠ full fleet without agents.</li><li>Behavioral hits are heuristics.</li></ul>
 <div class="note">Authorised defensive use only. Not a full enterprise SOC by itself. Confirm details against the repository before formal proposals.</div></section>

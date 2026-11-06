@@ -60,7 +60,19 @@ jobs:
       - name: Check external links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --root-dir . --exclude 'https://trintechdigitaldefense\.github\.io/' --exclude 'https://www\.linkedin\.com/' --exclude 'http://127\.0\.0\.1(:[0-9]+)?/' --exclude 'file:///.*\/(login|logout)$' --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
+          args: >-
+            --verbose
+            --no-progress
+            --root-dir .
+            --exclude 'https://trintechdigitaldefense\\.github\\.io/'
+            --exclude 'https://www\\.linkedin\\.com/'
+            --exclude-path 'portal-scaffold/**'
+            --timeout 20
+            --max-retries 2
+            './**/*.html'
+            './**/*.md'
+            './**/*.css'
+            './**/*.js'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

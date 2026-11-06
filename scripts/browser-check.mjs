@@ -72,4 +72,4 @@ if (failures.length) {
   console.error(failures.map(x => "FAIL " + x).join("\n"));
   process.exit(1);
 }
-console.log("Browser checks passed: 7 pages, Android-sized mobile, desktop, keyboard navigation, reduced motion, and serious/critical axe violations.");
+console.log(`Browser checks passed: ${paths.length} pages, Android-sized mobile, desktop, keyboard navigation, reduced motion, and serious/critical axe violations.`);

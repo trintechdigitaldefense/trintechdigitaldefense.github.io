@@ -43,14 +43,16 @@ Separate from the defense platforms. Still public.
 
 ## Services
 
-- Managed defense packages (Mirage, Mirage + CyberGuardian, Sentinel)
-- Network & infrastructure audits (Micro 1–5 devices, Small Biz 5–15)
+- **Managed Package 1 — TT$1,350/month:** Mirage + Sentinel + FortifyOne
+- **Managed Package 2 — TT$2,350/month:** Package 1 + CyberAudit Dashboard + CyberGuardian
+- **Monitoring device option:** TT$200 one-time when TrinTech must supply a dedicated mobile monitoring device
+- Network & infrastructure audits (Micro: 1–5 devices; Small Business: 5–15 devices)
 - Web & Android vulnerability assessments
 - OSINT / digital footprint reviews
 - Credential resilience testing
 - Cyber fraud investigation support
 
-All prices in USD (US$). TT$ equivalents available on request. Full details on the [pricing section of the site](https://trintechdigitaldefense.github.io/#pricing).
+The website currently lists prices in Trinidad & Tobago dollars (TT$). Baseline assessment prices shown there are TT$150/hour for OSINT (two-hour minimum), TT$1,000 for a Micro-Business Audit, and TT$2,200 for a Small Business Audit. Confirm scope and the current quote before accepting an engagement. See the [pricing section](https://trintechdigitaldefense.github.io/#pricing) for current details.
 
 ## Legal
 

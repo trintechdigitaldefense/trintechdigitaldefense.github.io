@@ -4,7 +4,7 @@
 
 Trinidad & Tobago cybersecurity firm. Practical security audits, digital footprint analysis, and continuous defense for Caribbean organisations.
 
-**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Trust Centre](https://trintechdigitaldefense.github.io/trust/) · [Service Enquiry](https://trintechdigitaldefense.github.io/#contact)
+**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Trust Centre](https://trintechdigitaldefense.github.io/trust/) · [Service Enquiry](https://trintechdigitaldefense.github.io/enquiry/)
 
 Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean.
 

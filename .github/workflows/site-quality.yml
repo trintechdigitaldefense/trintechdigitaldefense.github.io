@@ -60,7 +60,35 @@ jobs:
       - name: Check external links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --root-dir . --exclude 'https://trintechdigitaldefense\.github\.io/' --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
+          args: --verbose --no-progress --root-dir . --exclude 'https://trintechdigitaldefense\\.github\\.io/' --exclude 'https://www\\.linkedin\\.com/' --exclude 'http://127\\.0\\.0\\.1(:[0-9]+)?/' --exclude 'file:///.*\\/(login|logout) --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  browser-checks:
+    name: Android-sized and desktop browser checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser test dependencies
+        run: npm install --no-save playwright @axe-core/playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Start static site
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/site-server.log 2>&1 &
+          echo $! >/tmp/site-server.pid
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8000/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/site-server.log
+          exit 1
+      - name: Check mobile, desktop, keyboard, console and accessibility
+        run: node scripts/browser-check.mjs
+ --timeout 20 --max-retries 2 './**/*.html' './**/*.md' './**/*.css' './**/*.js'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

@@ -4,6 +4,10 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+from datetime import datetime, timezone
+from html import unescape
+import re
+import xml.etree.ElementTree as ET
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -103,10 +107,78 @@ for source, attr, value in LINKS:
 
 security = ROOT / ".well-known" / "security.txt"
 legacy_security = ROOT / "security.txt"
-if security.exists() and legacy_security.exists() and security.read_text() != legacy_security.read_text():
+if not security.is_file():
+    ERRORS.append("missing .well-known/security.txt")
+else:
+    security_text = security.read_text(encoding="utf-8")
+    fields: dict[str, list[str]] = {}
+    for line in security_text.splitlines():
+        if ":" in line and not line.lstrip().startswith("#"):
+            key, value = line.split(":", 1)
+            fields.setdefault(key.strip(), []).append(value.strip())
+    for required in ("Contact", "Canonical", "Expires", "Preferred-Languages"):
+        if not fields.get(required):
+            ERRORS.append(f"security.txt missing required {required} field")
+    if fields.get("Canonical") != ["https://trintechdigitaldefense.github.io/.well-known/security.txt"]:
+        ERRORS.append("security.txt Canonical must point to the published .well-known/security.txt URL")
+    if any(field in fields for field in ("Encryption", "Policy")):
+        ERRORS.append("security.txt must not advertise an unverified encryption key or unapproved policy")
+    if fields.get("Contact") and not fields["Contact"][0].startswith("mailto:"):
+        ERRORS.append("security.txt Contact must use the approved mailto contact")
+    if fields.get("Preferred-Languages") and "en" not in fields["Preferred-Languages"][0].lower().split(","):
+        ERRORS.append("security.txt Preferred-Languages must include en")
+    if fields.get("Expires"):
+        try:
+            expiry = datetime.strptime(fields["Expires"][0], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if expiry <= datetime.now(timezone.utc):
+                ERRORS.append("security.txt Expires date is not in the future")
+        except ValueError:
+            ERRORS.append("security.txt Expires must be an RFC 3339 UTC timestamp")
+if legacy_security.is_file() and security.is_file() and security.read_text(encoding="utf-8") != legacy_security.read_text(encoding="utf-8"):
     ERRORS.append("security.txt and .well-known/security.txt differ")
 
+sitemap = ROOT / "sitemap.xml"
+if not sitemap.is_file():
+    ERRORS.append("missing sitemap.xml")
+else:
+    try:
+        root = ET.parse(sitemap).getroot()
+        locs = [node.text.strip() for node in root.findall(".//{*}loc") if node.text]
+        for loc in locs:
+            parts = urlsplit(loc)
+            if parts.scheme != "https" or parts.netloc != "trintechdigitaldefense.github.io":
+                ERRORS.append(f"sitemap contains non-canonical site URL: {loc}")
+                continue
+            path = unquote(parts.path or "/")
+            target = ROOT / path.lstrip("/") if path != "/" else ROOT / "index.html"
+            if target.is_dir() or (not target.suffix and not target.exists()):
+                target = target / "index.html"
+            if not target.is_file():
+                ERRORS.append(f"sitemap URL has no local page: {loc}")
+        expected_sitemap_urls = (
+            "https://trintechdigitaldefense.github.io/about/",
+            "https://trintechdigitaldefense.github.io/trust/",
+            "https://trintechdigitaldefense.github.io/enquiry/",
+            "https://trintechdigitaldefense.github.io/blog/dark-web-credential-markets-2026.html",
+        )
+        for expected in expected_sitemap_urls:
+            if expected not in locs:
+                ERRORS.append(f"sitemap missing current public page: {expected}")
+    except ET.ParseError as exc:
+        ERRORS.append(f"sitemap.xml is invalid XML: {exc}")
+
 homepage = ROOT / "index.html"
+readme = ROOT / "README.md"
+if homepage.is_file() and readme.is_file():
+    homepage_text = unescape(re.sub(r"<[^>]*>", "", homepage.read_text(encoding="utf-8")))
+    readme_text = readme.read_text(encoding="utf-8")
+    for price in ("TT$1,350", "TT$2,350", "TT$200", "TT$150", "TT$1,000", "TT$2,200"):
+        if price not in homepage_text:
+            ERRORS.append(f"homepage missing published price {price}")
+        if price not in readme_text:
+            ERRORS.append(f"README pricing summary is out of sync: missing {price}")
+    if "All prices in USD" in readme_text:
+        ERRORS.append("README must not contradict the public TT$ pricing page")
 for page in PAGES:
     if "enhancements.js" in page.read_text(encoding="utf-8"):
         ERRORS.append(f"{page.relative_to(ROOT)}: must not load the unverified legacy enhancements.js module")

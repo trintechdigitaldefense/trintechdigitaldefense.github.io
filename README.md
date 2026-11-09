@@ -4,7 +4,7 @@
 
 Trinidad & Tobago cybersecurity firm. Practical security audits, digital footprint analysis, and continuous defense for Caribbean organisations.
 
-**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407)
+**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Trust Centre](https://trintechdigitaldefense.github.io/trust/) · [Service Enquiry](https://trintechdigitaldefense.github.io/enquiry/)
 
 Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean.
 
@@ -30,7 +30,7 @@ Separate from the defense platforms. Still public.
 
 | Tool | Role | Repo |
 |------|------|------|
-| **FortifyOne** | Professional network audit | [fortifyone](https://github.com/trintechdigitaldefense/fortifyone) |
+| **FortifyOne** | Professional network audit | Private repository (not publicly accessible) |
 | **Apex-Recon** | OSINT, SMB auditing, web scanning | [Apex-Recon-](https://github.com/trintechdigitaldefense/Apex-Recon-) |
 | **CyberAudit** | Live audit operations console | [cyberaudit-dashboard](https://github.com/trintechdigitaldefense/cyberaudit-dashboard) |
 | **CaribWatch** | Caribbean threat visibility | [caribwatch](https://github.com/trintechdigitaldefense/caribwatch) |
@@ -43,14 +43,22 @@ Separate from the defense platforms. Still public.
 
 ## Services
 
-- Managed defense packages (Mirage, Mirage + CyberGuardian, Sentinel)
-- Network & infrastructure audits (Micro 1–5 devices, Small Biz 5–15)
+- **Managed Package 1 — TT$1,350/month:** Mirage + Sentinel + FortifyOne
+- **Managed Package 2 — TT$2,350/month:** Package 1 + CyberAudit Dashboard + CyberGuardian
+- **Monitoring device option:** TT$200 one-time when TrinTech must supply a dedicated mobile monitoring device
+- Network & infrastructure audits (Micro: 1–5 devices; Small Business: 5–15 devices)
 - Web & Android vulnerability assessments
 - OSINT / digital footprint reviews
 - Credential resilience testing
 - Cyber fraud investigation support
 
-All prices in USD (US$). TT$ equivalents available on request. Full details on the [pricing section of the site](https://trintechdigitaldefense.github.io/#pricing).
+The website currently lists prices in Trinidad & Tobago dollars (TT$). Baseline assessment prices shown there are TT$150/hour for OSINT (two-hour minimum), TT$1,000 for a Micro-Business Audit, and TT$2,200 for a Small Business Audit. Confirm scope and the current quote before accepting an engagement. See the [pricing section](https://trintechdigitaldefense.github.io/#pricing) for current details.
+
+## Client enquiries and trust
+
+- The homepage service enquiry form creates a draft email in the visitor’s own email application; it does not send form data to a website backend or store it on the site.
+- Enquiries are not authorisation to test. A written scope and explicit permission are required before any assessment begins.
+- The [Trust Centre](https://trintechdigitaldefense.github.io/trust/) collects privacy, engagement, security and responsible-disclosure information. Draft policy content is clearly marked for management and legal review.
 
 ## Legal
 

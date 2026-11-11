@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta name="theme-color" content="#030a0e" media="(prefers-color-scheme: dark)" >
+<meta name="theme-color" content="#f5f8fa" media="(prefers-color-scheme: light)" >
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Security Attacks: Why Your Business APIs Are Being Exploited Right Now — TrinTech Digital Defense</title>
+<meta name="description" content="150 billion API attacks between 2023 and 2024. 87% of organisations reported API security incidents in 2025. Insecure APIs cost up to US$87 billion a year. Here's what every Trinidad business needs to know.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trintechdigitaldefense.github.io/blog/api-security-attacks-2026">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://trintechdigitaldefense.github.io/blog/api-security-attacks-2026">
+<meta property="og:title" content="API Security Attacks: Why Your Business APIs Are Being Exploited Right Now">
+<meta property="og:description" content="150 billion API attacks between 2023 and 2024. 87% of organisations reported API security incidents in 2025. Insecure APIs cost up to US$87 billion a year.">
+<meta property="og:image" content="https://trintechdigitaldefense.github.io/images/api-security-attacks-2026.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="API Security Attacks: Why Your Business APIs Are Being Exploited Right Now">
+<meta name="twitter:description" content="150 billion API attacks between 2023 and 2024. 87% of organisations reported API security incidents in 2025. Insecure APIs cost up to US$87 billion a year.">
+<meta name="twitter:image" content="https://trintechdigitaldefense.github.io/images/api-security-attacks-2026.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<style>
+:root{--bg:#030a0e;--bg2:#050f15;--cyan:#00e5ff;--muted:#4a6475;--border:rgba(0,229,255,0.14);--card:rgba(5,18,26,0.95);--mono:'Share Tech Mono',monospace;--display:'Bebas Neue',sans-serif;--body:'DM Sans',sans-serif}
+[data-theme="light"]{--bg:#f5f8fa;--bg2:#e8eef2;--cyan:#0077aa;--muted:#5a7485;--border:rgba(0,119,170,0.18);--card:rgba(255,255,255,0.95)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:#c8d8e0;font-family:var(--body);font-weight:300;line-height:1.8;transition:background .4s,color .4s}
+[data-theme="light"] body{color:#1a2a35}
+header{padding:2rem 3rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.header-logo{font-family:var(--display);font-size:1.3rem;letter-spacing:.1em;color:var(--cyan)}
+.header-home{font-family:var(--mono);font-size:.68rem;color:var(--muted);text-decoration:none;letter-spacing:.1em}
+.header-home:hover{color:var(--cyan)}
+article{max-width:720px;margin:4rem auto;padding:0 2rem}
+article h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.04em;color:#fff;margin-bottom:.6rem}
+[data-theme="light"] article h1{color:var(--bg)}
+.article-meta{font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.08em;margin-bottom:3rem}
+article p{margin-bottom:1.6rem;font-size:.95rem;color:var(--text)}
+article h2{font-family:var(--display);font-size:1.8rem;color:#fff;margin:2.5rem 0 1rem;letter-spacing:.03em}
+[data-theme="light"] article h2{color:var(--bg)}
+article ul{margin:1rem 0 1.6rem 1.5rem}
+article li{margin-bottom:.5rem;font-size:.92rem;color:var(--text);position:relative;padding-left:.5rem}
+article li::before{content:'-';position:absolute;left:-.8rem;color:var(--cyan)}
+.article-callout{background:var(--card);border-left:3px solid var(--cyan);padding:1.5rem 2rem;margin:2rem 0;border-radius:0 6px 6px 0}
+.article-callout p{margin:0;font-size:.9rem}
+.article-cta{background:var(--cyan);color:var(--bg);padding:1.5rem 2rem;border-radius:6px;text-align:center;margin:3rem 0}
+.article-cta h3{font-family:var(--display);font-size:1.6rem;letter-spacing:.05em;margin-bottom:.5rem}
+.article-cta p{color:var(--bg2);opacity:.8;margin:0;font-size:.85rem}
+.article-cta a{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--bg);text-decoration:none;border:2px solid var(--bg2);padding:.6rem 1.5rem;border-radius:3px;transition:background .2s,color .2s}
+.article-cta a:hover{background:var(--bg2);color:var(--cyan)}
+footer{padding:3rem;border-top:1px solid var(--border);text-align:center}
+footer p{font-family:var(--mono);font-size:.65rem;color:var(--muted);letter-spacing:.1em}
+</style>
+</head>
+<body>
+<header>
+<span class="header-logo">TRINTECH</span>
+<a href="/" class="header-home">- Back to TrinTech</a>
+</header>
+<article>
+<p class="article-meta"><span class="article-cat">Threat Analysis</span> <span class="article-cat">Business Risk</span> <span>November 2026</span></p>
+
+<h1>API Security Attacks: Why Your Business APIs Are Being Exploited Right Now</h1>
+
+<p>Attackers launched 150 billion API attacks between January 2023 and December 2024. In 2025, the average number of daily API attacks per organisation rose 113 percent year over year. 87 percent of surveyed organisations reported an API-related security incident in 2025. 99 percent experienced at least one API security issue in the prior 12 months. 60 percent had a confirmed data breach caused by API exploitation in the prior two years. 95 percent of API attacks came from authenticated sources, meaning the attacker was already inside the front door.</p>
+
+<p>These numbers are not from a niche segment of technology companies. They cover organisations across every industry, every size, and every geography. Akamai, which processes a significant share of the world's web traffic, now describes APIs as the primary attack surface for web applications. Cloudflare reports that APIs account for 57 percent of the dynamic internet traffic it processes, outpacing traditional browser-driven web traffic. Where the traffic goes, the attackers follow.</p>
+
+<p>For Trinidad and Tobago businesses, the risk is particularly acute because the same factors driving global API adoption are accelerating locally: the migration to cloud-based CRM and ERP systems, the integration of payment gateways and banking APIs, the proliferation of mobile applications, and the growing use of AI tools that communicate through APIs. Every new cloud service, every integration, every mobile app endpoint adds to the attack surface. The problem is that most organisations have built far more APIs than they realise, and the ones they know about are poorly protected.</p>
+
+<p>This article explains what API security attacks look like in 2026, why existing security controls miss them, and what practical steps businesses can take to protect their APIs before an attacker exploits a gap that has been sitting in the code since day one.</p>
+
+<h2>What Makes APIs Different from Web Applications</h2>
+
+<p>An API is an application programming interface -- a set of rules that lets one software system communicate with another. When a mobile app loads your customer data, when a payment gateway processes a transaction, when a third-party analytics service pulls reports from your database, those are all API calls. APIs have been the backbone of modern software for decades, but the scale and exposure have shifted dramatically.</p>
+
+<p>Traditional web applications are accessed through browsers. The user logs in, navigates pages, and the browser handles most of the complexity: session management, form validation, navigation state. Web application firewalls are designed to protect this pattern. They inspect HTTP requests coming from browsers, check for SQL injection, cross-site scripting, and other classic web attack patterns.</p>
+
+<p>APIs do not follow this pattern. They accept structured requests from machines -- mobile apps, web frontends, partner systems, automated tools -- and return structured data. There is no browser to provide context. There are no pages to navigate. The entire application is the API. And because the input comes from machine clients rather than browsers, the attack surface is fundamentally different.</p>
+
+<p>The most important difference is authorization. In a web application, the application renders pages based on the user's role. If a user is not authorised to see the admin panel, they cannot access it because the link does not appear in the UI. In an API, the front-end does not mediate access. A user who can authenticate to the API can send requests to any endpoint, and whether they can access the requested resource depends entirely on the authorization logic in the API code. That authorization logic is where the vast majority of API vulnerabilities live.</p>
+
+<p>This is why Broken Object Level Authorization, or BOLA, sits at the top of the OWASP API Security Top 10. BOLA is a flaw where an API lets a user access objects that belong to someone else, usually by changing an identifier in the request. If a user's data is accessed at /api/customers/12345, an attacker who changes the ID to /api/customers/67890 may be able to read another customer's data, if the API only checks that the user is authenticated but does not verify that the user owns the requested object. The attack does not require breaking into the system. It requires guessing or enumerating IDs, which are almost always sequential and easy to predict.</p>
+
+<p>Authorization flaws like BOLA cannot be detected by automated scanners because a scanner cannot know which user should own which object without understanding the application's data model. This is the central paradox of API security: the most common and most dangerous vulnerabilities are the ones that automated tools are worst at finding.</p>
+
+<h2>The Most Common API Attack Classes in 2026</h2>
+
+<p>The OWASP API Security Top 10, published in 2023, ranks the ten most critical API security risks. Real-world data from 2025 and 2026 confirms that the ranked list is not just theoretical -- it describes what attackers are actually exploiting at scale.</p>
+
+<p><strong>Broken Object Level Authorization (API1).</strong> The #1 risk. Part of the 28 percent of disclosed API vulnerabilities that were authorization-related in Wallarm's Q3 2025 data. BOLA lets attackers access data belonging to other users by manipulating object identifiers. It is common, easy to introduce during development, and impossible for automated scanners to detect reliably. It is also the primary mechanism through which data exposure incidents occur.</p>
+
+<p><strong>Broken Authentication (API2).</strong> Weak or broken login, token, or session handling. With 95 percent of API attacks coming from authenticated sources (Salt Security, 2025), authentication flaws are critical. Attackers do not need to break in through the front door if the front door's lock is broken. Poor token management, weak password policies, and broken multi-factor authentication flows are all exploitation paths.</p>
+
+<p><strong>Broken Object Property Level Authorization (API3).</strong> Over-exposed or over-writable object fields, also known as mass assignment. When an API accepts a JSON payload to update a user profile and does not validate which fields the authenticated user is authorised to change, an attacker can modify fields they should not have access to -- for example, setting a user's role to admin or modifying their own balance field in a financial application.</p>
+
+<p><strong>Unrestricted Resource Consumption (API4).</strong> Missing rate and resource limits enabling abuse or denial of service. Layer 7 DDoS attacks grew 104 percent over two years (Akamai, 2026 SOTI), and unrestricted resource consumption is the primary mechanism. Without rate limiting, an attacker can overwhelm an API with requests, exhaust computational resources, or trigger expensive operations repeatedly. This class also ties directly to automated abuse, which Imperva estimates costs businesses up to US$116 billion per year.</p>
+
+<p><strong>Broken Function Level Authorization (API5).</strong> Regular users accessing admin or privileged functions. If a standard user can call an endpoint designed for administrators, they can perform administrative actions -- view all users, modify system configuration, export data. This is a form of privilege escalation that relies on the same authorization gap as BOLA: the API checks that the user is logged in, but not that they are logged in as the right role.</p>
+
+<p><strong>Unrestricted Access to Sensitive Business Flows (API6).</strong> Automated abuse of legitimate flows. Bots accounted for 30 percent of all API attacks (Imperva, 2024). Attackers use bots to automate account creation, fraudulently claim promotions, scrape pricing data, or overwhelm checkout flows. This is the class that powers carding, scalping, and automated fraud at scale.</p>
+
+<p><strong>Server Side Request Forgery (API7).</strong> The API fetches a URL controlled by the attacker, which can be used to access internal services that are not exposed to the internet. SSRF is particularly dangerous in cloud environments where internal services often lack their own authentication, allowing the attacker to pivot from the API into the organisation's internal infrastructure.</p>
+
+<p><strong>Security Misconfiguration (API8).</strong> Insecure defaults, verbose error messages, missing security headers. Salt Security observed that security misconfiguration accounted for 54 percent of all API attacks in 2025, making it the single largest class by volume. Wallarm's Q3 2025 data put it at 38 percent of disclosed API vulnerabilities. Misconfiguration is the easiest vulnerability to fix -- turning off verbose error messages, setting proper CORS policies, removing debug endpoints -- but also the most common because it is often introduced during development and never corrected before production.</p>
+
+<p><strong>Improper Inventory Management (API9).</strong> Undocumented, deprecated, or shadow endpoints. Cloudflare's machine-learning discovery found about 31 percent more API endpoints than organisations self-reported, meaning roughly a third of the API surface is shadow infrastructure. Only 15 percent of organisations are strongly confident in the accuracy of their API inventory (Salt Security, 2025). Only 10 percent have a formal API posture governance strategy. Undocumented endpoints are endpoints that no one is monitoring, no one is testing, and no one knows exist -- until an attacker finds them.</p>
+
+<p><strong>Unsafe Consumption of APIs (API10).</strong> Blindly trusting data from third-party APIs. Organisations connect an average of 131 external APIs (Traceable and Ponemon, 2024). Each one is a dependency governed by someone else's security practices. When a third-party API returns unvalidated data that your application trusts without checking, you have created a supply chain attack vector that your security team did not build and may not even know exists.</p>
+
+<h2>Why Traditional Security Tools Miss API Attacks</h2>
+
+<p>Most organisations that have invested in application security have done so with web applications in mind. Web application firewalls, penetration testing frameworks, and automated vulnerability scanners are all designed to protect the browser-based web application pattern. They are poorly suited to APIs for several reasons.</p>
+
+<p><strong>Web application firewalls do not understand API context.</strong> WAFs inspect HTTP requests for known attack patterns: SQL injection syntax, cross-site scripting payloads, path traversal sequences. They are good at catching script kiddies running automated tools against HTML forms. They are not good at catching BOLA, which looks like a perfectly legitimate authenticated request -- the attacker is sending a valid token and requesting data from a valid endpoint. The only difference is the object ID, and the WAF has no way to know that ID 12345 belongs to the requester but ID 67890 belongs to someone else.</p>
+
+<p><strong>Automated vulnerability scanners miss authorization flaws.</strong> Scanners can detect missing security headers, known CVEs, and input validation gaps. They cannot detect logic flaws in authorization because they do not understand the application's data model. A scanner can confirm that /api/customers/12345 returns data when authenticated, but it cannot determine whether the authenticated user should be allowed to see customer 12345's data. That requires a testing methodology that reasons about ownership, roles, and tenant boundaries the way an attacker does.</p>
+
+<p><strong>Penetration testing is typically point-in-time.</strong> A penetration test is valuable because it finds vulnerabilities that automated tools miss. But a penetration test is a snapshot in time. If the API estate changes between tests -- and 30 percent of organisations saw their number of managed APIs grow 51 to 100 percent in a single year -- the test results are already stale. Only 38 percent of APIs are continually tested (Traceable and Ponemon, 2024). That means 62 percent of an organisation's APIs have never been tested, or have not been tested since before their last significant update.</p>
+
+<p><strong>SIEM and monitoring tools are tuned for perimeter traffic.</strong> Most security information and event management systems are configured to alert on unusual inbound traffic patterns from the internet. They are not configured to detect suspicious patterns in authenticated API traffic, which accounts for 95 percent of attacks. An attacker who authenticates legitimately and then systematically enumerates customer records sends traffic that looks identical to a legitimate user's traffic, except for the data being accessed. Without API-specific monitoring, this activity goes invisible.</p>
+
+<h2>The Scale of the Problem in Numbers</h2>
+
+<p>The data from 2025 and 2026 reports paints a comprehensive picture of the API threat landscape:</p>
+
+<ul>
+<li><strong>Attack volume.</strong> 150 billion API attacks between January 2023 and December 2024 (Akamai). The average number of daily API attacks per organisation rose 113 percent year over year in 2025 (Akamai, 2026 SOTI). OWASP API Top 10-aligned incidents rose 32 percent year over year (Wallarm, Q3 2025).</li>
+<li><strong>Organisational exposure.</strong> 87 percent of organisations reported an API-related security incident in 2025 (Akamai). 99 percent experienced at least one API security issue in the prior 12 months (Salt Security). 60 percent had a confirmed API-exploitation data breach in the prior two years (Traceable and Ponemon).</li>
+<li><strong>Authenticated attacks.</strong> 95 percent of API attacks came from authenticated sources (Salt Security). 98 percent targeted external-facing APIs (Salt Security). The typical API attack is not an anonymous probe but an authorised-looking request from inside the front door.</li>
+<li><strong>Bots and automation.</strong> Bots accounted for 30 percent of all API attacks (Imperva). Automated abuse of APIs specifically accounts for up to US$17.9 billion in annual losses.</li>
+<li><strong>Shadow infrastructure.</strong> Roughly 31 percent more API endpoints exist than organisations report (Cloudflare). Only 10 percent of organisations have an API posture governance strategy (Salt Security). Only 15 percent are confident in their API inventory accuracy.</li>
+<li><strong>Cost.</strong> Insecure APIs cost businesses up to US$87 billion a year, part of up to US$186 billion from insecure APIs and automated bot abuse combined (Imperva and Marsh McLennan). 55 percent of organisations delayed the rollout of a new application because of API security concerns (Salt Security).</li>
+<li><strong>AI expansion.</strong> Wallarm attributed the majority of newly disclosed AI-related vulnerabilities to APIs and recorded a 270 percent quarter-over-quarter surge in Model Context Protocol (MCP) issues in Q3 2025. Every new AI agent and integration is another API to secure.</li>
+</ul>
+
+<p>These numbers are not abstract. They describe the actual attack patterns that organisations are facing today, and they point directly to the gap between how most businesses protect their applications and what attackers are actually exploiting: authorization flaws in authenticated API traffic, delivered at scale by automated tools, targeting endpoints that no one has tested or even knows about.</p>
+
+<h2>How API Attacks Hit Trinidad Businesses</h2>
+
+<p>The API threat landscape is global, but the attack patterns that affect Trinidad and Tobago businesses have specific local characteristics that amplify the risk.</p>
+
+<p><strong>Cloud migration without API security.</strong> Trinidad businesses are rapidly adopting cloud-based services -- Microsoft 365 for email and collaboration, cloud ERP and accounting platforms, online payment gateways, mobile banking integrations. Each of these services exposes APIs, either through official SDKs or through undocumented endpoints. The migration brings operational benefits but expands the attack surface, often without a corresponding increase in API security investment. A business that moves its customer database from an on-premises server to a cloud-hosted application without reviewing the new application's API authorization logic has created a BOLA vulnerability by default.</p>
+
+<p><strong>Payment and banking API exposure.</strong> Trinidad's financial services sector relies on APIs for payment processing, online banking, and merchant services. These APIs handle sensitive financial data and money movement. A BOLA vulnerability in a payment API could let an attacker view other customers' transaction histories. A broken authentication flaw in a merchant API could let an attacker initiate refunds to their own accounts. The Trinidad and Tobago Financial Services Commission has increasingly focused on cybersecurity for financial institutions, and API security is a core component of that regulatory expectation.</p>
+
+<p><strong>Mobile applications and customer data.</strong> As Trinidad businesses build mobile applications for customer engagement, each app endpoint is an API that needs protection. Customer data -- names, phone numbers, addresses, transaction history -- is accessed through API calls from the app. Without proper object-level authorization, a user of one business's app could potentially access another user's data by manipulating API requests. This is especially dangerous in sectors like healthcare, education, and government services, where customer data is sensitive and regulatory frameworks require protection.</p>
+
+<p><strong>Third-party integration risk.</strong> Trinidad businesses that connect to third-party services -- shipping companies, payment processors, customer data platforms, marketing tools -- are connecting to 131 external APIs on average (Traceable and Ponemon). Each third-party API is a dependency whose security posture the business may not be able to fully evaluate. Unsafe consumption of third-party APIs (OWASP API10) is a real and under-addressed risk in the local market.</p>
+
+<p><strong>Small IT teams with limited API expertise.</strong> Most Trinidad businesses do not have dedicated API security engineers. The IT team that manages the network, handles help desk tickets, and maintains server infrastructure is rarely equipped to perform API-specific security testing. This knowledge gap is the single biggest factor enabling API vulnerabilities to persist in production. An API that has never been tested for BOLA, BFLA, or misconfiguration will almost certainly have those flaws, because they are common and easy to introduce during development.</p>
+
+<h2>What Businesses Can Do About API Security</h2>
+
+<p>API security does not require a complete technology overhaul. It requires a shift in how applications are designed, tested, and monitored, with specific focus on the authorization and inventory gaps that drive the majority of real-world attacks.</p>
+
+<p><strong>Inventory your APIs continuously.</strong> You cannot secure what you cannot see. Cloudflare's finding that 31 percent of API endpoints are shadow infrastructure is not an edge case -- it is the norm. Organisations need continuous API discovery that identifies every endpoint, maps its function, and tracks whether it is documented and tested. This includes developer APIs, internal APIs, partner APIs, and the undocumented endpoints that creep in when developers make quick changes in production. API inventory is the foundation of everything else.</p>
+
+<p><strong>Test authorization directly.</strong> The vulnerabilities that matter most -- BOLA, BFLA, broken object property authorization -- are authorization flaws. They require testing methodologies that validate object-level and tenant-isolation logic, not just input validation and known vulnerability patterns. Multi-account testing -- running the same API request through multiple authenticated user sessions and verifying that each user can only access their own data -- is the most effective way to find BOLA. Tenant-isolation testing -- verifying that one customer's API calls cannot access another customer's data -- is critical for SaaS applications.</p>
+
+<p><strong>Assume authenticated attackers.</strong> With 95 percent of API attacks coming from authenticated sources, access control has to hold up against valid users abusing their level of access. Every API endpoint should be evaluated from the perspective of a legitimate user who is trying to do something they should not be able to do. This is the core principle of security testing and it is especially relevant for APIs, where the authenticated request is the default attack vector.</p>
+
+<p><strong>Enforce rate limiting and resource controls.</strong> Unrestricted resource consumption enables denial of service, data scraping, and automated abuse. API endpoints should have rate limits appropriate to their function. Data export endpoints should have stricter limits than read endpoints. Authentication endpoints should have rate limits that prevent credential stuffing. These controls are straightforward to implement and directly address three of the OWASP API Top 10 classes.</p>
+
+<p><strong>Review third-party API consumption.</strong> Organisations connect to an average of 131 external APIs. Each connection is a trust relationship that needs to be evaluated. Does your application validate data returned from the third-party API? Does it handle errors gracefully? Does it have fallback behaviour if the third-party API becomes unavailable or returns malicious data? Unsafe consumption of APIs is a supply chain vulnerability that most security teams do not think about until after a breach.</p>
+
+<p><strong>Monitor API traffic continuously.</strong> API-specific monitoring should detect anomalous patterns in authenticated requests: a user accessing an unusual volume of data, a request to an endpoint that the user typically does not access, requests that fail authorization but are retried with different parameters. These patterns indicate automated enumeration or targeted exploitation that would be invisible to perimeter monitoring tools.</p>
+
+<h2>Why Penetration Testing Matters for API Security</h2>
+
+<p>Penetration testing is one of the most effective ways to identify API vulnerabilities that automated tools miss, because it requires human reasoning about business logic, ownership models, and authorization flows. An automated scanner can flag a missing security header. A penetration tester can demonstrate that authenticated user A can access user B's records by changing a single parameter in the request.</p>
+
+<p>The most effective API penetration testing covers the full OWASP API Security Top 10, with particular emphasis on API1 (BOLA), API2 (Broken Authentication), API5 (BFLA), and API8 (Security Misconfiguration) -- the classes that account for the vast majority of real-world API vulnerabilities. Testing should include multi-account validation (verifying that each authenticated user can only access their own data), privilege escalation testing (verifying that standard users cannot access admin functions), and boundary testing (verifying that API inputs are properly validated and constrained).</p>
+
+<p>Penetration testing is most effective when it is not a one-time event but part of an ongoing security program. API estates change continuously -- new endpoints are added, existing endpoints are modified, third-party integrations are updated. A single penetration test provides a snapshot that is already aging. Continuous or frequent testing is the only approach that keeps pace with the API estate.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>API security is not a future problem for Trinidad and Tobago businesses. It is an active, documented threat that affects 87 percent of organisations globally, with 150 billion API attacks recorded in just two years, and 60 percent of organisations suffering a confirmed API-exploitation data breach in the prior two years. The dominant vulnerabilities are authorization flaws -- BOLA, BFLA, and broken object property authorization -- that automated tools consistently miss and that require human testing to find.</p>
+
+<p>The factors driving API adoption in Trinidad -- cloud migration, payment integrations, mobile applications, third-party services -- are the same factors expanding the API attack surface. Every new endpoint is an opportunity for an attacker. Every undocumented endpoint is an endpoint that no one is protecting. Every authorization gap is a path to data that should not be accessible.</p>
+
+<p>The controls are well-understood. Inventory APIs continuously. Test authorization directly. Assume authenticated attackers. Enforce rate limits. Review third-party connections. Monitor API traffic. These are not theoretical recommendations. They are the specific controls that address the actual vulnerability classes driving API breaches today.</p>
+
+<p>For organisations that do not have dedicated API security expertise -- which is the majority of Trinidad businesses -- the choice is between engaging a security provider who can assess your API estate, identify the authorization gaps that exist today, and implement the testing and monitoring controls that address the most critical risks before the next breach becomes a headline.</p>
+
+<div class="article-callout">
+<p><strong>Key takeaway:</strong> 95 percent of API attacks come from authenticated sources, and 80 percent of all attack attempts map to the OWASP API Top 10. The dominant vulnerabilities are authorization flaws (BOLA, BFLA) that automated scanners cannot detect. The most effective defence is API-specific penetration testing that validates object-level and tenant-isolation logic, combined with continuous API inventory management and authentication-aware monitoring.</p>
+</div>
+
+<div class="article-cta">
+<h3>Is Your API Estate Secure?</h3>
+<p>TrinTech provides API penetration testing that covers the OWASP API Security Top 10, with specific focus on BOLA, BFLA, and authorization flaws that automated tools miss. We test your APIs the way attackers do -- as authenticated users manipulating object IDs, escalating privileges, and exploiting business logic.</p>
+<a href="/#contact">Contact TrinTech</a>
+</div>
+</article>
+<footer>
+<div>
+<p>TRINTECH</p>
+<p style="color:var(--muted);font-size:.55rem;margin-top:.3rem">Trinidad and Tobago Cybersecurity</p>
+</div>
+<div style="margin-top:1.5rem">
+<a href="/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Home</a>
+<a href="/blog/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Blog</a>
+<a href="/sentinel/" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Sentinel</a>
+<a href="/#contact" style="color:var(--muted);text-decoration:none;font-size:.55rem;margin:0 .5rem">Contact</a>
+</div>
+<div style="margin-top:1rem">
+<p>- 2026 TrinTech Digital Defense. All rights reserved.-</p>
+</div>
+</footer>
+</body>
+</html>

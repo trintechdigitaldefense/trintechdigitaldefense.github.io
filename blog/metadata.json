@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "api-security-attacks-2026",
+      "title": "API Security Attacks: Why Your Business APIs Are Being Exploited Right Now",
+      "date": "2026-11-11",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "API security",
+        "BOLA",
+        "OWASP API Top 10",
+        "authorization",
+        "shadow APIs",
+        "Trinidad"
+      ],
+      "word_count": 3120,
+      "url": "https://trintechdigitaldefense.github.io/blog/api-security-attacks-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/api-security-attacks-2026.png"
+    },
+    {
       "slug": "dark-web-credential-markets-2026",
       "title": "Dark Web Credential Markets: Why Your Employees Passwords Are Already for Sale",
       "date": "2026-11-04",

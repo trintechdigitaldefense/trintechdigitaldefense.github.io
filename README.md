@@ -50,7 +50,7 @@ Separate from the defense platforms. Still public.
 - Credential resilience testing
 - Cyber fraud investigation support
 
-All prices in USD (US$). TT$ equivalents available on request. Full details on the [pricing section of the site](https://trintechdigitaldefense.github.io/#pricing).
+All prices TTD$ equivalents available on request. Full details on the [pricing section of the site](https://trintechdigitaldefense.github.io/#pricing).
 
 ## Legal
 

@@ -13,21 +13,20 @@
 .pp{max-width:1100px;margin:0 auto;padding:2rem 1.25rem 4rem}
 .top{display:flex;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(3,10,14,.94);z-index:40;font-family:var(--mono);font-size:.72rem}
 .top a{color:var(--muted);text-decoration:none;margin-left:1rem}.top .b{color:var(--text);letter-spacing:.12em}.top .b span{color:var(--cyan)}
-@media(max-width:600px){.top{flex-wrap:wrap;gap:.6rem}.top>div{display:flex;flex-wrap:wrap;gap:.6rem}.top a{margin-left:0}}
 h1{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);margin:.4rem 0}
 .lead{color:var(--muted);max-width:640px;line-height:1.65}
 .badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .55rem;border:1px solid var(--border);border-radius:3px;color:var(--cyan);display:inline-block;margin:.3rem .3rem 0 0}
 .sec{margin-top:2rem}
 .sec h2{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:.6rem}
 .sec p,.sec li{color:var(--muted);line-height:1.6;font-size:.92rem}
-.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain} .table-wrap table{min-width:560px} table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.5rem}
+.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}.table-wrap table{min-width:560px}table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:.5rem}
 th,td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left}
 th{font-family:var(--mono);font-size:.62rem;color:var(--cyan);background:rgba(0,229,255,.08)}
 td{color:var(--muted)}
 .acts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
 .acts a{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.7rem 1.1rem;border-radius:3px}
 .primary{background:var(--cyan);color:#000}.secondary{border:1px solid var(--border);color:var(--cyan)}
-.note{margin-top:1rem;padding:1rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.06);font-size:.85rem;color:var(--muted)}
+.ops-steps{padding-left:1.3rem;margin:.8rem 0 0}.ops-steps li{padding:.35rem 0 .65rem .25rem;color:var(--cyan);font-family:var(--mono);font-size:.82rem}.ops-steps strong{font-weight:600}.ops-steps li p{margin:.35rem 0 0;font-family:var(--sans, sans-serif);color:var(--muted);font-size:.92rem;line-height:1.6}\n.note{margin-top:1rem;padding:1rem;border:1px solid var(--border);border-radius:6px;background:rgba(0,229,255,.06);font-size:.85rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -52,6 +51,15 @@ td{color:var(--muted)}
 <tr><td>Client PDF reports</td><td>Implemented</td><td>Supervision workflow</td></tr>
 </tbody></table></div></section>
 <section class="sec"><h2>// deployment</h2><p>Single-sensor pilot recommended: one always-on Linux host (Termux acceptable for light pilots). Run setup, doctor, continuous protection. Weekly: doctor, PDF, review alerts. See GitHub README for CLI.</p></section>
+<section class="sec"><h2>// operational approach</h2>
+<p>The goal is to move from a successfully tested codebase toward a consistently reliable operational security tool. Sentinel’s initial three-day setup establishes a working baseline; it is the beginning of an ongoing operational process, not a claim of production certification.</p>
+<ol class="ops-steps">
+<li><strong>Day 1 — Establish the baseline</strong><p>Confirm installation health, permissions, canaries, monitoring and alert logging. Record what Sentinel considers normal.</p></li>
+<li><strong>Day 2 — Operate and observe</strong><p>Run monitoring cycles, examine alerts, distinguish expected activity from suspicious activity and correct false positives.</p></li>
+<li><strong>Day 3 — Operational readiness review</strong><p>Review detection results, service stability, reporting, recovery procedures and outstanding limitations.</p></li>
+<li><strong>After Day 3 — Continuous improvement</strong><p>Operate within the supported capabilities of the current environment. Review findings, improve detections and strengthen controls as evidence becomes available.</p></li>
+</ol>
+</section>
 <section class="sec"><h2>// limitations</h2><ul><li>Pilot candidate until release checklist approved.</li><li>Single sensor ≠ full fleet without agents.</li><li>Behavioral hits are heuristics.</li></ul>
 <div class="note">Authorised defensive use only. Not a full enterprise SOC by itself. Confirm details against the repository before formal proposals.</div></section>
 <section class="sec"><h2>// related</h2><div class="acts"><a class="secondary" href="/trintech/">Products</a> <a class="secondary" href="/trintech/mirage/">Mirage</a> <a class="secondary" href="/#pricing">Pricing</a></div></section>

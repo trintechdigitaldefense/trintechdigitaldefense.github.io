@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 import AxeBuilder from "@axe-core/playwright";
 
 const base = process.env.SITE_URL || "http://127.0.0.1:8000";
-const paths = ["/", "/about/", "/health-check/", "/privacy/", "/terms/", "/safety/", "/trust/", "/enquiry/", "/sentinel/", "/trintech/"];
+const paths = ["/", "/about/", "/health-check/", "/privacy/", "/terms/", "/safety/", "/trust/", "/enquiry/", "/sentinel/", "/trintech/", "/blog/", "/blog/password-security-2026.html"];
 const browser = await chromium.launch({ headless: true });
 const errors = [];
 const failures = [];
@@ -55,6 +55,13 @@ if (await enquiryForm.count()) {
     return !Array.from(form.querySelectorAll("label")).some(label => (el.id && label.htmlFor === el.id) || label.contains(el));
   }).map(el => el.id || el.name || el.tagName));
   if (missingLabels.length) failures.push("enquiry form controls missing labels: " + missingLabels.join(", "));
+  const requiredConsents = await enquiryForm.locator('input[type="checkbox"][required]').count();
+  if (requiredConsents < 2) failures.push("enquiry form must require authorisation and privacy acknowledgement");
+  const privacyAcknowledgement = await enquiryForm.locator('input[name="Privacy acknowledgement"][required]').count();
+  if (privacyAcknowledgement !== 1) failures.push("enquiry form must include a required privacy acknowledgement");
+  const sensitiveFields = await enquiryForm.locator('input[type="password"], input[type="file"]').count();
+  if (sensitiveFields) failures.push("public enquiry form must not request credentials or file uploads");
+  if (!(await enquiryForm.locator('a[href="/privacy/"]').count())) failures.push("enquiry form must link to the Privacy Notice");
 }
 await page.evaluate(() => document.activeElement?.blur());
 await page.keyboard.press("Tab");

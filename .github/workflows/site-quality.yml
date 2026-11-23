@@ -19,11 +19,11 @@ jobs:
     name: HTML, links, and JavaScript checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
       - name: Validate HTML structure and local references
@@ -68,8 +68,8 @@ jobs:
     name: Android-sized and desktop browser checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
       - name: Install browser test dependencies
@@ -97,7 +97,7 @@ jobs:
       - name: Verify deployed public pages
         run: |
           set -e
-          for path in / /health-check/ /trust/ /enquiry/ /privacy/ /terms/ /safety/ /sitemap.xml /.well-known/security.txt; do
+          for path in / /about/ /health-check/ /trust/ /enquiry/ /privacy/ /terms/ /safety/ /sentinel/ /trintech/ /blog/ /blog/password-security-2026.html /sitemap.xml /security.txt /.well-known/security.txt; do
             url="https://trintechdigitaldefense.github.io$path"
             status=""
             for attempt in $(seq 1 12); do
@@ -111,7 +111,7 @@ jobs:
       - name: Inspect production response security headers
         run: |
           curl --silent --show-error --head --location --max-time 20 https://trintechdigitaldefense.github.io/ > /tmp/site-headers.txt
-          for header in strict-transport-security x-content-type-options referrer-policy content-security-policy; do
+          for header in strict-transport-security x-content-type-options referrer-policy content-security-policy permissions-policy x-frame-options; do
             if grep -qi "^$header:" /tmp/site-headers.txt; then
               echo "FOUND $header"
             else

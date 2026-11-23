@@ -67,6 +67,20 @@ class PageParser(HTMLParser):
         if tag == "title":
             self.in_title = False
 
+blog_index = ROOT / "blog" / "index.html"
+if blog_index.is_file():
+    blog_index_text = blog_index.read_text(encoding="utf-8")
+    if '<link rel="canonical" href="https://trintechdigitaldefense.github.io/blog/">' not in blog_index_text:
+        ERRORS.append("blog index is missing its canonical URL")
+
+product_centre = ROOT / "trintech" / "index.html"
+if product_centre.is_file():
+    product_text = product_centre.read_text(encoding="utf-8")
+    if "CamGuard" not in product_text or "not 24/7 continuous monitoring" not in product_text:
+        ERRORS.append("CamGuard must be described as a scoped, on-demand assessment, not continuous monitoring")
+    if "CamGuard" not in readme_text:
+        ERRORS.append("README must list the published CamGuard assessment tool")
+
 for page in PAGES:
     rel = page.relative_to(ROOT)
     raw = page.read_text(encoding="utf-8")
@@ -173,6 +187,7 @@ else:
             "https://trintechdigitaldefense.github.io/enquiry/",
             "https://trintechdigitaldefense.github.io/blog/dark-web-credential-markets-2026.html",
             "https://trintechdigitaldefense.github.io/blog/api-security-attacks-2026.html",
+            "https://trintechdigitaldefense.github.io/blog/password-security-2026.html",
         )
         for expected in expected_sitemap_urls:
             if expected not in locs:
@@ -185,6 +200,8 @@ readme = ROOT / "README.md"
 if homepage.is_file() and readme.is_file():
     homepage_text = unescape(re.sub(r"<[^>]*>", "", homepage.read_text(encoding="utf-8")))
     readme_text = readme.read_text(encoding="utf-8")
+    if "Avg Response" in homepage_text or "24H Response Target" in homepage_text:
+        ERRORS.append("homepage must not publish an unapproved numeric response-time promise")
     for price in ("TT$1,350", "TT$2,350", "TT$200", "TT$150", "TT$750", "TT$1,000", "TT$500–750", "TT$1,200–2,500"):
         if price not in homepage_text:
             ERRORS.append(f"homepage missing published price {price}")

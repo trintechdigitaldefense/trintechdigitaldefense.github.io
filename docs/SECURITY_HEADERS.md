@@ -19,6 +19,10 @@ Review and test these controls in a staging environment before production rollou
 - `Content-Security-Policy`: start in report-only mode. The current pages contain inline styles and scripts and load Google Fonts; a restrictive policy needs script/style hashes or a refactor, and explicit font/image/navigation source review. Do not solve this by blindly adding broad `unsafe-inline` or wildcard sources.
 - `frame-ancestors 'none'` (or a documented embedding policy) in the HTTP CSP header.
 
+## Production observation (23 November 2026)
+
+A live HTTPS GET to the homepage returned HTTP 200 and `Strict-Transport-Security: max-age=31556952`. The response did not include `Content-Security-Policy`, `Referrer-Policy`, `X-Content-Type-Options`, `Permissions-Policy`, or `X-Frame-Options`. The response identified GitHub as the server and included a Fastly/Varnish delivery hop; that does not establish a separately configured TrinTech CDN or edge policy. This is a point-in-time observation of the homepage, not a guarantee for every path or future deployment.
+
 ## Verification
 
 After deployment, inspect the live HTTPS response headers for the homepage and policy pages, confirm redirects and HSTS behaviour, and run a browser regression check. Record the date, tested URLs, edge provider and exact observed headers in the Trust Centre.

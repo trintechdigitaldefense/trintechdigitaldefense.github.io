@@ -13,10 +13,10 @@
   <style>
     :root{color-scheme:dark;--bg:#030a0e;--panel:#071a22;--text:#d8e5ec;--muted:#9aafbc;--line:rgba(0,229,255,.2);--accent:#00d8ef;--warn:#ffd166}
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif;overflow-wrap:anywhere}
     a{color:var(--accent);text-underline-offset:3px}
     a:focus-visible{outline:3px solid var(--warn);outline-offset:3px;border-radius:3px}
-    .wrap{width:min(100% - 2rem,900px);margin:auto}
+    .wrap{width:min(100% - 2rem,900px);margin:auto;min-width:0}
     .top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.2rem 0;border-bottom:1px solid var(--line);font: .78rem 'Share Tech Mono',monospace;letter-spacing:.08em}
     .top a{text-decoration:none}
     .brand{color:var(--text);font-weight:700}
@@ -25,11 +25,12 @@
     h2{font-size:1.1rem;margin:0 0 .45rem}
     p{margin:.45rem 0;color:var(--muted)}
     .intro{max-width:700px;font-size:1.05rem}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;margin:2rem 0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1rem;margin:2rem 0;min-width:0}.grid>*{min-width:0}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:1.25rem;min-width:0}
     .status{display:inline-block;margin-bottom:.7rem;padding:.18rem .5rem;border:1px solid var(--line);border-radius:99px;color:var(--accent);font: .65rem 'Share Tech Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
     .status.draft{color:var(--warn);border-color:rgba(255,209,102,.4)}
-    .notice{padding:1rem 1.2rem;border-left:3px solid var(--warn);background:rgba(255,209,102,.06);border-radius:4px}
+    .notice{padding:1rem 1.2rem;border-left:3px solid var(--warn);background:rgba(255,209,102,.06);border-radius:4px;overflow-wrap:anywhere}
+    .card{overflow-wrap:anywhere}
     .list{padding-left:1.2rem;color:var(--muted)}
     .list li{margin:.45rem 0}
     footer{margin:3rem 0 0;padding:1.5rem 0;border-top:1px solid var(--line);font-size:.8rem}
@@ -85,7 +86,7 @@
         <p>To report a suspected vulnerability in a TrinTech-owned website or service, contact <a href="mailto:trintechdigitaldefense@gmail.com?subject=Security%20report">trintechdigitaldefense@gmail.com</a>. Share only the minimum information needed to describe the issue. Do not include passwords, access tokens, personal records, or data belonging to other people.</p>
         <p>Do not test, scan, access, or disrupt any system unless you have explicit written authorisation and an agreed scope. Sending a report does not grant permission to test.</p>
         <p><span class="status draft">Draft · not yet approved</span></p>
-        <p>The proposed <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/main/docs/RESPONSIBLE_DISCLOSURE_DRAFT.md">Responsible Disclosure Policy draft</a> identifies decisions that management and legal counsel must approve before a formal policy can be published. It does not promise response times, safe harbour, or a defined in-scope asset list.</p>
+        <p>The proposed <a href="/docs/RESPONSIBLE_DISCLOSURE_DRAFT.md">Responsible Disclosure Policy draft</a> identifies decisions that management and legal counsel must approve before a formal policy can be published. It does not promise response times, safe harbour, or a defined in-scope asset list.</p>
       </section>
 
       <section aria-labelledby="enquiries">
@@ -99,14 +100,14 @@
           <li>Use an agreed secure channel for sensitive evidence and reports.</li>
         </ul>
         <p><strong>Retention note:</strong> The published Privacy Notice describes purpose-based retention but does not specify a fixed time period. Management approval of a documented retention schedule remains outstanding; deletion requests can be sent to the published contact address.</p>
-        <p>There is no public client portal or customer login on this GitHub Pages site. See the <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/main/docs/CLIENT_PORTAL_ARCHITECTURE.md">client portal architecture note</a> for the separate, not-yet-deployed design.</p>
+        <p>There is no public client portal or customer login on this GitHub Pages site. See the <a href="/docs/CLIENT_PORTAL_ARCHITECTURE.md">client portal architecture note</a> for the separate, not-yet-deployed design.</p>
       </section>
 
       <section aria-labelledby="hosting">
         <p class="eyebrow">04 // Hosting transparency</p>
         <h2 id="hosting">Website security configuration</h2>
         <p>This site is published through GitHub Pages. GitHub Pages does not apply a repository <code>.headers</code> file as HTTP response-header configuration. A CDN or other edge host must be configured separately for headers such as Content-Security-Policy, Referrer-Policy and Strict-Transport-Security.</p>
-        <p><strong>Current verification status:</strong> the latest recorded GitHub Pages build for main commit ca1c6c17c7fd7609d59d1d9bedcba5b5ee9dfd01 succeeded on 15 November 2026. Effective response headers and live browser behaviour remain unverified from this review environment. See the <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/blob/main/docs/SECURITY_HEADERS.md">hosting security-header deployment notes</a>.</p>
+        <p><strong>Live response-header check (23 November 2026):</strong> the homepage returned HTTP 200 and <code>Strict-Transport-Security: max-age=31556952</code>. It did not return <code>Content-Security-Policy</code>, <code>Referrer-Policy</code>, <code>X-Content-Type-Options</code>, <code>Permissions-Policy</code> or <code>X-Frame-Options</code>. GitHub Pages does not apply this repository’s <code>.headers</code> file; additional controls require an approved edge/CDN configuration and must be rechecked after deployment. See the <a href="/docs/SECURITY_HEADERS.md">hosting security-header deployment notes</a> and <a href="https://github.com/trintechdigitaldefense/trintechdigitaldefense.github.io/actions">GitHub Actions build history</a>.</p>
       </section>
     </main>
     <footer>

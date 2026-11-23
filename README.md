@@ -31,6 +31,7 @@ Separate from the defense platforms; repository availability is shown below.
 | Tool | Role | Repo |
 |------|------|------|
 | **FortifyOne** | Professional network audit | Private repository (not publicly accessible) |
+| **CamGuard** | CCTV/IP camera and NVR security assessments; scoped, on-demand, not continuous monitoring | [CamGuard](https://github.com/trintechdigitaldefense/CamGuard) |
 | **Apex-Recon** | OSINT, SMB auditing, web scanning | [Apex-Recon-](https://github.com/trintechdigitaldefense/Apex-Recon-) |
 | **CyberAudit** | Live audit operations console | [cyberaudit-dashboard](https://github.com/trintechdigitaldefense/cyberaudit-dashboard) |
 | **CaribWatch** | Caribbean threat visibility | [caribwatch](https://github.com/trintechdigitaldefense/caribwatch) |
@@ -52,6 +53,7 @@ Separate from the defense platforms; repository availability is shown below.
 - **Advanced Business Security Audit:** TT$1,000 for small businesses (5–15 devices).
 - **CCTV Security Assessment:** TT$500–750 for up to five cameras; final quote after scoping.
 - **CCTV Security Hardening:** TT$1,200–2,500; final quote after scoping.
+- CCTV/IP camera and NVR security assessments and hardening are scoped, on-demand engagements; CamGuard is not a 24/7 monitoring service.
 - Authorised web and Android assessments, credential-resilience reviews, network auditing and cyber-fraud investigation support are scoped separately.
 
 Published prices are in Trinidad & Tobago dollars (TT$). Confirm the written scope and final quote before any paid work. See the [pricing section](https://trintechdigitaldefense.github.io/#pricing) and [Business Cyber Health Check](https://trintechdigitaldefense.github.io/health-check/) for details.

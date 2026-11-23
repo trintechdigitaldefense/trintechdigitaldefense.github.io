@@ -45,6 +45,7 @@ for (const path of paths) {
 for (const path of ["/blog/", "/blog/password-security-2026.html"]) {
   await page.goto(base + path, { waitUntil: "domcontentloaded" });
   await page.locator("html").evaluate(el => el.setAttribute("data-theme", "light"));
+  await page.waitForTimeout(600); // allow the theme transition to finish before measuring contrast
   const lightAxe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   for (const violation of lightAxe.violations) {
     if (["critical", "serious"].includes(violation.impact)) {

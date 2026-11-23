@@ -48,7 +48,8 @@ for (const path of ["/blog/", "/blog/password-security-2026.html"]) {
   const lightAxe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
   for (const violation of lightAxe.violations) {
     if (["critical", "serious"].includes(violation.impact)) {
-      failures.push(`${path} (light theme): axe ${violation.impact} ${violation.id} — ${violation.help}`);
+      const nodes = violation.nodes.map(node => `target=${node.target.join(" ")} ${(node.failureSummary || "").replace(/\\s+/g, " ").slice(0, 240)}`);
+      failures.push(`${path} (light theme): axe ${violation.impact} ${violation.id} — ${violation.help}\\n` + nodes.join("\\n"));
     }
   }
 }

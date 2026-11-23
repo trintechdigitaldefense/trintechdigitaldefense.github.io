@@ -42,6 +42,17 @@ for (const path of paths) {
   }
 }
 
+for (const path of ["/blog/", "/blog/password-security-2026.html"]) {
+  await page.goto(base + path, { waitUntil: "domcontentloaded" });
+  await page.locator("html").evaluate(el => el.setAttribute("data-theme", "light"));
+  const lightAxe = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
+  for (const violation of lightAxe.violations) {
+    if (["critical", "serious"].includes(violation.impact)) {
+      failures.push(`${path} (light theme): axe ${violation.impact} ${violation.id} — ${violation.help}`);
+    }
+  }
+}
+
 await page.goto(base + "/", { waitUntil: "domcontentloaded" });
 await page.setViewportSize({ width: 360, height: 800 });
 const mobileOverflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);

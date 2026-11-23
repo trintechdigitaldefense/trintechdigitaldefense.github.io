@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "password-security-2026",
+      "title": "Password Security in 2026: Why Your Employees Passwords Are Still 123456",
+      "date": "2026-11-18",
+      "category": "Threat Analysis / Business Risk",
+      "tags": [
+        "password security",
+        "credential theft",
+        "MFA",
+        "passkeys",
+        "breach data",
+        "Trinidad"
+      ],
+      "word_count": 2850,
+      "url": "https://trintechdigitaldefense.github.io/blog/password-security-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/password-security-2026.png"
+    },
+    {
       "slug": "api-security-attacks-2026",
       "title": "API Security Attacks: Why Your Business APIs Are Being Exploited Right Now",
       "date": "2026-11-11",

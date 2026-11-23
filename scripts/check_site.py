@@ -78,7 +78,8 @@ if product_centre.is_file():
     product_text = product_centre.read_text(encoding="utf-8")
     if "CamGuard" not in product_text or "not 24/7 continuous monitoring" not in product_text:
         ERRORS.append("CamGuard must be described as a scoped, on-demand assessment, not continuous monitoring")
-    if "CamGuard" not in readme_text:
+    readme_file = ROOT / "README.md"
+    if readme_file.is_file() and "CamGuard" not in readme_file.read_text(encoding="utf-8"):
         ERRORS.append("README must list the published CamGuard assessment tool")
 
 for page in PAGES:

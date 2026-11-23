@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products — TrinTech Digital Defense</title>
-<meta name="description" content="TrinTech product centre: Sentinel, Mirage, CyberGuardian (flagship defense) and FortifyOne, Apex-Recon, CyberAudit, CaribWatch (assessment & intelligence).">
+<meta name="description" content="TrinTech product centre: managed defense platforms, CamGuard CCTV assessments, and scoped cybersecurity audit and intelligence tools.">
 <link rel="canonical" href="https://trintechdigitaldefense.github.io/trintech/">
 <meta property="og:title" content="Products — TrinTech Digital Defense">
-<meta property="og:description" content="Flagship defense and assessment products for Trinidad & Tobago.">
+<meta property="og:description" content="Managed defense platforms, CamGuard CCTV assessments, and scoped cybersecurity audit and intelligence tools for Trinidad & Tobago.">
 <meta property="og:url" content="https://trintechdigitaldefense.github.io/trintech/">
 <meta property="og:image" content="https://trintechdigitaldefense.github.io/og-image.png">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@ body{padding-top:0}
 .pc-card .links a:hover{text-decoration:underline}
 .pc-badge{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:3px;border:1px solid var(--border);color:var(--muted)}
 .pc-badge.flag{border-color:rgba(0,229,255,.4);color:var(--cyan)}
-.pc-compare{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:1rem}
+.pc-compare{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:1rem;table-layout:fixed}.pc-compare th,.pc-compare td{overflow-wrap:anywhere}
 .pc-compare th,.pc-compare td{border:1px solid var(--border);padding:.65rem .75rem;text-align:left}
 .pc-compare th{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);background:rgba(0,229,255,.04)}
 .pc-compare td{color:var(--muted)}
@@ -45,7 +45,7 @@ body{padding-top:0}
 .site-top{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.25rem;border-bottom:1px solid var(--border);position:sticky;top:0;background:rgba(3,10,14,.94);backdrop-filter:blur(12px);z-index:50}
 .site-top .brand{font-family:var(--mono);font-size:.8rem;letter-spacing:.12em;color:var(--text);text-decoration:none}
 .site-top .brand span{color:var(--cyan)}
-.site-top nav{display:flex;gap:1.1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.site-top nav{position:static;width:auto;padding:0;background:transparent;border:0;backdrop-filter:none;z-index:auto;display:flex;gap:1.1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
 .site-top nav a{color:var(--muted);text-decoration:none}
 .site-top nav a:hover{color:var(--cyan)}
 @media(max-width:600px){.pc-compare{font-size:.72rem}.site-top nav{display:none}}
@@ -88,7 +88,7 @@ body{padding-top:0}
         <p>Network deception: decoys, honeytokens, canaries, and attacker interaction visibility for continuous monitoring.</p>
         <div class="links">
           <a href="/trintech/mirage/">Product page</a>
-          <a href="https://github.com/trintechdigitaldefense/Mirage" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/Mirage" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </article>
       <article class="pc-card">
@@ -98,7 +98,7 @@ body{padding-top:0}
         <p>Host defense: file integrity monitoring, SSH protection, reverse-shell and persistence hunting, active deception hooks, client reporting.</p>
         <div class="links">
           <a href="/sentinel/">Product page</a>
-          <a href="https://github.com/trintechdigitaldefense/Sentinel" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/Sentinel" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </article>
       <article class="pc-card">
@@ -107,7 +107,7 @@ body{padding-top:0}
         <h3>CyberGuardian</h3>
         <p>Detection coordination with human-approved response (isolate, kill, block). Operator accountability — not unattended auto-response.</p>
         <div class="links">
-          <a href="https://github.com/trintechdigitaldefense/cyberguardian" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/cyberguardian" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="/#pricing">In Package 2</a>
         </div>
       </article>
@@ -118,14 +118,14 @@ body{padding-top:0}
     <h2>// assessment.intelligence</h2>
     <p class="sub">Audit and visibility tools. FortifyOne is included in Package 1; CyberAudit Dashboard is in Package 2. Others support scoped assessments.</p>
     <div class="pc-grid">
-      <article class="pc-card">
+<article class="pc-card">
         <span class="pc-badge">CCTV security</span>
         <div class="tier">Scoped client assessments</div>
         <h3>CamGuard</h3>
         <p>Specialist CCTV/IP camera and NVR cybersecurity assessments. Performs bounded, non-invasive checks, correlates device details with known security advisories, and produces risk-focused reports with technician-led inspection support. On-demand assessment tool — not 24/7 continuous monitoring.</p>
         <div class="links">
-          <a href="https://github.com/trintechdigitaldefense/CamGuard" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://github.com/trintechdigitaldefense/CamGuard/releases/tag/0.7.0" target="_blank" rel="noopener">0.7.0 release</a>
+          <a href="https://github.com/trintechdigitaldefense/CamGuard" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/CamGuard/releases/tag/0.7.0" target="_blank" rel="noopener noreferrer">0.7.0 release</a>
         </div>
       </article>
       <article class="pc-card">
@@ -135,7 +135,7 @@ body{padding-top:0}
         <p>Network and security audit framework for structured assessments and hardening reviews.</p>
         <div class="links">
           <a href="/trintech/fortifyone/">Product page</a>
-          <a href="https://github.com/trintechdigitaldefense/fortifyone" target="_blank" rel="noopener">GitHub</a>
+          <a href="/enquiry/">Request details</a>
         </div>
       </article>
       <article class="pc-card">
@@ -144,7 +144,7 @@ body{padding-top:0}
         <h3>CyberAudit Dashboard</h3>
         <p>Assessment console and visibility layer used with the full-stack managed package.</p>
         <div class="links">
-          <a href="https://github.com/trintechdigitaldefense/cyberaudit-dashboard" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/cyberaudit-dashboard" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a href="/#pricing">In Package 2</a>
         </div>
       </article>
@@ -155,7 +155,7 @@ body{padding-top:0}
         <p>Reconnaissance and authorised security assessment support for attack-surface mapping.</p>
         <div class="links">
           <a href="/trintech/apex-recon/">Product page</a>
-          <a href="https://github.com/trintechdigitaldefense/Apex-Recon" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/trintechdigitaldefense/Apex-Recon-" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </article>
       <article class="pc-card">
@@ -173,7 +173,7 @@ body{padding-top:0}
   <section id="compare" class="pc-section">
     <h2>// compare.flagship</h2>
     <p class="sub">High-level comparison for package conversations. Validate details against each repo before formal proposals.</p>
-    <table class="pc-compare">
+    <div class="pc-compare-wrap" role="region" aria-label="Product comparison table" tabindex="0" style="max-width:100%;overflow-x:auto"><table class="pc-compare">
       <thead>
         <tr><th>Capability</th><th>Mirage</th><th>Sentinel</th><th>CyberGuardian</th></tr>
       </thead>
@@ -184,7 +184,7 @@ body{padding-top:0}
         <tr><td>Reporting</td><td>Alerts & summaries</td><td>Security reports</td><td>Operator reports</td></tr>
         <tr><td>Managed packages</td><td>1 & 2</td><td>1 & 2</td><td>Package 2</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <section class="pc-section">

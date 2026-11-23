@@ -4,7 +4,7 @@
 
 Trinidad & Tobago cybersecurity firm. Practical security audits, digital footprint analysis, and continuous defense for Caribbean organisations.
 
-**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407)
+**Contact:** [trintechdigitaldefense@gmail.com](mailto:trintechdigitaldefense@gmail.com) · WhatsApp [+1 (868) 362-0679](https://wa.me/18683620679) · [LinkedIn](https://www.linkedin.com/in/trintech-digital-defense-a68614407) · [Trust Centre](https://trintechdigitaldefense.github.io/trust/) · [Service Enquiry](https://trintechdigitaldefense.github.io/enquiry/)
 
 Based in Trinidad & Tobago — serving Trinidad & Tobago and the wider Caribbean.
 
@@ -26,11 +26,12 @@ These three are the defense line on the [pricing page](https://trintechdigitalde
 
 ## Audit and monitoring line
 
-Separate from the defense platforms. Still public.
+Separate from the defense platforms; repository availability is shown below.
 
 | Tool | Role | Repo |
 |------|------|------|
-| **FortifyOne** | Professional network audit | [fortifyone](https://github.com/trintechdigitaldefense/fortifyone) |
+| **FortifyOne** | Professional network audit | Private repository (not publicly accessible) |
+| **CamGuard** | CCTV/IP camera and NVR security assessments; scoped, on-demand, not continuous monitoring | [CamGuard](https://github.com/trintechdigitaldefense/CamGuard) |
 | **Apex-Recon** | OSINT, SMB auditing, web scanning | [Apex-Recon-](https://github.com/trintechdigitaldefense/Apex-Recon-) |
 | **CyberAudit** | Live audit operations console | [cyberaudit-dashboard](https://github.com/trintechdigitaldefense/cyberaudit-dashboard) |
 | **CaribWatch** | Caribbean threat visibility | [caribwatch](https://github.com/trintechdigitaldefense/caribwatch) |
@@ -41,16 +42,27 @@ Separate from the defense platforms. Still public.
 
 `trintech-guardian` is archived for reference. Its successor is CyberGuardian. `trin-tech-audit` is superseded by FortifyOne and kept for reference.
 
-## Services
+## Services and published prices
 
-- Managed defense packages (Mirage, Mirage + CyberGuardian, Sentinel)
-- Network & infrastructure audits (Micro 1–5 devices, Small Biz 5–15)
-- Web & Android vulnerability assessments
-- OSINT / digital footprint reviews
-- Credential resilience testing
-- Cyber fraud investigation support
+- **Business Cyber Health Check:** free 15-minute discovery call; the review itself is quoted after scoping.
+- **Managed Package 1 — TT$1,350/month:** Mirage + Sentinel + FortifyOne.
+- **Managed Package 2 — TT$2,350/month:** Package 1 + CyberAudit Dashboard + CyberGuardian.
+- **Monitoring device option:** TT$200 one-time when TrinTech must supply a dedicated mobile monitoring device.
+- **OSINT / website reconnaissance:** TT$150/hour, two-hour minimum.
+- **Essential Security Audit:** TT$750 for micro-businesses (1–5 devices).
+- **Advanced Business Security Audit:** TT$1,000 for small businesses (5–15 devices).
+- **CCTV Security Assessment:** TT$500–750 for up to five cameras; final quote after scoping.
+- **CCTV Security Hardening:** TT$1,200–2,500; final quote after scoping.
+- CCTV/IP camera and NVR security assessments and hardening are scoped, on-demand engagements; CamGuard is not a 24/7 monitoring service.
+- Authorised web and Android assessments, credential-resilience reviews, network auditing and cyber-fraud investigation support are scoped separately.
 
-All prices TTD$ equivalents available on request. Full details on the [pricing section of the site](https://trintechdigitaldefense.github.io/#pricing).
+Published prices are in Trinidad & Tobago dollars (TT$). Confirm the written scope and final quote before any paid work. See the [pricing section](https://trintechdigitaldefense.github.io/#pricing) and [Business Cyber Health Check](https://trintechdigitaldefense.github.io/health-check/) for details.
+
+## Client enquiries and trust
+
+- The homepage service enquiry form creates a draft email in the visitor’s own email application; it does not send form data to a website backend or store it on the site.
+- Enquiries are not authorisation to test. A written scope and explicit permission are required before any assessment begins.
+- The [Trust Centre](https://trintechdigitaldefense.github.io/trust/) collects privacy, engagement, security and responsible-disclosure information. Draft policy content is clearly marked for management and legal review.
 
 ## Legal
 

@@ -1,6 +1,23 @@
 {
   "posts": [
     {
+      "slug": "waf-not-protecting-you-2026",
+      "title": "Web Application Firewalls: Why Your WAF Is Not Protecting You",
+      "date": "2026-11-25",
+      "category": "Web Security / Business Risk",
+      "tags": [
+        "WAF",
+        "web security",
+        "bypass techniques",
+        "OWASP",
+        "HTTP smuggling",
+        "Trinidad"
+      ],
+      "word_count": 2680,
+      "url": "https://trintechdigitaldefense.github.io/blog/waf-not-protecting-you-2026",
+      "image": "https://trintechdigitaldefense.github.io/images/waf-not-protecting-you-2026.png"
+    },
+    {
       "slug": "password-security-2026",
       "title": "Password Security in 2026: Why Your Employees Passwords Are Still 123456",
       "date": "2026-11-18",
